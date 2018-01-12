@@ -1,0 +1,568 @@
+@charset "utf-8";
+@min: '@2x.png';
+@max: '@3x.png';
+
+.bg-image(@url){
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+    background-image:url('@{url}@{max}'); 
+  }
+  background-image:url('@{url}@{min}');
+}
+.font-size(@val){
+    font-size: @val;
+    [data-dpr="2"] &{
+        font-size: 2*@val
+    }
+
+    [data-dpr="3"] &{
+        font-size: 3*@val
+    }
+
+    [data-dpr="4"] &{
+        font-size: 4*@val
+    }
+}
+
+
+body{font:12px Helvetica;color:#677887;margin:0 auto;background:#f2f7f9 !important;line-height:1;}
+ul li{ list-style-type:none;}
+img{ border:none;}
+i,em{font-style: normal;}
+a,input{outline:none !important;text-decoration:none !important;-webkit-tap-highlight-color: rgba(0,0,0,0) !important;  
+-webkit-tap-highlight-color: transparent !important; /* 清除高亮 For some Androids,个人感觉是低版本的安卓，4.0以下 */ }
+input{outline: none;border:none;}
+*:focus{outline: none;}
+.clear{clear: both;overflow: hidden;zoom: 1;}
+.left{ float:left !important;}
+.right{ float:right !important;}
+.center{ text-align:center !important;}
+.clear{ clear: both; }
+.jz{ margin:0 auto;}
+.jc{ font-weight:bold !important;}
+.overflow{ overflow: hidden;}
+.titlejz{ text-align:left;}
+.titlejy{ text-align:right;}
+.text_in{text-indent:2em;}
+.whole_width{width: 100%;}
+
+/*颜色*/
+.cr{color:#2f4252 !important;}
+.cr1{color:#677887;}
+.cr2{color:#637889;}
+.cr3{color:#9ba9b4;}
+.cr4{color:#2d95e6!important;}
+.cr5{color:#1b8fd3;}
+.cr6{color:#ff5065 !important;}
+.cr7{color:#71510c;}
+.cr8{color:#00B79D;}
+.cr9{color:#52a0e3;}
+.cr10{color:#9ea9b3 !important;}
+.cr11{color:#f67425 !important;}
+.whitebg{background-color: #fff !important;}
+
+/*字体*/
+.font50{ .font-size(50px); font-weight:inherit;}
+.font45{ .font-size(45px); font-weight:inherit;}
+.font42{ .font-size(42px); font-weight:inherit;}
+.font40{ .font-size(40px); font-weight:inherit;}
+.font36{ .font-size(36px); font-weight:inherit;}
+.font15{ .font-size(15px); font-weight:inherit;}
+.font16{ .font-size(16px) ; font-weight:inherit;}
+.font17{ .font-size(17px); font-weight:inherit;}
+.font18{ .font-size(18px) !important;; font-weight:inherit;}
+.font19{ .font-size(19px); font-weight:inherit;}
+.font20{ .font-size(20px) !important; font-weight:inherit;}
+.font21{ .font-size(21px); font-weight:inherit;}
+.font24{ .font-size(24px); font-weight:inherit;}
+.font25{ .font-size(25px); font-weight:inherit;}
+.font26{ .font-size(26px); font-weight:inherit;}
+.font27{ .font-size(27px); font-weight:inherit;}
+.font28{ .font-size(28px) !important; font-weight:inherit;}
+.font29{ .font-size(29px); font-weight:inherit;}
+.font30{ .font-size(30px) !important; font-weight:inherit;}
+.font32{ .font-size(32px); font-weight:inherit;}
+.font34{ .font-size(34px); font-weight:inherit;}
+.font46{ .font-size(46px); font-weight:inherit;}
+.font22{ .font-size(22px); font-weight:inherit;}
+.font23{ .font-size(23px); font-weight:inherit;}
+.font14{ .font-size(14px) !important;; font-weight:inherit;}
+.font13{ .font-size(13px); font-weight:inherit;}
+.font12{ .font-size(12px) !important; font-weight:inherit;}
+.font11{ .font-size(11px) !important; font-weight:inherit;}
+.font10{ .font-size(10px) !important; font-weight:inherit;}
+
+
+.black1{border-bottom:0.5px solid #f3f7f9;}
+.black5{height:0.13rem;}
+.black8{height:0.23rem;}
+.black10{height:0.29rem;}
+.black16{height:0.46rem;}
+.black20{height:0.57rem;}
+.black14{height:0.4rem;}
+.black35{height:1.0rem;}
+
+
+.wrap{
+  width: 100%;
+  margin:0 auto;
+}
+#transpass_box {
+  clear: both;
+  // overflow: hidden;
+  zoom: 1;
+}
+// 理财样式
+.dybchoose-coupon{
+  display:none;
+  position: absolute;
+  top:0.54rem;
+  left:3.1rem;
+  height:0.45rem;
+  b{
+    float:left;
+    width:0.45rem;
+    height:0.45rem;
+    .bg-image("../images/finance/icon_choose");
+    background-size:cover;
+  }
+  p{
+    float:left;
+    height:0.45rem;
+    line-height: 0.45rem;
+    .font-size(14px);
+    color:#677887;
+    margin-left:0.13rem;
+  }
+}
+.single_line2 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 1.51rem;
+  background: white;
+  padding: 0 0.53rem;
+  align-items: center;
+  label {
+    .font-size(16px);
+    color: #2f4252;
+  }
+  span.adred{
+    padding-right: 0.27rem;
+  }
+  span {
+    .font-size(14px);
+    color: #9ea9b3;
+  }
+  i{
+      .bg-image('../images/icon/jiantou_hui');
+      background-repeat: no-repeat;
+      background-size: 0.2rem 0.31rem;
+      width: 0.2rem; 
+      height: 0.31rem;
+      position: absolute;
+      right: 0.46rem;
+      top: 0.6rem;
+    }
+}
+.months {
+  position: relative;
+  display: flex;
+  background: white;
+  height: 1rem;
+  text-align: center;
+  text-align: center;
+  line-height: 1rem;
+  justify-content: space-around;
+  color: #9ea9b3;
+  .font-size(15px);
+  span.slideactive {
+    color: #f75f6a;
+    .font-size(20px);
+    i{
+      .font-size(11px);
+    } 
+  }
+  .bottom_line {
+    position: absolute;
+    bottom: 0;
+    left: 4%;
+    width: 1.6rem;
+    height: 4px;
+    background: #f75f6a;
+  }
+}
+#pullUp {
+  text-align: center;
+  height: 1rem;
+  line-height: 1rem;
+}
+.noborder_bottom{
+  border-bottom: none !important; 
+}
+.pinkred {
+  color: #f75f6a!important;
+}
+.lgray {
+  color: #9ea9b3;
+}
+.dgray {
+  color: #667887;
+}
+.h3cloor {
+  color: #2f4252;
+}
+.tabactive {
+  background: white;
+  color: #f75f6a
+}
+.h3styc {
+  .font-size(14px);
+  margin-bottom: 0.4rem;
+  color: #2f4252;
+}
+// 理财样式结束
+
+
+/*公共头部*/
+header{
+  width: 100%;
+  height: 1.26rem;
+  text-align: center;
+  .font-size(18px);
+  color:#677887;
+  line-height: 1.26rem;
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid #e4edf7;
+}
+header a{
+    width: 1.43rem;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .bg-image('../images/icon/back');
+    background-size:0.26rem 0.47rem;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+.acc-head{
+  background: none;
+  border-bottom:none;
+}
+/*公共底部*/
+#nav{
+  width: 100%;
+  height: 1.4rem;
+  border-top: 1px solid #e1eef8;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+}
+#nav a{
+  display: block;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  text-align: center;
+  .font-size(10px);
+  padding-top:1.0rem;
+  color:#9ea9b3;
+  position: relative;
+}
+#nav a span{
+  width: 0.86rem;
+  height: 0.86rem;
+  display: inline-block;
+  .bg-image('../images/icon/icon_01faxian_S');
+  background-size:0.8rem 0.8rem;
+  background-repeat:no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  -webkit-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  
+}
+#nav a:nth-child(2) span{
+  .bg-image('../images/icon/icon_02licai_S');
+  background-size:0.86rem 0.86rem;
+}
+#nav a:nth-child(3) span{
+  .bg-image('../images/icon/icon_03wode_S');
+  background-size:0.86rem 0.86rem;
+}
+#nav a.cur{
+  color:#71510c;
+}
+#nav a.cur span{
+  width: 1.57rem;
+  height: 1.57rem;
+  display: inline-block;
+  .bg-image('../images/icon/icon_01faxian_B');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: -0.6rem;
+  left: 52%;
+  -webkit-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+}
+#nav a.cur:nth-child(2) span{
+  .bg-image('../images/icon/icon_02licai_B');
+  background-size:cover;
+}
+#nav a.cur:nth-child(3) span{
+  .bg-image('../images/icon/icon_03wode_B');
+  background-size:cover;
+
+}
+
+
+
+/* 公共样式 带箭头*/
+.pulic_ul{ 
+  background: #fff;
+  .font-size(16px);
+  padding-left:0.57rem;
+  border-bottom: 1px solid #e8eef1;
+}
+.pulic_ul li{
+  height: 1.66rem;
+  line-height: 1.66rem;
+  /*.bg-image('../images/icon/jiantou_hui');*/
+  background-size: 0.19rem 0.31rem;
+  background-repeat:no-repeat;
+  background-position: 95% center;
+  border-bottom:1px solid #e8eef1;
+  position: relative;
+}
+.pulic_ul li:last-child{
+    border-bottom:none;
+}
+.pulic_ul li span{
+  position: absolute;
+  top: 0;
+  right: 0.94rem;
+  line-height: 1.66rem;
+  .font-size(14px);
+  color:#9ea9b3;
+}
+.pulic_ul li.done{
+  background: none;
+}
+.pulic_ul li.done span{
+  right: 0.46rem;
+}
+.pulic_ul li a{
+  color:#2f4252;
+  .font-size(16px);
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.pulic_ul li a:link {color: #2f4252 !important;}     /* 未访问的链接 */
+.pulic_ul li a:visited {color: #2f4252!important;}  /* 已访问的链接 */
+.pulic_ul li a:hover {color: #2f4252 !important;}    /* 当有鼠标悬停在链接上 */
+.pulic_ul li a:active {color: #2f4252 !important;}   /* 被选择的链接 */
+/*勾选框 */
+.gx_check span{
+  display: inline-block;
+  margin-right:5px; 
+  width: 0.4rem;
+  height: 0.4rem;
+  vertical-align: text-bottom;
+  border-radius: 4px;
+  .bg-image('../images/icon/btn_xieyi_gb');
+  background-size:0.4rem 0.4rem;
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+.gx_check .sp_check{
+  .bg-image('../images/icon/btn_xieyi_xz');
+  background-size:0.4rem 0.4rem;
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+
+
+
+/*公共样式 不带箭头 带input输入框*/
+.public-inp{
+  padding:0.46rem 0 0.46rem 0.69rem;
+  background-color: #fff;
+  position: relative;
+}
+.public-inp input{
+   height: 0.63rem;
+   line-height: 0.63rem;
+   .font-size(16px);
+   color:#2f4252;
+   // width: 100%;
+   height: 100%;
+}
+.public-inp input::input-placeholder {
+  color:#9ea9b3;
+  .font-size(16px);
+}
+.public-inp input::-webkit-input-placeholder {
+  color:#9ea9b3;
+  .font-size(16px);
+}
+.public-inp input::-moz-input-placeholder {
+  color:#9ea9b3;
+  .font-size(16px);
+}
+.public-inp input::-o-input-placeholder {
+  color:#9ea9b3;
+  .font-size(16px);
+}
+/*公共样式 温馨提示文字*/
+.warm_login_title{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .warm_line {
+    border-bottom: 1px solid #bdcbd7;
+    flex: 0 0 2.57rem;
+  }
+  .warm_title {
+    color: #afc0d0;
+    .font-size(12px);
+  }
+}
+
+
+.point-out{
+  padding:0.26rem 0 0 0.69rem;
+  .font-size(11px);
+  color:#85b7e5;
+  line-height: 0.54rem;
+}
+.point-out a{
+  color:#2d95e6;
+  .font-size(11px);
+}
+.error{
+  color:#f75f6a;
+  .font-size(11px);
+  text-align: center;
+}
+
+
+
+
+/*公共样式 确定按钮*/
+.pulic-btn{
+  text-align: center;
+  color: #fff;
+  background-color: #bcc1c5;
+  .font-size(18px);
+  letter-spacing: 1px;
+  width: 8.14rem;
+  height: 1.29rem;
+  border-radius: 0.86rem;
+  border:none;
+  a{
+     color: #fff;
+     .font-size(18px);
+  }
+}
+.pulic-btn-ok{
+  background-color: #2d95e6;
+}
+
+/*获取验证码*/
+.getCode{
+  display: inline-block;
+  width: 3.14rem;
+  height: 1.0rem;
+  color:#2d95e6;
+  border-radius:0.16rem;
+  position: absolute;
+  top: 0.26rem;
+  right: 0.46rem;
+  border:1px solid #2d95e6;
+  text-align: center;
+  line-height: 1.0rem;
+  letter-spacing: 1px;
+  font-size: 0.4rem;
+  background: none;
+}
+.getCode_star{
+  border:1px solid #2d95e6;
+  color:#2d95e6;
+  background-color: #fff;
+}
+.lg_clear {
+    display: none;
+    background-image: url(../images/login/btn_x@2x.png);
+    background-repeat: no-repeat;
+    width: 0.86rem;
+    height: 0.86rem;
+    right:0.57rem;
+    position: absolute;
+    top: 0.31rem;
+    background-size: 0.44rem 0.44rem;
+    background-repeat: no-repeat;
+    background-position: center ;
+}
+.no-content{
+  width: 100%;
+  height: 2.48rem;
+  .bg-image('../images/icon/pic_sanbian_wushuju');
+  background-size:2.4rem 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top:3.8rem;
+}
+.invenst_list_no_con {
+ width: 100%;
+  height: 2.48rem;
+  .bg-image('../images/icon/pic_sanbian_wushuju');
+  background-size:2.4rem 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 1.8rem;
+}
+
+.bottom_btn{
+  width: 100%;
+  height: 1.47rem;
+  text-align: center;
+  line-height: 1.47rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  .font-size(18px);
+}
+.tz{
+  height: 4.13rem;
+  .bg-image('../images/icon/tzxq_ico_chenggong');
+  background-size:1.68rem 1.68rem;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+.tz_p{
+  .font-size(14px);
+  color:#677887;
+  margin-top: 0.4rem;
+  text-align: center;
+  line-height:0.45rem;
+}
+.tz-fail{
+  .bg-image('../images/icon/tzxq_ico_shibai');
+}
+
+
+
+

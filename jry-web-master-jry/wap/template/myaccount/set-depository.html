@@ -1,0 +1,79 @@
+
+<div class="set-depository">
+	<div class="common-head" ng-click="toback()"><i></i><p>{{title}}</p></div>
+    <form novalidate name="myForm">
+        <div class="part-a">
+            <h1 ng-click="changeToggle($event)"><img src="images/myaccount/setdep-title-icon.png">用户信息<i class="init">></i></h1>
+            <main style="display:block;">
+                <div class="input-item">
+                    <label for="phone">手机号码</label>
+                    <input id="phone" disabled name="phone" type="text" required value="{{userForm.mobile_no}}">
+                    <footer></footer>
+                </div>
+                <div class="input-item">
+                    <label for="name">真实姓名</label>
+                    <input id="name" name="name" ng-model="userForm.cust_nm" type="text" placeholder="请输入真实姓名" required>
+                    <footer></footer>
+                </div>
+                <div class="input-item">
+                    <label for="idCards">身份证号</label>
+                    <input id="idCards" name="idCards" ng-model="userForm.certif_id" type="text" placeholder="请输入身份证号" ng-minlength="18" maxlength="18" required>
+                    <footer></footer>
+                </div>
+            </main>
+        </div>
+        <div class="part-b">
+            <h1 ng-click="changeToggle($event)"><img src="images/myaccount/setdep-title-icon.png">银行卡信息<i>></i></h1>
+            <main>
+                <div class="input-item">
+                    <label>开户行</label>
+                    <div>
+                        <select name="bankName" ng-class="userForm.parent_bank_id?'':'select-init'" ng-model="userForm.parent_bank_id" required>
+                            <option value="">请选择开户行</option>
+                            <option ng-repeat="item in bankList" value="{{item.code}}">{{item.bankName}}</option>
+                        </select>
+                        <i>></i>
+                    </div>
+                    <footer></footer>
+                </div>
+                <div class="input-item">
+                    <label for="capAcntNo">卡号</label>
+                    <input id="capAcntNo" name="capAcntNo" ng-model="userForm.capAcntNo" type="text" placeholder="请输入银行卡号" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" maxlength="20" required>
+                    <footer></footer>
+                </div>
+                <div class="input-item">
+                    <label>开户所在地</label>
+                    <div>
+                        <select name="select_province" ng-class="province?'':'select-init'" ng-model="province" ng-options="s.ProvinceName for s in cityList" required ng-change="changeProvince()">
+                            <option value="">请选择省份</option>
+                        </select>
+                        <i>></i>
+                    </div>
+                    <div ng-if="province.Cities.length>0">
+                        <select ng-class="userForm.city_id?'':'select-init'" id="city_id" name="city_id" ng-model="userForm.city_id" ng-options="sh[1] as sh[0] for sh in province.Cities" required>
+                            <option value="">请选择区县</option>
+                        </select>
+                        <i>></i>
+                    </div>
+                    <footer></footer>
+                </div>
+            </main>
+        </div>
+        <div class="part-c">
+            <h1 ng-click="changeToggle($event)"><img src="images/myaccount/setdep-title-icon.png">支付密码设置<span>用于账户提现</span><i>></i></h1>
+            <main>
+                <div class="input-item">
+                    <label for="password">设置支付密码</label>
+                    <input id="password" name="password" ng-model="userForm.password" type="password" placeholder="8-16位数字与字母组合" ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$/" maxlength="16" required>
+                    <footer></footer>
+                </div>
+                <div class="input-item">
+                    <label for="rpassword">确认支付密码</label>
+                    <input id="rpassword" name="rpassword" ng-model="userForm.rpassword" type="password" placeholder="请再次输入支付密码" ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$/" maxlength="16" required>
+                    <footer></footer>
+                </div>
+            </main>
+        </div>
+        <button class="btn submit" ng-click="submit(myForm)">确认开户</button>
+    </form>
+</div>

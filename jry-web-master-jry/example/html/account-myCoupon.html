@@ -1,0 +1,278 @@
+<div class="account-mymsg-wrap" ng-controller="myCouPonCtrl" ng-init="action=1">
+	<div class="account-common-title">我的优惠券</div>
+	<div class="account-common-con" >
+	
+		<div class="coupon-wrap">
+			<!-- tab -->
+			<div class="account-top-box">
+		    	<p ng-click="action=1" ng-class="{1:'top-list',3:'',2:''}[action]">可使用</p>
+		    	<p ng-click="action=2" ng-class="{1:'',2:'top-list',3:''}[action]">已使用</p>
+		        <p ng-click="action=3" ng-class="{3:'top-list',1:'',2:''}[action]" style="border-right: 1px solid #ECECEC;">已失效</p>
+		    </div>
+			<div class="coupon-box" ng-if="HBList.length>0||QList.length>0">
+<!-- 可使用 -->
+	        <!-- 红包 -->
+	        <div class="coupon-mode" ng-show="action==1">
+				<ul>
+					<li>红包 {{tipsLength}} 张</li> 
+				</ul>
+				<div class="icons">
+					<div class="icon-con icon-conn" ng-repeat="item in HBList | filter: {status: 0}" ng-class="{0: 'my-active-tips',1: 'my-used-tips',2: 'my-disable-tips'}[item.status]">
+						<p class="title">
+							<span class="lj-btn" ui-sref="main.productsList">立即激活</span>
+							<strong><b><i>￥</i>{{item.amount| currency:'':0}}</b></strong>
+						</p>
+						<p class="content">
+							<span>投资金额：单笔满{{item.enableAmount| currency:'':0}}元</span><br>
+							<span>投资期限：≥{{item.productDeadline}}天（活动标除外）</span><br>
+							<span>有效期至：{{item.expireDate| date:'yyyy.MM.dd'}}</span><br>
+							<span>红包来源：{{item.remark}}</span>
+						</p>
+						<p class="bot">满足以上条件红包即刻激活至账户</p>
+					</div>
+				</div>
+			</div>
+			<!-- 加息券 -->
+			<div class="coupon-mode" ng-show="action==1">
+				<ul>
+					<li>加息券 {{couponLength}} 张</li> 
+				</ul>
+				<div class="icons coupons">
+					<div ng-repeat="item in QList | filter: {status: 0}" class="icon-con icon-conn" ng-class="{0: 'my-active-coupon',1: 'my-used-coupon',2: 'my-disable-coupon'}[item.status]">
+						<p class="title">
+							<span ng-if="item.fullName == undefined" class="lj-btn jxq-btn" ui-sref="main.productsList"></span>
+							<span ng-if="item.fullName != undefined" class="lj-btn jxq-btn" ui-sref="main.billDetail({ id: item.pid })"></span>
+							<strong><b>{{item.raisedRates}}<i>%</i></b>加息券</strong>
+						</p>
+						<p class="content">
+							<span ng-if="item.fullName == undefined">投资期限：≥{{item.productDeadline}}天（活动标除外）</span>
+							<span ng-if="item.fullName != undefined">限用标的：{{item.fullName}}</span>
+							<span ng-if="item.fullName == undefined">有效期至：{{item.expireDate| date:'yyyy.MM.dd'}}</span>
+							<span ng-if="item.fullName != undefined">有效期至：满标过期</span>
+							<span>加息券来源：{{item.remark}}</span>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- 翻倍券 -->
+			<!--<div class="coupon-mode" ng-show="action==1">-->
+				<!--<ul>-->
+					<!--<li>翻倍券 {{fbqLength}} 张</li> -->
+				<!--</ul>-->
+				<!--<div class="icons coupons">-->
+					<!--<div ng-repeat="item in FBQList | filter: {status: 0}" class="icon-con icon-conn icon-fbq" ng-class="{0: 'my-active-fbq',1: 'my-used-fbq',2: 'my-disable-fbq'}[item.status]">-->
+						<!--<p class="title">-->
+							<!--<span class="lj-btn" ui-sref="main.productsList"></span>-->
+							<!--<strong><b>{{item.multiple}}</b>倍</strong>-->
+						<!--</p>-->
+						<!--<p class="content">-->
+							<!--<span>投资期限：≥{{item.productDeadline}}天（活动标除外）</span>-->
+							<!--<span>有效期至：{{item.expireDate| date:'yyyy.MM.dd'}}</span>-->
+							<!--<span>作用描述：基础利率翻倍</span>-->
+						<!--</p>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+				<!-- 活动券 -->
+				<!--<div class="coupon-mode" ng-show="action==1">-->
+					<!--<ul>-->
+						<!--<li>活动券 {{FBQListHDLength}} 张</li>-->
+					<!--</ul>-->
+					<!--<div class="icons coupons">-->
+						<!--<div ng-repeat="item in FBQListHD | filter: {status: 0}" class="icon-con icon-conn icon-fbq" ng-class="{0: 'my-active-fbq',1: 'my-used-fbq',2: 'my-disable-fbq'}[item.status]">-->
+							<!--<p class="title">-->
+								<!--<span class="lj-btn" ui-sref="main.productsList"></span>-->
+								<!--<strong><b>{{item.multiple}}</b>倍</strong>-->
+							<!--</p>-->
+							<!--<p class="content">-->
+								<!--<span>投资期限：≥{{item.productDeadline}}天（活动标除外）</span>-->
+								<!--<span>有效期至：{{item.expireDate| date:'yyyy.MM.dd'}}</span>-->
+								<!--<span>作用描述：基础利率翻倍</span>-->
+							<!--</p>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+
+
+<!-- 已使用 -->
+	        <!-- 红包 -->
+	        <div class="coupon-mode" ng-show="action==2">
+				<ul>
+					<li>红包 {{tipsUsedLength}} 张</li> 
+				</ul>
+				<div class="icons">
+					<div class="icon-con" ng-repeat="item in HBList | filter: {status: 1}" ng-class="{0: 'my-active-tips',1: 'my-used-tips',2: 'my-disable-tips'}[item.status]">
+						<p class="title">
+							<span class="lj-btn">立即激活</span>
+							<strong><b><i>￥</i>{{item.amount| currency:'':0}}</b></strong>
+						</p>
+						<p class="content">
+							<span>投资金额：单笔满{{item.enableAmount| currency:'':0}}元</span><br>
+							<span>投资期限：≥{{item.productDeadline}}天以上（活动标除外）</span><br>
+							<span>有效期至：{{item.expireDate| date:'yyyy.MM.dd'}}</span><br>
+							<span>红包来源：{{item.remark}}</span>
+						</p>
+						<p class="bot">满足以上条件红包即刻激活至账户</p>
+					</div>
+				</div>
+			</div>
+			<!-- 加息券 -->
+			<div class="coupon-mode" ng-show="action==2">
+				<ul>
+					<li>加息券 {{couponUsedLength}} 张</li> 
+				</ul>
+				<div class="icons coupons">
+					<div ng-repeat="item in QList | filter: {status: 1}" class="icon-con" ng-class="{0: 'my-active-coupon',1: 'my-used-coupon',2: 'my-disable-coupon'}[item.status]">
+						<p class="title">
+							<span class="lj-btn"></span>
+							<strong><b>{{item.raisedRates}}<i>%</i></b>加息券</strong>
+						</p>
+						<p class="content">
+							<span ng-if="item.fullName == undefined">投资期限：≥{{item.productDeadline}}天（活动标除外）</span>
+							<span ng-if="item.fullName != undefined">限用标的：{{item.fullName}}</span>
+							<span ng-if="item.fullName == undefined">有效期至：{{item.expireDate| date:'yyyy.MM.dd'}}</span>
+							<span ng-if="item.fullName != undefined">有效期至：满标过期</span>
+							<span>加息券来源：{{item.remark}}</span>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- 翻倍券 -->
+			<!--<div class="coupon-mode" ng-show="action==2">-->
+				<!--<ul>-->
+					<!--<li>翻倍券 {{fbqUsedLength}} 张</li> -->
+				<!--</ul>-->
+				<!--<div class="icons coupons">-->
+					<!--<div ng-repeat="item in FBQList | filter: {status: 1}" class="icon-con icon-conn icon-fbq" ng-class="{0: 'my-active-fbq',1: 'my-used-fbq',2: 'my-disable-fbq'}[item.status]">-->
+						<!--<p class="title">-->
+							<!--<strong><b>{{item.multiple}}</b>倍</strong>-->
+						<!--</p>-->
+						<!--<p class="content">-->
+							<!--<span>投资期限：≥{{item.productDeadline}}天（活动标除外）</span>-->
+							<!--<span>有效期至：{{item.expireDate| date:'yyyy.MM.dd'}}</span>-->
+							<!--<span>作用描述：基础利率翻倍</span>-->
+						<!--</p>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+
+				<!-- 活动券 -->
+				<!--<div class="coupon-mode" ng-show="action==2">-->
+					<!--<ul>-->
+						<!--<li>活动卷 {{FBQListHDLength2}} 张</li>-->
+					<!--</ul>-->
+					<!--<div class="icons coupons">-->
+						<!--<div ng-repeat="item in FBQListHD | filter: {status: 1}" class="icon-con icon-conn icon-fbq" ng-class="{0: 'my-active-fbq',1: 'my-used-fbq',2: 'my-disable-fbq'}[item.status]">-->
+							<!--<p class="title">-->
+								<!--<strong><b>{{item.multiple}}</b>倍</strong>-->
+							<!--</p>-->
+							<!--<p class="content">-->
+								<!--<span>投资期限：≥{{item.productDeadline}}天（活动标除外）</span>-->
+								<!--<span>有效期至：{{item.expireDate| date:'yyyy.MM.dd'}}</span>-->
+								<!--<span>作用描述：基础利率翻倍</span>-->
+							<!--</p>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+
+
+<!-- 已失效 -->
+	        <!-- 红包 -->
+	        <div class="coupon-mode" ng-show="action==3">
+				<ul>
+					<li>红包 {{tipsDisabledLength}} 张</li> 
+				</ul>
+				<div class="icons">
+					<div class="icon-con" ng-repeat="item in HBList | filter: {status: 2}" ng-class="{0: 'my-active-tips',1: 'my-used-tips',2: 'my-disable-tips'}[item.status]">
+						<p class="title">
+							<span class="lj-btn">立即激活</span>
+							<strong><b><i>￥</i>{{item.amount| currency:'':0}}</b></strong>
+						</p>
+						<p class="content">
+							<span>投资金额：单笔满{{item.enableAmount| currency:'':0}}元</span><br>
+							<span>投资期限：≥{{item.productDeadline}}天（活动标除外）</span><br>
+							<span>有效期至：{{item.expireDate| date:'yyyy.MM.dd'}}</span><br>
+							<span>红包来源：{{item.remark}}</span>
+						</p>
+						<p class="bot">满足以上条件红包即刻激活至账户</p>
+					</div>
+				</div>
+			</div>
+			<!-- 加息券 -->
+			<div class="coupon-mode" ng-show="action==3">
+				<ul>
+					<li>加息券 {{couponDisabledLength}} 张</li> 
+				</ul>
+				<div class="icons coupons">
+					<div ng-repeat="item in QList | filter: {status: 2}" class="icon-con" ng-class="{0: 'my-active-coupon',1: 'my-used-coupon',2: 'my-disable-coupon'}[item.status]">
+						<p class="title">
+							<span class="lj-btn"></span>
+							<strong><b>{{item.raisedRates}}<i>%</i></b>加息券</strong>
+						</p>
+						<p class="content">
+							<span ng-if="item.fullName == undefined">投资期限：≥{{item.productDeadline}}天（活动标除外）</span>
+							<span ng-if="item.fullName != undefined">限用标的：{{item.fullName}}</span>
+							<span ng-if="item.fullName == undefined">有效期至：{{item.expireDate| date:'yyyy.MM.dd'}}</span>
+							<span ng-if="item.fullName != undefined">有效期至：满标过期</span>
+							<span>加息券来源：{{item.remark}}</span>
+						</p>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- 翻倍券 -->
+			<!--<div class="coupon-mode" ng-show="action==3">-->
+				<!--<ul>-->
+					<!--<li>翻倍券 {{fbqDisabledLength}} 张</li> -->
+				<!--</ul>-->
+				<!--<div class="icons coupons">-->
+					<!--<div ng-repeat="item in FBQList | filter: {status: 2}" class="icon-con icon-conn icon-fbq" ng-class="{0: 'my-active-fbq',1: 'my-used-fbq',2: 'my-disable-fbq'}[item.status]">-->
+						<!--<p class="title">-->
+							<!--<strong><b>{{item.multiple}}</b>倍</strong>-->
+						<!--</p>-->
+						<!--<p class="content">-->
+							<!--<span>投资期限：≥{{item.productDeadline}}天（活动标除外）</span>-->
+							<!--<span>有效期至：{{item.expireDate| date:'yyyy.MM.dd'}}</span>-->
+							<!--<span>作用描述：基础利率翻倍</span>-->
+						<!--</p>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+				<!-- 活动券 -->
+				<!--<div class="coupon-mode" ng-show="action==3" >-->
+					<!--<ul>-->
+						<!--<li>活动券 {{FBQListHDLength3}} 张</li>-->
+					<!--</ul>-->
+					<!--<div class="icons coupons">-->
+						<!--<div ng-repeat="item in FBQListHD | filter: {status: 2}" class="icon-con icon-conn icon-fbq" ng-class="{0: 'my-active-fbq',1: 'my-used-fbq',2: 'my-disable-fbq'}[item.status]">-->
+							<!--<p class="title">-->
+								<!--<strong><b>{{item.multiple}}</b>倍</strong>-->
+							<!--</p>-->
+							<!--<p class="content">-->
+								<!--<span>投资期限：≥{{item.productDeadline}}天（活动标除外）</span>-->
+								<!--<span>有效期至：{{item.expireDate| date:'yyyy.MM.dd'}}</span>-->
+								<!--<span>作用描述：基础利率翻倍</span>-->
+							<!--</p>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+
+			</div>
+			<p class="my-nocoupon" ng-if="HBList.length<1&&QList.length<1"></p>
+		</div>
+
+		<div class="account-common-tips">
+			<p>温馨提示：</p>
+			<p>1. 激活红包需要投资满足相应条件且在投资时“使用优惠券”里勾选使用符合条件的红包，投资后红包自动激活并立即到账；</p>
+			<p>2. 加息券、翻倍券在满足相应条件且在投资时“使用优惠券”里勾选使用符合条件的加息券、翻倍券，投资后自动加息；</p>
+			<p>3. 每笔投资只能激活一个优惠券；</p>
+			<p>4. 体验标、活动标不能激活红包、加息券、翻倍券等优惠券；</p>
+			<p>5. 各类优惠券必须在有效期内使用，过期即过期失效；</p>
+			<p>6. 最终解释权归菠菜理财所有。</p>
+		</div>
+	</div>
+
+</div>

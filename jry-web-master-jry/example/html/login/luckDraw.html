@@ -1,0 +1,154 @@
+<!--luckDrawCtrl.js-->
+<div class="luckDrawClass" ng-controller="luckDrawCtrl">
+  <div class="luckDraw_bg">
+      <div class="luckDraw_img" id="lottery">
+        <div class="luckDraw_img1">
+            <div class="div lottery-unit">
+                <img src="./images/zphd/0simg.png" alt="">
+                <div class="lottery-unit-0"></div>
+            </div>
+            <div class="div lottery-unit">
+                <img src="./images/zphd/1simg.png" alt="">
+                <div class="lottery-unit-1"></div>
+            </div>
+            <div class="div lottery-unit">
+                <img src="./images/zphd/6simg.png" alt="">
+                <div  class="lottery-unit-2"></div>
+            </div>
+            <div class="div lottery-unit">
+                <img src="./images/zphd/7simg.png" alt="">
+                <div class="lottery-unit-3"></div>
+            </div>
+        </div>
+        <div class="luckDraw_img2">
+            <div class="luckDraw_img22">
+               <div class="img lottery-unit">
+                   <img src="./images/zphd/11simg.png" alt="">
+                   <div class="lottery-unit-11"></div>
+               </div>
+               <div class="img2 lottery-unit">
+                   <img src="./images/zphd/10simg.png" alt="">
+                   <div class="lottery-unit-10"></div>
+               </div>
+            </div>
+            <div class="luckDraw_img23">
+                <div id="onclickCj" ng-click="onclickCj()">
+                    <h1 id="djcjFont"></h1>
+                    <p id="dlzhck">{{cjjhlhbd}}</p>
+                </div>
+            </div>
+            <div class="luckDraw_img24">
+                <div class="img lottery-unit">
+                    <img src="./images/zphd/8simg.png" alt="">
+                    <div class="lottery-unit-4"></div>
+                </div>
+                <div class="img2 lottery-unit">
+                    <img src="./images/zphd/2simg.png" alt="">
+                    <div class="lottery-unit-5"></div>
+                </div>
+            </div>
+        </div>
+        <div class="luckDraw_img13">
+              <div class="aa lottery-unit">
+                  <img src="./images/zphd/9simg.png" alt="">
+                  <div class="lottery-unit-9"></div>
+              </div>
+              <div class="aa lottery-unit">
+                  <img src="./images/zphd/5simg.png" alt="">
+                  <div class="lottery-unit-8"></div>
+              </div>
+              <div class="aa lottery-unit">
+                  <img src="./images/zphd/4simg.png" alt="" >
+                  <div class="lottery-unit-7"></div>
+              </div>
+              <div class="aa lottery-unit">
+                  <img src="./images/zphd/3simg.png" alt="">
+                  <div class="lottery-unit-6"></div>
+              </div>
+        </div>
+      </div>
+      <div class="zjjl" style="height: 190px;">
+          <h1>用户中奖记录</h1>
+          <div class="zjjl_border" style="overflow: hidden">
+              <ul  class="wzdhlb">
+                  <li ng-repeat="awordZjs in awordZj">恭喜用户&nbsp{{awordZjs.userId}}&nbsp获得&nbsp{{awordZjs.priceName}}</li>
+              </ul>
+          </div>
+       </div>
+        <div class="luckDraw_hdgz">
+            <p> 1:2017.10.16-10.26（抽奖机会仅在活动期间有效，过期作废）</p>
+            <p>2.注册账户每人每天有1次免费抽奖机会</p>
+            <p>3.注册账户每人每天登录菠菜理财APP，将获得一次免费抽奖机会</p>
+            <p>4.注册账户每人每天登录菠菜理财微信服务号，将获得一次免费抽奖机会</p>
+            <p>5.注册账户成功邀请好友注册，将获得一次免费抽奖机会，每人每天最多三次</p>
+            <p>6.绑卡账户每单笔投资金额每满2,000元（不含新手标和体验标）就多一次抽奖机会，投资越多，抽奖机 </p>
+            <p> &nbsp&nbsp 会就越多</p>
+            <p>7.奖励发放：返现红包、加息券即时发放至用户账户中；京东卡、话费将在中奖以后3个工作日内由客服</p>
+            <p> &nbsp&nbsp 人员联系并发放。</p>
+        </div>
+       <div class="luckDraw_footer">
+         本活动最终解释权为菠菜理财所有,如有疑问请拨打客服热线：400-111-0866。
+      </div>
+      <div id="luckDrawabId" class="luckDrawab">
+          <div class="luckDrawab2">
+              <div class="img2">
+                  <img src="./images/zphd/sjapp2.png" id="wdjbId" alt="" ng-click="wdjbIdClick()">
+              </div>
+              <div class="img">
+                  <img src="./images/zphd/sjapp1.png" alt="" ng-mouseover="img2Hover()" ng-mouseleave="img2leave()">
+              </div>
+              <div class="img"><img src="./images/zphd/sjapp3.png" alt="" ng-mouseover="img3Hover()" ng-mouseleave="img3leave()"></div>
+              <div class="img">
+                  <img id="toTop" src="./images/zphd/sjapp4.png" alt="">
+              </div>
+          </div>
+      </div>
+      <!--弹出的二维码-->
+      <div  class="luckDrawab1" ng-show="luckDrawab1show">
+          <img style="width:100px;" src="images/azlogo.png">
+          <p style="border-bottom: 1px solid #ccc;height: 25px;margin-bottom: 6px;text-align: center">安卓客户端</p>
+          <img style="width:100px;margin-top: 4px" src="images/iosewm.png">
+          <p style="text-align: center">iOS客户端</p>
+      </div>
+      <div  class="luckDrawab1" ng-show="luckDrawab1show333">
+          <img style="width:100px;" src="images/weichar-code.jpg">
+          <p style="text-align: center">官方微信</p>
+      </div>
+
+      <!--奖品动画-->
+      <!--<div ng-class = "{'nganimation': true, 'nganimation22': isnganimation22, 'nganimation33': isnganimation33}" ng-show="nganimation">-->
+          <!--我的奖品-->
+      <!--</div>-->
+      <div ng-class = "{'nganimation': true, 'nganimation22': isnganimation2Show,}" ng-show="nganimationShow">
+          您中奖了
+          <div>{{fontWORD}}</div>
+      </div>
+        <!--我的奖品-->
+      <!--</div>-->
+      <div class="luckDraw_absolute"  ng-click="luckDrawab1Click()" ng-show="luckDraw_absolute"></div>
+      <!--<div class="luckDraw_absolute"  ng-click="luckDrawab1Click()" id="luckDraw_absolute"></div>-->
+     <!--没有次数快去抽奖-->
+      <div class="luckDraw_absolute2" ng-show="luckDraw_absolute2Show22">
+          <div class="div">
+              <h1>您暂无抽奖机会快去投资吧</h1>
+              <button class="btn" ng-click="yqhyHd()">去邀友</button>
+              <button ng-click="wytzHd()">去投资</button>
+          </div>
+
+      </div>
+      <!--我的奖品展示-->
+      <div class="luckDraw_absolute3" ng-show="luckDraw_absolute3Show3">
+          <h1>我的中奖记录</h1>
+          <div class="table_bg">
+              <ul>
+                  <li ng-repeat="wdjpZjs in wdjpZj">
+                      <div ng-style="setColor(wdjpZjs.type)">
+                          {{wdjpZjs.priceName}}
+                      </div>
+                  </li>
+              </ul>
+              <button ng-click="ljckClick()">立即查看</button>
+          </div>
+      </div>
+  </div>
+</div>

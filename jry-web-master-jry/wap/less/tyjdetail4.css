@@ -1,0 +1,287 @@
+.tyjdetail main.main {
+  position: relative;
+  margin: 0.74074rem 0;
+  background-color: #fff;
+  padding-bottom: 0.98765rem;
+}
+.tyjdetail main.main h2 {
+  font-size: 1.2rem;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 0.49383rem 1.23457rem;
+}
+.tyjdetail main.main h3 {
+  font-size: 1.2rem;
+  margin: 0.98765rem 0;
+  text-align: center;
+  color: #e84034;
+}
+.tyjdetail main.main .center-box {
+  padding: 0 0.98765rem;
+}
+.tyjdetail main.main .center-box div {
+  float: left;
+  width: 50%;
+}
+.tyjdetail main.main .center-box div h4 {
+  font-size: 0.8rem;
+  color: #808080;
+  text-align: center;
+}
+.tyjdetail main.main .center-box div p {
+  color: #f4524a;
+  font-size: 3rem;
+  text-align: center;
+}
+.tyjdetail main.main .center-box div p i {
+  font-size: 2rem;
+}
+.tyjdetail main.main .center-box footer {
+  clear: both;
+}
+.tyjdetail main.main .message {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.98765rem;
+}
+.tyjdetail .rule-box {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1.7284rem 1.23457rem 2.96296rem 1.23457rem;
+  box-sizing: border-box;
+}
+.tyjdetail .rule-box header p {
+  color: #333333;
+  font-size: 0.9rem;
+  line-height: 1.60494rem;
+  padding: 0 0.74074rem;
+  box-sizing: border-box;
+}
+.tyjdetail .rule-box header p span {
+  color: #ff0000;
+}
+.tyjdetail .rule-box .rule {
+  margin-top: 1.23457rem;
+}
+.tyjdetail .rule-box .rule p {
+  color: #333333;
+  font-size: 0.9rem;
+  height: 1.60494rem;
+  line-height: 1.60494rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+.tyjdetail .rule-box .rule p img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 1rem;
+}
+.tyjdetail .rule-box .rule ul {
+  list-style-type: disc;
+  padding-left: 1.23457rem;
+  box-sizing: border-box;
+}
+.tyjdetail .rule-box .rule ul li {
+  color: #b7b7b7;
+  font-size: 0.9rem;
+  line-height: 1.60494rem;
+}
+.tyjdetail .full {
+  width: 100%;
+  display: block;
+}
+.tyjdetail .confirm-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.tyjdetail .confirm-box main {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0.24691rem 0 0.74074rem 0;
+}
+.tyjdetail .confirm-box main h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.74074rem;
+  color: #4e4e4e;
+  margin-top: 0.24691rem;
+}
+.tyjdetail .confirm-box main .info {
+  font-size: 1rem;
+  color: #999999;
+  padding-left: 1.48148rem;
+  margin-bottom: 0.98765rem;
+  margin-top: 0.49383rem;
+}
+.tyjdetail .confirm-box main .quan-box {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  color: #ffffff;
+}
+.tyjdetail .confirm-box main .quan-box .quan {
+  width: 80%;
+  position: relative;
+}
+.tyjdetail .confirm-box main .quan-box .quan img {
+  width: 100%;
+  display: block;
+}
+.tyjdetail .confirm-box main .quan-box .quan div {
+  position: absolute;
+  top: 1.48148rem;
+  left: 7.90123rem;
+}
+.tyjdetail .confirm-box main .quan-box .quan div p {
+  margin-bottom: 0.74074rem;
+  font-size: 1.15rem;
+}
+.tyjdetail .confirm-box main .quan-box .correct {
+  width: 20%;
+  text-align: center;
+}
+.tyjdetail .confirm-box main .quan-box .correct img {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  top: 2.46914rem;
+}
+.tyjdetail .confirm-box main .confirm-button {
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+  height: 2.71605rem;
+  border-radius: 0.3rem;
+  line-height: 2.71605rem;
+  background-color: #e84034;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+.tyjdetail .confirm-box main .confirm-button:disabled {
+  background-color: #808080;
+}
+.tyjdetail .confirm-box main .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.3rem;
+  padding: 0.8rem 0.8rem 0 0;
+  z-index: 150;
+}
+.tyjdetail .depository {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+.tyjdetail .depository .depository-box {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding-bottom: 0.37037rem;
+  border-radius: 0.24691rem;
+  overflow: hidden;
+}
+.tyjdetail .depository .depository-box header img {
+  width: 100%;
+  display: block;
+}
+.tyjdetail .depository .depository-box main {
+  padding: 0 0 0.98765rem 0;
+  background-color: #f9f9f9;
+}
+.tyjdetail .depository .depository-box main p {
+  color: #7a7a7a;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.tyjdetail .depository .depository-box main div {
+  margin: 0.98765rem 0;
+}
+.tyjdetail .depository .depository-box main div h2 {
+  font-size: 1.2rem;
+  color: #333333;
+  text-align: center;
+  font-weight: bold;
+}
+.tyjdetail .depository .depository-box footer {
+  padding-top: 0.98765rem;
+}
+.tyjdetail .depository .depository-box footer h5 {
+  color: #7a7a7a;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.tyjdetail .depository .depository-box footer p {
+  text-align: center;
+  color: #f04848;
+  height: 2.71605rem;
+  line-height: 2.71605rem;
+  font-size: 1.2rem;
+}
+.tyjdetail .depository .depository-box footer div {
+  text-align: center;
+  font-size: 1.2rem;
+  height: 2.71605rem;
+  line-height: 2.71605rem;
+}
+.tyjdetail .depository .depository-box footer .button-agree {
+  background-color: #e84034;
+  width: 90%;
+  margin: 0 auto;
+  color: #ffffff;
+  border-radius: 0.5rem;
+}
+.tyjdetail .depository .depository-box footer .button-close {
+  color: #939393;
+  margin-top: 0.49383rem;
+}
+.tyjdetail .depository .depository-box .close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1rem;
+  padding-top: 0.8rem;
+  padding-right: 0.8rem;
+}
+.tyjSuccess .investSuccess-info {
+  padding-bottom: 4.93827rem;
+}
+.tyjSuccess .message {
+  margin-top: 3.95062rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.tyjSuccess .message span {
+  color: #e84034;
+}
+.tyjSuccess .bottom-btn {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}

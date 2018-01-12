@@ -1,0 +1,10 @@
+<div class="finnace-dialog">
+	<div class="title"><i class="finance-success"></i>认证成功！</div>
+	<p>您共获得68888元体验金和588元现金红包！</p>
+	<div class="btn">
+		<a href="/main/myAccount/myFinance" ng-if="isCps == 0" ng-click="closeDialog('myFinance')">查看</a>
+		<a href="/main/myAccount/myCoupon" ng-if="isCps == 1" ng-click="closeDialog('myCoupon')">查看</a>
+		<a href="/main/billDetail?id=1379" class="go" ng-if="isCps == 0" ng-click="closeDialog()">去赚钱</a>
+		<a href="/main/bankBillList" class="go" ng-if="isCps == 1" ng-click="closeDialog()">去赚钱</a>
+	</div>
+</div>

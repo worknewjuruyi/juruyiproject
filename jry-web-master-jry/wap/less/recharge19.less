@@ -1,0 +1,618 @@
+@charset "utf-8";
+@min: '@2x.png';
+@max: '@3x.png';
+.ml(@n){
+  margin-left: @n;
+}
+.mr(@n){
+  margin-right: @n;
+}
+.mt(@n){
+  margin-top:@n;
+}
+.mb(@n){
+  margin-bottom:@n;
+}
+.pl(@n){
+  padding-left: @n;
+}
+.pr(@n){
+  padding-right: @n;
+}
+.pt(@n){
+  padding-top:@n;
+}
+.pb(@n){
+  padding-bottom:@n;
+}
+.bg-c(@c){
+  background-color: @c;
+}
+.br(@deg){
+  border-radius: @deg;
+}
+.bg-image(@url){
+@media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+    background-image:url('@{url}@{max}');
+    background-size:cover; 
+}
+background-image:url('@{url}@{min}');
+background-size:cover; 
+}
+
+.font-size(@val){
+    font-size: @val;
+    [data-dpr="2"] &{
+        font-size: 2*@val
+    }
+
+    [data-dpr="3"] &{
+        font-size: 3*@val
+    }
+
+    [data-dpr="4"] &{
+        font-size: 4*@val
+    }
+}
+
+//oldcss
+.recharge-wrapper {
+  .recharge-wrap {
+    .card-box {
+      background-color: #ffffff;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 1.48148rem 0 0.98765rem 0;
+      display: flex;
+      align-content: space-between;
+      justify-content: center;
+      .card-info {
+        text-align: center;
+        img {
+          width: 2.96296rem;
+        }
+        h2 {
+          color: #333333;
+          font-size: 1rem;
+        }
+        p {
+          color: #999999;
+          font-size: 0.9rem;
+        }
+        &:nth-of-type(2) {
+          margin: 0 0.74074rem;
+          position: relative;
+          width: 8.64198rem;
+          img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+          }
+        }
+      }
+    }
+    .recharge-reminder {
+      line-height: 2.22222rem;
+      font-size: 0.9rem;
+      color: #999999;
+      padding: 0 0.98765rem;
+    }
+    form {
+      width: 100%;
+      .input-box {
+        padding: 0.98765rem 1.23457rem;
+        position: relative;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+        width: 100%;
+        overflow: hidden;
+        color: #333333;
+        font-size: 1.1rem;
+        background-color: #ffffff;
+        label {
+          width: 15%;
+          float: left;
+        }
+        input {
+          width: 85%;
+          font-size: 1.1rem;
+        }
+        span {
+          position: absolute;
+          top: 0.98765rem;
+          right: 0.98765rem;
+        }
+        footer {
+          clear: both;
+        }
+      }
+    }
+    .recharge-bot-tips {
+      margin-top: 2.22222rem;
+      padding: 0 1.23457rem;
+      h3 {
+        font-size: 1rem;
+        color: #333333;
+        line-height: 2.22222rem;
+      }
+      p {
+        font-size: 0.9rem;
+        color: #999999;
+        line-height: 1.7284rem;
+      }
+    }
+  }
+  .recharge-wrap2 {
+    & > div {
+      margin-top: 0.7rem;
+      background-color: #ffffff;
+      padding-left: 1.23457rem;
+      border-bottom: 1px solid #cccccc;
+      ul {
+        li {
+          height: 3.45679rem;
+          line-height: 3.45679rem;
+          font-size: 1rem;
+          padding-right: 1.23457rem;
+          border-bottom: 1px solid #cccccc;
+          display: flex;
+          justify-content: space-between;
+          color: #4d4d4d;
+          &:last-of-type {
+            border: none;
+          }
+        }
+      }
+    }
+    form {
+      width: 100%;
+      margin-top: 0.9rem;
+      & > div {
+        padding-left: 1.23457rem;
+        border-bottom: 1px solid #cccccc;
+        background-color: #ffffff;
+        .input-box {
+          border-bottom: 1px solid #cccccc;
+          padding: 1.23457rem 0 1.23457rem 1.97531rem;
+          width: 100%;
+          box-sizing: border-box;
+          position: relative;
+          &:last-of-type {
+            border: none;
+          }
+          img {
+            width: 0.88889rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+          }
+          input {
+            width: 100%;
+            color: #4d4d4d;
+            font-size: 1rem;
+          }
+          span {
+            position: absolute;
+            right: 1.23457rem;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 6.41975rem;
+            height: 1.97531rem;
+            line-height: 1.97531rem;
+            box-sizing: border-box;
+            border: 1px solid #00a8a8;
+            color: #00a8a8;
+            font-size: 0.9rem;
+            text-align: center;
+            border-radius: 0.19753rem;
+          }
+        }
+      }
+      .sub-btn {
+        width: 23.90123rem;
+        height: 3.45679rem;
+        line-height: 3.45679rem;
+        text-align: center;
+        border-radius: 0.2963rem;
+        background: #00a8a8;
+        font-size: 1.2rem;
+        color: #fff;
+        display: block;
+        margin: 4.93827rem auto;
+        &:disabled {
+          background-color: #bbbbbb;
+        }
+      }
+    }
+  }
+  .getCash-recharge-wrap {
+    .card-box {
+      background: #fff;
+      overflow: hidden;
+      img {
+        float: left;
+        margin: 0.98765rem 0 0.98765rem 1.38272rem;
+        width: 10.61728rem;
+      }
+      .card-info {
+        float: right;
+        text-align: right;
+        font-size: 1.18519rem;
+        color: #333;
+        padding: 1.18519rem 1.38272rem 0 0;
+        .card-tip {
+          font-size: 1.03704rem;
+          padding-top: 0.24691rem;
+          color: #999;
+          padding-bottom: 1.03704rem;
+        }
+      }
+    }
+  }
+  .rest-box {
+    height: 3.20988rem;
+    line-height: 3.20988rem;
+    padding: 0 1.38272rem;
+    margin: 0.98765rem 0;
+    background: #fff;
+    overflow: hidden;
+    font-size: 1.18519rem;
+    .name {
+      float: left;
+      color: #a0a0a0;
+    }
+    .count {
+      float: right;
+      color: #333;
+    }
+  }
+  .cash-box {
+    height: 2.76543rem;
+    line-height: 2.76543rem;
+    padding: 0 1.38272rem;
+    font-size: 1.18519rem;
+    color: #333;
+    background: #fff;
+    &.recharge-box {
+      input {
+        width: 19.75309rem;
+      }
+      span {
+        float: right;
+      }
+    }
+    .setPwd {
+      display: block;
+      font-size: 0.98765rem;
+      color: #ff6400;
+      line-height: 2.46914rem;
+    }
+    .cash {
+      float: left;
+      width: 13.08642rem;
+    }
+    .wd {
+      float: left;
+    }
+    .all {
+      float: right;
+      span {
+        width: 3.55556rem;
+        height: 2.07407rem;
+        float: right;
+        margin: 0.32099rem 0 0 0.54321rem;
+        background: #fff;
+        border: 1px solid #d2d2d2;
+        border-radius: 50px;
+        position: relative;
+        i {
+          width: 2.07407rem;
+          height: 2.07407rem;
+          border-radius: 50px;
+          position: absolute;
+          left: -1px;
+          top: -1px;
+          box-shadow: 2px 2px 2px rgba(210, 210, 210, 0.4);
+          border: 1px solid #d2d2d2;
+          background: #fff;
+        }
+      }
+    }
+  }
+  .cash-info {
+    table {
+      height: 5.67901rem;
+      font-size: 0.98765rem;
+      color: #333;
+      p {
+        padding-left: 1.38272rem;
+        &.cost {
+          padding-bottom: 0.61728rem;
+        }
+        span {
+          color: #ff6400;
+        }
+      }
+    }
+  }
+  &.cash-wrapper {
+    .sxf-tips {
+      width: 94%;
+      margin: 1.23457rem auto;
+      margin-top: 0.24691rem;
+      background-color: #f0f0f0;
+      border: 1px solid #dedede;
+      padding: 0.49383rem 0.74074rem;
+      box-sizing: border-box;
+      p {
+        color: #999999;
+        line-height: 1.48148rem;
+      }
+    }
+  }
+  .sub-box {
+    width: 23.90123rem;
+    margin: 2.37037rem auto 0;
+    &.recharge-sub {
+      margin-top: 0;
+      .sub-btn {
+        height: 3.45679rem;
+        line-height: 3.45679rem;
+      }
+    }
+  }
+  .sub-btn {
+    width: 23.90123rem;
+    height: 2.76543rem;
+    line-height: 2.76543rem;
+    text-align: center;
+    border-radius: 0.39506rem;
+    background: #00a8a8;
+    font-size: 1.38272rem;
+    color: #fff;
+  }
+}
+.ngdialog {
+  &.ngdialog-theme-default {
+    &.recharge-dialog-wrap {
+      .ngdialog-content {
+        width: 21.83333rem !important;
+        max-width: 21.83333rem !important;
+        border-radius: 0.66667rem;
+        overflow: hidden;
+      }
+    }
+  }
+}
+.recharge-dialog {
+  width: 21.83333rem;
+  border-radius: 0.66667rem;
+  background: #fff;
+  overflow: hidden;
+  &.forget {
+    p {
+      width: 19.16667rem;
+      text-align: center;
+      padding-top: 0.83333rem;
+      margin: 0 auto;
+    }
+    .btns {
+      border-top: 1px solid #666;
+      overflow: hidden;
+      margin-top: 2.16667rem;
+      padding: 0;
+      span {
+        color: #ff6400;
+      }
+      .right {
+        border-left: 1px solid #666;
+        margin-left: -1px;
+        position: relative;
+      }
+    }
+  }
+  .title {
+    margin-right: 1.08333rem;
+    margin-left: 1.08333rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #333;
+    border-bottom: 1px solid #d2d2d2;
+  }
+  .num {
+    padding-top: 1.83333rem;
+    padding-bottom: 0.70833rem;
+    padding-left: 1.66667rem;
+    font-size: 1.08333rem;
+    color: #666;
+  }
+  .code {
+    width: 19.75rem;
+    height: 2.70833rem;
+    line-height: 2.70833rem;
+    background: #f8f8f8;
+    font-size: 1.16667rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.375rem;
+    margin: 0 auto;
+    a {
+      float: right;
+      color: #ff6400;
+      padding-right: 0.66667rem;
+    }
+    input {
+      float: left;
+      width: 12.08333rem;
+      padding-left: 0.5rem;
+      color: #666;
+      height: 2.70833rem;
+      line-height: 2.70833rem;
+    }
+  }
+  .btns {
+    padding-top: 2.16667rem;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 3rem;
+    input {
+      width: 50%;
+      height: 3rem;
+      background: #ffc800;
+      color: #fff;
+      float: right;
+    }
+    span {
+      float: left;
+      width: 50%;
+      color: #a0a0a0;
+    }
+  }
+}
+
+
+//newcss
+//提现
+.cash-wrapper{
+    //用户可用余额
+    .cash-userful{
+        padding: 0.93rem 0;
+        background-color: white;
+        text-align: center;
+        h4{
+            .font-size(14px);
+            color: #9c9dae;
+        }
+        p{
+            .font-size(44px);
+            color: #3D3F4C;
+            margin-top: 0.4rem;
+        }
+    }
+    //关联银行卡
+    .bind-card{
+        background-color: white;
+        height: 1.6rem;
+        margin-top: 2px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        .bind-cardW{
+            line-height: 1.6rem;
+            margin-left: 0.4rem;
+            .font-size(16px);
+            color: #3D3F4C;
+        }
+        .bind-card-detail{
+            margin-right: 0.4rem;
+            display: flex;  
+            align-self: center;                   
+            .card-img{
+                width: 0.85rem;
+                height: 0.85rem;
+                .bg-image("../images/recharge2/bank_zs");
+                float: left;
+                align-self: center;
+            }
+            .card-img-msg{                
+                float: left;
+                margin-left: 0.13rem;
+                p{
+                    color: #3d3f4c;
+                    .font-size(16px);
+                    margin-bottom: 0.1rem;
+                }
+                span{
+                    .font-size(12px);
+                    color: #9c9dae;
+                }
+            }
+        }
+    }
+    //友情提示
+    .friendly-tips{
+        padding: 0.26rem 0 0.4rem 0;
+        background-color: #F2F2F2;
+        p{
+            padding-left: 0.4rem;
+            .font-size(14px);
+            color: #9C9DAE;
+        }
+    }
+    //输入金额
+    .input-cashNum{
+        height: 1.17rem;
+        background-color: white;
+        position: relative;
+        p{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1.17rem;
+            margin-left: 0.4rem;
+            line-height: 1.16rem;
+            .font-size(16px);
+            color: #3D3F4C;
+        }
+        input{
+          .font-size(16px);
+          padding-left: 1.52rem;  
+          height: 1.17rem;
+          border: none;
+          outline: none;
+          background: none;
+          
+        }
+        
+        //placeholder颜色
+        input::-webkit-input-placeholder {   
+          color: #9C9DAE;  
+        }  
+        input:-moz-placeholder { 
+          color: #9C9DAE;   
+        }  
+        input::-moz-placeholder {  
+          color: #9C9DAE;   
+        }  
+        input:-ms-input-placeholder {  
+          color: #9C9DAE;   
+        }
+    }
+    //说明
+    .explain{
+        padding: 0.26rem 0 0 0.4rem;
+        p{
+            color: #9C9DAE;
+            .font-size(14px);
+            margin-bottom: 0.06rem;
+            em{
+                color: #FF4B3B;
+            }
+        }
+        span{
+            color: #9C9DAE;
+            .font-size(14px);
+        }
+    }
+    //提现
+    .get-btn{
+        width: 9.2rem;
+        height: 1.17rem;
+        border-radius: 0.1rem;
+        text-align: center;
+        line-height: 1.17rem;
+        .font-size(16px);
+        color: white;
+        background-color: #5665f5;
+        margin: 0 auto;
+        margin-top: 0.4rem;
+    }
+}

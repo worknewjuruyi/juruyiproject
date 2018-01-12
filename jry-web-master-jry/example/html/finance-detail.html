@@ -1,0 +1,86 @@
+<!--financeDetailCtrl.js-->
+<!--体验金投资界面-->
+<div ng-controller="financeDetailCtrl" class="newhand-detail finance-detail-wrapper">
+	<!-- <div class="bread-nav-wrapper new-bread-wrapper">
+		<div class="bread-nav">
+			<div class="bread-box"><span ng-repeat="item in path"><a href="{{item.url}}">{{item.pathName}}</a> > </span>{{title}}</div>
+		</div>
+	</div> -->
+
+	<div class="bill-detail-wrap">
+		<div class="bill-detail-content">
+			<div class="bill-detail-box">
+				<div class="bill-detail">
+					<div class="detail-box">
+						<div class="title">{{product.fullName}}</div>
+						<ul>
+							<li>
+								<h1 class="rate">{{product.rate | number:1}}<span>%</span></h1>
+								<p>历史年化收益</p>
+							</li>
+							<li>
+								<h1>{{product.deadline}}天</h1>
+								<p>投资期限</p>
+							</li>
+							<li>
+								<h1>{{investCount}}</h1>
+								<p>已体验人数</p>
+							</li>
+						</ul>
+						<p class="warning">*体验金不可与其他优惠同时使用，支付后扣除</p>
+					</div>
+				</div>
+				<div class="bill-form-wrap">
+					<div ng-if="product.status == 5" class="form-box">
+						<h1>可投金额：<span>{{experienceAmount.experAmount || 0}}元</span></h1>
+						<h1 ng-if="isLogin">可用体验金余额：<span>{{experienceAmount.experAmount}}元</span></h1>
+						<h2 ng-if="!isLogin">可用体验金余额：<span ui-sref="login">登录</span>后显示</h2>
+						<form>
+							<div class="input-box">
+								<ul>
+									<li>
+										<input disabled class="text" type="text" value="可投金额 {{experienceAmount.experAmount}} 元">
+									</li>
+								</ul>
+							</div>
+							<div class="profit">预计利息收益：<b>{{(((product.rate)/100) / 360 * experienceAmount.experAmount * product.deadline) | isNumber2}}</b>	元</div>
+							<div class="sub-box">
+								<input ng-if="isLogin" type="submit" ng-disabled="experienceAmount.experAmount <= 0" ng-click="onClick('立即投资')" class="button" value="立即投资">
+								<input ng-if="!isLogin" type="submit" ng-click="onClick('登录')" class="button" value="登录后查看详情">
+							</div>
+							<!-- <div class="bot">*体验金不可与其他优惠同时使用，支付后扣除</div> -->
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="newhand-detail-info">
+			<div class="newhand-new-wrap">
+				<div class="newhand-mode">
+					<div class="newwrap-title">产品描述</div>
+					<div class="finance-con">
+						<div class="top">
+							<b>举个栗子：</b>
+							<b>小明有50000元体验金,那么他的到期收益为</b>
+							<p>50000*{{product.rate}}%/360*1=<span>{{((product.rate/100) / 360 * 50000 * product.deadline) | isNumber2}}元</span></p>
+						</div>
+						<div class="bot">
+							<div class="title"><i class="finance-tip"></i>体验标说明：</div>
+							<ul>
+								<li><i class="finance-dot"></i>仅限使用菠菜理财体验金进行投资，标的为虚拟体验，可产生投资收益；</li>
+								<li><i class="finance-dot"></i>投资体验标无需实名认证，投资次日计息；</li>
+								<li><i class="finance-dot"></i>体验标投资到期后，所得收益以现金形式存入用户的账户，归用户所有，可提现；</li>
+								<li><i class="finance-dot"></i>体验金收益需完成一次真实投资后才可提现；</li>
+								<li><i class="finance-dot"></i>投资后体验金本金会由平台收回。 本规则解释权归菠菜理财所有；</li>
+								<li><i class="finance-dot"></i>如有疑问请拨打客服热线：400-111-0866</li>
+							</ul>
+						</div>
+						<i class="finance-detailicon"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

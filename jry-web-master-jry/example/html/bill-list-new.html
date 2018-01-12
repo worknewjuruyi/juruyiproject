@@ -1,0 +1,68 @@
+<!--bankBillCtrl.js-->
+<div ng-controller="bankBillCtrl">
+	<div class="bill-content-wrapper">
+		<div class="bill-content-banner"></div>
+		<div class="bill-list-wrap">
+			<div class="list-title">优选理财<span>定期投资 分散投标</span></div>
+
+			<div class="list-box">
+				<!--列表循环-->
+				<div class="list-mode-box" ng-repeat="item in youList">
+					<h1>{{item.fullName}}<span ng-if="item.isCash==1">红包</span><span ng-if="item.isInterest==1">加息券</span></h1>
+					<ul>
+						<li class="rate-box">
+							<h1 class="rate">{{item.rate | number:1}}<span>%</span> <span class="activity-rate" ng-if="item.activityRate > 0">+{{item.activityRate | number:1}}%</span></h1>
+							<p>历史年化利率</p>
+						</li>
+						<li class="term-box">
+							<h1>{{item.deadline}}天</h1>
+							<p>投资期限</p>
+						</li>
+						<li class="start-box">
+							<h1>{{item.leastaAmount}}元</h1>
+							<p>起投金额</p>
+						</li>
+						<li class="total-box">
+							<h1>{{item.amount | number:0}}元</h1>
+							<p>总投资额</p>
+						</li>
+						<li class="percentage-box">
+							<div>
+								<h2>{{item.pert | setProgress}}%</h2>
+								<div class="percentage"><span ng-attr-style="width: {{item.pert | setProgress}}%"></span></div>
+							</div>
+						</li>
+						<li class="invest-btn-box">
+							<div ui-sref="main.billDetail({ id: item.id })" class="button">{{(item.status | isProductType).cnvalue}}</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 页码分页 -->
+		<div class="past-page-wrap">
+			<div class="page-wrap" ng-if="bill.pages.length > 0">
+				<div class="page-box">
+					<!--$scope.bill.pages.legth为总页码数量
+				    $scope.bill.pageOn为分页器起始页
+				    $scope.onClickPage为点击页码请求数据-->
+					<a ng-if="bill.pageOn != 1" href ng-click="onClickPage('beforPage',bill.pageOn)" class="prev">上一页</a>
+					<ul>
+						<li ng-if="bill.pageOn != 1" ng-click="onClickPage('currentPage',1)"><a href="">1</a></li>
+						<li ng-if="bill.pages.length > 5 && bill.pageOn > 3"><span>...</span></li>
+						<li ng-if="bill.pageOn == bill.pages.length && bill.pages.length > 4" ng-click="onClickPage('currentPage',bill.pageOn-3)"><a href="">{{bill.pageOn-3}}</a></li>
+						<li ng-if="(bill.pageOn == bill.pages.length || bill.pageOn == bill.pages.length - 1) && bill.pages.length>3 && bill.pageOn!=3" ng-click="onClickPage('currentPage',bill.pageOn-2)"><a href="">{{bill.pageOn-2}}</a></li>
+						<li ng-if="bill.pageOn-1 > 1" ng-click="onClickPage('currentPage',bill.pageOn-1)"><a href="">{{bill.pageOn-1}}</a></li>
+						<li ng-click="onClickPage('currentPage',bill.pageOn)"><a href="" class="cur">{{bill.pageOn}}</a></li>
+						<li ng-if="bill.pageOn+1 < bill.pages.length" ng-click="onClickPage('currentPage',bill.pageOn+1)"><a href="">{{bill.pageOn+1}}</a></li>
+						<li ng-if="bill.pageOn == 1 && bill.pages.length>3" ng-click="onClickPage('currentPage',3)"><a href="">3</a></li>
+						<li ng-if="(bill.pageOn == 1 || bill.pageOn == 2) && bill.pages.length>4" ng-click="onClickPage('currentPage',4)"><a href="">4</a></li>
+						<li ng-if="bill.pages.length > 5 && (bill.pageOn < (bill.pages.length - 2))"><span>...</span></li>
+						<li ng-if="bill.pageOn != bill.pages.length" ng-click="onClickPage('currentPage',bill.pages.length)"><a href="">{{bill.pages.length}}</a></li>
+					</ul>
+					<a ng-if="bill.pageOn != bill.pages.length" href class="next" ng-click="onClickPage('nextPage',bill.pageOn)">下一页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

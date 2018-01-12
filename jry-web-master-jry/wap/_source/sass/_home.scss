@@ -1,0 +1,355 @@
+.home-wrapper{
+	background: #f2f2f2;
+	padding-bottom: 4rem;
+	.home-banner{
+		border-bottom: 1px solid #d2d2d2;
+		width: 100%;
+		overflow: hidden;
+		img{
+			width: 100%;
+			display: block;
+		}
+		.banner-img{
+			position: relative;
+			height: rem-calc(381px,750);
+		}
+		.trigger-wrap{
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			top: rem-calc(503);
+			background: none;
+			border: none;
+			.trigger-box{
+				margin-right: rem-calc(-34);
+			}
+			i{
+				width: rem-calc(20);
+				height: rem-calc(20);
+				border-radius: rem-calc(20);
+				margin-right: rem-calc(34);
+				display: inline-block;
+				text-indent: -999em;
+				cursor: pointer;
+				background: rgba(255,255,255,.6);
+				&.active{
+					background: #fff;
+				}
+			}
+			margin: 0 auto;
+		}
+	}
+	.notice-box{
+		height: 2rem;
+		overflow: hidden;
+		position: relative;
+		padding-left: 2.5rem;
+		padding: 0.3rem 0.8rem 0.3rem 2.5rem;
+		img{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 1rem;
+			width: 1rem;
+			margin: auto;
+		}
+		>div{
+			width: 100%;
+			height: 2rem;
+			overflow: hidden;
+			ul{
+				li{
+					width: 100%;
+					overflow:hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					line-height: 2rem;
+					color: #666666;
+				}
+			}
+		}
+	}
+	.middle-tab{
+		background: #FFFFFF;
+		margin-bottom: 0.8rem;
+		overflow: hidden;
+		border-top: 1px solid #E0E0E0;
+		border-bottom: 1px solid #E0E0E0;
+		>div{
+			box-sizing: border-box;
+			float: left;
+			width: 50%;
+			padding: 1rem 0;
+			text-align: center;
+			&:nth-of-type(1){
+				border-right: 1px solid #EAEAEA;
+			}
+			>div{
+				display: inline-block;
+				overflow: hidden;
+				img{
+					float: left;
+					width: 2.5rem;
+					margin-right: 0.8rem;
+				}
+				>div{
+					float: left;
+					text-align: left;
+					h3{
+						color: #333333;
+						font-size: 0.9rem;
+					}
+					p{
+						color: #999999;
+						font-size: 0.8rem;
+					}
+				}
+			}
+		}
+	}
+	.logo{
+		padding: rem-calc(25px 0);
+		img{
+			width: 32%;
+			display: block;
+			padding-left:5%;
+		}
+		p{
+			float: right;
+			padding-right: rem-calc(60);
+			font-size: 1.1rem;
+			color: #666;
+			line-height: 2.5rem;
+			span,a{
+				color: #00A8A8;
+			}
+			span{
+				margin: rem-calc(0 40);
+			}
+		}
+	}
+	.home-cplist{
+		.home-cpbox-b{
+			width: 100%;
+			max-width: 750px;
+			border-top: 1px solid #CCCCCC;
+			border-bottom: 1px solid #CCCCCC;
+			margin-bottom: 0.7rem;
+			background-color: #FFFFFF;
+			&.home-cpbox-newhand{
+				main{
+					.part-a{
+						p{
+							font-size: 2.5rem;
+							color: #FF6300;
+							>span{
+								font-size: 1.2rem;
+							}
+							sup{
+								font-size: 1.2rem;
+								span{
+									font-size: 0.9rem;
+								}
+							}
+						}
+					}
+					.part-c{
+						width: 5rem;
+						height: 5rem;
+						overflow: hidden;
+						position: relative;
+
+						border-radius: initial;
+						border: none;
+						line-height: initial;
+						box-sizing: initial;
+						text-align: initial;
+						color: initial;
+						font-size: initial;
+						p{
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							text-align: center;
+							height: 5rem;
+							line-height: 5rem;
+							color: #666666;
+							font-size: 0.9rem;
+						}
+					}
+				}
+			}
+			header{
+				border-bottom: 1px solid #DCDCDC;
+				height: rem-calc(140);
+				line-height: rem-calc(140);
+				color: #333333;
+				font-size: 1.1rem;
+				padding-left: rem-calc(125);
+				position: relative;
+				img{
+					width: 1.3rem;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: rem-calc(50);
+					margin: auto;
+				}
+				span{
+					color: #ff6400;
+					border: 1px solid #ff6400;
+					font-size: 0.8rem;
+					padding: rem-calc(4) rem-calc(15);
+					border-radius: 0.15rem;
+					margin-left: rem-calc(30);
+				}
+			}
+			main{
+				padding: rem-calc(60) rem-calc(50);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				>div{
+					&.part-a{
+						font-size: 2.5rem;
+						color: #ff6400;
+						>span{
+							font-size: 1.2rem;
+						}
+					}
+					&.part-b{
+						font-size: 1.8rem;
+						color: #666666;
+						text-align: center;
+						span{
+							font-size: 1.1rem;
+						}
+					}
+					&.part-c{
+						width: rem-calc(180);
+						height: rem-calc(180);
+						border-radius: rem-calc(90);
+						border: rem-calc(12) solid #00CDB3;
+						line-height: rem-calc(156);
+						box-sizing: border-box;
+						text-align: center;
+						color: #00CDB3;
+						font-size: 0.9rem;
+					}
+				}
+				footer{
+					clear: both;
+				}
+			}
+		}
+	}
+	.footer-adv{
+		height: rem-calc(120);
+		padding: 0 rem-calc(70) rem-calc(30);
+		box-sizing: border-box;
+		>div{
+			float: left;
+			width: 32%;
+			height: rem-calc(90);
+			position: relative;
+			img{
+				position: absolute;
+				width: rem-calc(60);
+				left: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			>div{
+				padding-left: rem-calc(80);
+				p{
+					line-height: rem-calc(45);
+					height: rem-calc(45);
+					color: #A8A8A8;
+				}
+			}
+		}
+	}
+}
+.home-modal{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+	z-index: 999;
+	.home-modal-mask{
+		height: 100%;
+		width: 100%;
+		background: rgba(0,0,0,.4);
+	}
+	.luckEnter{
+		width: 95%;
+		min-height: 24rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		-webkit-transform: translate(-50%,-50%);
+		background: url('/images/activity/luckDraw/luckEnter-bg.png') top center no-repeat;
+		background-size: 100% auto;
+		padding-top: 1px;
+		.close-mask{
+			position: absolute;
+			top: 0px;
+			right: 10%;
+			display: block;
+			height: 2rem;
+			width: 2rem;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 2rem;
+			color: #fff;
+			i{
+				display: block;
+				transform: scaleX(1.4);
+				-webkit-transform: scaleX(1.4);
+			}
+		}
+		> p{
+			height: 2rem;
+			color: #fff;
+			text-align: center;
+			margin-top: 48%;
+			font-size: 1.13rem;
+			span{
+				i{
+					font-size: 1.5rem;
+					vertical-align: middle;
+					position: relative;
+					top: -3px;
+				}
+			}
+		}
+		.btn-group{
+			width: 80%;
+			margin: 3.6rem auto 0;
+			display: flex;
+			display: -webkit-flex;
+			justify-content: space-between;
+			-webkit-justify-content: space-between;
+			&.btn-center{
+				justify-content: center;
+				-webkit-justify-content: center;
+			}
+			button{
+				height: 2.8rem;
+				line-height: 2.8rem;
+				width: 9rem;
+				text-align: center;
+				background: #f50738;
+				color: #fff;
+				font-size: 1.3rem;
+				border-radius: 1.4rem;
+			}
+		}
+	}
+}

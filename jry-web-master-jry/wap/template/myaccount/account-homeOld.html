@@ -1,0 +1,82 @@
+<!--myaccountCtrl.js-->
+<div class="account-wrapper" ng-controller="accountHomeCtrl">
+	<div class="home-header">
+		<div class="home-info">
+			<ul>
+				<li ui-sref="myInfo" class="h-user" ng-if="accunt.isFuiou==1"><img src="images/myaccount/ico_user_1.png"></li>
+				<li ui-sref="setDepository" class="h-user" ng-if="accunt.isFuiou==0"><img src="images/myaccount/ico_user_1.png"></li>
+				<li class="h-mobile">{{user.mobilephone | limitTo:3}}*****{{user.mobilephone | limitTo:-3}}</li>
+				<li class="ident" ng-if="accunt.isFuiou==1"><i class="fuiou"></i>已认证</li>
+				<li class="ident" ng-if="accunt.isFuiou==0"><i></i>未认证</li>
+			</ul>
+			<div class="assets">
+				<p class="account-all">总资产（元） </p>
+				<span class="total">{{(accunt.wprincipal + accunt.balance + accunt.wprincipalFuiou + accunt.balanceFuiou + accunt.freeFuiou + accunt.free) | isNumber2}}</span>
+				<div class="h-over">
+					<p>平台账户（元）</p>
+					<p class="account">{{accunt.balanceFuiou | isNumber2}}</p>
+				</div>
+				<div class="h-over">
+					<p>待回款总额（元）</p>
+					<p class="account">{{(accunt.wprincipal + accunt.winterest + accunt.collectAmountFuiou)| isNumber2}}</p>
+				</div>
+			</div>
+		</div>
+		<div class="btns">
+			<div ng-if="accunt.isFuiou==1" ui-sref="recharge({from:'home'})">
+				<div>
+					<img src="images/myaccount/ico_recharge.png" alt="">
+					<span>我要充值</span>
+				</div>
+			</div>
+			<div ng-if="accunt.isFuiou==0" ui-sref="setDepository">
+				<div>
+					<img src="images/myaccount/ico_recharge.png" alt="">
+					<span>我要充值</span>
+				</div>
+			</div>
+			<div ng-if="accunt.isFuiou==1" ui-sref="getCash">
+				<div>
+					<img src="images/myaccount/ico_withdraw.png" alt="">
+					<span>我要提现</span>
+				</div>
+			</div>
+			<div ng-if="accunt.isFuiou==0" ui-sref="setDepository">
+				<div>
+					<img src="images/myaccount/ico_withdraw.png" alt="">
+					<span>我要提现</span>
+				</div>
+			</div>
+		</div>
+		<table class="myaccount-mod">
+			<tr>
+				<td width="33%" ui-sref="myCoupon">
+					<img src="images/myaccount/ico_red.png">
+					<p>我的红包</p>
+				</td>
+				<td width="34%" ui-sref="myTyj">
+					<img src="images/myaccount/ico_tyj.png">
+					<p>体验金<br ng-if="accunt.experienceAmount>0"><span ng-if="accunt.experienceAmount>0" style="color:#ff6400;font-size:0.9rem;">{{accunt.experienceAmount | number:0 }}元</span></p>
+				</td>
+				<td width="33%" ui-sref="myInvitation">
+					<img src="images/myaccount/ico_invite.png" style="width:30%;">
+					<p>我的邀请</p>
+				</td>
+			</tr>
+			<tr>
+				<td ui-sref="myInfo">
+					<img src="images/myaccount/ico_data.png">
+					<p>我的信息</p>
+				</td>
+				<td ui-sref="myInvest">
+					<img src="images/myaccount/ico_invest.png">
+					<p>我的投资</p>
+				</td>
+				<td ui-sref="minxi">
+					<img src="images/myaccount/ico_detail.png">
+					<p>我的明细</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

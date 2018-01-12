@@ -1,0 +1,88 @@
+<div class="task-detail-wrap invite-myfriend-wrap" ng-controller="myFriend">
+	<div class="account-common-title"><p>累计邀请<span>{{myinvite.total}}</span>人</p>我的邀请</div>
+	<div class="account-common-con">
+		<div class="task-detail">
+			<a href="{{myinvite.jumpUrl}}" target="_blank" ng-if="myinvite.isPut" class="topimg">
+				<img src="{{myinvite.banner}}">
+			</a>
+			<!-- <div class="act-info" ng-if="myinvite.isPut">
+				<p>活动时间：{{myinvite.startTime | date: 'yyyy年MM月dd日'}}-{{myinvite.endTime | date: 'MM月dd日'}}</p>
+				<div>{{myinvite.content}}<a href="{{myinvite.jumpUrl}}" target="_blank">了解详情>></a></div>
+			</div> -->
+			<div class="stitle">邀请方式<i></i></div>
+			<div class="share-wrap">
+				<div class="share-mode">
+					<i class="invite-metha"></i>
+					<div class="title titlea"><i class="invite-shareicon"></i>邀请码分享</div>
+					<p>好友注册时，让他填写您的<br>邀请码或已认证的手机号</p>
+					<div class="invitecode-wrap">
+						<span>邀请码：</span>
+						<input value="{{myinvite.recommCodes}}">
+					</div>
+				</div>
+				<div class="share-mode">
+					<i class="invite-methb"></i>
+					<div class="title titleb"><i class="invite-wx"></i>微信邀请</div>
+					<p>打开微信扫二维码，将邀请函<br>发送给微信好友或分享至朋友圈</p>
+					<div class="taskcode-wrap">
+						<div class="taskcode-box">
+							<qrcode version="5" error-correction-level="L" size="155" data="http://m.bocailicai.cn/register?recommCode={{myPhone}}&frompc=true"></qrcode>
+						</div>
+					</div>
+				</div>
+				<div class="share-mode">
+					<i class="invite-methc"></i>
+					<div class="title titlec"><i class="invite-linkr"></i>链接邀请</div>
+					<p>打开您的专属邀请链接，<br>将邀请函发送给您的好友</p>
+					<div class="copy-wrap">
+						<input value="http://www.bocailicai.cn/register?recommCode={{myinvite.recommCodes}}">
+						<a href="" class="copy" ng-click="copyNow()" ng-show="!cpoyFin" id="goToCopy">复制链接</a>
+						<a href="" class="copy fincopy" ng-if="cpoyFin">复制链接</a>
+						<div class="fin" ng-if="cpoyFin">链接复制成功</div>
+						<input id="copyTxt" value="http://www.bocailicai.cn/register?recommCode={{myinvite.recommCodes}}" style="margin-top: 80px;">
+					</div>
+				</div>
+			</div>
+			<div class="stitle">我邀请的好友<i style="background:#00A8A8;"></i></div>
+			<table class="total-table">
+				<tr>
+					<td width="50%"><div class="friend">累积邀请好友：<span>{{myinvite.total}}人</span></div></td>
+					<td width="50%"><div class="invest">已完成投资：<span>{{myinvite.investors}}人</span></div></td>
+				</tr>
+			</table>
+			<table class="friend-table">
+				<tr class="top">
+					<th width="20%">注册手机号</th>
+					<th width="20%">姓名</th>
+					<th width="20%">注册时间</th>
+					<th width="20%">是否投资<span>（新手标、体验标除外）</span></th>
+					<th width="20%">是否返现</th>
+				</tr>
+				<tr ng-repeat="item in friend" ng-if="mylistPage.total > 0">
+					<td>{{item.mobilePhone}}</td>
+					<td>{{item.realName}}</td>
+					<td>{{item.regTime | date:'yyyy.MM.dd'}}</td>
+					<td>{{item.isInvest}}</td>
+					<td ng-if="!(item.amount>0)">{{{0:'否',undefined:'未投资'}[item.amount]}}</td>
+					<td ng-if="item.amount>0">{{item.amount}}元</td>
+				</tr>
+				<tr ng-if="mylistPage.total == 0">
+					<td class="nodata" colspan="5">您还未邀请好友</td>
+				</tr>
+			</table>
+
+			<div class="page-wrap" ng-if="mylistPage.total > 0">
+				<div class="page-box">
+					<a href ng-click="changePage('beforPage',a)" class="prev">上一页</a>
+					<ul>
+						<li ng-click="changePage('currentPage',a)" ng-repeat="a in mylistPage.pages">
+							<a href ng-class="{true: 'cur', false: ''}[mylistPage.pageOn == a]">{{a}}</a>
+						</li>
+					</ul>
+					<a href class="next" ng-click="changePage('nextPage',a)">下一页</a>
+				</div>
+				<span>共{{mylistPage.totalPage}}页</span>
+			</div>
+		</div>
+	</div>
+</div>

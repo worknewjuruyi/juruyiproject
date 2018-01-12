@@ -1,0 +1,1269 @@
+@charset "utf-8";
+@keyframes doudong {
+  0% {
+    transform: rotate(0deg);
+  }
+  2% {
+    transform: rotate(10deg);
+  }
+  4% {
+    transform: rotate(0deg);
+  }
+  6% {
+    transform: rotate(-10deg);
+  }
+  8% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  12% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes doudong {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  2% {
+    -webkit-transform: rotate(10deg);
+  }
+  4% {
+    -webkit-transform: rotate(0deg);
+  }
+  6% {
+    -webkit-transform: rotate(-10deg);
+  }
+  8% {
+    -webkit-transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(10deg);
+  }
+  12% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@-moz-keyframes doudong {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  2% {
+    -moz-transform: rotate(10deg);
+  }
+  4% {
+    -moz-transform: rotate(0deg);
+  }
+  6% {
+    -moz-transform: rotate(-10deg);
+  }
+  8% {
+    -moz-transform: rotate(0deg);
+  }
+  10% {
+    -moz-transform: rotate(10deg);
+  }
+  12% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+  }
+}
+@-o-keyframes doudong {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  2% {
+    -o-transform: rotate(10deg);
+  }
+  4% {
+    -o-transform: rotate(0deg);
+  }
+  6% {
+    -o-transform: rotate(-10deg);
+  }
+  8% {
+    -o-transform: rotate(0deg);
+  }
+  10% {
+    -o-transform: rotate(10deg);
+  }
+  12% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(0deg);
+  }
+}
+.account-wrapper {
+  padding-bottom: 4rem;
+}
+.account-wrapper .home-info {
+  height: 11.45679rem;
+  background: #fff;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  margin: 0.98765rem 0 0 0;
+  color: #787878;
+  font-size: 0.83951rem;
+}
+.account-wrapper .home-info ul {
+  float: left;
+  width: 32%;
+  height: 8.2716rem;
+  margin-top: 1.60494rem;
+  border-right: 1px solid #d2d2d2;
+  text-align: center;
+  box-sizing: border-box;
+}
+.account-wrapper .home-info ul img {
+  width: 3.35802rem;
+  margin: 0.74074rem 0 0.54321rem;
+}
+.account-wrapper .home-info ul .ident {
+  font-size: 0.98765rem;
+  color: #00cdb3;
+  padding-top: 0.49383rem;
+}
+.account-wrapper .home-info ul .ident i {
+  display: inline-block;
+  margin-right: 0.39506rem;
+  width: 0.93827rem;
+  height: 0.61728rem;
+  background-position: 0 46.05839%;
+}
+.account-wrapper .home-info ul .ident i.fuiou {
+  width: 0.93827rem;
+  height: 0.61728rem;
+  background-position: 0 47.0438%;
+}
+.account-wrapper .home-info .assets {
+  float: left;
+  text-align: left;
+  padding: 1.23457rem 0 0 1.7284rem;
+  width: 68%;
+  box-sizing: border-box;
+  position: relative;
+}
+.account-wrapper .home-info .assets .total {
+  font-size: 2.22222rem;
+  color: #ff6400;
+}
+.account-wrapper .home-info .assets .h-over {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.account-wrapper .home-info .assets .h-over p {
+  float: left;
+  margin-right: 1.23457rem;
+  line-height: 1.48148rem;
+  height: 1.48148rem;
+}
+.account-wrapper .home-info .assets .h-over p:nth-of-type(1) {
+  width: 43%;
+  margin-right: 0;
+}
+.account-wrapper .home-info .assets .h-over p.account {
+  color: #333;
+}
+.account-wrapper .btns {
+  margin: 0.7rem 0;
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 1.2rem;
+  color: #666;
+  background: #fff;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  text-align: center;
+}
+.account-wrapper .btns > div {
+  float: left;
+  width: 50%;
+}
+.account-wrapper .btns > div > div {
+  display: inline-block;
+  height: 4rem;
+}
+.account-wrapper .btns > div > div img {
+  width: 2.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.75rem;
+  float: left;
+}
+.account-wrapper .myaccount-mod {
+  width: 100%;
+}
+.account-wrapper .myaccount-mod tr {
+  width: 100%;
+}
+.account-wrapper .myaccount-mod tr td {
+  border: 1px solid #d2d2d2;
+  background: #fff;
+  font-size: 1.18519rem;
+  color: #666;
+  text-align: center;
+  position: relative;
+  height: 9.87654rem;
+  overflow: hidden;
+}
+.account-wrapper .myaccount-mod tr td p {
+  position: absolute;
+  width: 100%;
+  top: 5.92593rem;
+}
+.account-wrapper .myaccount-mod tr td img {
+  width: 25%;
+  margin-top: -2.5rem;
+  padding: 2rem 0;
+}
+.myMission {
+  width: 90%;
+  margin: 1rem auto;
+}
+.myMission .myMissionItem {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+}
+.myMission .myMissionItem img {
+  width: 100%;
+}
+.myMission .myMissionItem p {
+  font-size: 0.9rem;
+  padding: 0.3rem 1rem 0.3rem 0.5rem;
+}
+.myMission .myMissionItem .qishu {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 4.5rem;
+  text-align: center;
+}
+.myMission .myMissionItem .qishu img {
+  width: 100%;
+}
+.myMission .myMissionItem .qishu span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding-top: 0.65rem;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+  padding-right: 7%;
+  color: red;
+}
+.myMission .myMissionItem .over {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: block;
+  background: rgba(255, 255, 255, 0.5);
+}
+.myMission .myMissionItem .over p {
+  display: block;
+  vertical-align: middle;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  color: #9c9c9c;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.5);
+}
+.actList .myMission {
+  background-color: #f2f2f2;
+}
+.actList .myMission .myMissionItem {
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+}
+.actList .myMission .myMissionItem h3 {
+  font-size: 0.9rem;
+  padding: 0.3rem 1rem 0.3rem 0.5rem;
+  color: #fb6262;
+}
+.actList .myMission.offline-activity .list-item {
+  margin-bottom: 1rem;
+}
+.actList .myMission.offline-activity .list-item img {
+  width: 100%;
+  display: block;
+}
+.actList .myMission.offline-activity .list-item h1 {
+  background: #ffffff;
+  text-align: center;
+  line-height: 2.46914rem;
+  height: 2.46914rem;
+  color: #333333;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.yaoqing {
+  position: fixed;
+  bottom: 3.65432rem;
+  left: 0;
+  z-index: 50;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 1rem;
+}
+.yaoqing p {
+  line-height: 2.5rem;
+  height: 2rem;
+}
+.yaoqing p span {
+  color: #e84034;
+  font-weight: bold;
+}
+.yaoqing a {
+  float: right;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background-image: url("/images/myaccount/lingqu-bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  line-height: normal;
+}
+.hongbaoBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  max-width: 750px;
+}
+.hongbaoBox.hongbaoBox2 .hongbaoBoxCenter .hongbaotext {
+  padding-top: 7rem;
+}
+.hongbaoBox.hongbaoBox2 .hongbaoBoxCenter .hongbaotext .hongbaotitle {
+  padding: 2rem 0 1rem 0;
+}
+.hongbaoBox.hongbaoBox2 .hongbaoBoxCenter .hongbaotext .hongbaolist {
+  padding: 1.5rem 1.5rem 5.5rem 1.5rem;
+  position: relative;
+}
+.hongbaoBox.hongbaoBox2 .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaoclose {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1rem;
+  color: #fa804e;
+  width: 100%;
+  padding: 0 1.5rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+.hongbaoBox .hongbaoBoxCenter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10%;
+  margin: auto;
+  width: 22rem;
+}
+.hongbaoBox .hongbaoBoxCenter .bg {
+  width: 100%;
+  display: block;
+}
+.hongbaoBox .hongbaoBoxCenter .jinbi {
+  position: absolute;
+  width: 10rem;
+  bottom: -2rem;
+  right: -1.8rem;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbao-link {
+  position: absolute;
+  left: 50.5%;
+  top: 45%;
+  transform: translate(-50%);
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 50%;
+}
+.hongbaoBox .hongbaoBoxCenter .closeico {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  width: 1.2rem;
+  z-index: 7;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 7rem;
+  z-index: 5;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaotitle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  padding: 2rem 0 1rem 0;
+  color: #fff;
+  text-align: center;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaotitle h2 {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaotitle h2 span {
+  color: #fecb00;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaotitle p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  box-sizing: border-box;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaobd {
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaobd .hongbaoitem {
+  width: 100%;
+  position: relative;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaobd .hongbaoitem .hongbaobg {
+  width: 100%;
+  display: block;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaobd .hongbaoitem .hongbaoCont {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaobd .hongbaoitem .hongbaoCont .hongbaoCont-left {
+  width: 28%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  color: #fff;
+  line-height: normal;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  display: table;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaobd .hongbaoitem .hongbaoCont .hongbaoCont-left div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaobd .hongbaoitem .hongbaoCont .hongbaoCont-left div span {
+  font-size: 1.2rem;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaobd .hongbaoitem .hongbaoCont .hongbaoCont-left div p {
+  font-size: 0.6rem;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaobd .hongbaoitem .hongbaoCont .hongbaoCont-right {
+  width: 72%;
+  height: 100%;
+  float: right;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem 0 1rem;
+  position: relative;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaobd .hongbaoitem .hongbaoCont .hongbaoCont-right p {
+  color: #fa665b;
+  font-size: 0.7rem;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaobd .hongbaoitem .hongbaoCont .hongbaoCont-right .hongbaobtn {
+  position: absolute;
+  left: 0;
+  bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaobd .hongbaoitem .hongbaoCont .hongbaoCont-right .hongbaobtn hr {
+  width: 95%;
+  border-bottom: 1px dashed #b3b3b3;
+  border-top: none;
+  margin-bottom: 0.3rem;
+}
+.hongbaoBox .hongbaoBoxCenter .hongbaotext .hongbaolist .hongbaobd .hongbaoitem .hongbaoCont .hongbaoCont-right .hongbaobtn img {
+  width: 50%;
+}
+.activity-firend-boxweixin {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 54;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: right;
+  display: none;
+}
+.activity-firend-boxweixin .sharetext {
+  width: 65%;
+  margin-right: 5%;
+}
+.activity-firend-boxweixin .sharebtn {
+  width: 25%;
+  display: block;
+  margin: 1rem auto;
+}
+.hbopen-wrapper {
+  position: relative;
+}
+.hbopen-wrapper .hbopen-bg {
+  width: 100%;
+  position: relative;
+  top: -3.40741rem;
+  z-index: 1;
+}
+.hbopen-wrapper .quan {
+  position: absolute;
+  top: 12.59259rem;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+  width: 85%;
+}
+.hbopen-wrapper .quan .quan-bg {
+  width: 100%;
+  display: block;
+}
+.hbopen-wrapper .quan .box {
+  position: relative;
+}
+.hbopen-wrapper .quan .box span {
+  display: inline-block;
+  width: 6.91358rem;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 1.97531rem;
+  color: #fbfbfb;
+  font-size: 2rem;
+}
+.hbopen-wrapper .quan .box span i {
+  font-size: 1.5rem;
+}
+.hbopen-wrapper .quan .box section {
+  position: absolute;
+  top: 0.61728rem;
+  left: 7.40741rem;
+}
+.hbopen-wrapper .quan .box section p {
+  color: #fa665b;
+  font-size: 1rem;
+}
+.hbopen-wrapper .quan .box section i {
+  font-size: 0.7rem;
+}
+.hbopen-wrapper .quan .box div {
+  position: absolute;
+  bottom: 0.74074rem;
+  left: 9.87654rem;
+  width: 7.90123rem;
+  height: 1.82716rem;
+  line-height: 1.82716rem;
+  text-align: center;
+  color: #f23c2f;
+  font-size: 1rem;
+  border-radius: 0.91358rem;
+  border: 1px solid #f23c2f;
+}
+.hbopen-wrapper .quan:nth-of-type(2) {
+  top: 22.46914rem;
+}
+.hbopen-wrapper .list-box {
+  z-index: 10;
+  width: 100%;
+  box-sizing: border-box;
+  height: 11.85185rem;
+  position: absolute;
+  bottom: 4.93827rem;
+  overflow: hidden;
+  padding: 0 1.97531rem;
+}
+.hbopen-wrapper .list-box ul li {
+  width: 85vw;
+  height: 4rem;
+  position: absolute;
+}
+.hbopen-wrapper .list-box ul li p {
+  font-size: 0.9rem;
+  line-height: 1.7284rem;
+}
+.hbopen-wrapper .list-box ul li p span {
+  float: right;
+}
+.hbopen-wrapper .more {
+  z-index: 15;
+  width: 3.7037rem;
+  height: 1.97531rem;
+  position: absolute;
+  top: 31.35802rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+.reminder .main {
+  background-color: #ffffff;
+  min-height: 41rem;
+  padding: 1.48148rem 1.23457rem 4.93827rem 1.23457rem;
+}
+.reminder .main ul {
+  list-style-type: decimal;
+  padding-left: 1.23457rem;
+}
+.reminder .main ul li {
+  margin-bottom: 1.23457rem;
+  line-height: 1.48148rem;
+  font-size: 0.9rem;
+  color: #333333;
+}
+.account-wrapper {
+  padding-bottom: 2.5rem;
+}
+.account-wrapper .header {
+  padding: 0.72rem 0 0.48rem 0;
+  position: relative;
+  background: -webkit-linear-gradient(left, #ff8560, #fe4f40);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #ff8560, #fe4f40);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #ff8560, #fe4f40);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #ff8560, #fe4f40);
+  /* 标准的语法 */
+}
+.account-wrapper .header .header-user-msg {
+  overflow: hidden;
+  padding-left: 0.4rem;
+}
+.account-wrapper .header .header-user-msg .user-headimg {
+  float: left;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.account-wrapper .header .header-user-msg .user-headimg img {
+  width: 100%;
+  height: 100%;
+}
+.account-wrapper .header .header-user-msg .user-detail {
+  float: left;
+  margin-left: 0.26rem;
+}
+.account-wrapper .header .header-user-msg .user-detail .user-name {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+[data-dpr="2"] .account-wrapper .header .header-user-msg .user-detail .user-name {
+  font-size: 36px;
+}
+[data-dpr="3"] .account-wrapper .header .header-user-msg .user-detail .user-name {
+  font-size: 54px;
+}
+[data-dpr="4"] .account-wrapper .header .header-user-msg .user-detail .user-name {
+  font-size: 72px;
+}
+.account-wrapper .header .header-user-msg .user-detail .user-signMsg {
+  margin-top: 0.16rem;
+  overflow: hidden;
+}
+.account-wrapper .header .header-user-msg .user-detail .user-signMsg .user-isRealname {
+  float: left;
+  width: 1.6rem;
+  height: 0.37rem;
+}
+.account-wrapper .header .header-user-msg .user-detail .user-signMsg .user-noRealname {
+  background-image: url('../images/myaccount2/verified_not@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .header .header-user-msg .user-detail .user-signMsg .user-noRealname {
+    background-image: url('../images/myaccount2/verified_not@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .header .header-user-msg .user-detail .user-signMsg .user-hasRealname {
+  background-image: url('../images/myaccount2/verified_yes@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .header .header-user-msg .user-detail .user-signMsg .user-hasRealname {
+    background-image: url('../images/myaccount2/verified_yes@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .header .header-user-msg .user-detail .user-signMsg .user-isCunguan {
+  float: left;
+  margin-left: 0.26rem;
+  width: 1.6rem;
+  height: 0.37rem;
+}
+.account-wrapper .header .header-user-msg .user-detail .user-signMsg .user-noCunguan {
+  background-image: url('../images/myaccount2/depository_not@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .header .header-user-msg .user-detail .user-signMsg .user-noCunguan {
+    background-image: url('../images/myaccount2/depository_not@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .header .header-user-msg .user-detail .user-signMsg .user-hasCunguan {
+  background-image: url('../images/myaccount2/depository_yes@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .header .header-user-msg .user-detail .user-signMsg .user-hasCunguan {
+    background-image: url('../images/myaccount2/depository_yes@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .header .header-user-tips {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.53rem;
+  width: 0.64rem;
+  height: 0.64rem;
+  background-image: url('../images/myaccount2/letter_default_icon@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .header .header-user-tips {
+    background-image: url('../images/myaccount2/letter_default_icon@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .header .header-user-tipsNew {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.53rem;
+  width: 0.64rem;
+  height: 0.64rem;
+  background-image: url('../images/myaccount2/letter_unread_icon@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .header .header-user-tipsNew {
+    background-image: url('../images/myaccount2/letter_unread_icon@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .user-money-detail {
+  padding: 0.53rem 0;
+  overflow: hidden;
+  position: relative;
+}
+.account-wrapper .user-money-detail .user-total-money {
+  float: left;
+  width: 50%;
+}
+.account-wrapper .user-money-detail .user-total-money h4 {
+  padding-left: 0.4rem;
+  font-size: 14px;
+  color: #9C9DAE;
+}
+[data-dpr="2"] .account-wrapper .user-money-detail .user-total-money h4 {
+  font-size: 28px;
+}
+[data-dpr="3"] .account-wrapper .user-money-detail .user-total-money h4 {
+  font-size: 42px;
+}
+[data-dpr="4"] .account-wrapper .user-money-detail .user-total-money h4 {
+  font-size: 56px;
+}
+.account-wrapper .user-money-detail .user-total-money p {
+  padding-left: 0.4rem;
+  margin-top: 0.4rem;
+  font-size: 21px;
+  color: #3D3F4C;
+  font-weight: bold;
+}
+[data-dpr="2"] .account-wrapper .user-money-detail .user-total-money p {
+  font-size: 42px;
+}
+[data-dpr="3"] .account-wrapper .user-money-detail .user-total-money p {
+  font-size: 63px;
+}
+[data-dpr="4"] .account-wrapper .user-money-detail .user-total-money p {
+  font-size: 84px;
+}
+.account-wrapper .user-money-detail .user-total-income {
+  float: left;
+  width: 50%;
+}
+.account-wrapper .user-money-detail .user-total-income h4 {
+  padding-left: 0.4rem;
+  font-size: 14px;
+  color: #9C9DAE;
+}
+[data-dpr="2"] .account-wrapper .user-money-detail .user-total-income h4 {
+  font-size: 28px;
+}
+[data-dpr="3"] .account-wrapper .user-money-detail .user-total-income h4 {
+  font-size: 42px;
+}
+[data-dpr="4"] .account-wrapper .user-money-detail .user-total-income h4 {
+  font-size: 56px;
+}
+.account-wrapper .user-money-detail .user-total-income p {
+  padding-left: 0.4rem;
+  margin-top: 0.4rem;
+  font-size: 21px;
+  color: #3D3F4C;
+  font-weight: bold;
+}
+[data-dpr="2"] .account-wrapper .user-money-detail .user-total-income p {
+  font-size: 42px;
+}
+[data-dpr="3"] .account-wrapper .user-money-detail .user-total-income p {
+  font-size: 63px;
+}
+[data-dpr="4"] .account-wrapper .user-money-detail .user-total-income p {
+  font-size: 84px;
+}
+.account-wrapper .user-money-detail .eye-btn {
+  width: 0.64rem;
+  height: 0.64rem;
+  background-image: url('../images/myaccount2/show_mine_icon@2x.png');
+  background-size: cover;
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .user-money-detail .eye-btn {
+    background-image: url('../images/myaccount2/show_mine_icon@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .user-money-detail .eye-btn-close {
+  width: 0.64rem;
+  height: 0.64rem;
+  background-image: url('../images/myaccount2/hidden_mine_icon@2x.png');
+  background-size: cover;
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .user-money-detail .eye-btn-close {
+    background-image: url('../images/myaccount2/hidden_mine_icon@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .user-self-account .user-account-money {
+  height: 1.3rem;
+  background-color: white;
+  overflow: hidden;
+}
+.account-wrapper .user-self-account .user-account-money .left-money {
+  float: left;
+  line-height: 1.3rem;
+  padding-left: 0.4rem;
+}
+.account-wrapper .user-self-account .user-account-money .left-money span {
+  font-size: 16px;
+  color: #5C5C66;
+}
+[data-dpr="2"] .account-wrapper .user-self-account .user-account-money .left-money span {
+  font-size: 32px;
+}
+[data-dpr="3"] .account-wrapper .user-self-account .user-account-money .left-money span {
+  font-size: 48px;
+}
+[data-dpr="4"] .account-wrapper .user-self-account .user-account-money .left-money span {
+  font-size: 64px;
+}
+.account-wrapper .user-self-account .user-account-money .left-money em {
+  font-size: 16px;
+  color: #5665f5;
+}
+[data-dpr="2"] .account-wrapper .user-self-account .user-account-money .left-money em {
+  font-size: 32px;
+}
+[data-dpr="3"] .account-wrapper .user-self-account .user-account-money .left-money em {
+  font-size: 48px;
+}
+[data-dpr="4"] .account-wrapper .user-self-account .user-account-money .left-money em {
+  font-size: 64px;
+}
+.account-wrapper .user-self-account .user-account-money .right-money-detail {
+  float: right;
+  line-height: 1.3rem;
+  padding-right: 0.4rem;
+}
+.account-wrapper .user-self-account .user-account-money .right-money-detail span {
+  font-size: 14px;
+  color: #9c9dae;
+  margin-right: 0.13rem;
+}
+[data-dpr="2"] .account-wrapper .user-self-account .user-account-money .right-money-detail span {
+  font-size: 28px;
+}
+[data-dpr="3"] .account-wrapper .user-self-account .user-account-money .right-money-detail span {
+  font-size: 42px;
+}
+[data-dpr="4"] .account-wrapper .user-self-account .user-account-money .right-money-detail span {
+  font-size: 56px;
+}
+.account-wrapper .user-self-account .user-account-money .right-money-detail em {
+  font-size: 14px;
+  color: #9c9dae;
+}
+[data-dpr="2"] .account-wrapper .user-self-account .user-account-money .right-money-detail em {
+  font-size: 28px;
+}
+[data-dpr="3"] .account-wrapper .user-self-account .user-account-money .right-money-detail em {
+  font-size: 42px;
+}
+[data-dpr="4"] .account-wrapper .user-self-account .user-account-money .right-money-detail em {
+  font-size: 56px;
+}
+.account-wrapper .user-ct {
+  margin-top: 2px;
+  background-color: white;
+  height: 1.3rem;
+}
+.account-wrapper .user-ct .user-ct-table {
+  width: 100%;
+  overflow: hidden;
+}
+.account-wrapper .user-ct .user-ct-table tr {
+  width: 100%;
+  height: 1.3rem;
+}
+.account-wrapper .user-ct .user-ct-table td {
+  text-align: center;
+  border: 1px solid #F2F2F2;
+  border-width: 0px 2px 0px 0px;
+}
+.account-wrapper .user-ct .user-ct-table .withdraw {
+  color: #5665F5;
+  font-size: 16px;
+}
+[data-dpr="2"] .account-wrapper .user-ct .user-ct-table .withdraw {
+  font-size: 32px;
+}
+[data-dpr="3"] .account-wrapper .user-ct .user-ct-table .withdraw {
+  font-size: 48px;
+}
+[data-dpr="4"] .account-wrapper .user-ct .user-ct-table .withdraw {
+  font-size: 64px;
+}
+.account-wrapper .user-ct .user-ct-table .charge {
+  color: #FF4B3B;
+  font-size: 16px;
+}
+[data-dpr="2"] .account-wrapper .user-ct .user-ct-table .charge {
+  font-size: 32px;
+}
+[data-dpr="3"] .account-wrapper .user-ct .user-ct-table .charge {
+  font-size: 48px;
+}
+[data-dpr="4"] .account-wrapper .user-ct .user-ct-table .charge {
+  font-size: 64px;
+}
+.account-wrapper .user-setone,
+.account-wrapper .user-settwo,
+.account-wrapper .user-setthree {
+  margin-top: 0.4rem;
+  background-color: white;
+}
+.account-wrapper .user-setone ul li,
+.account-wrapper .user-settwo ul li,
+.account-wrapper .user-setthree ul li {
+  width: 100%;
+  height: 1.3rem;
+  background-color: white;
+}
+.account-wrapper .user-setone ul li .logoimg-left,
+.account-wrapper .user-settwo ul li .logoimg-left,
+.account-wrapper .user-setthree ul li .logoimg-left {
+  width: 1.44rem;
+  height: 1.3rem;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.account-wrapper .user-setone ul li .logoimg-left .logo-inner,
+.account-wrapper .user-settwo ul li .logoimg-left .logo-inner,
+.account-wrapper .user-setthree ul li .logoimg-left .logo-inner {
+  width: 0.64rem;
+  height: 0.64rem;
+  background-image: url('../images/myaccount2/invest_mine_icon@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .user-setone ul li .logoimg-left .logo-inner,
+  .account-wrapper .user-settwo ul li .logoimg-left .logo-inner,
+  .account-wrapper .user-setthree ul li .logoimg-left .logo-inner {
+    background-image: url('../images/myaccount2/invest_mine_icon@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .user-setone ul li .logoimg-left .logo-inner2,
+.account-wrapper .user-settwo ul li .logoimg-left .logo-inner2,
+.account-wrapper .user-setthree ul li .logoimg-left .logo-inner2 {
+  width: 0.64rem;
+  height: 0.64rem;
+  background-image: url('../images/myaccount2/coupons_mine_icon@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .user-setone ul li .logoimg-left .logo-inner2,
+  .account-wrapper .user-settwo ul li .logoimg-left .logo-inner2,
+  .account-wrapper .user-setthree ul li .logoimg-left .logo-inner2 {
+    background-image: url('../images/myaccount2/coupons_mine_icon@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .user-setone ul li .logoimg-left .logo-inner3,
+.account-wrapper .user-settwo ul li .logoimg-left .logo-inner3,
+.account-wrapper .user-setthree ul li .logoimg-left .logo-inner3 {
+  width: 0.64rem;
+  height: 0.64rem;
+  background-image: url('../images/myaccount2/gold_mine_icon@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .user-setone ul li .logoimg-left .logo-inner3,
+  .account-wrapper .user-settwo ul li .logoimg-left .logo-inner3,
+  .account-wrapper .user-setthree ul li .logoimg-left .logo-inner3 {
+    background-image: url('../images/myaccount2/gold_mine_icon@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .user-setone ul li .logoimg-left .logo-inner4,
+.account-wrapper .user-settwo ul li .logoimg-left .logo-inner4,
+.account-wrapper .user-setthree ul li .logoimg-left .logo-inner4 {
+  width: 0.64rem;
+  height: 0.64rem;
+  background-image: url('../images/myaccount2/invite_mine_icon@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .user-setone ul li .logoimg-left .logo-inner4,
+  .account-wrapper .user-settwo ul li .logoimg-left .logo-inner4,
+  .account-wrapper .user-setthree ul li .logoimg-left .logo-inner4 {
+    background-image: url('../images/myaccount2/invite_mine_icon@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .user-setone ul li .logoimg-left .logo-inner5,
+.account-wrapper .user-settwo ul li .logoimg-left .logo-inner5,
+.account-wrapper .user-setthree ul li .logoimg-left .logo-inner5 {
+  width: 0.64rem;
+  height: 0.64rem;
+  background-image: url('../images/myaccount2/center_mine_icon@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .user-setone ul li .logoimg-left .logo-inner5,
+  .account-wrapper .user-settwo ul li .logoimg-left .logo-inner5,
+  .account-wrapper .user-setthree ul li .logoimg-left .logo-inner5 {
+    background-image: url('../images/myaccount2/center_mine_icon@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .user-setone ul li .logoimg-left .logo-inner6,
+.account-wrapper .user-settwo ul li .logoimg-left .logo-inner6,
+.account-wrapper .user-setthree ul li .logoimg-left .logo-inner6 {
+  width: 0.64rem;
+  height: 0.64rem;
+  background-image: url('../images/myaccount2/safety_mine_icon@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .user-setone ul li .logoimg-left .logo-inner6,
+  .account-wrapper .user-settwo ul li .logoimg-left .logo-inner6,
+  .account-wrapper .user-setthree ul li .logoimg-left .logo-inner6 {
+    background-image: url('../images/myaccount2/safety_mine_icon@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .user-setone ul li .logoimg-left .logo-inner7,
+.account-wrapper .user-settwo ul li .logoimg-left .logo-inner7,
+.account-wrapper .user-setthree ul li .logoimg-left .logo-inner7 {
+  width: 0.64rem;
+  height: 0.64rem;
+  background-image: url('../images/myaccount2/help_mine_icon@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .user-setone ul li .logoimg-left .logo-inner7,
+  .account-wrapper .user-settwo ul li .logoimg-left .logo-inner7,
+  .account-wrapper .user-setthree ul li .logoimg-left .logo-inner7 {
+    background-image: url('../images/myaccount2/help_mine_icon@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .user-setone ul li .logoimg-left .logo-inner8,
+.account-wrapper .user-settwo ul li .logoimg-left .logo-inner8,
+.account-wrapper .user-setthree ul li .logoimg-left .logo-inner8 {
+  width: 0.64rem;
+  height: 0.64rem;
+  background-image: url('../images/myaccount2/more_mine_icon@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .account-wrapper .user-setone ul li .logoimg-left .logo-inner8,
+  .account-wrapper .user-settwo ul li .logoimg-left .logo-inner8,
+  .account-wrapper .user-setthree ul li .logoimg-left .logo-inner8 {
+    background-image: url('../images/myaccount2/more_mine_icon@3x.png');
+    background-size: cover;
+  }
+}
+.account-wrapper .user-setone ul li .set-detail-right,
+.account-wrapper .user-settwo ul li .set-detail-right,
+.account-wrapper .user-setthree ul li .set-detail-right {
+  width: 8.56rem;
+  height: 1.3rem;
+  float: left;
+  line-height: 1.3rem;
+  border-bottom: 1px solid #F2F2F2;
+  overflow: hidden;
+}
+.account-wrapper .user-setone ul li .set-detail-right .msg-set,
+.account-wrapper .user-settwo ul li .set-detail-right .msg-set,
+.account-wrapper .user-setthree ul li .set-detail-right .msg-set {
+  float: left;
+  font-size: 16px;
+  color: #5C5C66;
+}
+[data-dpr="2"] .account-wrapper .user-setone ul li .set-detail-right .msg-set,
+[data-dpr="2"] .account-wrapper .user-settwo ul li .set-detail-right .msg-set,
+[data-dpr="2"] .account-wrapper .user-setthree ul li .set-detail-right .msg-set {
+  font-size: 32px;
+}
+[data-dpr="3"] .account-wrapper .user-setone ul li .set-detail-right .msg-set,
+[data-dpr="3"] .account-wrapper .user-settwo ul li .set-detail-right .msg-set,
+[data-dpr="3"] .account-wrapper .user-setthree ul li .set-detail-right .msg-set {
+  font-size: 48px;
+}
+[data-dpr="4"] .account-wrapper .user-setone ul li .set-detail-right .msg-set,
+[data-dpr="4"] .account-wrapper .user-settwo ul li .set-detail-right .msg-set,
+[data-dpr="4"] .account-wrapper .user-setthree ul li .set-detail-right .msg-set {
+  font-size: 64px;
+}
+.account-wrapper .user-setone ul li .set-detail-right .set-tips,
+.account-wrapper .user-settwo ul li .set-detail-right .set-tips,
+.account-wrapper .user-setthree ul li .set-detail-right .set-tips {
+  float: right;
+  margin-right: 0.4rem;
+}
+.account-wrapper .user-setone ul li .set-detail-right .set-tips span,
+.account-wrapper .user-settwo ul li .set-detail-right .set-tips span,
+.account-wrapper .user-setthree ul li .set-detail-right .set-tips span {
+  font-size: 15px;
+  color: #9c9dae;
+}
+[data-dpr="2"] .account-wrapper .user-setone ul li .set-detail-right .set-tips span,
+[data-dpr="2"] .account-wrapper .user-settwo ul li .set-detail-right .set-tips span,
+[data-dpr="2"] .account-wrapper .user-setthree ul li .set-detail-right .set-tips span {
+  font-size: 30px;
+}
+[data-dpr="3"] .account-wrapper .user-setone ul li .set-detail-right .set-tips span,
+[data-dpr="3"] .account-wrapper .user-settwo ul li .set-detail-right .set-tips span,
+[data-dpr="3"] .account-wrapper .user-setthree ul li .set-detail-right .set-tips span {
+  font-size: 45px;
+}
+[data-dpr="4"] .account-wrapper .user-setone ul li .set-detail-right .set-tips span,
+[data-dpr="4"] .account-wrapper .user-settwo ul li .set-detail-right .set-tips span,
+[data-dpr="4"] .account-wrapper .user-setthree ul li .set-detail-right .set-tips span {
+  font-size: 60px;
+}
+.account-wrapper .user-setone ul li .set-detail-right .set-tips em,
+.account-wrapper .user-settwo ul li .set-detail-right .set-tips em,
+.account-wrapper .user-setthree ul li .set-detail-right .set-tips em {
+  font-size: 15px;
+  color: #9c9dae;
+}
+[data-dpr="2"] .account-wrapper .user-setone ul li .set-detail-right .set-tips em,
+[data-dpr="2"] .account-wrapper .user-settwo ul li .set-detail-right .set-tips em,
+[data-dpr="2"] .account-wrapper .user-setthree ul li .set-detail-right .set-tips em {
+  font-size: 30px;
+}
+[data-dpr="3"] .account-wrapper .user-setone ul li .set-detail-right .set-tips em,
+[data-dpr="3"] .account-wrapper .user-settwo ul li .set-detail-right .set-tips em,
+[data-dpr="3"] .account-wrapper .user-setthree ul li .set-detail-right .set-tips em {
+  font-size: 45px;
+}
+[data-dpr="4"] .account-wrapper .user-setone ul li .set-detail-right .set-tips em,
+[data-dpr="4"] .account-wrapper .user-settwo ul li .set-detail-right .set-tips em,
+[data-dpr="4"] .account-wrapper .user-setthree ul li .set-detail-right .set-tips em {
+  font-size: 60px;
+}
+.account-wrapper .user-setone ul li .set-detail-right .set-tips .colornew,
+.account-wrapper .user-settwo ul li .set-detail-right .set-tips .colornew,
+.account-wrapper .user-setthree ul li .set-detail-right .set-tips .colornew {
+  font-size: 15px;
+  color: #FF4B3B;
+}
+[data-dpr="2"] .account-wrapper .user-setone ul li .set-detail-right .set-tips .colornew,
+[data-dpr="2"] .account-wrapper .user-settwo ul li .set-detail-right .set-tips .colornew,
+[data-dpr="2"] .account-wrapper .user-setthree ul li .set-detail-right .set-tips .colornew {
+  font-size: 30px;
+}
+[data-dpr="3"] .account-wrapper .user-setone ul li .set-detail-right .set-tips .colornew,
+[data-dpr="3"] .account-wrapper .user-settwo ul li .set-detail-right .set-tips .colornew,
+[data-dpr="3"] .account-wrapper .user-setthree ul li .set-detail-right .set-tips .colornew {
+  font-size: 45px;
+}
+[data-dpr="4"] .account-wrapper .user-setone ul li .set-detail-right .set-tips .colornew,
+[data-dpr="4"] .account-wrapper .user-settwo ul li .set-detail-right .set-tips .colornew,
+[data-dpr="4"] .account-wrapper .user-setthree ul li .set-detail-right .set-tips .colornew {
+  font-size: 60px;
+}

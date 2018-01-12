@@ -1,0 +1,47 @@
+<!--getCashCtr.js-->
+<div ng-view class="recharge-wrapper cash-wrapper" ng-controller="getcashCtrl">
+    <header class="common-header">
+    	<i></i>
+    	<h3>提现</h3>
+    </header>
+    <!--用户存管余额-->
+    <div class="cash-userful">
+    	<h4>存管账户余额（元）</h4>
+    	<p>100000.00</p>
+    </div>
+    <!--已帮银行卡-->
+    <div class="bind-card">
+    	<div class="bind-cardW">
+    		已关联绑定银行卡
+    	</div>
+    	<div class="bind-card-detail">
+    		<!--绑定银行卡的图标-->
+    		<div class="card-img"></div>
+    		<div class="card-img-msg">
+    			<p>招商银行</p>
+    			<span>尾号 2333</span>
+    		</div>
+    		<div style="clear: both;"></div>
+    	</div>
+    </div>
+    <!--友情提示-->
+    <div class="friendly-tips">
+    	<p>友情提示：该卡最多可提现10,000.00元</p>
+    </div>
+    <!--输入金额-->
+    <div class="input-cashNum">
+    	<input type="text" value="" placeholder="请输出提现金额" onkeyup="this.value=this.value.replace(/^\D*(\d*(?:\.\d{0,2})?).*$/g, '$1')" required ng-pattern="/^[0-9]+([.]{1}[0-9]+){0,1}$/" maxlength="10" />
+    	<p>金额</p>
+    </div>
+    <!--说明-->
+    <div class="explain">
+    	<p>将从您的个人账户发起提现，手续费<em> 0.00 </em>元</p>
+    	<span>(T+1个工作日到账)</span>
+    </div>
+    <!--提现按钮-->
+    <div class="get-btn">
+    	提现
+    </div>
+</div>
+
+

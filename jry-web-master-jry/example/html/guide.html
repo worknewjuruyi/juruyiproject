@@ -1,0 +1,160 @@
+<div class="newguide-wrapper" ng-controller="newguideCtrl">
+	<div class="banner"></div>
+	<div class="modea-wrap">
+		<div class="mode">
+			<div class="title">什么是菠菜理财</div>
+			<div class="con">
+				上海高溪金融信息服务有限公司(菠菜理财)，是一家由国资全资（上海犇序实业有限公司）控股的互联网金融信息中介平台。旨在通过互联网技术为中小微企业及个人提供专业、透明、高效的金融信息服务，从而提升社会闲散资金的流通效率。帮助中小微企业实现更为高效、低成本的融资，同时为投资者提供低风险、低门槛、性价比高的投资理财服务。
+			</div>
+			<div class="newguide-process"></div>
+		</div>
+	</div>
+	<div class="modeb-wrap">
+		<div class="mode">
+			<div class="title">菠菜理财的优势</div>
+			<div class="list">
+				<div class="mod">
+					<div class="content">
+						<i class="newguide-aqbz"></i>
+						<p class="t">资金安全保障</p>
+						<p class="c">六大还款来源 专业保理担保</p>
+					</div>
+				</div>
+				<div class="mod">
+					<div class="content">
+						<i class="newguide-hgzc"></i>
+						<p class="t">专业律师合规支持</p>
+						<p class="c">国内顶级律师事务所 全程法律支持</p>
+					</div>
+				</div>
+				<div class="mod">
+					<div class="content">
+						<i class="newguide-zsxm"></i>
+						<p class="t">真实借款项目</p>
+						<p class="c">对借款企业信息进行详细披露</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modec-wrap">
+		<div class="mode">
+			<ul>
+				<!-- <li>
+					<h1>优选计划35天</h1>
+					<div class="detail">
+						<div class="left">
+							<h1 class="rate">6.5<span>%</span> <span class="activity-rate">+2.0%</span></h1>
+							<p>历史年化利率</p>
+						</div>
+						<div class="right">
+							<h1>35天</h1>
+							<p>投资期限</p>
+						</div>
+					</div>
+					<div class="progress">
+						<p>剩余投资金额：888888元</p>
+						<div class="percentage"><span ng-attr-style="width: {{20}}%"></span></div>
+					</div>
+					<div ui-sref="main.billDetail({ id: productA.id })" class="button">立即投资</div>
+				</li> -->
+				<li>
+					<h1>{{productA.fullName}}</h1>
+					<div class="detail">
+						<div class="left">
+							<h1 class="rate">{{productA.rate | number:1}}<span>%</span> <span class="activity-rate" ng-if="productA.activityRate > 0">+{{productA.activityRate | number:1}}%</span></h1>
+							<p>历史年化利率</p>
+						</div>
+						<div class="right">
+							<h1>{{productA.deadline}}天</h1>
+							<p>投资期限</p>
+						</div>
+					</div>
+					<div class="progress">
+						<p>剩余投资金额：{{productA.surplusAmount}}元</p>
+						<div class="percentage"><span ng-attr-style="width: {{productA.pert | setProgress}}%"></span></div>
+					</div>
+					<div ui-sref="main.billDetail({ id: productA.id })" class="button">立即投资</div>
+				</li>
+				<li>
+					<h1>{{productB.fullName}}</h1>
+					<div class="detail">
+						<div class="left">
+							<h1 class="rate">{{productB.rate | number:1}}<span>%</span> <span class="activity-rate" ng-if="productB.activityRate > 0">+{{productB.activityRate | number:1}}%</span></h1>
+							<p>历史年化利率</p>
+						</div>
+						<div class="right">
+							<h1>{{productB.deadline}}天</h1>
+							<p>投资期限</p>
+						</div>
+					</div>
+					<div class="progress">
+						<p>剩余投资金额：{{productB.surplusAmount}}元</p>
+						<div class="percentage"><span ng-attr-style="width: {{productB.pert | setProgress}}%"></span></div>
+					</div>
+					<div ui-sref="main.billDetail({ id: productB.id })" class="button">立即投资</div>
+				</li>
+				<li>
+					<h1>{{productC.fullName}}</h1>
+					<div class="detail">
+						<div class="left">
+							<h1 class="rate">{{productC.rate | number:1}}<span>%</span> <span class="activity-rate" ng-if="productC.activityRate > 0">+{{productC.activityRate | number:1}}%</span></h1>
+							<p>历史年化利率</p>
+						</div>
+						<div class="right">
+							<h1>{{productC.deadline}}天</h1>
+							<p>投资期限</p>
+						</div>
+					</div>
+					<div class="progress">
+						<p>剩余投资金额：{{productC.surplusAmount}}元</p>
+						<div class="percentage"><span ng-attr-style="width: {{productC.pert | setProgress}}%"></span></div>
+					</div>
+					<div ui-sref="main.billDetail({ id: productC.id })" class="button">立即投资</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="moded-wrap">
+		<div class="mode">
+			<div class="step-icons">
+				<p class="newguide-steptruea" ng-if="showStep >= 1" ng-click="changeStep(1)"></p>
+				<!-- <p class="newguide-stepnora" ng-if="showStep != 1" ng-click="showStep = 1"></p> -->
+				<p class="newguide-steptrueb" ng-if="showStep >= 2" ng-click="changeStep(2)"></p>
+				<p class="newguide-stepnorb" ng-if="showStep < 2" ng-click="changeStep(2)"></p>
+				<p class="newguide-steptruec" ng-if="showStep >= 3" ng-click="changeStep(3)"></p>
+				<p class="newguide-stepnorc" ng-if="showStep < 3" ng-click="changeStep(3)"></p>
+				<p class="newguide-steptrued" ng-if="showStep >= 4" ng-click="changeStep(4)"></p>
+				<p class="newguide-stepnord" ng-if="showStep < 4" ng-click="changeStep(4)"></p>
+			</div>
+			<div class="window">
+				<div class="newguide-prev" ng-click="prev()"></div>
+				<div class="newguide-window">
+					<div class="box">
+						<ul>
+							<li ng-if="showStep == 1">
+								<img src="/images/xszy1.png" alt="">
+								<!--<p class="newguide-reg"></p>-->
+							</li>
+							<li ng-if="showStep == 2">
+								<img src="/images/xszy2.png" alt="">
+								<!--<p class="newguide-certification"></p>-->
+							</li>
+							<li ng-if="showStep == 3">
+								<img src="/images/xszy3.png" alt="">
+								<!--<p class="newguide-recharge"></p>-->
+							</li>
+							<li ng-if="showStep == 4">
+								<img src="/images/xszy4.png" alt="">
+								<!--<p class="newguide-invest"></p>-->
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="newguide-next" ng-click="next()"></div>
+			</div>
+			<a href="/register" class="regbtn">立即注册领红包</a>
+			<p class="bot">其它疑问？您还可以<a href="/main/jt2/help">查看帮助中心</a></p>
+		</div>
+	</div>
+</div>

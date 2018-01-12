@@ -1,0 +1,326 @@
+.luckyDrawV1 {
+  padding-top: 17rem;
+  min-height: 60rem;
+  background: #ffcf16 url("/images/activity/luckDraw/luckBg.png") top center no-repeat;
+  background-size: 100% auto;
+  position: relative;
+  .turn-table-box {
+    width: 80%;
+    max-width: 552px;
+    margin: 0 auto;
+    padding: 3px;
+    border: .6rem solid #f3d34d;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #999;
+    background: #d7602e;
+    
+    
+    .turn-table {
+      width: 100%;
+      position: relative;
+      left: -.5px;
+      td {
+        width: 25%;
+        height: 5.3rem;
+        background: url("/images/activity/luckDraw/jp-bg.png") center center no-repeat;
+        background-size: 96% auto;
+        text-align: center;
+        position: relative;
+        &.start-btn {
+          background: url("/images/activity/luckDraw/btn-start.png") center center no-repeat;
+          background-size: 96% auto;
+          color: #fff;
+          .point {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            top: 12px;
+          }
+          .notes {
+            font-size: 1rem;
+          }
+        }
+        & > img {
+          width: 65%;
+          margin: 0 auto;
+          &.need-big {
+            width: 83%;
+          }
+        }
+        & > .td-mask {
+          position: absolute;
+          top: 0px;
+          display: none;
+          width: 100%;
+          height: 100%;
+          background: -webkit-radial-gradient(transparent 40%, #fff, #fff);
+          background: -o-radial-gradient(transparent 40%, #fff, #fff);
+          background: -moz-radial-gradient(transparent 40%, #fff, #fff);
+          background: radial-gradient(rgba(0, 0, 0, 0) 40%, #ffffff, #ffffff);
+          opacity: .7;
+        }
+        &.active {
+          & > .td-mask {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .my-winning-record {
+    height: 3rem;
+    line-height: 3rem;
+    width: 16rem;
+    display: block;
+    margin: 2rem auto 0;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 1.5rem;
+    background: -webkit-linear-gradient(#e86462, #d63843);
+    background: -o-linear-gradient(#e86462, #d63843);
+    background: -moz-linear-gradient(#e86462, #d63843);
+    background: linear-gradient(#e86462, #d63843);
+  }
+  .user-winning-record {
+    color: #e83f4f;
+    width: 85%;
+    margin: 2rem auto 0;
+    .title {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .winning-record-box {
+      margin-top: 1rem;
+      padding: 1rem;
+      box-sizing: border-box;
+      height: 12rem;
+      border: 2px solid #e83f4f;
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: .8rem;
+      li {
+        text-align: center;
+        line-height: 2rem;
+      }
+    }
+  }
+  .luckyDrawV1-gz {
+    .gz-title {
+      display: block;
+      width: 75%;
+      max-width: 545px;
+      margin: 1.1rem auto;
+      transform: translateX(1rem);
+      -webkit-transform: translateX(1rem);
+    }
+    .gz-list {
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+      background: #ec7c3b;
+      color: #fff;
+      padding: 1.2rem;
+      box-sizing: border-box;
+      border-radius: 6px;
+      font-size: .8rem;
+      ul {
+        padding-left: 1rem;
+        li {
+          list-style: decimal;
+        }
+      }
+    }
+  }
+  .hz-tips {
+    text-align: center;
+    font-size: .5rem;
+    color: #fff;
+    overflow: hidden;
+    background: url("/images/activity/luckDraw/hz-tips.png") bottom center no-repeat;
+    background-size: 100% 100%;
+    padding-top: 1px;
+    .hz-tips-text {
+      padding-top: 2rem;
+      padding-bottom: .8rem;
+    }
+  }
+  .my-luck-list {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    .luck-mask {
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .my-luck-list-show {
+      width: 90%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      background: #fa2f2b;
+      border-radius: 3px;
+      .title {
+        color: #fff;
+        text-align: center;
+        line-height: 3rem;
+        font-size: 1.5rem;
+      }
+      .luck-list {
+        padding: 1rem;
+        background: #fff;
+        ul {
+          width: 100%;
+          max-height: 20rem;
+          overflow: auto;
+          display: flex;
+          display: -webkit-flex;
+          flex-wrap: wrap;
+          -webkit-flex-wrap: wrap;
+          border: 1px dashed #dcdcdc;
+          li {
+            width: 25%;
+            height: 5rem;
+            border-right: 1px dashed #dcdcdc;
+            border-bottom: 1px dashed #dcdcdc;
+            position: relative;
+            box-sizing: border-box;
+//          &:nth-child(4n {
+//            & + 0) {
+//              border-right: none;
+//            }
+//          }
+            & > div {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              -webkit-transform: translate(-50%, -50%);
+              width: 80%;
+              height: 68%;
+              display: flex;
+              display: -webkit-flex;
+              justify-content: center;
+              -webkit-justify-content: center;
+              align-items: center;
+              -webkit-align-items: center;
+              padding-left: .2rem;
+              padding-right: .2rem;
+              box-sizing: border-box;
+              text-align: center;
+              box-shadow: 0 0 3px #9b9a9a;
+              border-radius: 5px;
+              color: #fff;
+              .money {
+                font-size: 1.2rem;
+                .icon {
+                  font-size: 1rem;
+                }
+              }
+              .card-type {
+                font-size: 1rem;
+                position: relative;
+                top: -3px;
+              }
+              &.jdk {
+                background: #b566ff;
+              }
+              &.jxq {
+                background: #36bff6;
+              }
+              &.hb {
+                background: #ff5151;
+              }
+              &.hf {
+                background: #ec7c3b;
+              }
+            }
+          }
+        }
+      }
+      .lets-see {
+        height: 5rem;
+        background: #fff;
+        padding: 1px;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+  }
+  .luckyDrawV1 .my-luck-list .my-luck-list-show .luck-list ul li:nth-child(4n+0) {
+      border-right: none;
+   }
+  .luckDetail {
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background: url("/images/activity/luckDraw/hjtc-bg.png") top center no-repeat;
+    background-size: 100% auto;
+    padding-top: 1px;
+    & > p {
+      text-align: center;
+      color: #fff;
+      &.jptype {
+        margin-top: 34%;
+        font-size: 1.5rem;
+      }
+      &.jpluck {
+        margin-top: 17%;
+        font-size: 1.2rem;
+        &.goTZ {
+          margin-top: 12%;
+          label {
+            display: block;
+          }
+        }
+      }
+    }
+    .btn-group {
+      width: 80%;
+      margin: 2.5rem auto 0;
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      &.noHasLuckNum-btn-group {
+        margin: 1.8rem auto 0;
+      }
+    }
+  }
+}
+.luckyDrawV1 .my-luck-list .my-luck-list-show .lets-see button, .luckyDrawV1 .my-luck-list .my-luck-list-show .lets-see a {
+  width: 12rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  display: block;
+  margin: 1rem auto 0;
+  color: #fff;
+  background: #fa2f2b;
+  font-size: 1.2rem;
+  border-radius: 1.5rem;
+}
+.luckyDrawV1 .luckDetail .btn-group button, .luckyDrawV1 .luckDetail .btn-group a {
+  height: 2.4rem;
+  line-height: 2.4rem;
+  width: 7rem;
+  text-align: center;
+  background: #f50738;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 1.2rem;
+}
+.luckyDrawV1 .luckDetail .btn-group button:first-child, .luckyDrawV1 .luckDetail .btn-group a:first-child {
+  background: #fff;
+  color: #f50738;
+}

@@ -1,0 +1,193 @@
+<div class="account-home-wrap" ng-controller="AccountaccountHomeCtrl">
+	<div class="title">
+		<div class="msg"><b>{{accuntHome.unReadMsg}}</b><a href="{{hrefUrl}}main/myAccount/myMsg">封未读信息</a><i class="my-msg"></i></div>
+		<div ng-if="accuntHome.realName != undefined" class="hello">您好，{{accuntHome.realName}} {{accuntHome.sex | isSex}}！</div>
+		<div ng-if="accuntHome.realName == undefined" class="hello">您好，{{accuntHome.mobilephone | limitTo:3}}*****{{accuntHome.mobilephone | limitTo:-3}}！</div>
+		<div class="icons">
+			<i ng-class="{1:'my-bank-set',0:'my-no-bank'}[isFuiou]"></i>
+			<i ng-class="{1:'my-phone-set',0:'my-no-phone'}[accuntHome.mobileVerify]"></i>
+		</div>
+	</div>
+	<!-- 紧急通告 -->
+	<div>
+		<marquee style="color: red">{{summaryContents}}</marquee>
+	</div>
+	<div class="content-wrap">
+		<div class="show-mode">
+			<div class="top-gold-wrap">
+				<div class="top-gold-mode">
+					<div class="mode-title">
+						我的资产
+					</div>
+					<div class="total-num">{{accuntHome.axInvestSum + accuntHome.yxInvestSum + accuntHome.free + accuntHome.balance + accuntHome.xsInvestSum + accuntHome.balanceFuiou| isNumber2}}</div>
+					<div class="list-wrap">
+						<ul class="show-list">
+							<!-- <li>
+								<p>在投本金</p>
+								<b >{{accuntHome.axInvestSum | isNumber2}}</b>
+							</li> -->
+							<li>
+								<p>优选理财</p>
+								<b>{{accuntHome.yxInvestSum | isNumber2}}</b>
+							</li>
+							<li>
+								<p>冻结资金</p>
+								<b>{{accuntHome.free  | isNumber2}}</b>
+							</li>
+							<!-- <li>
+								<p>新手产品</p>
+								<b>{{accuntHome.xsInvestSum  | isNumber2}}</b>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+				<span class="top-gold-inner"></span>
+				<div class="top-gold-mode">
+					<div class="mode-title gold-title">
+						体验金
+						<!--<a href="https://aowubao.com/main/jt/GGXQ?newId=75&t=2">-->
+						<a href="http://www.bocailicai.cn/main/jt/GGXQ?newId=13&t=2">
+							<!--<span class="my-goldq" ui-sref="main.myAccount.myFinance"></span>-->
+						<span class="my-goldq"></span>
+							<b>活动规则</b>
+						</a>
+					</div>
+					<div class="total-num">{{experienceAmount | isNumber2}}</div>
+					<div class="list-wrap">
+						<ul class="show-list">
+							<li class="top-gold">
+								<a href="" ng-if="hasNoACT && isExperience" ui-sref="main.productsList">立即激活</a>
+								<a href="" ng-if="!hasNoACT && isExperience" ui-sref="main.financeDetail">立即变现</a>
+								<p ng-if="isExperience">体验金仅可投资体验标</p>
+								<p ng-if="!isExperience" style="padding: 0;">请留意相关活动</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="btn-wrap">
+				<div class="rest">
+					<div class="data"><strong>账户可用余额：</strong><b>{{accuntHome.balanceFuiou | isNumber2}}</b>元</div>
+				</div>
+				<a href="/main/myAccount/recharge" class="recharge-btn">充值</a>
+				<a href="/main/myAccount/Withdraw" class="get-btn">提现</a>
+			</div>
+		</div>
+
+		<div class="show-mode" style="overflow: hidden;">
+			<div class="mode-title">我的已收收益</div>
+			<div class="total-num">{{accuntHome.profit  | isNumber2}}</div>
+			<div class="list-wrap">
+				<ul class="show-list">
+					<li class="last">
+						<p>待收收益</p>
+						<b class="tip-color">{{accuntHome.winterest  | isNumber2}}</b>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- <div class="show-mode">
+			<div class="invite-show">
+				<div class="inviteup-account" ui-sref="extend.inviteup"></div>
+				<div class="invite-mode">
+					<div class="my-total">您共邀请了<span>{{inviteInfo.friendTotal}}</span>位好友，本期有<span>{{inviteInfo.firstTotal}}</span>位完成首投</div>
+					<div class="total">
+						<div class="total-mode">
+							<span>累计获得返现</span>
+							<p><b>{{inviteInfo.rewards | currency:''}}</b>元</p>
+						</div>
+					</div>
+				</div>
+				<div class="btns">
+					<a href="" class="invite" ui-sref="extend.inviteup">邀好友赚钱</a>
+				</div>
+			</div>
+		</div> -->
+
+		<div class="show-mode">
+			<div class="mode-title">
+				<a href="/main/myAccount/myInvest" class="more">更多</a>我的投资产品
+			</div>
+			<table class="show-table">
+				<tr>
+					<th width="24%" class="first">产品名称</th>
+					<th width="14%">历史年化收益</th>
+					<th width="14%">投资期限</th>
+					<th width="16%">回款方式</th>
+					<th width="16%">购买金额</th>
+					<th width="16%">待收收益</th>
+				</tr>
+				<tr ng-repeat="item in investList">
+					<td ng-if="item.type!=5" class="first next" ui-sref="main.billDetail({ id: item.pid })">{{item.fullName}}</td>
+					<td ng-if="item.type==5" class="first next" ui-sref="main.financeDetail">{{item.fullName}}</td>
+					<td><b>{{item.rate}}</b>%<span ng-if="item.activityRate > 0">+<b>{{item.activityRate}}</b>%</span></td>
+					<td><b>{{item.deadline}}</b>天</td>
+					<td>{{(item.repayType | isRepayType).cnvalue}}</td>
+					<td><b>{{item.amount | currency:'￥'}}</b></td>
+					<td ng-if="item.status==0"><b>{{item.interest | isNumber2}}</b>元</td>
+					<td ng-if="item.status!=0"><b>{{item.factInterest | isNumber2}}</b>元</td>
+				</tr>
+			</table>
+		</div>
+
+		
+		<div class="show-mode">
+			<div class="mode-title">
+				<a href="/main/myAccount/myAssets" class="more">更多</a>资金记录
+			</div>
+			<table class="data-table">
+				<tr>
+					<th width="10%" class="first">记录号</th>
+					<th width="15%">记录类别</th>
+					<th width="15%">涉及金额</th>
+					<th width="20%">操作时间</th>
+					<th width="20%">操作状态</th>
+					<th width="20%">操作后资金余额</th>                                                                                                    
+				</tr>                                                                                                                   
+				<tr ng-repeat="item in fundsRecord" >
+					<td class="first" ng-bind="$index+1"></td>
+					<td>{{item.tradeType | investListTradeType}}</td>
+					<td>{{item.amount | isNumber2}} 元</td>
+					<td>{{item.addTime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+					<td><span ng-if="item.status == 1">处理中</span><span ng-if="item.status == 2">失败</span><span ng-if="item.status == 3">成功</span><span ng-if="item.status == 4">募集中</span></td>
+					<td>{{item.balance}} 元</td>                                                                                         
+				</tr>
+			</table>
+		</div>
+
+		<div class="show-mode">
+			<div class="mode-title">
+				产品推荐
+			</div>
+			<div class="pro-recommend">
+				<ul ng-repeat="item in infoList" ui-sref="main.billDetail({ id: item.id })" >
+					<li class="bill-name">{{item.fullName}}
+					<span style="width: 140px;" class="honour-tip" ng-if="item.accept !=undefined && item.accept !=''">
+                                            <i class="common-honour-icon"></i>{{item.accept}}</span>
+					</li>
+					<li class="rate-box">
+						<span class="rate"><b>{{item.rate}}</b>%</span>
+						<p>历史年化收益</p>
+					</li>
+					<li>
+						<span>{{item.leastaAmount}}</span>
+						<p>起投金额</p>
+					</li>
+					<li>
+						<span>{{item.deadline}}天</span>
+						<p>投资期限</p>
+					</li>
+					<li>
+						<span>{{item.amount | currency:'￥':0}}</span>
+						<p>产品总额</p>
+					</li>
+					<li class="invest-btn-box">
+						<a href="" class="invest-btn">{{(item.status | isProductType).cnvalue}}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

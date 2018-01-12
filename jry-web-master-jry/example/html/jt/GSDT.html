@@ -1,0 +1,21 @@
+<!--gsdtCtrl.js-->
+<!--位于信息披露-媒体报道里-->
+<!-- 公司动态 -->
+<div class="jt-wrap news-wrap" ng-controller="gsdtCtrl" style="padding: 18px;">
+	<div class="gsdt-box">
+		<ul>
+			<li ng-repeat="item in news">
+				<div class="left">
+					<img src="{{item.litpic}}">
+				</div>
+				<div class="right">
+					<a class="gsdt-title">{{item.title}}</a>
+					<p>{{item.summaryContents}}</p>
+					<a class="ckxq" href="/main/jt/XWXQ?newId={{item.artiId}}&t=0" ng-click="onXWclick(item)">查看详情>></a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- 页码ngInvestList.js -->
+	<dr-pg></dr-pg>
+</div>

@@ -1,0 +1,249 @@
+<!--controllerHome.js-->
+
+<div class="home-wrapper" ng-controller='controllerHome'>
+	<!--头部-->
+    <div class="header-home">
+        <div class="header-home-msgPoint"></div>
+        <div class="header-home-title"></div>
+        <div class="header-home-sign"></div>
+    </div>
+    
+    <!-- banner -->
+    <div class="home-banner">
+        <div class="banner-img">
+            <my-banner banner="banner"></my-banner>
+            <div class="trigger-wrap">
+                <div class="trigger-box"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!--滚动公告-->
+    <!--<div class="notice-box">
+        <img src="images/index/trumpet.png">
+        <div>
+            <ul>
+                <li ui-sref="GGXQ({artiId:item.artiId,wap:true})" ng-repeat="item in gglist">{{item.title}}</li>
+            </ul>
+        </div>
+    </div>-->
+    
+    <!--更多信息列表-->
+    <div class="moreMsg-show">
+        <div ui-sref="aqbz({wap:true})" class="moreMsg-aqbz">
+            <div>
+                <div class="imgaqbz"></div>
+                <div>
+                    <h3>安全保障</h3>
+                </div>
+            </div>
+        </div>
+        
+        <div class="moreMsg-yybg">
+            <div>
+                <div class="imgyybg"></div>
+                <div>
+                    <h3>运营报告</h3>
+                </div>
+            </div>
+        </div>        
+        <div class="moreMsg-xxpl">
+            <div>
+                <div class="imgxxpl"></div>
+                <div>
+                    <h3>信息披露</h3>
+                </div>
+            </div>
+        </div>
+        <div ui-sref="inviteFriend1({wap:true})" class="moreMsg-yqhy">
+            <div>
+                <div class="imgyqhy"></div>
+                <div>
+                    <h3>邀请好友</h3>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!--新人专享-->
+    <div class="newfish-gift" ng-if=''>
+    	<div class="newfish-title">
+    		<span class="line-left"></span>
+    		<em>新人专享</em>
+    		<span class="line-right"></span>
+    	</div>
+    	<div class="newfish-content">
+    		<!--三种按钮状态1. 未注册（或未登录）：newfish-btn,2.开通存管：newfish-btn2,首次投资：newfish-btn3-->
+    		<div class="newfish-btn"></div>
+    	</div>
+    </div>
+    
+    
+    
+    <div class="home-cplist">
+        <!--新手标old-->
+        <!--<div ng-if="index.fuiouNewHand" ui-sref="newhandDetail({pid:index.fuiouNewHand.id})" class="home-cpbox-b home-cpbox-newhand">
+            <header><img src="images/index/newhand-icon.png">{{index.fuiouNewHand.fullName}}<span ng-if="index.fuiouNewHandLabel">{{index.fuiouNewHandLabel}}</span></header>
+            <main>
+                <div class="part-a">
+                    <p>
+                        {{index.fuiouNewHand.rate}}<span>%</span>
+                        <sup ng-if="index.fuiouNewHand.activityRate>0">+{{index.fuiouNewHand.activityRate}}<span>%</span></sup>
+                    </p>
+                </div>
+                <div class="part-b">
+                    <div class="part-b">{{index.fuiouNewHand.deadline}}<span> 天</span></div>
+                </div>
+                <div class="part-c">
+                    <div data-progress="{{index.fuiouNewHand.pert | setProgress}}" progress-circle></div>
+                    <p ng-if="index.fuiouNewHand.status==5" style="color:#00CDB3;">去抢购</p>
+                    <p ng-if="index.fuiouNewHand.status==6">抢完了</p>
+                    <p ng-if="index.fuiouNewHand.status==8">待还款</p>
+                    <p ng-if="index.fuiouNewHand.status==9">已回款</p>
+                </div>
+            </main>
+        </div>-->
+        <!--新人专享标new-->
+        <div class="home-cpbox-newfish">
+        	<div class="cpbox-newfish-title">
+        		新人专享标
+        		<span>NO.20171012期</span>
+        	</div>
+        	<div class="cpbox-newfish-content">
+        		<div class="newfish-content-left">
+        			<p>18.00%</p>
+        			<span>历史年化收益率</span>
+        		</div>
+        		<div class="line-wrap">
+        			<div class="newfish-content-line"></div>
+	        		<div class="newfish-content-right">
+	        			<p>项目周期<em>7天</em></p>
+	        			<span>剩余可投<i>1,000</i>元</span>
+	        		</div>
+        		</div>        		
+        	</div>
+        </div>
+        <!--优选理财old-->
+        <!--<div ui-sref="main.bankBillList" class="home-cpbox-b">
+            <header>
+                <img src="images/index/you-icon.png" alt="优选理财">{{index.preferredInvest.preferredName}}
+                <span ng-if="index.preferredInvest.isCash==1">红包</span>
+                <span ng-if="index.preferredInvest.isInterest==1">加息券</span>
+            </header>
+            <main>
+                <div class="part-a">
+                    {{index.preferredInvest.minRate}}<span>%~</span>{{index.preferredInvest.maxRate}}<span>%</span>
+                </div>
+                <div class="part-b">{{index.preferredInvest.minDeadline}}<span> 天起</span></div>
+                <div class="part-c">去抢购</div>
+            </main>
+        </div>-->
+        <!--精选推荐new-->
+        <div class="cpnox-recommend">
+        	<div class="cpnox-recommend-title">
+        		<h4>精选推荐</h4>
+        		<p>人气活动 限时加息</p>
+        	</div>
+        	<div class="cpnox-recommend-content">
+        		<ul>
+        			<li>
+        				<div class="cpbox-recommend-title">
+			        		如意宝
+			        		<span>17E14(14/19)</span>
+			        	</div>
+			        	<div class="li-recommend-content">
+			        		<div class="li-content-left">
+			        			<p><span>11.00%</span><em>+0.6%</em></p>
+			        			<span>历史年化收益率</span>
+			        		</div>
+			        		
+			        		<div class="line-wrap">
+			        			<div class="li-content-line"></div>
+				        		<div class="li-content-right">
+				        			<p>项目周期<em>7天</em></p>
+				        			<span>剩余可投<i>1,000</i>元</span>
+				        		</div>
+			        		</div>
+			        		
+			        	</div>
+        			</li>
+        			<li>
+        				<div class="cpbox-recommend-title">
+			        		如意宝
+			        		<span>17E14(14/19)</span>
+			        	</div>
+			        	<div class="li-recommend-content">
+			        		<div class="li-content-left">
+			        			<p><span>11.00%</span><em>+0.6%</em></p>
+			        			<span>历史年化收益率</span>
+			        		</div>
+			        		
+			        		<div class="line-wrap">
+			        			<div class="li-content-line"></div>
+				        		<div class="li-content-right">
+				        			<p>项目周期<em>7天</em></p>
+				        			<span>剩余可投<i>1,000</i>元</span>
+				        		</div>
+			        		</div>
+			        		
+			        	</div>
+        			</li>
+        		</ul>
+        	</div>
+        </div>
+        <!--优选理财-->
+        <div class="cpnox-selectyx">
+        	<div class="cpnox-selectyx-title">
+        		<h4>优选理财</h4>
+        		<p>收益高 期限短</p>
+        	</div>
+        	<div class="cpnox-selectyx-content">
+        		<ul>
+        			<li>        				
+			        	<div class="li-selectyx-content">
+			        		<div class="li-content-left">
+			        			<p><span>8.00%~18.00%</span><em></em></p>
+			        			<span>期限<em>30</em>天起 | <i>100</i>元起投</span>
+			        		</div>
+			        		<div class="line-wrap">		
+				        		<button>去抢购</button>
+			        		</div>
+			        	</div>
+        			</li>
+        			
+        		</ul>
+        	</div>
+        </div>
+    </div>
+    
+    <!--底部-->
+    <div class="footer-safeshow"></div>
+    
+    <!--<div class="footer-adv">
+        <div>
+            <img src="images/index/footer-icon-a.png" alt="">
+            <div>
+                <p>严格甄选</p>
+                <p>优质产品</p>
+            </div>
+        </div>
+        <div>
+            <img src="images/index/footer-icon-b.png" alt="">
+            <div>
+                <p>6大还款</p>
+                <p>来源保障</p>
+            </div>
+        </div>
+        <div style="width:36%;">
+            <img src="images/index/footer-icon-c.png" alt="">
+            <div>
+                <p>知名律师</p>
+                <p>事务所支持</p>
+            </div>
+        </div>
+    </div>-->
+    
+
+    
+
+</div>

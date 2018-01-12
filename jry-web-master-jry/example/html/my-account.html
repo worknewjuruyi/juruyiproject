@@ -1,0 +1,58 @@
+<div class="my-account-wrapper" ng-controller="sideMenuCtrl">
+	<div class="my-account-wrap">
+		<div class="my-account-side">
+			<!-- 左侧菜单 -->
+			<div class="side-mode-list">
+				<div class="side-mode" ng-class="{'active-mode':currentPath=='/main/myAccount/accountHome'}">
+					<span ui-sref="main.myAccount.accountHome" class="mode-title">我的帐户</span>
+				</div>
+				<div class="side-mode" ng-class="{'active-mode':currentPath=='/main/myAccount/myInvest' || currentPath=='/main/myAccount/myAssets'}">
+					<i class="side-down"></i>
+					<span class="mode-title" ng-click="onClickMenuItem($event)">我的资产</span>
+					<div class="mode-con">
+						<a ui-sref="main.myAccount.myInvest" ng-class="{'actived':currentPath=='/main/myAccount/myInvest'}">我的投资</a>
+						<a ui-sref="main.myAccount.myAssets" ng-class="{'actived':currentPath=='/main/myAccount/myAssets'}">资产记录</a>
+					</div>
+				</div>
+				<div class="side-mode" ng-class="{'active-mode':currentPath=='/main/myAccount/recharge' || currentPath=='/main/myAccount/Withdraw'}">
+					<i class="side-down"></i>
+					<span class="mode-title" ng-click="onClickMenuItem($event)">资金管理</span>
+					<div class="mode-con">
+						<a ui-sref="main.myAccount.recharge" ng-class="{'actived':currentPath=='/main/myAccount/recharge'}">充值</a>
+						<a ui-sref="main.myAccount.Withdraw" ng-class="{'actived':currentPath=='/main/myAccount/Withdraw'}">提现</a>
+					</div>
+				</div>
+				<div class="side-mode" ng-class="{'active-mode':currentPath=='/main/myAccount/person' || currentPath=='/main/myAccount/security' || currentPath=='/main/myAccount/storageinfo' || currentPath=='/main/myAccount/openStorage'}">
+					<i class="side-down"></i>
+					<span class="mode-title" ng-click="onClickMenuItem($event)">账户管理</span>
+					<div class="mode-con">
+						<a ui-sref="main.myAccount.person" ng-class="{'actived':currentPath=='/main/myAccount/person'}">个人中心</a>
+						<a ui-sref="main.myAccount.security" ng-class="{'actived':currentPath=='/main/myAccount/security'}">安全认证</a>
+						<a ui-sref="main.myAccount.storageinfo" ng-class="{'actived':currentPath=='/main/myAccount/storageinfo' || currentPath=='/main/myAccount/openStorage'}">存管账户</a>
+					</div>
+				</div>
+				<div class="side-mode" ng-class="{'active-mode':currentPath=='/main/myAccount/myCoupon' || currentPath=='/main/myAccount/myFinance'}">
+					<i class="side-down"></i>
+					<span class="mode-title" ng-click="onClickMenuItem($event)">我的福利</span>
+					<div class="mode-con">
+						<a ui-sref="main.myAccount.myCoupon" ng-class="{'actived':currentPath=='/main/myAccount/myCoupon'}">我的优惠券</a>
+						<a ui-sref="main.myAccount.myFinance" ng-class="{'actived':currentPath=='/main/myAccount/myFinance'}">我的体验金</a>
+					</div>
+				</div>
+				<div class="side-mode" ng-class="{'active-mode':currentPath=='/main/myAccount/myFriend'}">
+					<span ui-sref="main.myAccount.myFriend" class="mode-title">我的邀请</span>
+				</div>
+				<div class="side-mode" ng-class="{'active-mode':currentPath=='/main/myAccount/myMsg'}">
+					<span ui-sref="main.myAccount.myMsg" class="mode-title">消息中心</span>
+				</div>
+			</div>
+			<div class="phone-wrap">
+				<p>{{(a | web).phoneLabel}}<i class="my-side-phone"></i></p>
+				<strong style="font-size: 16px">{{(a | web).phone}}</strong>
+			</div>
+		</div>
+		<div class="my-account-content">
+			<div ng-cloak class="ng-scope ng-cloak" ui-view=""></div>
+		</div>
+	</div>
+</div>

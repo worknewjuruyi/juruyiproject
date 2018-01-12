@@ -1,0 +1,141 @@
+<!--controllerHome.js-->
+
+<div class="home-wrapper" ng-controller='controllerHome'>
+    <div class="logo">
+        <p class="enter" ng-if="!isLogin"><a href="/login">登录</a><span>|</span><a href="/register">注册</a></p>
+        <p class="info" ng-if="isLogin" ui-sref="main.myaccountHome">{{realInfo}}</p>
+        <img src="images/index/logo-one.png">
+    </div>
+    
+    <!-- banner -->
+    <div class="home-banner">
+        <div class="banner-img">
+            <my-banner banner="banner"></my-banner>
+            <div class="trigger-wrap">
+                <div class="trigger-box"></div>
+            </div>
+        </div>
+    </div>
+    <!--滚动公告-->
+    <div class="notice-box">
+        <img src="images/index/trumpet.png">
+        <div>
+            <ul>
+                <li ui-sref="GGXQ({artiId:item.artiId,wap:true})" ng-repeat="item in gglist">{{item.title}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle-tab">
+        <div ui-sref="aqbz({wap:true})">
+            <div>
+                <img src="images/index/middle-aqbz.png" alt="">
+                <div>
+                    <h3>安全保障</h3>
+                    <p>六大还款来源</p>
+                </div>
+            </div>
+        </div>
+        <div ui-sref="inviteFriend1({wap:true})">
+            <div>
+                <img src="images/index/middle-invite.png" alt="">
+                <div>
+                    <h3>邀请好友</h3>
+                    <p>丰厚利润享不停</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home-cplist">
+        <!--新手标-->
+        <div ng-if="index.fuiouNewHand" ui-sref="newhandDetail({pid:index.fuiouNewHand.id})" class="home-cpbox-b home-cpbox-newhand">
+            <header><img src="images/index/newhand-icon.png">{{index.fuiouNewHand.fullName}}<span ng-if="index.fuiouNewHandLabel">{{index.fuiouNewHandLabel}}</span></header>
+            <main>
+                <div class="part-a">
+                    <p>
+                        {{index.fuiouNewHand.rate}}<span>%</span>
+                        <sup ng-if="index.fuiouNewHand.activityRate>0">+{{index.fuiouNewHand.activityRate}}<span>%</span></sup>
+                    </p>
+                </div>
+                <div class="part-b">
+                    <div class="part-b">{{index.fuiouNewHand.deadline}}<span> 天</span></div>
+                </div>
+                <div class="part-c">
+                    <div data-progress="{{index.fuiouNewHand.pert | setProgress}}" progress-circle></div>
+                    <p ng-if="index.fuiouNewHand.status==5" style="color:#00CDB3;">去抢购</p>
+                    <p ng-if="index.fuiouNewHand.status==6">抢完了</p>
+                    <p ng-if="index.fuiouNewHand.status==8">待还款</p>
+                    <p ng-if="index.fuiouNewHand.status==9">已回款</p>
+                </div>
+            </main>
+        </div>
+        <!--优选理财-->
+        <div ui-sref="main.bankBillList" class="home-cpbox-b">
+            <header>
+                <img src="images/index/you-icon.png" alt="优选理财">{{index.preferredInvest.preferredName}}
+                <span ng-if="index.preferredInvest.isCash==1">红包</span>
+                <span ng-if="index.preferredInvest.isInterest==1">加息券</span>
+            </header>
+            <main>
+                <div class="part-a">
+                    {{index.preferredInvest.minRate}}<span>%~</span>{{index.preferredInvest.maxRate}}<span>%</span>
+                </div>
+                <div class="part-b">{{index.preferredInvest.minDeadline}}<span> 天起</span></div>
+                <div class="part-c">去抢购</div>
+            </main>
+        </div>
+    </div>
+    <div class="footer-adv">
+        <div>
+            <img src="images/index/footer-icon-a.png" alt="">
+            <div>
+                <p>严格甄选</p>
+                <p>优质产品</p>
+            </div>
+        </div>
+        <div>
+            <img src="images/index/footer-icon-b.png" alt="">
+            <div>
+                <p>6大还款</p>
+                <p>来源保障</p>
+            </div>
+        </div>
+        <div style="width:36%;">
+            <img src="images/index/footer-icon-c.png" alt="">
+            <div>
+                <p>知名律师</p>
+                <p>事务所支持</p>
+            </div>
+        </div>
+    </div>
+    <div class="rem-rule"></div>
+
+    <div class="home-modal" ng-show="modelCanEnter">
+        <div class="home-modal-mask"></div>
+        <div class="luckEnter">
+            <span class="close-mask" ng-click="closeEnter()">
+                <i>X</i>
+            </span>
+            <p>
+                <span ng-if="!isLogin">登录即可获得1次抽奖机会</span>
+                <span ng-if="isLogin && hasLuckNum == 0">您目前没有抽奖机会</span>
+                <span ng-if="isLogin && hasLuckNum > 0">您有 <i ng-bind="hasLuckNum"></i> 次抽奖机会</span>
+            </p>
+
+            <!-- 未登录 -->
+            <div class="btn-group btn-center" ng-if="!isLogin">
+                <button ng-click="clickBtnGoPage('login',{returnurl:'luckyDrawV1'})">立即登录</button>
+            </div>
+            <!-- 登录状态 无抽奖次数 -->
+            <div class="btn-group" ng-if="isLogin && hasLuckNum == 0">
+                <button ng-click="clickBtnGoPage('inviteFriend1',{wap:true})">邀请好友</button>
+                <button ng-click="clickBtnGoPage('main.bankBillList',{})">我要投资</button>
+            </div>
+            <!-- 登录状态 有抽奖次数 -->
+            <div class="btn-group" ng-if="isLogin && hasLuckNum > 0">
+                <button ng-click="clickBtnGoPage('luckyDrawV1',{wap:true})">立即抽奖</button>
+                <button ng-click="clickBtnGoPage('main.bankBillList',{})">我要投资</button>
+            </div>
+        </div>
+    </div>
+
+</div>

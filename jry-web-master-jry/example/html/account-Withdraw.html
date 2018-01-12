@@ -1,0 +1,67 @@
+<div class="account-withdraw-wrap" ng-controller="withdrawCtrl">
+	<div class="account-common-title">提现</div>
+	<div class="account-common-con">
+		<div class="form-wrap">
+			<form name="storageForm" id="storageForm" method="POST" target="_blank" style="height: 0;">
+				<!-- <input type="hidden" id="storageJson" name="json" value=""> -->
+			</form>
+			<form name="cashForm" ng-submit="submitForm(cashForm.$valid)" novalidate>
+				<input style="display:none">
+				<input type="password" style="display:none">
+
+				<div class="choose">
+					<dl>
+						<dt>提现银行：</dt>
+						<dd>
+							<div class="bank-info">
+								<img src="/images/bank/{{user.bankCodeFuiou}}.jpg">
+								<p class="last-num">尾号<b>{{user.bankNumFuiou}}</b></p>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>提现金额：</dt>
+						<dd class="input-box">
+							<div class="input-mode">
+								<input type="text" class="text sum" name="storagecash" ng-model="user.storagecash" required placeholder="0.00"
+								 autocomplete="off" onkeyup="this.value=this.value.replace(/^\D*(\d*(?:\.\d{0,2})?).*$/g, '$1')" ng-blur="setAmount($event)"
+								 ng-pattern="/^[0-9]+([.]{1}[0-9]+){0,1}$/" morethan storagewithdrawlimit storagemaxlimit ng-if="user.isChargeFlag == 0">
+								<input type="text" class="text sum" name="storagecash" ng-model="user.storagecash" required placeholder="0.00"
+								 autocomplete="off" onkeyup="this.value=this.value.replace(/^\D*(\d*(?:\.\d{0,2})?).*$/g, '$1')" ng-blur="setAmount($event)"
+								 ng-pattern="/^[0-9]+([.]{1}[0-9]+){0,1}$/" morethan3 storagewithdrawlimit storagemaxlimit ng-if="user.isChargeFlag == 1">
+								<span>元</span>
+							</div>
+							<i ng-class="{true: 'common-form-ok', false: 'common-form-error'}[cashForm.storagecash.$valid]" ng-show="cashForm.storagecash.$dirty"></i>
+							<span class="error" ng-show="cashForm.storagecash.$error.pattern">请输入正确的数值</span>
+							<span class="error" ng-show="cashForm.storagecash.$dirty && cashForm.storagecash.$error.required">请输入提现金额</span>
+							<span ng-if="user.isChargeFlag == 0" class="error" ng-show="cashForm.storagecash.$error.morethan">提现金额至少为1元</span>
+							<span ng-if="user.isChargeFlag == 1" class="error" ng-show="cashForm.storagecash.$error.morethan3">提现金额至少为3元</span>
+							<span class="error" ng-show="cashForm.storagecash.$error.storagewithdrawlimit && !cashForm.storagecash.$error.morethan && !cashForm.storagecash.$error.morethan3">账户余额不足</span>
+							<span class="error" ng-show="cashForm.storagecash.$error.storagemaxlimit">提现金额最多为500,000元</span>
+						</dd>
+					</dl>
+
+					<div class="account-common-tips inner-tips">
+						<p>手续费：每位用户每月可享受2次免费提现，超出后提现手续费为2元/笔，手续费将从您的账户余额中扣除。</p>
+					</div>
+					<dl>
+						<dt>预估到账金额：</dt>
+						<dd>
+							<strong ng-if="user.storagecash - user.cost < 0" class="myrest">0.00</strong><strong ng-if="user.storagecash - user.cost >= 0" class="myrest">{{(user.storagecash - user.cost) | isNumber2}}</strong> 元
+						</dd>
+					</dl>
+
+					<div class="sub-box"><input type="submit" value="下一步" class="sub-btn sub" ng-disabled="cashForm.$invalid" /></div>
+
+					<div class="account-common-tips">
+						<p>友情提示：</p>
+						<p>2. 体验金收益需完成一次真实投资后才可提现；</p>
+						<p>3. 若提现过程中遇到任何问题，请及时联系我们 400-111-0866。</p>
+					</div>
+				</div>
+
+			</form>
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,88 @@
+.invest-balance-layer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  max-width: 750px;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.invest-balance-layer .main-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 20%;
+  width: 92%;
+  background-color: #ffffff;
+  border-radius: 0.24691rem;
+  overflow: hidden;
+  padding: 2.46914rem 0 1.97531rem 0;
+}
+.invest-balance-layer .main-box > img {
+  width: 0.98765rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.74074rem;
+}
+.invest-balance-layer .main-box h1 {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #444444;
+  margin-bottom: 1.23457rem;
+  position: relative;
+  line-height: 2.46914rem;
+  height: 2.46914rem;
+}
+.invest-balance-layer .main-box h1 img {
+  width: 1.48148rem;
+  position: relative;
+  top: 0.32099rem;
+}
+.invest-balance-layer .main-box p {
+  font-size: 0.9rem;
+  color: #444444;
+  text-align: center;
+  margin-bottom: 1.7284rem;
+  padding: 0 0.98765rem;
+}
+.invest-balance-layer .main-box .button-box {
+  width: 86%;
+  margin: 0 auto;
+  height: 2.46914rem;
+  line-height: 2.46914rem;
+}
+.invest-balance-layer .main-box .button-box span {
+  width: 44%;
+  float: left;
+  color: #ff4941;
+  border: 1px solid #ff4941;
+  text-align: center;
+  border-radius: 0.24691rem;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+}
+.invest-balance-layer .main-box .button-box span:nth-of-type(2) {
+  float: right;
+  background-color: #f04848;
+  color: #ffffff;
+  border: none;
+}
+.mask-layer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  max-width: 750px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  display: none;
+}

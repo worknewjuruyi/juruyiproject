@@ -1,0 +1,21 @@
+<!-- 内容 -->
+<div ng-cloak class="ng-scope ng-cloak" ng-include="'template/home.html'"></div>
+<!-- 底部 -->
+<div ng-controller="pageHomeCtrl" class="sign_box_1 sign_box_bottom">
+	<div ui-sref="main.home" ng-class="{selected:path=='/main/home'}" class="button">
+		<i class="ico_home"></i>
+		<!-- <a href="" class="button">首页</a> -->
+	</div>
+	<div ui-sref="main.bankBillList" ng-class="{selected:path=='/main/bankBillList'}" class="button">
+		<i class="ico_fund"></i>
+		<!-- <a href="main/canPin" class="button">我要投资</a> -->
+	</div>
+	<div ui-sref="main.myaccountHome" ng-class="{selected:path=='/main/myaccountHome'}" class="button">
+		<i class="ico_account"></i>
+		<!-- <a href="register" class="button">我的账户</a> -->
+	</div>
+	<div ui-sref="main.more" ng-class="{selected:path=='/main/more'}" class="button">
+		<i class="ico_more"></i>
+		<!-- <a href="more" >更多</a> -->
+	</div>
+</div>

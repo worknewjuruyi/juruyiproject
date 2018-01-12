@@ -1,0 +1,629 @@
+@charset "utf-8";
+.list-wrapper .normalcplist-content {
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+  background-color: #ffffff;
+  margin: 0.7rem 0;
+}
+.list-wrapper .normalcplist-content.finish {
+  opacity: 0.8;
+}
+.list-wrapper .normalcplist-content > header {
+  border-bottom: 1px solid #dcdcdc;
+  height: 3.45679rem;
+  line-height: 3.45679rem;
+  color: #333333;
+  font-size: 1.1rem;
+  padding-left: 1.23457rem;
+}
+.list-wrapper .normalcplist-content > header span {
+  color: #ff6400;
+  border: 1px solid #ff6400;
+  font-size: 0.8rem;
+  padding: 0.09877rem 0.49383rem;
+  border-radius: 0.15rem;
+  margin-left: 0.61728rem;
+}
+.list-wrapper .normalcplist-content > main {
+  padding: 0.98765rem 1.23457rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-wrapper .normalcplist-content > main > div.part-a {
+  font-size: 2.5rem;
+  color: #ff6400;
+}
+.list-wrapper .normalcplist-content > main > div.part-a > p {
+  font-size: 0.8rem;
+  color: #999999;
+}
+.list-wrapper .normalcplist-content > main > div.part-a > span {
+  font-size: 1.2rem;
+}
+.list-wrapper .normalcplist-content > main > div.part-a sup {
+  font-size: 1.2rem;
+}
+.list-wrapper .normalcplist-content > main > div.part-a sup span {
+  font-size: 0.9rem;
+}
+.list-wrapper .normalcplist-content > main > div.part-b {
+  font-size: 1.8rem;
+  color: #666666;
+  text-align: center;
+}
+.list-wrapper .normalcplist-content > main > div.part-b > p {
+  font-size: 0.8rem;
+  color: #999999;
+  margin-bottom: 0.74074rem;
+}
+.list-wrapper .normalcplist-content > main > div.part-b > span span {
+  font-size: 1.1rem;
+}
+.list-wrapper .normalcplist-content > main > div.part-c {
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  position: relative;
+}
+.list-wrapper .normalcplist-content > main > div.part-c p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  height: 5rem;
+  line-height: 5rem;
+  color: #666666;
+  font-size: 0.9rem;
+}
+.list-wrapper .normalcplist-content > p {
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid #f0f1f3;
+  height: 1.97531rem;
+  line-height: 1.97531rem;
+  color: #4d4d4d;
+}
+.list-wrapper .tab-header {
+  height: 1.17rem;
+  background-color: white;
+}
+.list-wrapper .tab-header ul {
+  display: flex;
+  justify-content: space-around;
+}
+.list-wrapper .tab-header ul li {
+  height: 1.17rem;
+  line-height: 1.17rem;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.list-wrapper .tab-header ul li .red-line {
+  width: 0.66rem;
+  height: 0.1rem;
+  border-radius: 0.05rem;
+  background-color: #ff4b3b;
+  position: absolute;
+  bottom: 0.13rem;
+}
+.list-wrapper .tab-header ul li h4 {
+  color: #9C9DAE;
+  font-size: 16px;
+}
+[data-dpr="2"] .list-wrapper .tab-header ul li h4 {
+  font-size: 32px;
+}
+[data-dpr="3"] .list-wrapper .tab-header ul li h4 {
+  font-size: 48px;
+}
+[data-dpr="4"] .list-wrapper .tab-header ul li h4 {
+  font-size: 64px;
+}
+.list-wrapper .tab-header ul li h4.active {
+  color: #3D3F4C;
+  font-weight: bold;
+}
+.list-wrapper .cpnox-newfish-content,
+.list-wrapper .cpnox-common-content,
+.list-wrapper .cpnox-activity-content {
+  background-color: white;
+}
+.list-wrapper .cpnox-newfish-content ul li,
+.list-wrapper .cpnox-common-content ul li,
+.list-wrapper .cpnox-activity-content ul li {
+  padding: 0.4rem 0;
+  border-top: 2px solid #f2f2f2;
+}
+.list-wrapper .cpnox-newfish-content ul li .cpbox-newfish-title,
+.list-wrapper .cpnox-common-content ul li .cpbox-newfish-title,
+.list-wrapper .cpnox-activity-content ul li .cpbox-newfish-title,
+.list-wrapper .cpnox-newfish-content ul li .cpbox-common-title,
+.list-wrapper .cpnox-common-content ul li .cpbox-common-title,
+.list-wrapper .cpnox-activity-content ul li .cpbox-common-title,
+.list-wrapper .cpnox-newfish-content ul li .cpbox-activity-title,
+.list-wrapper .cpnox-common-content ul li .cpbox-activity-title,
+.list-wrapper .cpnox-activity-content ul li .cpbox-activity-title {
+  padding-left: 0.4rem;
+  color: #5c5c66;
+  font-size: 16px;
+  font-weight: bold;
+}
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .cpbox-newfish-title,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .cpbox-newfish-title,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .cpbox-newfish-title,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .cpbox-common-title,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .cpbox-common-title,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .cpbox-common-title,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .cpbox-activity-title,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .cpbox-activity-title,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .cpbox-activity-title {
+  font-size: 32px;
+}
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .cpbox-newfish-title,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .cpbox-newfish-title,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .cpbox-newfish-title,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .cpbox-common-title,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .cpbox-common-title,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .cpbox-common-title,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .cpbox-activity-title,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .cpbox-activity-title,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .cpbox-activity-title {
+  font-size: 48px;
+}
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .cpbox-newfish-title,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .cpbox-newfish-title,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .cpbox-newfish-title,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .cpbox-common-title,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .cpbox-common-title,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .cpbox-common-title,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .cpbox-activity-title,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .cpbox-activity-title,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .cpbox-activity-title {
+  font-size: 64px;
+}
+.list-wrapper .cpnox-newfish-content ul li .cpbox-newfish-title span,
+.list-wrapper .cpnox-common-content ul li .cpbox-newfish-title span,
+.list-wrapper .cpnox-activity-content ul li .cpbox-newfish-title span,
+.list-wrapper .cpnox-newfish-content ul li .cpbox-common-title span,
+.list-wrapper .cpnox-common-content ul li .cpbox-common-title span,
+.list-wrapper .cpnox-activity-content ul li .cpbox-common-title span,
+.list-wrapper .cpnox-newfish-content ul li .cpbox-activity-title span,
+.list-wrapper .cpnox-common-content ul li .cpbox-activity-title span,
+.list-wrapper .cpnox-activity-content ul li .cpbox-activity-title span {
+  color: #5c5c66;
+  font-size: 16px;
+  font-weight: normal;
+}
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .cpbox-newfish-title span,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .cpbox-newfish-title span,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .cpbox-newfish-title span,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .cpbox-common-title span,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .cpbox-common-title span,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .cpbox-common-title span,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .cpbox-activity-title span,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .cpbox-activity-title span,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .cpbox-activity-title span {
+  font-size: 32px;
+}
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .cpbox-newfish-title span,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .cpbox-newfish-title span,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .cpbox-newfish-title span,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .cpbox-common-title span,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .cpbox-common-title span,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .cpbox-common-title span,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .cpbox-activity-title span,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .cpbox-activity-title span,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .cpbox-activity-title span {
+  font-size: 48px;
+}
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .cpbox-newfish-title span,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .cpbox-newfish-title span,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .cpbox-newfish-title span,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .cpbox-common-title span,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .cpbox-common-title span,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .cpbox-common-title span,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .cpbox-activity-title span,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .cpbox-activity-title span,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .cpbox-activity-title span {
+  font-size: 64px;
+}
+.list-wrapper .cpnox-newfish-content ul li .li-newfish-content,
+.list-wrapper .cpnox-common-content ul li .li-newfish-content,
+.list-wrapper .cpnox-activity-content ul li .li-newfish-content,
+.list-wrapper .cpnox-newfish-content ul li .li-common-content,
+.list-wrapper .cpnox-common-content ul li .li-common-content,
+.list-wrapper .cpnox-activity-content ul li .li-common-content,
+.list-wrapper .cpnox-newfish-content ul li .li-activity-content,
+.list-wrapper .cpnox-common-content ul li .li-activity-content,
+.list-wrapper .cpnox-activity-content ul li .li-activity-content {
+  padding-left: 0.4rem;
+  margin-top: 0.53rem;
+  overflow: hidden;
+}
+.list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left,
+.list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left,
+.list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left,
+.list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left,
+.list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left,
+.list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left,
+.list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left,
+.list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left,
+.list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left {
+  float: left;
+  margin-top: -0.15rem;
+}
+.list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left p,
+.list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left p,
+.list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left p,
+.list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left p,
+.list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left p,
+.list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left p,
+.list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left p,
+.list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left p,
+.list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left p {
+  margin-bottom: 0.24rem;
+  overflow: hidden;
+}
+.list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left p span,
+.list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left p span,
+.list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left p span,
+.list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left p span,
+.list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left p span,
+.list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left p span,
+.list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left p span,
+.list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left p span,
+.list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left p span {
+  float: left;
+  color: #ff4b3b;
+  font-size: 32px;
+}
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left p span,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left p span,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left p span,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left p span,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left p span,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left p span,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left p span,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left p span,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left p span {
+  font-size: 64px;
+}
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left p span,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left p span,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left p span,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left p span,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left p span,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left p span,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left p span,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left p span,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left p span {
+  font-size: 96px;
+}
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left p span,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left p span,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left p span,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left p span,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left p span,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left p span,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left p span,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left p span,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left p span {
+  font-size: 128px;
+}
+.list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left p em,
+.list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left p em,
+.list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left p em,
+.list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left p em,
+.list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left p em,
+.list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left p em,
+.list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left p em,
+.list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left p em,
+.list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left p em {
+  float: left;
+  color: #ff4b3b;
+  font-size: 12px;
+  margin-top: 0.1rem;
+}
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left p em,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left p em,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left p em,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left p em,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left p em,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left p em,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left p em,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left p em,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left p em {
+  font-size: 24px;
+}
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left p em,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left p em,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left p em,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left p em,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left p em,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left p em,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left p em,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left p em,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left p em {
+  font-size: 36px;
+}
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left p em,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left p em,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left p em,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left p em,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left p em,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left p em,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left p em,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left p em,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left p em {
+  font-size: 48px;
+}
+.list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left span,
+.list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left span,
+.list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left span,
+.list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left span,
+.list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left span,
+.list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left span,
+.list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left span,
+.list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left span,
+.list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left span {
+  color: #9c9dae;
+  font-size: 12px;
+}
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left span,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left span,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left span,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left span,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left span,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left span,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left span,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left span,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left span {
+  font-size: 24px;
+}
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left span,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left span,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left span,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left span,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left span,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left span,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left span,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left span,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left span {
+  font-size: 36px;
+}
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-left span,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-left span,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-left span,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-left span,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-left span,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-left span,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-left span,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-left span,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-left span {
+  font-size: 48px;
+}
+.list-wrapper .cpnox-newfish-content ul li .li-newfish-content .line-wrap,
+.list-wrapper .cpnox-common-content ul li .li-newfish-content .line-wrap,
+.list-wrapper .cpnox-activity-content ul li .li-newfish-content .line-wrap,
+.list-wrapper .cpnox-newfish-content ul li .li-common-content .line-wrap,
+.list-wrapper .cpnox-common-content ul li .li-common-content .line-wrap,
+.list-wrapper .cpnox-activity-content ul li .li-common-content .line-wrap,
+.list-wrapper .cpnox-newfish-content ul li .li-activity-content .line-wrap,
+.list-wrapper .cpnox-common-content ul li .li-activity-content .line-wrap,
+.list-wrapper .cpnox-activity-content ul li .li-activity-content .line-wrap {
+  float: right;
+  margin-right: 0.3rem;
+  overflow: hidden;
+}
+.list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-line,
+.list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-line,
+.list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-line,
+.list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-line,
+.list-wrapper .cpnox-common-content ul li .li-common-content .li-content-line,
+.list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-line,
+.list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-line,
+.list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-line,
+.list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-line {
+  height: 1.33rem;
+  border-left: 1px solid #f2f2f2;
+  float: left;
+  margin-top: 0.16rem;
+}
+.list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right,
+.list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right,
+.list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right,
+.list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right,
+.list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right,
+.list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right,
+.list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right,
+.list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right,
+.list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right {
+  float: left;
+  margin-left: 0.26rem;
+}
+.list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right p,
+.list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right p,
+.list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right p,
+.list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right p,
+.list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right p,
+.list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right p,
+.list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right p,
+.list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right p,
+.list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right p {
+  color: #5c5c66;
+  font-size: 14px;
+  margin-bottom: 0.57rem;
+}
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right p,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right p,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right p,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right p,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right p,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right p,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right p,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right p,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right p {
+  font-size: 28px;
+}
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right p,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right p,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right p,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right p,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right p,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right p,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right p,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right p,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right p {
+  font-size: 42px;
+}
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right p,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right p,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right p,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right p,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right p,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right p,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right p,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right p,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right p {
+  font-size: 56px;
+}
+.list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right p em,
+.list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right p em,
+.list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right p em,
+.list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right p em,
+.list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right p em,
+.list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right p em,
+.list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right p em,
+.list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right p em,
+.list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right p em {
+  color: #5c5c66;
+  font-size: 14px;
+  font-weight: bold;
+}
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right p em,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right p em,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right p em,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right p em,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right p em,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right p em,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right p em,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right p em,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right p em {
+  font-size: 28px;
+}
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right p em,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right p em,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right p em,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right p em,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right p em,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right p em,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right p em,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right p em,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right p em {
+  font-size: 42px;
+}
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right p em,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right p em,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right p em,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right p em,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right p em,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right p em,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right p em,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right p em,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right p em {
+  font-size: 56px;
+}
+.list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right span,
+.list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right span,
+.list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right span,
+.list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right span,
+.list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right span,
+.list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right span,
+.list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right span,
+.list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right span,
+.list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right span {
+  color: #5c5c66;
+  font-size: 14px;
+}
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right span,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right span,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right span,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right span,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right span,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right span,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right span,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right span,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right span {
+  font-size: 28px;
+}
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right span,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right span,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right span,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right span,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right span,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right span,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right span,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right span,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right span {
+  font-size: 42px;
+}
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right span,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right span,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right span,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right span,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right span,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right span,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right span,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right span,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right span {
+  font-size: 56px;
+}
+.list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right span i,
+.list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right span i,
+.list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right span i,
+.list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right span i,
+.list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right span i,
+.list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right span i,
+.list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right span i,
+.list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right span i,
+.list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right span i {
+  color: #5c5c66;
+  font-size: 14px;
+  font-weight: bold;
+}
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right span i,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right span i,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right span i,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right span i,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right span i,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right span i,
+[data-dpr="2"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right span i,
+[data-dpr="2"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right span i,
+[data-dpr="2"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right span i {
+  font-size: 28px;
+}
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right span i,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right span i,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right span i,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right span i,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right span i,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right span i,
+[data-dpr="3"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right span i,
+[data-dpr="3"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right span i,
+[data-dpr="3"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right span i {
+  font-size: 42px;
+}
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-newfish-content .li-content-right span i,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-newfish-content .li-content-right span i,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-newfish-content .li-content-right span i,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-common-content .li-content-right span i,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-common-content .li-content-right span i,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-common-content .li-content-right span i,
+[data-dpr="4"] .list-wrapper .cpnox-newfish-content ul li .li-activity-content .li-content-right span i,
+[data-dpr="4"] .list-wrapper .cpnox-common-content ul li .li-activity-content .li-content-right span i,
+[data-dpr="4"] .list-wrapper .cpnox-activity-content ul li .li-activity-content .li-content-right span i {
+  font-size: 56px;
+}

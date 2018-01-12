@@ -1,0 +1,230 @@
+<!--homeCtr.js-->
+<!--<link rel="stylesheet" type="text/css" href="../css/stylesheets/new.css"/>-->
+<div ng-controller="homeCtrl" class="home-wrapper">
+    <!-- banner 轮播图区域 -->
+    <div class="home-banner">
+        <div class="banner-img">
+            <banner banner="banner"></banner>
+        </div>
+    </div>
+    <!-- banner结束 -->
+    <div class="notice-wrapper">
+        <div class="notice-box" ng-show="showSummary == true && (summaryContents!='' || summaryContents!=undefined)">
+            <span class="noticet">网站公告<i class="home-tip"></i></span>
+            <div class="con">
+                <div>
+                    <span ng-repeat="item in noticeList track by $index">
+                        <a target="_blank" href="{{a|webIE8}}main/jt/GGXQ?newId={{item.arti_id}}&t=2">{{item.title}}</a>
+                        <i>{{item.create_time|date:"yyyy.MM.dd"}}</i>
+                    </span>
+                </div>
+            </div>
+            <p><a href="/main/jt/GSGG" target="_blank">查看更多</a></p>
+        </div>
+        <div class="data-wrapper">
+            <!-- 特性 -->
+            <div class="feature-wrap">
+                <div class="feature-list">
+                    <div class="feature-box">
+                        <ul>
+                            <li>
+                                <div>
+                                	<!--图片地址加时间戳-->
+                                    <p class="img"><img src="images/home/feature-a.png?v={{timer}}"></p>
+                                    <div>
+                                        <span>资金安全保障</span>
+                                        <p>六大还款来源 专业保理担保</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="img"><img src="images/home/feature-b.png"></p>
+                                    <div>
+                                        <span>专业律师合规支持</span>
+                                        <p>国内顶级律师事务所 全程法律支持</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="img"><img src="images/home/feature-c.png"></p>
+                                    <div>
+                                        <span>真实借款项目</span>
+                                        <p>对借款企业信息进行详细披露</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="home-content-wrapper">
+        <div ng-if="newUser != undefined" class="newlayout-wrap" style="overflow: hidden">
+            <!--<div class="title">新手专区<span>新手投资 专项通道</span></div>-->
+            <div class="newlayout">
+                <img class="newlayout_myimg" src="images/home/newhand-left.png" alt="">
+                <div class="prolayout">
+                    <div class="prolayout_detail2">
+                        <div class="prolayout_detail2_left">
+                            <img src="images/home/xszx.png" alt="">
+                        </div>
+                       <div class="prolayout_detail2_right">
+                          <div class="prolayout_detail2_right_1">
+                                                                                         新手福利标
+                           </div>
+                           <div  class="prolayout_detail2_right_2">
+                                                                                         专享福利不容错过
+                           </div>
+                       </div>
+
+                    </div>
+                    <div class="prolayout-detail">
+                        <div>
+                            <h1 class="rate">{{newUser.rate | number:1}}<span>%</span> <span class="activity-rate" ng-if="newUser.activityRate > 0">+{{newUser.activityRate | number:1}}%</span></h1>
+                            <p>历史年化利率</p>
+                        </div>
+                        <div>
+                            <h1>{{newUser.deadline}}天</h1>
+                            <p>投资期限</p>
+                        </div>
+                        <div>
+                            <h1>{{newUser.maxAmount | number:0}}元</h1>
+                            <p>最高可投</p>
+                        </div>
+                    </div>
+                    <!--此处的footer标签以后可更换div标签 以适应兼容-->
+                    <footer>
+                        <div class="progress-box">
+                            <p>剩余投资金额：{{newUser.surplusAmount}}元</p>
+                            <div class="percentage"><span ng-attr-style="width: {{newUser.pert | setProgress}}%"></span></div>
+                        </div>
+                        <div class="button" ui-sref="main.billDetail({ id: newUser.id })">立即投资</div>
+                    </footer>                    
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="product-wrap">
+            <!--<div class="title">优选理财<span>定期投资 分散投标</span></div>-->
+            <div class="product">
+                <div style="width: 220px;float: left;margin-right: 20px">
+                    <!--<h3>7.5%~10.5%</h3>-->
+                    <!--<br>-->
+                    <!--<p>自主投资 期限多样</p>-->
+                    <!--<p>资产优质 类型丰富</p>-->
+                    <!--<br>-->
+                    <!--<p>六重还款来源</p>-->
+                    <!--<p>保证资金安全</p>-->
+                    <!--<img src="images/home/product-left-part.png" alt="">-->
+                    <img style="width: 100%" src="images/home/product-left-part2.png" alt="">
+                </div>
+                <div class="product-right-part pull-right">
+                    <div class="product-item" ng-repeat="item in listDatas track by $index">
+                        <header>
+                            <h3>菠菜优选</h3>
+                            <p>{{item.deadline}}天</p>
+                        </header>
+                        <div class="product-rate">
+                            <h1>{{item.rate | number:1}}<span>%</span> <span class="activity-rate" ng-if="item.activityRate > 0">+{{item.activityRate | number:1}}%</span></h1>
+                            <p>历史年化利率</p>
+                        </div>
+                        <div class="product-deadline">
+                            <h1>{{item.deadline}}天</h1>
+                            <p>投资期限</p>
+                        </div>
+                        <button class="mybtn" ui-sref="main.billDetail({ id: item.id })">立即投资</button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-wrap">
+            <div class="news-con">
+                <div class="news tips">
+                    <div class="title">
+                        <a class="more" href="/main/jt/GSGG" target="_blank">更多></a>
+                        <p>网站公告</p>
+                    </div>
+                    <div class="con">
+                        <ul>
+                            <li ng-repeat="item in urgentNoticeList track by $index">
+                                <a target="_blank" href="{{a|webIE8}}main/jt/GGXQ?newId={{item.arti_id}}&t=2">
+                                    <span>{{item.create_time|date:"yyyy.MM.dd"}}</span>
+                                    <i class="txt">{{item.title}}</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="title">
+                        <a class="more" ui-sref="main.jt.GSDT" href="" target="_blank">更多></a>
+                        <p>新闻资讯</p>
+                    </div>
+                    <news news="news"></news>
+                </div>
+            </div>
+        </div>
+
+        <div class="partners">
+        	<!--路由测试-->
+        	<!--<div class="testRouter" ui-sref="main.RouterTest" style="color: red;font-size: 22px;text-align: center;">这是路由测试跳转内容!!!</div>-->
+            
+            <div class="partner-title">           	
+                                            合作机构
+            </div>
+            <div class="partner-box">
+                <div class="button-prev"><</div>
+                <div class="imgs swiper-container">
+                    <ul class="swiper-wrapper">
+                        <!--<li class="swiper-slide">-->
+                            <!--<img src="/images/home-partners/0.png">-->
+                        <!--</li>-->
+                        <li class="swiper-slide">
+                            <img src="/images/home-partners/1.png">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="/images/home-partners/2.png">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="/images/home-partners/3.png">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="/images/home-partners/4.png">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="/images/home-partners/5.png">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="/images/home-partners/6.png">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="/images/home-partners/7.png">
+                        </li>
+                    </ul>
+                </div>
+                <div class="button-next">></div>
+            </div>
+        </div>
+    </div>
+    <div ng-if="isShowGangGao">
+        <div class="donghuawrap" ng-click="closeAD()" style="width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 999;background: rgba(0,0,0,.7);">
+            <a target="_blank" href="{{popList.location}}" ng-click="closeAD()">
+                <div class="donghua" style="width:450px;height:530px;position:absolute;top: 0;left: 0;bottom:0;right:0;margin:auto;">
+                    <img class="donghua" style="width:100%;display:block;" src="{{popList.imgUrl}}">
+                    <!-- <a href="" ng-click="closeAD()">
+                        <div style="width: 44px;height: 44px;border-radius: 100px;left: 191px;top: 553px;line-height: 50px;position: absolute;text-align: center;font-size: 60px;">×</div>
+                    </a> -->
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="float-ad" ng-show="isShowGg"><a href="{{floatList.location}}" target="_blank"><img src="{{floatList.imgUrl}}"></a></div>
+    <!--进入页面的活动弹窗-->
+    <div ng-include="'html/login/hdtksy.html'"></div>
+</div>

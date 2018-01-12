@@ -1,0 +1,179 @@
+<!--cpDetailCtrl.js-->
+<div class="wrap newhand-wrapper cp-wrapper immedia-invest">
+	<!--顶部-->
+    <header class="common-header">
+	    <i></i>
+	    <h3>巨金宝</h3>
+	    <span class="protol">协议</span>
+    </header>
+    <div class="immedia-invest-content">
+    <!--历史年化收益率-->
+    <div class="income-rate">
+    	<div class="income-rate-content">
+    		<h5>历史年化收益率</h5>
+    		<h4>13.00<span>%</span></h4>
+    		<!--进度条-->
+    		<div class="income-rate-barwrap">
+    			<div class="bar">
+    				<div class="bar-inner"></div>
+    			</div>
+    			<!--比率-->
+    			<span class="rate">50%</span>
+    		</div>
+    	</div>
+    	<!--投资期限-->
+    	<div class="income-rate-msg">
+    		<div class="rate-msg-left">投资期限<span> 90</span>天</div>
+    		<div class="rate-msg-line"></div>
+    		<div class="rate-msg-middle">
+    			<p>满标后<span class="msg-middle-color">T+1</span>计息</p>
+    			<p>募集期平台贴息</p>
+    		</div>
+    		<div class="rate-msg-line"></div>
+    		<div class="rate-msg-right">到期返本付息</div>
+    		<div style="clear: both;"></div>
+    	</div>
+    	
+    </div>
+    <!--输入金额与收益-->
+	<div class="comein-wrap">
+		<div class="come-inp-msg">
+			<h5>请输入投资金额(元)</h5>
+			<p>剩余可投<span>71,400</span>元</p>
+		</div>
+		<div class="come-money">
+			<div class="come-money-word">金额</div>
+			<!--金额输入框-->
+			<input type="text" name="inp-money" id="" placeholder="100起投，100递增" onkeyup="this.value=this.value.replace(/^\D*(\d*(?:\.\d{0,2})?).*$/g, '$1')" ng-pattern="/^[0-9]+([.]{1}[0-9]+){0,1}$/" required/>
+		</div>
+		<div class="income-expected">
+			预期收益(元)：<span>128.12+100</span>
+		</div>
+	</div>
+	<!--优惠券-->
+	<div class="coupons" ng-click="isShowCoupon()">
+		<h4>优惠券</h4>
+		<div class="coupons-userful">
+			<!--未登录状态此处提示登录后可查看-->
+			<span>1张可用</span>
+			<em>></em>
+		</div>
+	</div>
+	
+	<!--投资详情弹出层-->
+	<div class="invest-detail">
+		<!--tab切换按钮-->
+		<div class="tab-header">
+			<ul>
+				<li ng-click="changeMode(1)">
+					<h4 ng-class="{1:'active'}[showMode]">项目信息</h4>
+					<div ng-class="{1:'red-line'}[showMode]"></div>
+				</li>
+				<li ng-click="changeMode(2)">
+					<h4 ng-class="{2:'active'}[showMode]">资金保障</h4>
+					<div ng-class="{2:'red-line'}[showMode]"></div>
+				</li>
+				<li ng-click="changeMode(3)">
+					<h4 ng-class="{3:'active'}[showMode]">投资记录</h4>
+					<div ng-class="{3:'red-line'}[showMode]"></div>
+				</li>
+			</ul>
+		</div>
+		
+		<!--tab内-内容-->
+		<!--项目信息-->
+		<div class="project-detail" ng-show="showMode==1">
+			<div class="date-msg">
+				<div class="top-msg">
+					<span>购买日期</span>
+					<span>开始计息</span>
+					<span>项目到期</span>
+					<span>汇款日期</span>
+				</div>
+				<div class="line-msg"></div>
+				<div class="bottom-msg">
+					<span>次日计息</span>
+					<span>2018-01-03</span>
+					<span>2018-01-03</span>
+					<span>1~2个工作日</span>
+				</div>
+			</div>
+		</div>
+		<!--资金保障-->
+		<div class="money-protect" ng-show="showMode==2">
+			2
+		</div>
+		<!--投资记录-->
+		<div class="invest-record" ng-show="showMode==3">
+			3
+		</div>
+	</div>
+	</div>
+	<!--浮动在底部-->
+	<div class="invest-float">
+		<!--立即投资按钮-->
+		<div class="immedia-invest-btn">
+			<button>立即投资</button>
+		</div>
+		<!--不懂问一问-->
+		<div class="touch-detail">
+			<div class="detail-msg">
+				<div class="detail-msg-img"></div>
+				<p>不懂问一问</p>
+			</div>
+			<div class="touch-up" ng-class="{'touch-down':isDownUp}" ng-touchstart="touchStart()" ng-touchmove="touchMove()">
+				<div class="up-icon"></div>
+				<p>上滑查看详情</p>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!--优惠券弹窗-->
+	<div class="coupon-list-mask">
+		<div class="coupon-list">
+			<!--头部-->
+			<div class="coupon-list-head">
+				<div class="income-left">
+					<i>预期收益(元)：</i><span>118.12</span><em>+100</em>
+				</div>
+				<div class="check-btn-right" ng-click="closeBtn()">
+					<button>确认</button>
+				</div>
+			</div>
+			<!--文字-->
+			<div class="coupon-listmsg">
+				请选择优惠券(可多选)
+			</div>
+			<!--content-->
+			<div class="coupon-list-content">
+				<ul>
+					<!--返现券coupon-invalid:不可点击背景样式，coupon-valid:可点击背景样式，coupon-selected:已选择的背景样式-->
+					<li class="cash-back coupon-invalid">
+						<div class="coupons-msg-left">
+							<h5>返现券</h5>
+							<p>满20000元可用 | 期限≥30天</p>
+							<p>有效期至 2018-01-06</p>
+						</div>
+						<div class="coupons-msg-right">
+							<p><span>￥</span>200<em></em></p>
+						</div>
+					</li>
+					<!--加息券-->
+					<li class="cash-back coupon-invalid">
+						<div class="coupons-msg-left">
+							<h5>返现券</h5>
+							<p>满20000元可用 | 期限≥30天</p>
+							<p>有效期至 2018-01-06</p>
+						</div>
+						<div class="coupons-msg-right">
+							<p><span>+</span>200<em>%</em></p>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</div>

@@ -1,0 +1,16 @@
+<div class="openaccount-dialog-wrapper">
+	<i class="storage-bigclose" ng-click="closeDialog(showSuccess)"></i>
+	<div ng-if="!showSuccess">
+		<div class="title"><b class="storage-error"></b>绑卡失败</div>
+		<div class="info" ng-if="errorMsg==undefined || errorMsg==''">绑卡遇到问题，请核对您填写的信息是否正确！</div>
+		<div class="info" ng-if="errorMsg!=undefined && errorMsg!=''">{{errorMsg}}</div>
+		<a href="" class="again" ng-click="closeDialog()">重新绑卡</a>
+	</div>
+	<div ng-if="showSuccess">
+		<!--<div class="title"><b class="storage-success"></b>开户成功</div>-->
+		<div class="title"><b class="storage-success"></b>绑卡成功</div>
+		<!--<div class="info">您已成功开通上海银行资金存管账户，快去充值投资赚收益吧！</div>-->
+		<div class="info">您已经成功绑定银行卡，快去充值投资赚取收益吧！</div>
+		<div class="bot"><a href="" class="keep" ng-click="closeDialog(showSuccess)">暂不充值</a><a href="/main/myAccount/recharge" class="recharge" ng-click="closeDialog()">充值</a></div>
+	</div>
+</div>

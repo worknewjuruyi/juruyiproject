@@ -1,0 +1,16 @@
+<div class="dialog recharge-dialog" ng-class="{true: 'recharge-gift-dialog'}[giftFlag]">
+	<div class="success-content">
+		<i class="dialog-{{status}}"></i>
+		<div class="{{status}}-text">
+			<span>{{type}}{{text}}</span><strong ng-if="status == 'error'">({{errorCode}})</strong>
+			<p>{{msg}}<b ng-show="showForgetPwd == true">，请一小时后再试，或<a href="" ng-click="forgetTradeCode()" class="forget">找回密码</a>解锁</b>。</p>
+			<p class="little-tip" ng-if="showLittleTip">预计将在10分钟内到账，请耐心等待。</p>
+			<a href="" ng-click="returnHome()" ng-if="status!='error'">返回</a>
+			<a href="" ng-click="closeDialog()" ng-if="status=='error'">返回</a>
+		</div>
+	</div>
+	<div class="gift-bg">
+		<a href="" class="close" ng-click="closeDialog()">×</a>
+		<a href="/main/myAccount/myCoupon" class="check" ng-click="closeDialog()">立即查看</a>
+	</div>
+</div>

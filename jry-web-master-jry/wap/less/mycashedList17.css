@@ -1,0 +1,65 @@
+.mycashedList {
+  font-size: 0.98765rem;
+}
+.mycashedList .mycashedHead {
+  line-height: 260%;
+  color: #4d4d4d;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+.mycashedList .mycashedHead .tab1 {
+  float: left;
+  width: 40%;
+  text-align: center;
+}
+.mycashedList .mycashedHead .tab2 {
+  float: left;
+  width: 30%;
+  text-align: center;
+}
+.mycashedList .mycashedHead .tab3 {
+  float: left;
+  width: 30%;
+  text-align: center;
+}
+.mycashedList .mycashedBody .mycashedBody-td {
+  border-bottom: 1px solid #d3d4d3;
+  padding: 0.74074rem 0;
+  overflow: hidden;
+  color: #4d4d4d;
+  background: #fff;
+}
+.mycashedList .mycashedBody .mycashedBody-td .tab1 {
+  float: left;
+  width: 40%;
+  text-align: center;
+  height: 3.45679rem;
+  font-size: 0.81481rem;
+}
+.mycashedList .mycashedBody .mycashedBody-td .tab1 span {
+  color: #ff6400;
+  font-size: 1.23457rem;
+}
+.mycashedList .mycashedBody .mycashedBody-td .tab2 {
+  float: left;
+  width: 30%;
+  text-align: center;
+  height: 3.45679rem;
+  line-height: 3.45679rem;
+  font-size: 0.98765rem;
+}
+.mycashedList .mycashedBody .mycashedBody-td .tab3 {
+  float: left;
+  width: 30%;
+  text-align: center;
+  height: 3.45679rem;
+  line-height: 3.45679rem;
+  font-size: 0.98765rem;
+  color: #9c9c9c;
+}
+.mycashedList .mycashedBody .mycashedBody-td .tab3 .green {
+  color: #ff6400;
+}
+.mycashedList .mycashedBody .mycashedBody-td .tab3 .gray {
+  color: #9c9c9c;
+}

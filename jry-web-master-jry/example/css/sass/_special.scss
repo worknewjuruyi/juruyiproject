@@ -1,0 +1,28 @@
+.special-footer{
+	height: 187px;
+	text-align: center;
+	background: #3e3e3e;
+	color: #fff;
+	font-size: 20px;
+	.foot-nav{
+		padding-top: 50px;
+		span{
+			margin: 0 22px;
+		}
+	}
+	a{
+		color: #fff;
+	}
+	.right{
+		padding-top: 33px;
+	}
+	&.reg-footer{
+		height: 185px;
+		font-size: 16px;
+		.foot-nav{
+			i{
+				margin-left: 50px;
+			}
+		}
+	}
+}

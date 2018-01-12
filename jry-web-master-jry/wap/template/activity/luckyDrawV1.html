@@ -1,0 +1,192 @@
+
+<div class="luckyDrawV1">
+    <div class="turn-table-box" data-ng-init="lotteryLoad()" id="lottery">
+        <table class="turn-table">
+            <tr>
+                <td class="lottery-unit lottery-unit-0">
+                    <img class="need-big" src="../images/activity/luckDraw/jl-01.png" alt="">
+                    <span class="td-mask"></span>
+                </td>
+                <td class="lottery-unit lottery-unit-1">
+                    <img class="need-big" src="../images/activity/luckDraw/jl-02.png" alt="">
+                    <span class="td-mask"></span>
+                </td>
+                <td class="lottery-unit lottery-unit-2">
+                    <img class="need-big" src="../images/activity/luckDraw/jl-07.png" alt="">
+                    <span class="td-mask"></span>
+                </td>
+                <td class="lottery-unit lottery-unit-3">
+                    <img class="need-big" src="../images/activity/luckDraw/jl-08.png" alt="">
+                    <span class="td-mask"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="lottery-unit lottery-unit-11">
+                    <img class="need-big" src="../images/activity/luckDraw/jl-012.png" alt="">
+                    <span class="td-mask"></span>
+                </td>
+                <td class="start-btn" colspan="2" rowspan="2" ng-click="startLuck(false)">
+                    <div ng-if="ftype == 2">
+                        <p class="point">点击抽奖</p>
+                        <p class="notes">( 您还有<span ng-bind="hasLuckNum"></span>次机会 )</p>
+                    </div>
+                    <div ng-if="ftype == 1">
+                        <p class="point">点击登录</p>
+                        <p class="notes">登录查看抽奖次数</p>
+                    </div>
+                </td>
+                <td class="lottery-unit lottery-unit-4">
+                    <img class="need-big" src="../images/activity/luckDraw/jl-09.png" alt="">
+                    <span class="td-mask"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="lottery-unit lottery-unit-10">
+                    <img class="need-big" src="../images/activity/luckDraw/jl-011.png" alt="">
+                    <span class="td-mask"></span>
+                </td>
+                <td class="lottery-unit lottery-unit-5">
+                    <img src="../images/activity/luckDraw/jl-03.png" alt="">
+                    <span class="td-mask"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="lottery-unit lottery-unit-9">
+                    <img class="need-big" src="../images/activity/luckDraw/jl-010.png" alt="">
+                    <span class="td-mask"></span>
+                </td>
+                <td class="lottery-unit lottery-unit-8">
+                    <img src="../images/activity/luckDraw/jl-06.png" alt="">
+                    <span class="td-mask"></span>
+                </td>
+                <td class="lottery-unit lottery-unit-7">
+                    <img src="../images/activity/luckDraw/jl-05.png" alt="">
+                    <span class="td-mask"></span>
+                </td>
+                <td class="lottery-unit lottery-unit-6">
+                    <img src="../images/activity/luckDraw/jl-04.png" alt="">
+                    <span class="td-mask"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <button ng-if="ftype==2" class="my-winning-record" ng-click="showMyLuckListFn()">我的中奖记录</button>
+
+    <div class="user-winning-record">
+        <p class="title">用户中奖纪录</p>
+        <div class="winning-record-box" id="winning-record-box">
+            <ul ng-if="usersLuckList.length>0" data-ng-init="winningLoad()">
+                <li ng-repeat="i in usersLuckList">恭喜用户 {{i.userId}} 获得{{i.priceName}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="luckyDrawV1-gz">
+        <img class="gz-title" src="../images/activity/luckDraw/cjhdgz.png" alt="">
+        <div class="gz-list">
+        	<ul>
+        		<li>活动时间：2017.10.16-10.26 (抽奖机会仅在活动期间有效，过期作废)</li>
+        		<li>注册账户每人每天有1次免费抽奖机会</li>
+        		<li>注册账户每人每天登录巨和宝理财APP，将获得一次免费抽奖机会</li>
+        		<li>注册账户每人每天登录巨和宝理财微信服务号，将获得一次免费抽奖机会</li>
+        		<li>注册账户成功邀请好友注册，将获得一次免费抽奖机会，每人每天最多三次</li>
+        		<li>绑卡账户每单笔投资金额每满2,000元（不含新手标和体验标）就多一次抽奖机会，投资越多，抽奖机会就越多</li>
+        		<li>奖励发放：返现红包、加息券即时发放至用户账户中；京东卡、话费将在中奖以后3个工作日内由客服人员联系并发放</li>
+        	</ul>
+        </div>
+    </div>
+
+    <div class="hz-tips">
+        <div class="hz-tips-text">
+            <p>本活动最终解释权为巨和宝理财所有</p>
+            <p>如有疑问请拨打客服热线：400-111-0866.</p>
+        </div>
+    </div>
+
+
+    <!-- 我的中奖纪录 -->
+
+    <div class="my-luck-list" ng-show="showMyLuckList">
+        <div class="luck-mask" ng-click="closeLuckList()"></div>
+        <div class="my-luck-list-show">
+            <p class="title">我的中奖纪录</p>
+            <div class="luck-list">
+                <ul ng-if="myPrizeList.length > 0">
+                    <li ng-repeat="i in myPrizeList">
+                        <div ng-class="{'jdk': i.type==6, 'jxq': i.type==2, 'hb': i.type==1, 'hf': i.type==7}">
+                            <p>{{i.priceName}}</p>
+                            <!-- <p class="money">
+                                <span class="icon">￥</span><span>100</span>
+                            </p>
+                            <p class="card-type">京东卡</p> -->
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <div class="jxq">
+                            <p class="money">
+                                <span class="icon"></span><span>1%</span>
+                            </p>
+                            <p class="card-type">加息券</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hb">
+                            <p class="money">
+                                <span class="icon">￥</span><span>100</span>
+                            </p>
+                            <p class="card-type">红包</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hf">
+                            <p class="money">
+                                <span class="icon">￥</span><span>100</span>
+                            </p>
+                            <p class="card-type">话费</p>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="lets-see">
+                <button ng-if="!isApp" ng-click="clickBtnGoPage('myCoupon',{})">立即查看</button>
+                <a ng-if="isApp&&isAndroid" href="jsmp://page=16?">立即查看</a>
+                <a ng-if="isApp&&isIOS" href="jsmp://page=2?">立即使用</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 中奖弹窗 -->
+    <div class="home-modal" ng-show="modelCanEnter">
+        <div class="home-modal-mask" ng-click="closeEnter()"></div>
+        <div class="luckDetail">
+            <p class="jptype" ng-bind="luckList[WinningIndex].fullName"></p>
+            <p class="jpluck">恭喜您获得<span ng-bind="luckList[WinningIndex].name"></span></p>
+
+            <div class="btn-group">
+                <button ng-click="startLuck(true)">再抽一次</button>
+                <button ng-if="!isApp" ng-click="clickBtnGoPage('main.bankBillList',{})">立即使用</button>
+                <a ng-if="isApp" href="jsmp://page=2?">立即使用</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 无抽奖机会 -->
+    <div class="home-modal" ng-show="noHasLuckNum">
+        <div class="home-modal-mask" ng-click="closeEnter()"></div>
+        <div class="luckDetail">
+            <p class="jptype">谢谢参与</p>
+            <p class="jpluck goTZ">
+                <label>对不起您暂无抽奖机会</label>
+                <label>快去投资吧</label>
+            </p>
+
+            <div class="btn-group noHasLuckNum-btn-group">
+                <button ng-click="clickBtnGoPage('inviteFriend1',{wap:true})">邀请好友</button>
+                <button ng-if="!isApp" ng-click="clickBtnGoPage('main.bankBillList',{})">立即投资</button>
+                <a ng-if="isApp" href="jsmp://page=2?">立即投资</a>
+            </div>
+        </div>
+    </div>
+
+</div>

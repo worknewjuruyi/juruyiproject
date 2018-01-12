@@ -1,0 +1,335 @@
+@charset "utf-8";
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+}
+html * {
+  -webkit-tap-highlight-color: transparent;
+}
+html,
+body {
+  font-family: sans-serif;
+}
+body,
+div,
+em,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th {
+  text-align: left;
+}
+fieldset,
+img {
+  border: 0;
+}
+em,
+i,
+strong {
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+ul,
+ol {
+  list-style: none;
+}
+del {
+  text-decoration: line-through;
+}
+input,
+button,
+textarea,
+select {
+  font-size: 100%;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+}
+a,
+button,
+input,
+select,
+textarea,
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0 none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+::-webkit-input-placeholder {
+  color: #999;
+}
+::-moz-placeholder {
+  color: #999;
+}
+:-moz-placeholder {
+  color: #999;
+}
+body {
+  width: 100%;
+  margin: 0 auto;
+  color: #323232;
+  background: #f2f2f2;
+}
+.sign_box_bottom-wgx {
+  position: relative !important;
+  border-radius: 8px;
+}
+.sign_box_bottom {
+  background: #fff;
+  border-top: 1px solid #d2d2d2;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 100;
+  overflow: hidden;
+  *zoom: 1;
+}
+.sign_box_bottom .button {
+  width: 25%;
+  float: left;
+  height: 1.15rem;
+  padding: 0.13rem 0;
+}
+.sign_box_bottom .button i {
+  display: block;
+  margin: 0 auto;
+}
+.sign_box_bottom .button em {
+  display: block;
+  text-align: center;
+  height: 0.26rem;
+  color: grey;
+  font-size: 10px;
+}
+[data-dpr="2"] .sign_box_bottom .button em {
+  font-size: 20px;
+}
+[data-dpr="3"] .sign_box_bottom .button em {
+  font-size: 30px;
+}
+[data-dpr="4"] .sign_box_bottom .button em {
+  font-size: 40px;
+}
+.sign_box_bottom .button i.ico_home {
+  background-image: url('../images/nav2/home_0@2x.png');
+  background-size: cover;
+  width: 0.69rem;
+  height: 0.69rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .sign_box_bottom .button i.ico_home {
+    background-image: url('../images/nav2/home_0@3x.png');
+    background-size: cover;
+  }
+}
+.sign_box_bottom .button i.ico_account {
+  background-image: url('../images/nav2/find_0@2x.png');
+  background-size: cover;
+  width: 0.69rem;
+  height: 0.69rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .sign_box_bottom .button i.ico_account {
+    background-image: url('../images/nav2/find_0@3x.png');
+    background-size: cover;
+  }
+}
+.sign_box_bottom .button i.ico_fund {
+  background-image: url('../images/nav2/product_0@2x.png');
+  background-size: cover;
+  width: 0.69rem;
+  height: 0.69rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .sign_box_bottom .button i.ico_fund {
+    background-image: url('../images/nav2/product_0@3x.png');
+    background-size: cover;
+  }
+}
+.sign_box_bottom .button i.ico_more {
+  background-image: url('../images/nav2/mine_0@2x.png');
+  background-size: cover;
+  width: 0.69rem;
+  height: 0.69rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .sign_box_bottom .button i.ico_more {
+    background-image: url('../images/nav2/mine_0@3x.png');
+    background-size: cover;
+  }
+}
+.sign_box_bottom .button:active i.ico_home {
+  background-image: url('../images/nav2/home_1@2x.png');
+  background-size: cover;
+  width: 0.69rem;
+  height: 0.69rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .sign_box_bottom .button:active i.ico_home {
+    background-image: url('../images/nav2/home_1@3x.png');
+    background-size: cover;
+  }
+}
+.sign_box_bottom .button:active i.ico_account {
+  background-image: url('../images/nav2/find_1@2x.png');
+  background-size: cover;
+  width: 0.69rem;
+  height: 0.69rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .sign_box_bottom .button:active i.ico_account {
+    background-image: url('../images/nav2/find_1@3x.png');
+    background-size: cover;
+  }
+}
+.sign_box_bottom .button:active i.ico_fund {
+  background-image: url('../images/nav2/product_1@2x.png');
+  background-size: cover;
+  width: 0.69rem;
+  height: 0.69rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .sign_box_bottom .button:active i.ico_fund {
+    background-image: url('../images/nav2/product_1@3x.png');
+    background-size: cover;
+  }
+}
+.sign_box_bottom .button:active i.ico_more {
+  background-image: url('../images/nav2/mine_1@2x.png');
+  background-size: cover;
+  width: 0.69rem;
+  height: 0.69rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .sign_box_bottom .button:active i.ico_more {
+    background-image: url('../images/nav2/mine_1@3x.png');
+    background-size: cover;
+  }
+}
+.sign_box_bottom .button.selected em {
+  display: block;
+  text-align: center;
+  height: 0.26rem;
+  color: black;
+  font-size: 10px;
+}
+[data-dpr="2"] .sign_box_bottom .button.selected em {
+  font-size: 20px;
+}
+[data-dpr="3"] .sign_box_bottom .button.selected em {
+  font-size: 30px;
+}
+[data-dpr="4"] .sign_box_bottom .button.selected em {
+  font-size: 40px;
+}
+.sign_box_bottom .button.selected i.ico_home {
+  background-image: url('../images/nav2/home_1@2x.png');
+  background-size: cover;
+  width: 0.69rem;
+  height: 0.69rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .sign_box_bottom .button.selected i.ico_home {
+    background-image: url('../images/nav2/home_1@3x.png');
+    background-size: cover;
+  }
+}
+.sign_box_bottom .button.selected i.ico_account {
+  background-image: url('../images/nav2/find_1@2x.png');
+  background-size: cover;
+  width: 0.69rem;
+  height: 0.69rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .sign_box_bottom .button.selected i.ico_account {
+    background-image: url('../images/nav2/find_1@3x.png');
+    background-size: cover;
+  }
+}
+.sign_box_bottom .button.selected i.ico_fund {
+  background-image: url('../images/nav2/product_1@2x.png');
+  background-size: cover;
+  width: 0.69rem;
+  height: 0.69rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .sign_box_bottom .button.selected i.ico_fund {
+    background-image: url('../images/nav2/product_1@3x.png');
+    background-size: cover;
+  }
+}
+.sign_box_bottom .button.selected i.ico_more {
+  background-image: url('../images/nav2/mine_1@2x.png');
+  background-size: cover;
+  width: 0.69rem;
+  height: 0.69rem;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .sign_box_bottom .button.selected i.ico_more {
+    background-image: url('../images/nav2/mine_1@3x.png');
+    background-size: cover;
+  }
+}

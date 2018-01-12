@@ -1,0 +1,18 @@
+.maintenance-page {
+  min-height: 49rem;
+  box-sizing: border-box;
+  padding-top: 8rem;
+  font-size: 14px;
+  background: #fff;
+}
+.maintenance-page .maintenance-img {
+  width: 100%;
+}
+.maintenance-page p {
+  width: 80%;
+  margin: 0px auto;
+  line-height: 28px;
+}
+.maintenance-page p.td2 {
+  text-indent: 2em;
+}

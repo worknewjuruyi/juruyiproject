@@ -1,0 +1,122 @@
+<!--myinvitationCtrl.js-->
+<div class="my-invitation-wrapper" ng-controller="myInvitationCtrl">
+	<div class="common-head" ng-click="toback()"><i></i><p>我的邀请</p></div>
+	<div class="all">
+		<a href="{{data.jumpUrl}}?wap=true"><img src="{{data.banner}}" width="100%"></a>
+	</div>
+	<div class="tab">
+		<h1>累积邀请好友：<span><span> {{data.total}} </span>人</span></h1>
+		<h1>已完成投资：<span><span> {{data.investors}} </span>人</span></h1>
+	</div>
+	<div class="table-box">
+		<table>
+			<tr class="header">
+				<th>注册手机号</th>
+				<th>姓名</th>
+				<th>注册时间</th>
+				<th>是否返现</th>
+				<!-- <th class="special">是否投资<br><span>（新手标、体验标除外）</span></th> -->
+			</tr>
+			<tr ng-repeat="item in inviteList">
+				<td>{{item.mobilePhone}}</td>
+				<td>{{item.realName}}</td>
+				<td>{{item.regTime | date:'yyyy.MM.dd'}}</td>
+				<td ng-if="!(item.amount>0)">{{{0:'否',undefined:'未投资'}[item.amount]}}</td>
+				<td ng-if="item.amount>0">{{item.amount}}元</td>
+			</tr>
+		</table>
+	</div>
+	<!-- <div class="preview">
+		<p>
+			<span>累计任务奖金：</span>
+			<span>{{data.threePresentRewards | currency:''}}元</span>
+		</p>
+	</div>
+	<div class="content">
+		<header><img src="images/myaccount/before-icon.png">&nbsp; 基础奖励&#x3000; <span>每邀请一位好友首投≥1000元，可获得10元返现</span></header>
+		<div class="statistic">
+			<div>
+				<span>邀请好友人数总计</span>
+				<span>{{data.recommendedCount}} 位</span>
+			</div>
+			<p>
+				<span>完成首投的好友</span>
+				<span><span>{{data.firstInvestCount}}</span> 位</span>
+			</p>
+			<footer></footer>
+		</div>
+		<div class="table-box">
+			<div class="table-header">
+				<span style="width: 25%;">我的好友</span>
+				<span style="width: 35%;">投资金额(元)</span>
+				<span style="width: 40%;">我的返利奖金(元)</span>
+			</div>
+			<div class="table-body">
+				<table ng-if="firstInvestList.length>0">
+					<tr ng-repeat="item in firstInvestList">
+						<td width="25%">{{item.realname}}</td>
+						<td width="35%">{{item.investAmount}}</td>
+						<td width="40%"><span>{{item.rebateAmount | number:2}}</span></td>
+					</tr>
+				</table>
+				<p ng-if="firstInvestList.length<=0"><img src="images/myaccount/norecord.png"></p>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<header><img src="images/myaccount/before-icon.png">&nbsp; 进阶奖励&#x3000; <span>获好友第2笔及第3笔投资收益30%的现金返现</span></header>
+		<div class="statistic">
+			<div>
+				<span>邀请好友人数总计</span>
+				<span>{{data.recommendedCount}} 位</span>
+			</div>
+			<p>
+				<span>完成复投的好友</span>
+				<span><span>{{data.reInvestCount}}</span> 位</span>
+			</p>
+			<footer></footer>
+		</div>
+		<div class="table-box">
+			<div class="table-header">
+				<span style="width: 19%;">我的好友</span>
+				<span style="width: 19%;">投资次数</span>
+				<span style="width: 28%;">投资金额(元)</span>
+				<span style="width: 34%;">我的返利奖金(元)</span>
+			</div>
+			<div class="table-body">
+				<table ng-if="repeatInvestList.length>0">
+					<tr ng-repeat="item in repeatInvestList">
+						<td width="19%">{{item.realname}}</td>
+						<td width="19%">{{item.investOrder}}</td>
+						<td width="28%">{{item.investAmount}}</td>
+						<td width="34%"><span>{{item.rebateAmount | number:2}}</span></td>
+					</tr>
+				</table>
+				<p ng-if="repeatInvestList.length<=0"><img src="images/myaccount/norecord.png"></p>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<header><img src="images/myaccount/before-icon.png">&nbsp; 终极奖励&#x3000; <span>排行榜前10名的邀请者可获得人脉王大奖</span></header>
+		<div class="rank">
+			<h1 ng-if="!(data.nowRanking<=10)">您当前的排名暂时无法上榜</h1>
+			<img ng-if="!(data.nowRanking<=10)" src="images/myaccount/rank-fail.png">
+			<h3 ng-if="!(data.nowRanking<=10)">赶紧用洪荒之力召唤您的好友~</h3>
+
+			<h1 ng-if="data.nowRanking<=10">您的当前排名&#x3000;&#x3000;第<span>{{data.nowRanking}}</span>位</h1>
+			<img ng-if="data.nowRanking<=10" src="images/myaccount/rank-success.png">
+			<h3 ng-if="data.nowRanking<=10">保持住，马上就可领取大奖了！</h3>
+		</div>
+	</div> -->
+	<div class="btn-bot" ng-click="share()">立即邀请好友</div>
+	<!--分享弹框-->
+	<div class="fixed-box" ng-click="closeshare()">
+		<div class="linkurl" ng-click="default($event)">
+			<p>复制以下网址，发送给您的好友注册并投资</p>
+			<textarea>http://m.bocailicai.cn/register?recommCode={{userOBJ.user.member.mobilephone}}</textarea>
+		</div>
+	</div>
+	<div class="activity-firend-boxweixin" ng-click="closeshareweixin()">
+    	<img src="images/activity/inviteFriend1/sharetext.png" class="sharetext" />
+    </div>
+</div>

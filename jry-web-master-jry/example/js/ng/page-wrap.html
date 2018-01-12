@@ -1,0 +1,101 @@
+<div class="page-wrap" ng-if="bill.pages.length > 0">
+    <div class="page-box">
+        <a ng-if="bill.pageOn != 1" href ng-click="onClickPage('beforePage',bill.pageOn)" class="prev">上一页</a>
+        <ul>
+            <li ng-if="bill.pageOn != 1" ng-click="onClickPage('currentPage',1)"><a href="">1</a></li>
+            <li ng-if="bill.pages.length > 5 && bill.pageOn > 3"><span>...</span></li>
+            <li ng-if="bill.pageOn == bill.pages.length && bill.pages.length > 4" ng-click="onClickPage('currentPage',bill.pageOn-3)"><a href="">{{bill.pageOn-3}}</a></li>
+            <li ng-if="(bill.pageOn == bill.pages.length || bill.pageOn == bill.pages.length - 1) && bill.pages.length>3 && bill.pageOn!=3"
+                ng-click="onClickPage('currentPage',bill.pageOn-2)"><a href="">{{bill.pageOn-2}}</a></li>
+            <li ng-if="bill.pageOn-1 > 1" ng-click="onClickPage('currentPage',bill.pageOn-1)"><a href="">{{bill.pageOn-1}}</a></li>
+            <li ng-click="onClickPage('currentPage',bill.pageOn)"><a href="" class="cur">{{bill.pageOn}}</a></li>
+            <li ng-if="bill.pageOn+1 < bill.pages.length" ng-click="onClickPage('currentPage',bill.pageOn+1)"><a href="">{{bill.pageOn+1}}</a></li>
+            <li ng-if="bill.pageOn == 1 && bill.pages.length>3" ng-click="onClickPage('currentPage',3)"><a href="">3</a></li>
+            <li ng-if="(bill.pageOn == 1 || bill.pageOn == 2) && bill.pages.length>4" ng-click="onClickPage('currentPage',4)"><a href="">4</a></li>
+            <li ng-if="bill.pages.length > 5 && (bill.pageOn < (bill.pages.length - 2))"><span>...</span></li>
+            <li ng-if="bill.pageOn != bill.pages.length" ng-click="onClickPage('currentPage',bill.pages.length)"><a href="">{{bill.pages.length}}</a></li>
+        </ul>
+        <a ng-if="bill.pageOn != bill.pages.length" href class="next" ng-click="onClickPage('nextPage',bill.pageOn)">下一页</a>
+    </div>
+</div>
+
+
+<!-- <div class="page-wrap" ng-if="bill.totalPage < 7 && bill.totalPage > 0">
+    <div class="page-box">
+        <a ng-if="bill.pageOn!=1" ng-click="onClickPage('beforePage',a)" class="prev">上一页</a>
+        <ul>
+            <li ng-click="onClickPage('currentPage',a)" ng-repeat="a in bill.pages">
+                <a ng-class="{true: 'cur', false: ''}[bill.pageOn == a]">{{a}}</a>
+            </li>
+        </ul>
+        <a ng-if="bill.pageOn!=bill.totalPage" href class="next" ng-click="onClickPage('nextPage',a)">下一页</a>
+    </div>
+</div>
+
+<div ng-if="bill.totalPage >= 7">
+    <div class="page-wrap" ng-if="bill.pageOn <= 5">
+        <div class="page-box">
+            <a href ng-click="onClickPage('beforePage',a)" class="prev">上一页</a>
+            <ul>
+                <li ng-click="onClickPage('currentPage',1)">
+                    <a ng-class="{true: 'cur', false: ''}[bill.pageOn == 1]">1</a>
+                </li>
+                <li ng-click="onClickPage('currentPage',2)">
+                    <a ng-class="{true: 'cur', false: ''}[bill.pageOn == 2]">2</a>
+                </li>
+                <li ng-click="onClickPage('currentPage',3)">
+                    <a ng-class="{true: 'cur', false: ''}[bill.pageOn == 3]">3</a>
+                </li>
+                <li ng-click="onClickPage('currentPage',4)">
+                    <a ng-class="{true: 'cur', false: ''}[bill.pageOn == 4]">4</a>
+                </li>
+                <li ng-click="onClickPage('currentPage',5)">
+                    <a ng-class="{true: 'cur', false: ''}[bill.pageOn == 5]">5</a>
+                </li>
+                <li ng-if="bill.pageOn == 5" ng-click="onClickPage('currentPage',6)">
+                    <a>6</a>
+                </li>
+                <li ng-if="bill.pageOn == 5" ng-click="onClickPage('currentPage',7)">
+                    <a>7</a>
+                </li>
+                <li ng-if="bill.totalPage != 0"><span>...</span></li>
+            </ul>
+            <a href class="next" ng-click="onClickPage('nextPage',a)">下一页</a>
+        </div>
+    </div>
+    <div class="page-wrap" ng-if="bill.pageOn > 5 && bill.pageOn <= (bill.totalPage - 4)">
+        <div class="page-box">
+            <a href ng-click="onClickPage('beforePage',bill.pageOn)" class="prev">上一页</a>
+            <ul>
+                <li ng-click="onClickPage('currentPage',1)"><a>1</a></li>
+                <li ng-click="onClickPage('currentPage',2)"><a>2</a></li>
+                <li><span>...</span></li>
+                <li ng-click="onClickPage('currentPage',bill.pageOn-2)"><a>{{bill.pageOn-2}}</a></li>
+                <li ng-click="onClickPage('currentPage',bill.pageOn-1)"><a>{{bill.pageOn-1}}</a></li>
+                <li ng-click="onClickPage('currentPage',bill.pageOn)"><a class="cur">{{bill.pageOn}}</a></li>
+                <li ng-click="onClickPage('currentPage',bill.pageOn+1)"><a>{{bill.pageOn+1}}</a></li>
+                <li ng-click="onClickPage('currentPage',bill.pageOn+2)"><a>{{bill.pageOn+2}}</a></li>
+                <li><span>...</span></li>
+            </ul><a href class="next" ng-click="onClickPage('nextPage',bill.pageOn)">下一页</a>
+        </div>
+    </div>
+    <div class="page-wrap" ng-if="bill.pageOn > 5 && bill.pageOn > (bill.totalPage - 4)">
+        <div class="page-box">
+            <a href ng-click="onClickPage('beforePage',bill.pageOn)" class="prev">上一页</a>
+            <ul>
+                <li ng-click="onClickPage('currentPage',1)"><a>1</a></li>
+                <li ng-click="onClickPage('currentPage',2)"><a>2</a></li>
+                <li><span>...</span></li>
+                <li ng-click="onClickPage('currentPage',bill.totalPage-4)"><a ng-class="{true: 'cur', false: ''}[bill.pageOn == (bill.totalPage - 4)]">{{bill.totalPage-4}}</a></li>
+                <li
+                    ng-click="onClickPage('currentPage',bill.totalPage-3)"><a ng-class="{true: 'cur', false: ''}[bill.pageOn == (bill.totalPage - 3)]">{{bill.totalPage-3}}</a></li>
+                    <li
+                        ng-click="onClickPage('currentPage',bill.totalPage-2)"><a ng-class="{true: 'cur', false: ''}[bill.pageOn == (bill.totalPage - 2)]">{{bill.totalPage-2}}</a></li>
+                        <li
+                            ng-click="onClickPage('currentPage',bill.totalPage-1)"><a ng-class="{true: 'cur', false: ''}[bill.pageOn == (bill.totalPage - 1)]">{{bill.totalPage-1}}</a></li>
+                            <li
+                                ng-click="onClickPage('currentPage',bill.totalPage)"><a ng-class="{true: 'cur', false: ''}[bill.pageOn == (bill.totalPage)]">{{bill.totalPage}}</a></li>
+            </ul><a href class="next" ng-click="onClickPage('nextPage',bill.pageOn)">下一页</a>
+        </div>
+    </div>
+</div> -->

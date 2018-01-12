@@ -1,0 +1,35 @@
+<!--pwdCtr.js-->
+<div class="tradepwd-wrapper" ng-controller="pwdCtrl">
+	<div class="common-head" ng-click="toback()"><i></i><p>{{title}}</p></div>
+	<form name="pwdSetForm" novalidate ng-submit="submitForm(pwdSetForm.$valid)" autocomplete="off">
+		<div class="pwd-box pwd-box-wgx" ng-if="!userOBJ.register">
+        	<input class="wt100" name="mobilephone" type="text" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" placeholder="请输入手机号" id="mobilephone" ng-model="mobilephone" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')"  minlength="11" maxlength="11" required>
+		</div>
+		<input style="display:none">
+        <input type="password" style="display:none">
+		<!--<div class="pwd-box code-box">
+			<a href="" ng-click="getCode()" ng-if="isGetCode == false" class="right">获取验证码</a><span class="right" ng-if="isGetCode == true">{{times}}s重新获取</span><input type="text" class="text" placeholder="请输入短信验证码" name="code" ng-model="pwd.code" required onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')" ng-blur="setInput('code')" maxlength="6">
+		</div>
+		<div class="pwd-box" ng-show="showCode == false">
+			<a href="" class="eye right" ng-click="showCode = true"></a><input type="password" name="pwd" class="text" placeholder="设置登录密码" required ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/" ng-model="pwd.pwd" autocomplete="off" ng-blur="setInput('pwd')" maxlength="20" onKeyUp="this.value=this.value.replace(/[^0-9a-zA-Z]*$/g,'')">
+		</div>
+		<div class="pwd-box" ng-show="showCode == true">
+			<a href="" class="eye right act" ng-click="showCode = false"></a><input type="text" name="repwd" class="text" placeholder="设置登录密码" required ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/" ng-model="pwd.pwd" autocomplete="off" ng-blur="setInput('repwd')" maxlength="20" onKeyUp="this.value=this.value.replace(/[^0-9a-zA-Z]*$/g,'')">
+		</div>-->
+		
+		<div class="pwd-box code-box pwd-box-wgx">
+			<a href="" ng-click="getCode()" ng-if="isGetCode == false" class="right">获取验证码</a><span class="right" ng-if="isGetCode == true">{{times}}s重新获取</span><input type="text" class="text" placeholder="请输入短信验证码" name="code" ng-model="pwd.code" required onKeyUp="this.value=this.value.replace(/[^0-9a-zA-Z]*$/g,'')" maxlength="6">
+		</div>
+		<div class="pwd-box pwd-box-wgx" ng-show="showCode == false">
+			<a href="" class="eye right" ng-click="showCode = true"></a><input type="password" name="pwd" class="text" placeholder="设置登录密码" required ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/" ng-model="pwd.pwd" autocomplete="off" maxlength="18" onKeyUp="this.value=this.value.replace(/[^0-9a-zA-Z]*$/g,'')">
+		</div>
+		<div class="pwd-box pwd-box-wgx" ng-show="showCode == true">
+			<a href="" class="eye right act" ng-click="showCode = false"></a><input type="text" name="repwd" class="text" placeholder="设置登录密码" required ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/" ng-model="pwd.pwd" autocomplete="off" maxlength="18" onKeyUp="this.value=this.value.replace(/[^0-9a-zA-Z]*$/g,'')">
+		</div>
+	
+		<div class="little-tip">登录密码为6-18位数字与字母组合</div>
+		<div class="sub-box" ng-if="forget == false"><input type="submit" value="修改" class="sub" ng-disabled="pwdSetForm.$invalid"></div>
+		<div class="sub-box" ng-if="forget == true"><input type="submit" value="提交" class="sub" ng-disabled="pwdSetForm.$invalid"></div>
+
+	</form>
+</div>

@@ -1,0 +1,57 @@
+<div ng-controller="mainCtrl">
+	<!-- 欢迎栏 -->
+	<div>
+		<!-- 欢迎栏 -->
+		<div ng-hide="isLoginPage" class="top-global-wrapper">
+			<div class="top-content">
+				<div class="tel">
+					<i class="global-topphone"></i>
+					<b>客服热线：<span>{{(a | web).phone}}</span>（工作日：09:00-21:00；   周末及节假日：09:00-18:00）</b>
+				</div>
+				<div class="top-nav">
+					<a ng-if="(a | isRegister).register" href="" ng-click="gotoLoginPage('myAccount')">{{(a | isRegister).user.userName}}</a>&nbsp;
+					<a ng-show="(a | isRegister).register" ng-click="userOut()" href="#" class="top-quit">[退出]</a>
+					<a href="{{a|webIE8}}main/home" target="_blank">首页</a>
+					<span style="margin-right: 12px;">|</span>
+					<a href="{{a|webIE8}}main/guide" target="_blank">新手指引</a>
+					<span style="margin-right: 12px;">|</span>
+					<a href="{{a|webIE8}}main/jt2/help?menuName=help" target="_blank">帮助中心</a>
+					<span>|</span>
+					<div class="appCode">
+						<a href><i>手机APP</i></a>
+						<div>
+							<img style="width:100px;" src="images/global/app.png">
+							<p>安卓客户端<br>APP下载</p>
+						</div>
+					</div>
+					<span style="margin-left: -4px;">|</span>
+					<div class="appCode">
+						<i class="global-topwechat"></i>
+						<div>
+							<img style="width:100px;" src="images/global/wechat.jpg">
+							<p>扫一扫<br>关注官方微信</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 欢迎栏结束 -->
+
+	</div>
+
+	<!-- 中间容器 -->
+	<div ui-view="" ng-cloak class='ng-scope ng-cloak'></div>
+	<!-- 中间容器结束 -->
+
+	<div class="special-footer reg-footer">
+		<p class="foot-nav"><a href="{{a|webIE8}}main/jt/JSGK?menuName=JSGK" target="_blank">公司简介</a><span>|</span><a href="{{a|webIE8}}main/jt/LXWM?menuName=LXWM"
+			 target="_blank">联系我们</a><span>|</span><a href="{{a|webIE8}}main/guarantee?menuName=guarantee" target="_blank">安全保障</a><span>|</span>
+			<a
+			 href="{{a|webIE8}}main/jt2/help?menuName=help" target="_blank">常见问题</a><span>|</span><a href="{{a|webIE8}}main/guide" target="_blank">新手指引</a><span>|</span><a href="{{a|webIE8}}main/FLFG"
+				 target="_blank">法律保障</a></p>
+		<p class="right">
+			<a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action" target="_blank" style="color:#b4b4b4;text-decoration:none;">沪ICP备17010435号-3</a>			| © 上海高溪金融信息服务有限公司 {{v}}
+		</p>
+	</div>
+
+</div>

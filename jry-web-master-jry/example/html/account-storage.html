@@ -1,0 +1,143 @@
+<div class="account-home-wrap" ng-controller="storageCtrl">
+	<div class="title" style="border: none;">
+		<div class="msg"><b>{{accuntHome.unReadMsg}}</b><a href="{{hrefUrl}}main/myAccount/myMsg">封未读信息</a><i class="my-msg"></i></div>
+		<div ng-if="accuntHome.realName != undefined" class="hello">您好，{{accuntHome.realName}} {{accuntHome.sex | isSex}}！</div>
+		<div ng-if="accuntHome.realName == undefined" class="hello">您好，{{accuntHome.mobilephone | limitTo:3}}*****{{accuntHome.mobilephone | limitTo:-3}}！</div>
+		<div class="icons">
+			<!-- <i ng-class="{1:'my-card-set',0:'my-no-card'}[accuntHome.realVerify]"></i> -->
+			<i ng-class="{1:'my-bank-set',0:'my-no-bank'}[isFuiou]"></i>
+			<i ng-class="{1:'my-phone-set',0:'my-no-phone'}[accuntHome.mobileVerify]"</i>
+		</div>
+	</div>
+	<div class="account-storage-wrapper">
+		<form name="storageForm" id="storageForm" method="POST" style="height: 0;">
+			<!-- <input type="hidden" id="storageJson" name="json" value=""> -->
+		</form>
+		<div class="open-storage-wrapper">
+			<form name="infoForm">
+				<div class="form-box">
+					<p class="inner-title">填写用户信息</p>
+					<div class="form" ng-if="member.idCards==''">
+						<div class="inputbox">
+							<p>手机号码：</p>
+							<div class="inputmod">
+								<span class="inner">{{member.phone}}</span>
+							</div>
+						</div>
+						<div class="inputbox">
+							<p class="fill">真实姓名：</p>
+							<div class="inputmod">
+								<input type="text" name="realName" class="text" ng-model="user.realName" required>
+								<i ng-class="{true: '', false: 'common-form-error'}[infoForm.realName.$valid]" ng-show="infoForm.realName.$dirty"></i>
+	                            <span class="error" ng-show="infoForm.realName.$dirty && infoForm.realName.$error.required">请输入真实姓名</span>
+							</div>
+						</div>
+						<div class="inputbox">
+							<p class="fill">证件号码：</p>
+							<div class="inputmod">
+								<input type="text" name="idCards" class="text" ng-model="user.idCards" required ng-minlength="15" ng-maxlength="18" ng-pattern="/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/" maxlength="18" minlength="15">
+								<i ng-class="{true: '', false: 'common-form-error'}[infoForm.idCards.$valid]" ng-show="infoForm.idCards.$dirty"></i>
+	                            <span class="error" ng-show="infoForm.idCards.$error.pattern">请输入正确的证件号码</span>
+	                            <span class="error" ng-show="infoForm.idCards.$dirty && infoForm.idCards.$error.required">请输入证件号码</span>
+							</div>
+						</div>
+					</div>
+					<div class="form" ng-if="member.idCards!=''">
+						<div class="inputbox">
+							<p>手机号码：</p>
+							<div class="inputmod">
+								<span class="inner">{{member.phone}}</span>
+							</div>
+						</div>
+						<div class="inputbox">
+							<p>真实姓名：</p>
+							<div class="inputmod">
+								<span class="inner">{{member.realName}}</span>
+							</div>
+						</div>
+						<div class="inputbox">
+							<p>证件号码：</p>
+							<div class="inputmod">
+								<span class="inner">{{member.idCards}}</span>
+							</div>
+						</div>
+					</div>
+					<div class="other-box form">
+						<div class="inputbox">
+							<p class="fill">银行名称：</p>
+							<div class="inputmod">
+								<select required ng-model="user.bank" name="bankName" ng-options="b.code as b.name for b in bank" ng-change="selectBank()">
+									<option value="">请选择</option>
+								</select>
+								<i ng-class="{true: '', false: 'common-form-error'}[infoForm.bankName.$valid]" ng-show="infoForm.bankName.$dirty"></i>
+	                            <span class="error" ng-show="infoForm.bankName.$dirty && infoForm.bankName.$error.required">请选择银行名称</span>
+							</div>
+						</div>
+						<div class="inputbox">
+							<p class="fill">银行卡号：</p>
+							<div class="inputmod">
+								<input type="text" name="card" class="text" ng-model="user.card" required>
+								<!--<input type="text" name="card" class="text" ng-model="user.card" required valbankcardno>-->
+								<i ng-class="{true: '', false: 'common-form-error'}[infoForm.card.$valid]" ng-show="infoForm.card.$dirty"></i>
+	                            <span class="error" ng-show="infoForm.card.$error.valbankcardno">请输入正确的银行卡号</span>
+	                            <span class="error" ng-show="infoForm.card.$dirty && infoForm.card.$error.required">请输入银行卡号</span>
+							</div>
+						</div>
+						<div class="inputbox">
+							<p class="fill">开户所在地：</p>
+							<div class="inputmod">
+								<label ng-class="{error: error.province}">
+									<select class="small" name="province" required ng-model="user.province" ng-options="s.ProvinceName for s in list" ng-change="changeP()">
+                						<option value="">请选择</option>
+        							</select>
+        							<i ng-class="{true: '', false: 'common-form-error'}[infoForm.province.$valid]" ng-show="infoForm.province.$dirty"></i>
+	                            	<span class="error" ng-show="infoForm.province.$dirty && infoForm.province.$error.required">请选择开户所在省</span>
+        						</label><b>省</b>
+        						<label ng-disabled="user.province.Cities.length" ng-class="{error: error.city}">
+        							<select class="small" name="city" required ng-model="user.city" ng-options="sh[1] as sh[0] for sh in user.province.Cities" ng-change="changeC()">
+                						<option value="">请选择</option>
+        							</select>
+        							<i ng-class="{true: '', false: 'common-form-error'}[infoForm.city.$valid]" ng-show="infoForm.city.$dirty && !infoForm.province.$error.required"></i>
+	                            	<span class="error" ng-show="infoForm.city.$dirty && infoForm.city.$error.required && !infoForm.province.$error.required">请选择开户所在市</span>
+        						</label><b>市</b>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-box botform-box">
+				
+					<p class="inner-title">设置存管支付密码<span>该密码只用于账户提现</span></p>
+					<div class="form">
+						<div class="inputbox">
+							<p class="fill">设置支付密码：</p>
+							<div class="inputmod">
+								<input type="password" id="paycode" name="paycode" class="text" onKeyUp="this.value=this.value.replace(/[^0-9a-zA-Z]*$/g,'')"
+									   ng-model="user.paycode" required maxlength="16"
+									   ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$/"><strong>请输入8-16位数字与字母组合</strong>
+								<i ng-class="{true: '', false: 'common-form-error'}[infoForm.paycode.$valid]" ng-show="infoForm.paycode.$dirty"></i>
+	                            <span class="error" ng-show="infoForm.paycode.$error.pattern">支付密码格式不正确</span>
+	                            <span class="error" ng-show="infoForm.paycode.$dirty && infoForm.paycode.$error.required">请输入支付密码</span>
+							</div>
+						</div>
+						<div class="inputbox">
+							<p class="fill">确认支付密码：</p>
+							<div class="inputmod">
+								<input type="password" name="repaycode" class="text" onKeyUp="this.value=this.value.replace(/[^0-9a-zA-Z]*$/g,'')"
+									   ng-model="user.repaycode" required maxlength="16" match="paycode">
+								<i ng-class="{true: '', false: 'common-form-error'}[infoForm.repaycode.$valid]" ng-show="infoForm.repaycode.$dirty"></i>
+	                            <span class="error" ng-show="infoForm.repaycode.$error.match && !infoForm.repaycode.$error.required">两次输入的密码不符</span>
+	                            <span class="error" ng-show="infoForm.repaycode.$dirty && infoForm.repaycode.$error.required">请再次输入支付密码</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<input class="open botopen sub" type="submit" value="开通存管账户" ng-disabled="infoForm.$invalid" ng-click="storageSubmit()">
+			</form>
+		</div>
+	</div>
+
+</div>

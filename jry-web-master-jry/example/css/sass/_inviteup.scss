@@ -1,0 +1,283 @@
+.invite-new-wrapper{
+	width: 100%;
+	min-width: 1215px;
+	background-image: url('/images/activity/invite/bg.jpg');
+	// background-size: 100%;
+	background-position: top center;
+	background-repeat: no-repeat;
+	padding-bottom: 95px;
+	.invite-main{
+		width: 1215px;
+		margin: 0 auto;
+		position: relative;
+		.logo{
+			position: absolute;
+			width: 150px;
+			top: 10px;
+			left: 20px;
+			cursor: pointer;
+			z-index: 1;
+		}
+		.banner{
+			width: 100%;
+			display: block;
+		}
+		.content{
+			background-image: url('/images/activity/invite/main-bg.png');
+			background-size: 100%;
+			background-repeat: no-repeat;
+			border-radius: 8px;
+			padding-top: 105px;
+			padding-bottom: 50px;
+			width: 1160px;
+			margin: 0 auto;
+			margin-top: -25px;
+			p{
+				line-height: 35px;
+				font-size: 18px;
+				text-align: center;
+				color: #6A35EF;
+				font-weight: bold;
+				span{
+					color: #F53414;
+				}
+			}
+			.middle-box{
+				width: 1100px;
+				margin: 20px auto 50px;
+				background: #8A5BFF;
+				border-radius: 8px;
+				box-sizing: border-box;
+				box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+				img{
+					width: 100%;
+					display: block;
+				}
+			}
+			.topTen-box{
+				width: 1100px;
+				margin: 0 auto;
+				background: #8A5BFF;
+				border-radius: 8px;
+				padding: 20px 0 40px;
+				box-sizing: border-box;
+				box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+				position: relative;
+				header{
+					text-align: center;
+					img{
+						width: 420px;
+					}
+				}
+				>div{
+					height: 210px;
+					padding-top: 5px;
+					box-sizing: border-box;
+					margin-top: 25px;
+					ul{
+						float: left;
+						border-right: 1px solid #ffffff;
+						height: 200px;
+						width: 50%;
+						box-sizing: border-box;
+						&:last-of-type{
+							border-right: none;
+						}
+						&:first-of-type{
+							li:nth-of-type(1),li:nth-of-type(2),li:nth-of-type(3){
+								span{
+									color: #FCE213;
+									font-weight: bold;
+								}
+							}
+						}
+						li{
+							height: 40px;
+							line-height: 40px;
+							font-size: 17px;
+							padding-left: 50px;
+							span{
+								float: left;
+								color: #ffffff;
+								&:nth-of-type(1){
+									width: 100px;
+								}
+								&:nth-of-type(2){
+									width: 180px;
+								}
+								&:nth-of-type(3){
+									width: 210px;
+								}
+							}
+						}
+					}
+				}
+				>img{
+					position: absolute;
+					width: 64px;
+					top: 100px;
+					left: 15px;
+				}
+			}
+		}
+		.rule{
+			background-image: url('/images/activity/invite/rule-bg.png');
+			background-size: 100%;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+			padding-top: 120px;
+			padding-bottom: 60px;
+			width: 1160px;
+			margin: 0 auto;
+			.not-login{
+				display: block;
+				width: 1122px;
+				margin: 55px auto 0;
+				cursor: pointer;
+			}
+			.button{
+				text-align: center;
+				span{
+					display: inline-block;
+					height: 35px;
+					line-height: 35px;
+					border: 2px solid #6A35EF;
+					color: #6A35EF;
+					font-size: 16px;
+					padding: 0 20px;
+					cursor: pointer;
+					border-radius: 17.5px;
+					font-weight: bold;
+				}
+			}
+			.main-box{
+				width: 1100px;
+				margin: 20px auto;
+				height: 340px;
+				.share-mode{
+					width: 350px;
+					height: 340px;
+					margin-right: 25px;
+					box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+					text-align: center;
+					background: #ffffff;
+					border-radius: 8px;
+					box-sizing: border-box;
+					float: left;
+					&:last-of-type{
+						margin-right: 0;
+					}
+					h1{
+						font-size: 18px;
+						color: #6A35EF;
+						height: 60px;
+						line-height: 60px;
+						font-weight: bold;
+					}
+					p{
+						line-height: 30px;
+						height: 30px;
+						font-size: 18px;
+						color: #6A35EF;
+						font-weight: bold;
+					}
+					.taskcode-wrap{
+						width: 190px;
+						height: 190px;
+						margin: 25px auto;
+					}
+					.copy-wrap{
+						margin-top: 35px;
+						overflow: hidden;
+						position: relative;
+						#copyTxt{
+							position: absolute;
+							top: -100px;
+						}
+						input{
+							width: 280px;
+							height: 36px;
+							padding-left: 20px;
+							box-sizing: border-box;
+							background: #EEEEEE;
+							color: #666666;
+							font-size: 14px;
+							display: block;
+							margin: 0 auto;
+							border: none;
+							outline: none;
+						}
+						.fin{
+							color: #ff6400;
+							font-size: 14px;
+							height: 0;
+						}
+						a{
+							background-image: url('/images/activity/invite/button-bg.png');
+							background-size: 100% 100%;
+							background-repeat: no-repeat;
+							width: 296px;
+							height: 62px;
+							line-height: 52px;
+							color: #ffffff;
+							display: block;
+							margin: 60px auto 0;
+							text-align: center;
+							text-decoration: none;
+							font-size: 18px;
+							font-weight: bold;
+							&.fincopy{
+								background: none;
+								background: #D4D4D4;
+								color: #ffffff;
+								cursor: default;
+								height: 52px;
+							}
+						}
+					}
+					.invitecode-wrap{
+						margin-top: 45px;
+						span{
+							font-size: 18px;
+							color: #333333;
+							display: block;
+							font-weight: bold;
+						}
+						input{
+							width: 280px;
+							height: 85px;
+							line-height: 85px;
+							background: #EEEEEE;
+							color: #ff6400;
+							font-size: 24px;
+							margin: 30px auto;
+							border: none;
+							outline: none;
+							text-align: center;
+						}
+					}
+					
+				}
+			}
+			ul{
+				width: 1100px;
+				margin: 40px auto 0;
+				li{
+					color: #6A35EF;
+					line-height: 30px;
+					font-size: 16px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+.show-mode .invite-show .inviteup-account{
+	float: left;
+    position: relative;
+    margin: 13px 0 0 14px;
+    cursor: pointer;
+    height: 113px;
+    width: 200px;
+    background: image-url('inviteup/account.png');
+}

@@ -1,0 +1,80 @@
+<!--对应在mainCtrl.js-->
+<!-- 欢迎栏 -->
+<div ng-hide="isLoginPage" class="top-global-wrapper">
+    <div class="top-content">
+        <div class="tel">
+            <i class="global-topphone"></i>
+            <b>客服热线：400-111-0866</b>
+        </div>
+        <div class="top-nav">
+        	<!--此处的a并无实际意义只是为了承接过滤器-->
+            <a ng-if="(a | isRegister).register" href="" ng-click="gotoLoginPage('myAccount')">{{(a | isRegister).user.userName}}</a>&nbsp;
+            <a ng-show="(a | isRegister).register" ng-click="userOut()" href="#" class="top-quit">[退出]</a>
+            <a href="{{a|webIE8}}main/guide" target="_blank">新手指引</a>
+            <span style="margin-right: 12px;">|</span>
+            <a href="{{a|webIE8}}main/jt2/help?menuName=help" target="_blank">帮助中心</a>
+            <span>|</span>
+            <div class="appCode">
+                <a href><i>手机APP</i></a>
+                <div>
+                    <img style="width:100px;" src="images/azlogo.png">
+                    <p>安卓客户端<br>APP下载</p>
+                    <img style="width:100px;margin-top: 4px" src="images/iosewm.png">
+                    <p>iOS客户端<br>APP下载</p>
+                </div>
+            </div>
+            <span style="margin-left: -4px;">|</span>
+            <div class="appCode">
+                <i class="global-topwechat"></i>
+                <div>
+                    <img style="width:100px;" src="images/global/wechat.jpg">
+                    <p>扫一扫<br>关注官方微信</p>
+                </div>
+            </div>
+            <span style="margin-left: -4px;">|</span>
+            <div class="appCode">
+                <a class="global-topwechat2" target="_blank" href="http://weibo.com/u/6351725088"></a>
+                <div>
+                    <img style="width:100px;" src="images/global/wbbig.png">
+                    <p>扫一扫<br>关注官方微博</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div id=>
+<!-- 欢迎栏结束 -->
+<!-- 导航 -->
+<div class="globalheader-wrapper"  id="wrapperId">
+    <div class="globalheader-wrap">
+        <div ng-click="$state.go('main.home');" class="logo-wrap">
+            <img src="/images/global/logo.png">
+            <!--<div style="display: inline-block;border-left: 1px solid #004d3c;height: 25px;margin-left: 12px;margin-top: 8px;"></div>-->
+            <img src="/images/global/gzvj.png" style="display: inline-block;margin-top: 7px;margin-left: 20px;">
+        </div>
+        <div class="nav-box">
+            <div>
+                <ul>
+                    <li><a ui-sref="main.home" ng-class="{active:currentPath == '/main/home'}">首页</a></li>
+                    <li><a ui-sref="main.productsList" ng-class="{active:(currentPath == '/main/productsList'||currentPath == '/main/billDetail')}">我要理财</a></li>
+                    <li><a ui-sref="main.guarantee" ng-class="{active:currentPath == '/main/guarantee'}">安全保障</a></li>
+                    <li><a ui-sref="main.jt.JSGK" ng-class="{active:currentPath == '/main/jt'}">信息披露</a></li>
+                </ul>
+                <div class="nologin" ng-if="!(a | isRegister).register">
+                    <a href="/register">注册</a>/<a href="/login">登录</a>
+                </div>
+                <div class="account" ng-if="(a | isRegister).register">
+                    <a href="{{a|webIE8}}main/myAccount/accountHome">我的账户</a>
+                    <div class="con" ng-show="(a | isRegister).register">
+                        <div>
+                            <a href="{{a|webIE8}}main/myAccount/myAssets">我的资产</a>
+                            <a href="{{a|webIE8}}main/myAccount/myInvest">我的投资</a>
+                            <a href="{{a|webIE8}}main/myAccount/myCoupon">我的优惠券</a>
+                            <a href="{{a|webIE8}}main/myAccount/myMsg">我的消息</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
