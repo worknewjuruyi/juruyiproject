@@ -1,75 +1,191 @@
 <!--myCouponCtrl.js-->
-<div class="newhand-wrapper cp-wrapper " ng-controller="myCouponCtrl">
-
-    <div class="common-head">
-        <i></i><p ng-click="toback()">{{title}} </p>
-        <!-- <img ui-sref="reminder({wap:true})" style="position:absolute;right:0;top:50%;transform:translate(0,-50%);width:1.9rem;padding-right:1rem;" src="images/myaccount/question-icon.png"> -->
+<div class="my-coupon" ng-controller="myCouponCtrl">
+     <header class="common-header">
+    	<i></i>
+    	<h3>券包<em>?</em></h3>
+    	<span>去投资</span>
+    </header>
+    <div class="coupon-content">
+    	<!--tab切换-->
+    	<div class="tab-header">
+			<ul>			
+				<li>
+					<h4 class="active">返现券</h4>
+					<div class="red-line"></div>
+				</li>
+				<li>
+					<h4>加息券</h4>
+					<div></div>
+				</li>
+				<li>
+					<h4>现金红包</h4>
+					<div></div>
+				</li>
+			</ul>
+		</div>
+		<!--list列表-->
+		<div class="coupon-list">
+			<!--content-->
+			<div class="swiper-container">
+			  <div class="swiper-wrapper">
+			  	<!--返现券-->
+			    <div class="swiper-slide">
+			    	<div class="coupon-list-content" id="slide1">
+						<ul>
+							<!--返现券coupon-invalid:不可点击背景样式，coupon-valid:可点击背景样式，coupon-selected:已选择的背景样式-->
+							<li class="cash-back coupon-valid">
+								<div class="coupons-msg-left">
+									<h5>返现券</h5>
+									<p>满20000元可用 | 期限≥30天</p>
+									<p>有效期至 2018-01-06</p>
+								</div>
+								<div class="coupons-msg-right">
+									<p><span>￥</span>200<em></em></p>
+								</div>
+							</li>
+							
+							<li class="cash-back coupon-valid">
+								<div class="coupons-msg-left">
+									<h5>返现券</h5>
+									<p>满20000元可用 | 期限≥30天</p>
+									<p>有效期至 2018-01-06</p>
+								</div>
+								<div class="coupons-msg-right">
+									<p><span>￥</span>200<em></em></p>
+								</div>
+							</li>
+							<li class="cash-back coupon-invalid">
+								<div class="coupons-msg-left">
+									<h5>返现券</h5>
+									<p>满20000元可用 | 期限≥30天</p>
+									<p>有效期至 2018-01-06</p>
+								</div>
+								<div class="coupons-msg-right">
+									<p><span>￥</span>200<em></em></p>
+								</div>
+							</li>
+							
+							<li class="cash-back coupon-invalid">
+								<div class="coupons-msg-left">
+									<h5>返现券</h5>
+									<p>满20000元可用 | 期限≥30天</p>
+									<p>有效期至 2018-01-06</p>
+								</div>
+								<div class="coupons-msg-right">
+									<p><span>￥</span>200<em></em></p>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+			    </div>
+			    <!--现金红包-->
+			    <div class="swiper-slide">
+			    	<div class="coupon-list-content2" id="slide2">
+						<ul>
+							<!--返现券coupon-invalid:不可点击背景样式，coupon-valid:可点击背景样式，coupon-selected:已选择的背景样式-->
+							<li class="cash-back coupon-valid">
+								<div class="coupons-msg-left">
+									<h5>现金红包</h5>
+									<p>满20000元可用 | 期限≥30天</p>
+									<p>有效期至 2018-01-06</p>
+								</div>
+								<div class="coupons-msg-right">
+									<p><span>￥</span>200<em></em></p>
+								</div>
+							</li>
+							
+							<li class="cash-back coupon-valid">
+								<div class="coupons-msg-left">
+									<h5>现金红包</h5>
+									<p>满20000元可用 | 期限≥30天</p>
+									<p>有效期至 2018-01-06</p>
+								</div>
+								<div class="coupons-msg-right">
+									<p><span>￥</span>200<em></em></p>
+								</div>
+							</li>
+							<li class="cash-back coupon-invalid">
+								<div class="coupons-msg-left">
+									<h5>现金红包</h5>
+									<p>满20000元可用 | 期限≥30天</p>
+									<p>有效期至 2018-01-06</p>
+								</div>
+								<div class="coupons-msg-right">
+									<p><span>￥</span>200<em></em></p>
+								</div>
+							</li>
+							
+							<li class="cash-back coupon-invalid">
+								<div class="coupons-msg-left">
+									<h5>现金红包</h5>
+									<p>满20000元可用 | 期限≥30天</p>
+									<p>有效期至 2018-01-06</p>
+								</div>
+								<div class="coupons-msg-right">
+									<p><span>￥</span>200<em></em></p>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+			    </div>
+			    <!--加息券-->
+			    <div class="swiper-slide">
+			    	<div class="coupon-list-content3" id="slide3">
+						<ul>
+							<!--返现券coupon-invalid:不可点击背景样式，coupon-valid:可点击背景样式，coupon-selected:已选择的背景样式-->
+							<li class="cash-back coupon-valid">
+								<div class="coupons-msg-left">
+									<h5>加息券</h5>
+									<p>满20000元可用 | 期限≥30天</p>
+									<p>有效期至 2018-01-06</p>
+								</div>
+								<div class="coupons-msg-right">
+									<p><span>+</span>0.5<em>%</em></p>
+								</div>
+							</li>
+							
+							<li class="cash-back coupon-valid">
+								<div class="coupons-msg-left">
+									<h5>加息券</h5>
+									<p>满20000元可用 | 期限≥30天</p>
+									<p>有效期至 2018-01-06</p>
+								</div>
+								<div class="coupons-msg-right">
+									<p><span>+</span>0.5<em>%</em></p>
+								</div>
+							</li>
+							<li class="cash-back coupon-invalid">
+								<div class="coupons-msg-left">
+									<h5>加息券</h5>
+									<p>满20000元可用 | 期限≥30天</p>
+									<p>有效期至 2018-01-06</p>
+								</div>
+								<div class="coupons-msg-right">
+									<p><span>+</span>0.5<em>%</em></p>
+								</div>
+							</li>
+							
+							<li class="cash-back coupon-invalid">
+								<div class="coupons-msg-left">
+									<h5>加息券</h5>
+									<p>满20000元可用 | 期限≥30天</p>
+									<p>有效期至 2018-01-06</p>
+								</div>
+								<div class="coupons-msg-right">
+									<p><span>+</span>0.5<em>%</em></p>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+			    </div>
+			  </div>
+			</div>
+			
+		</div>		
     </div>
     
-    <div class='wap-body' style="margin-top: 0;" >
-        <ul class="nav nav-pills mb1 my-coupon" >
-            <li role="presentation" style="width: 33%" ng-class="{0:'active',1:'',2:''}[active]" ng-click="onClick(0)"><a href="">未使用</a></li>
-            <li role="presentation" style="width: 33%" ng-class="{0:'',1:'active',2:''}[active]" ng-click="onClick(1)"><a href="">已使用</a></li>
-            <li role="presentation" style="width: 33%" ng-class="{0:'',1:'',2:'active'}[active]" ng-click="onClick(2)"><a href="">已失效</a></li>
-        </ul>
-                <!-- tab 0 -->
-        <div class="h5-coupon" ng-class="{0:'new-coupon',1:'used-coupon',2:'invalid-coupon'}[active]">
-            <div class="coupon-card" ng-repeat="coupon in coupons" ng-if="coupon.type!=3 && coupon.type!=6 && coupon.type!=7">
-                <div class="card-name">
-                    <p ng-bind="{1:'返现券',2:'加息券',3:'体验金',4:'翻倍券',5:'加息券',}[coupon.type]"></p>
-                    <b ng-if="coupon.type==1"><span>￥</span>{{coupon.amount}}</b>
-                    <b ng-if="coupon.type==2">+{{coupon.raisedRates}}<span>%</span></b>
-                    <b ng-if="coupon.type==3"><span>￥</span>{{coupon.amount}}</b>
-                    <b ng-if="coupon.type==4">{{coupon.multiple}}倍</b>
-                    <b ng-if="coupon.type==5">+{{coupon.raisedRates}}<span>%</span></b>
-                </div>
-                <div class="info">
-                    <p ng-class="{1:'fanxian'}[coupon.type]">使用说明</p>
-                    <ul>
-                        <li ng-if="coupon.type==1">投资金额：单笔满<span>{{coupon.enableAmount}}</span>元</li>
-                        <li ng-if="coupon.type==1">投资期限：≥{{coupon.productDeadline}}天（活动标除外）</li>
-                        <li ng-if="coupon.type==1">有效期至：{{coupon.expireDate | date:'y-M-d'}}</li>
-                        <li ng-if="coupon.type==1">红包来源：{{coupon.remark}}</li>
-
-                        <li ng-if="coupon.type==2&&!coupon.pid">投资期限：≥{{coupon.productDeadline}}天（活动标除外）</li>
-                        <li ng-if="coupon.type==2&&!coupon.pid">有效期至：{{coupon.expireDate | date:'y-M-d'}}</li>
-                        <li ng-if="coupon.type==2&&!coupon.pid">加息券来源：{{coupon.remark}}</li>
-
-                        <li ng-if="coupon.type==2&&coupon.pid">限用标的：{{coupon.fullName}}</li>
-                        <li ng-if="coupon.type==2&&coupon.pid">有效期至：满标过期</li>
-                        <li ng-if="coupon.type==2&&coupon.pid">加息券来源：{{coupon.remark}}</li>
-                        <!-- <li ng-if="coupon.type!=3">有效日期：至<span>{{coupon.expireDate | date:'y-M-d'}}</span></li>
-                        <li ng-if="coupon.type==3">仅限新手标</li>
-                        <li ng-if="coupon.type==1">红包作用：投资成功返现</li>
-                        <li ng-if="coupon.type==2">红包作用：增加投资利息</li>
-                        <li ng-if="coupon.type==3">红包作用：增加投资本金</li>
-                        <li ng-if="coupon.type==4">红包作用：增加投资收益</li>
-                        <li>投资金额：≥<span>{{coupon.enableAmount}}</span>元</li>
-                        <li ng-if="coupon.type==1">使用条件：产品期限≥{{coupon.productDeadline}}天且产品可用现金券</li>
-                        <li ng-if="coupon.type==2">使用条件：产品期限≥{{coupon.productDeadline}}天且产品可用加息券</li>
-                        <li ng-if="coupon.type==3">使用条件：产品期限≥{{coupon.productDeadline}}天且产品可用体验金</li>
-                        <li ng-if="coupon.type==4">使用条件：产品期限≥{{coupon.productDeadline}}天且产品可用翻倍券</li> -->
-
-                        <li ng-if="coupon.type==4">投资期限：≥{{coupon.productDeadline}}天（活动标除外）</li>
-                        <li ng-if="coupon.type==4">有效期至：{{coupon.addtime | date:'y.M.d'}}-{{coupon.expireDate | date:'y.M.d'}}</li>
-                        <li ng-if="coupon.type==4">作用描述：基础利率翻{{coupon.multiple}}倍</li>
-
-                        <!-- 转盘活动奖励   加息券 -->
-                        <li ng-if="coupon.type==5">投资金额：投资任意金额可用</li>
-                        <li ng-if="coupon.type==5">有效时间：{{coupon.productDeadline}}天</li>
-                        <li ng-if="coupon.type==5">有效期至：{{coupon.expireDate | date:'y.M.d'}}</li>
-                        <li ng-if="coupon.type==5">加息券来源：{{coupon.remark}}</li>
-
-                    </ul>
-                    <p class="type1-tip" ng-if="coupon.type==1">满足以上条件红包即刻激活至账户</p>
-                    <p class="type1-tip" ng-if="coupon.type==5">不可与返现红包同时使用</p>
-                    <a href="/main/bankBillList" ng-if="coupon.type!=3 && active==0 && !coupon.pid"></a>
-                    <a href="/cpDetail?pid={{coupon.pid}}" ng-if="coupon.type!=3 && coupon.pid && active==0"></a>
-                    <span class="showa">点击使用</span>
-                </div>
-                <div class="used" ng-if="active == 1"></div>
-                <div class="invalid" ng-if="active == 2"></div>
-            </div>
-        </div>
-    </div>
+    
 </div>

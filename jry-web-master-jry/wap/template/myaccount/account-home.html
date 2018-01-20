@@ -25,15 +25,15 @@
 	<div class="user-money-detail">
 		<div class="user-total-money">
 			<h4>总资产（元）</h4>
-			<p>12,345,678.90</p>
+			<p ng-bind="totalMoney">12,345,678.90</p>
 		</div>
 		<div class="user-total-income">
 			<h4>累计收益（元）</h4>
-			<p>12,345,678.90</p>
+			<p ng-bind="totalIncome">12,345,678.90</p>
 		</div>
 		<!--眼睛/隐藏按钮-->
 		<!--不隐藏：eye-btn，隐藏：eye-btn-close-->
-		<div class="eye-btn"></div>
+		<div class="eye-btn" ng-class="{'eye-btn-close':isCloseEye}" ng-click="clickEye()"></div>
 	</div>
 	<!--用户账户-->
 	<div class="user-self-account">
@@ -41,7 +41,7 @@
 		<div class="user-account-money">
 			<div class="left-money">
 				<span>账户余额</span>
-				<em>1000.32</em>
+				<em ng-bind="accountMoney">1000.32</em>
 			</div>
 			<div class="right-money-detail">
 				<span>资金明细</span>
