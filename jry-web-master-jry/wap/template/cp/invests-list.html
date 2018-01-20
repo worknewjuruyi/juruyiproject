@@ -3,140 +3,151 @@
 	<!--tab类型切换-->
 	<div class="tab-header">
 		<ul>
-			<li ng-click="changeMode(1)" ng-show="isShowNewFish">
-				<h4 ng-class="{1:'active'}[showMode]">新手理财</h4>
-				<div ng-class="{1:'red-line'}[showMode]"></div>
+			<li class="tab-cpnox-newfish">
+				<h4 class="active">新手理财</h4>
+				<div class="red-line"></div>
 			</li>
-			<li ng-click="changeMode(2)">
-				<h4 ng-class="{2:'active'}[showMode]">常规产品</h4>
-				<div ng-class="{2:'red-line'}[showMode]"></div>
+			<li class="tab-cpnox-common">
+				<h4 ng-class="{'active':!isShowNewFish}">常规产品</h4>
+				<div ng-class="{'red-line':!isShowNewFish}"></div>
 			</li>
-			<li ng-click="changeMode(3)">
-				<h4 ng-class="{3:'active'}[showMode]">限时活动</h4>
-				<div ng-class="{3:'red-line'}[showMode]"></div>
+			<li>
+				<h4>限时活动</h4>
+				<div></div>
 			</li>
 		</ul>
 	</div>
 	<!--投资列表内容-->
-	<!--新手理财-->
-	<div class="cpnox-newfish-content" ng-show="showMode==1">
-		<ul>
-			<li>
-				<div class="cpbox-newfish-title">
-	        		新手理财
-	        		<span>17E14(14/19)</span>
-	        	</div>
-	        	<div class="li-newfish-content">
-	        		<div class="li-content-left">
-	        			<p><span>11.00%</span></p>
-	        			<span>历史年化收益率</span>
-	        		</div>
-	        		
-	        		<div class="line-wrap">
-	        			<div class="li-content-line"></div>
-		        		<div class="li-content-right">
-		        			<p>项目周期<em>7天</em></p>
-		        			<span>剩余可投<i>1,000</i>元</span>
-		        		</div>
-	        		</div>
-	        		
-	        	</div>
-			</li>
-			<li>
-				<div class="cpbox-newfish-title">
-	        		新手理财
-	        		<span>17E14(14/19)</span>
-	        	</div>
-	        	<div class="li-newfish-content">
-	        		<div class="li-content-left">
-	        			<p><span>11.00%</span></p>
-	        			<span>历史年化收益率</span>
-	        		</div>
-	        		
-	        		<div class="line-wrap">
-	        			<div class="li-content-line"></div>
-		        		<div class="li-content-right">
-		        			<p>项目周期<em>7天</em></p>
-		        			<span>剩余可投<i>1,000</i>元</span>
-		        		</div>
-	        		</div>
-	        		
-	        	</div>
-			</li>
-		</ul>
-	</div>
-	<!--常规产品-->
-	<div class="cpnox-common-content" ng-show="showMode==2">
-		<ul>
-			<li>
-				<div class="cpbox-common-title">
-	        		常规产品
-	        		<span>17E14(14/19)</span>
-	        	</div>
-	        	<div class="li-common-content">
-	        		<div class="li-content-left">
-	        			<p><span>11.00%</span></p>
-	        			<span>历史年化收益率</span>
-	        		</div>
-	        		
-	        		<div class="line-wrap">
-	        			<div class="li-content-line"></div>
-		        		<div class="li-content-right">
-		        			<p>项目周期<em>7天</em></p>
-		        			<span>剩余可投<i>1,000</i>元</span>
-		        		</div>
-	        		</div>
-	        		
-	        	</div>
-			</li>
-			
-		</ul>
-	</div>
-	<!--限时活动-->
-	<div class="cpnox-activity-content" ng-show="showMode==3">
-		<ul>
-			<li>
-				<div class="cpbox-activity-title">
-	        		限时活动
-	        		<span>17E14(14/19)</span>
-	        	</div>
-	        	<div class="li-activity-content">
-	        		<div class="li-content-left">
-	        			<p><span>11.00%</span></p>
-	        			<span>历史年化收益率</span>
-	        		</div>
-	        		
-	        		<div class="line-wrap">
-	        			<div class="li-content-line"></div>
-		        		<div class="li-content-right">
-		        			<p>项目周期<em>7天</em></p>
-		        			<span>剩余可投<i>1,000</i>元</span>
-		        		</div>
-	        		</div>
-	        		
-	        	</div>
-			</li>
-			<li>
-				<div class="cpbox-activity-title">
-	        		限时活动
-	        		<span>17E14(14/19)</span>
-	        	</div>
-	        	<div class="li-activity-content">
-	        		<div class="li-content-left">
-	        			<p><span>11.00%</span></p>
-	        			<span>历史年化收益率</span>
-	        		</div>
-	        		
-	        		<div class="line-wrap">
-	        			<div class="li-content-line"></div>
-		        		<div class="li-content-right">
-		        			<p>项目周期<em>7天</em></p>
-		        			<span>剩余可投<i>1,000</i>元</span>
-		        		</div>
-	        		</div>
-	        		
-	        	</div>
-			</li>
-		</ul>
-	</div>
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide cpnox-newfish">
+	        	<!--新手理财-->
+				<div class="cpnox-newfish-content">
+					<ul>
+						
+						<li>
+							<div class="cpbox-newfish-title">
+				        		新手理财
+				        		<span>17E14(14/19)</span>
+				        	</div>
+				        	<div class="li-newfish-content">
+				        		<div class="li-content-left">
+				        			<p><span>11.00%</span></p>
+				        			<span>历史年化收益率</span>
+				        		</div>
+				        		
+				        		<div class="line-wrap">
+				        			<div class="li-content-line"></div>
+					        		<div class="li-content-right">
+					        			<p>项目周期<em>7天</em></p>
+					        			<span>剩余可投<i>1,000</i>元</span>
+					        		</div>
+				        		</div>
+				        		
+				        	</div>
+						</li>
+						<li>
+							<div class="cpbox-newfish-title">
+				        		新手理财
+				        		<span>17E14(14/19)</span>
+				        	</div>
+				        	<div class="li-newfish-content">
+				        		<div class="li-content-left">
+				        			<p><span>11.00%</span></p>
+				        			<span>历史年化收益率</span>
+				        		</div>
+				        		
+				        		<div class="line-wrap">
+				        			<div class="li-content-line"></div>
+					        		<div class="li-content-right">
+					        			<p>项目周期<em>7天</em></p>
+					        			<span>剩余可投<i>1,000</i>元</span>
+					        		</div>
+				        		</div>
+				        		
+				        	</div>
+						</li>
+					</ul>
+				</div>
+	        </div>
+	        <div class="swiper-slide">
+	        	<!--常规产品-->
+				<div class="cpnox-common-content">
+					<ul>
+						<li>
+							<div class="cpbox-common-title">
+				        		常规产品
+				        		<span>17E14(14/19)</span>
+				        	</div>
+				        	<div class="li-common-content">
+				        		<div class="li-content-left">
+				        			<p><span>11.00%</span></p>
+				        			<span>历史年化收益率</span>
+				        		</div>
+				        		
+				        		<div class="line-wrap">
+				        			<div class="li-content-line"></div>
+					        		<div class="li-content-right">
+					        			<p>项目周期<em>7天</em></p>
+					        			<span>剩余可投<i>1,000</i>元</span>
+					        		</div>
+				        		</div>
+				        		
+				        	</div>
+						</li>
+						
+					</ul>
+				</div>
+	        </div>
+	        <div class="swiper-slide">
+	        	<!--限时活动-->
+				<div class="cpnox-activity-content">
+					<ul>
+						<li>
+							<div class="cpbox-activity-title">
+				        		限时活动
+				        		<span>17E14(14/19)</span>
+				        	</div>
+				        	<div class="li-activity-content">
+				        		<div class="li-content-left">
+				        			<p><span>11.00%</span></p>
+				        			<span>历史年化收益率</span>
+				        		</div>
+				        		
+				        		<div class="line-wrap">
+				        			<div class="li-content-line"></div>
+					        		<div class="li-content-right">
+					        			<p>项目周期<em>7天</em></p>
+					        			<span>剩余可投<i>1,000</i>元</span>
+					        		</div>
+				        		</div>
+				        		
+				        	</div>
+						</li>
+						<li>
+							<div class="cpbox-activity-title">
+				        		限时活动
+				        		<span>17E14(14/19)</span>
+				        	</div>
+				        	<div class="li-activity-content">
+				        		<div class="li-content-left">
+				        			<p><span>11.00%</span></p>
+				        			<span>历史年化收益率</span>
+				        		</div>
+				        		
+				        		<div class="line-wrap">
+				        			<div class="li-content-line"></div>
+					        		<div class="li-content-right">
+					        			<p>项目周期<em>7天</em></p>
+					        			<span>剩余可投<i>1,000</i>元</span>
+					        		</div>
+				        		</div>
+				        		
+				        	</div>
+						</li>
+					</ul>
+				</div>
+	        </div>
+	    </div>	    
+	</div>		
 </div>
