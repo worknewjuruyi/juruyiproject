@@ -3,6 +3,7 @@
     <header class="common-header">
     	<i></i>
     	<h3>提现</h3>
+    	<span>提现记录</span>
     </header>
     <!--用户存管余额-->
     <div class="cash-userful">
@@ -39,9 +40,74 @@
     	<span>(T+1个工作日到账)</span>
     </div>
     <!--提现按钮-->
-    <div class="get-btn">
+    <div class="get-btn" ng-click="ClickTxBtn()">
     	提现
     </div>
+    
+    <!--弹窗遮挡层-->
+    <div class="mask-layer"></div>
+    <!--安全键盘弹窗-->
+    <div class="safety-keyborad">
+    	<!--提示信息-->
+    	<h4 class="worning-msg" ng-if="isShowTopWorn">连续输入错误3次,账户将被锁定一小时,期间不可投资和提现</h4>
+    	<!--顶部-->
+    	<div class="keyborad-header">
+    		<h4>请输入交易密码</h4>
+    		<span class="close-keyborad" ng-click="closeKeyboard()">x</span>
+    	</div>
+    	<!--数字显示区域-->
+    	<div class="number-show">
+    		<!--输入有误的边框颜色class：table-error-->
+    		<table border="1px" cellspacing="0" cellpadding="0" ng-class="{'table-error':isredBord}">
+    			<tr>
+    				<td ng-bind="keyboardArr[0]"></td>
+    				<td ng-bind="keyboardArr[1]"></td>
+    				<td ng-bind="keyboardArr[2]"></td>
+    				<td ng-bind="keyboardArr[3]"></td>
+    				<td ng-bind="keyboardArr[4]"></td>
+    				<td ng-bind="keyboardArr[5]"></td>
+    			</tr>
+    		</table>
+    	</div>
+    	<!--安全键盘提示-->
+    	<div class="safe-msg">
+    		<div class="msg-left">
+    			<span class="msg-normal" ng-if="isShowPsw">巨如意安全键盘</span>
+    			<span class="worning-psw" ng-if="!isShowPsw">已输错<i> 1 </i>次，您还有<i> 2 </i>次机会</span>
+    		</div>
+    		<p class="msg-right">忘记密码？</p>
+    	</div>
+    	<!--安全键盘-->
+    	<div class="safe-keyboard-content">
+    		<table border="1px" cellspacing="0" cellpadding="0">
+    			<tr>
+    				<td ng-click="Click1($event)">1</td>
+    				<td ng-click="Click1($event)">3</td>
+    				<td ng-click="Click1($event)">5</td>    				
+    			</tr>
+    			<tr>
+    				<td ng-click="Click1($event)">7</td>
+    				<td ng-click="Click1($event)">8</td>
+    				<td ng-click="Click1($event)">0</td>    				
+    			</tr>
+    			<tr>
+    				<td ng-click="Click1($event)">9</td>
+    				<td ng-click="Click1($event)">2</td>
+    				<td ng-click="Click1($event)">4</td>    				
+    			</tr>
+    			<tr>
+    				<td class="cell-none"></td>
+    				<td ng-click="Click1($event)">6</td>
+    				<td class="delet-cell" ng-click="deletNum()">
+    					<div class="delet-img"></div>
+    				</td>    				
+    			</tr>
+    		</table>
+    	</div>
+    </div>
+    
+    <!--输错3次账户被锁定弹窗-->
+    
 </div>
 
 
