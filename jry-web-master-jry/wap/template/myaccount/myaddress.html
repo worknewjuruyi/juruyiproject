@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="set-depository" ng-controller="controllerMyaddress">
+			<div class="common-header">
+			     <i></i>
+			     <h3>添加地址</h3>
+		    </div>
+		    <form novalidate name="myForm">
+		    	<div class="part-a">
+		    		<main class="main" style="display:block;">
+				    	<div class="input-item">
+		                    <label for="name">收货人</label>
+		                    <input id="name" style="margin-left:0;" name="name" ng-model="userForm.cust_nm" type="text" placeholder="请输入收货人姓名" required>
+		                    <footer></footer>
+		                </div>
+		                <div class="input-item" >
+		                	<label>手机号码</label>
+		                	<input class="wt100" style="margin-left:0;" name="mobilephone" type="text" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" placeholder="请输入手机号" id="mobilephone1" ng-model="mobilephone" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')"  minlength="11" maxlength="11" required>
+		                	<footer></footer>
+		                </div>
+		                <div class="input-item">
+		                    <label for="name">详细地址</label>
+		                    <input id="name" name="name" style="margin-left:0;"  ng-model="userForm.cust_nm" type="textarea" placeholder="请输入收货人详细地址" required>
+		                    <footer></footer>
+		                </div>
+		                <div class="input-item" >
+		                	<label>邮政编码</label>
+		                	<input class="wt100" style="margin-left:0;" name="mobilephone" type="text" ng-pattern="/^1[3|4|5|7|8][0-9]{9}$/" placeholder="请输入手机号" id="postcode" ng-model="mobilephone" onkeyup="this.value=this.value.replace(/[\D\.]/gi,'')"  minlength="6" maxlength="6" required>
+		                	<footer></footer>
+		                </div>
+	                </main>
+		    	</div>
+		    	 <button class="btn submit" ng-click="submit(myForm)">保存</button>
+		    </form>
+		</div>
+	</body>
+</html>

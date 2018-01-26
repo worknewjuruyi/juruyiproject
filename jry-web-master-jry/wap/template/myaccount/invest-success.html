@@ -1,0 +1,37 @@
+
+<div class="wrap-investSucc">
+	<header class="common-header">
+		<i></i>
+		<h3>投资成功</h3>
+	</header>
+	<div class="i-inst-container">
+		<div class="i-inst-wrap">
+			<div class="i-inst-main">
+				<p></p>
+				<p>恭喜您!投资成功</p>
+			</div>
+		</div>
+		<div class="i-inst-meg">
+			  <dl>
+	            <dt>{{data.info.fullName}}</dt>
+	            <dd>投资项目<span>{{data.investAmount}}巨如意17e14(14/19)</span></dd>
+	            <dd>项目周期(天)<span>{{data.info.deadline}}30</span></dd>
+	            <dd>预计回款日期
+	                <span>{{data.info.rate}}2018-01-03
+	                    <span ng-if="data.isOldUser==true && (data.info.activityRate>0||data.specialRate>0)">
+	                        +{{data.info.activityRate + data.specialRate}}
+	                    </span>
+	                    <span ng-if="data.isOldUser==false && data.info.activityRate>0">
+	                        +{{data.info.activityRate}}
+	                    </span>
+	                </span>
+	            </dd>
+	            <dd>预计到期本息(元)<span>{{data.shouyi}}10213.32</span></dd>
+	           
+	        </dl>
+		</div>
+		
+	</div>
+	<div class="i-inst-btn">更多精选</div>
+	<div class="i-inst-myinst">查看我的投资</div>
+</div>

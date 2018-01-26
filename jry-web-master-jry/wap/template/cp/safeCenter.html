@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--myInfoCtrl.js-->
+		<div class="person-center" ng-controller="controllersafeCr">
+			<header class="common-header">
+			     <i></i>
+			     <h3>安全中心</h3>
+		    </header>
+		    <div class="info-box save-moy">
+		    	<ul>
+		    		<li>
+		    			<p ui-sref="setDepository"><i></i><span class="realName">未开通</span></p>
+						<!--<p  ui-sref="myBank"><i></i>未认证</p>-->
+						<span>存管账户</span>
+		    		</li>
+		    	</ul>
+			</div>
+			<div class="info-box">
+				<ul>
+					<li>
+						<!--<p ng-if="">{{user.realName}}</p>-->
+						<p ui-sref="setDepository"><i></i><span class="realName">未实名</span></p>
+						<span>个人姓名姓名</span>
+					</li>
+					<li>
+						<!--<p ng-if="">{{user.idCards}}</p>-->
+						<p ui-sref="setDepository"><i></i><span class="realName">未实名</span></p>
+						<span>身份证号</span>
+					</li>
+					
+					<li><p>{{user.mobilephone}}</p><span>注册手机号</span></li>
+				</ul>
+			</div>
+			
+			<div class="info-box">
+				<ul>
+					<li><p>{{user.mobilephone}}</p><span>银行账号</span></li>
+					<!--<li ui-sref="resetTradePwd({firstset:false})"><p><i></i></p><span>重置交易密码</span></li>-->
+					<li><p>{{user.mobilephone}}</p><span>预留手机号</span></li>
+				</ul>
+			</div>
+			
+		</div>
+	</body>
+</html>
