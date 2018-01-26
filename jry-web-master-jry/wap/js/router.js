@@ -375,6 +375,111 @@ define(['jweixin', "app", 'filter', 'urlFilters', 'md5js', 'framework/slider.js'
                     templateUrl: "template/activity/luckyDrawV1.html",
                     controller: "luckyDrawV1"
                 })
+                //
+                //订单详情页面--my
+                .state('invest-detailOrder',{
+                    url: '/invest-detailOrder',
+                    templateUrl: "template/cp/invest-orderDtailMy.html",                    
+                })
+                //协议页面--my
+                .state('protocol',{
+                    url: '/protocol',
+                    templateUrl: "template/pages/protocol.html",                    
+                })
+                //签到页面--my
+                .state('sign',{
+                    url: '/sign?uid&token',
+                    templateUrl: "template/myaccount/signMy.html",                    
+                })
+                
+                
+                //
+                //理财商品已售罄-dcf
+                .state('buy-end',{
+	                 url:'/buy-end',
+	                 templateUrl:'template/cp/buy-end.html'
+                })
+                //帮助与反馈-dcf
+                .state('help-advice',{
+	                 url:'/help-advice',
+	                 templateUrl:'template/login/help-advice.html'
+                })
+                //收货地址-dcf
+                .state('myaddress',{
+	                 url:'/myaddress',
+	                 templateUrl:'template/myaccount/myaddress.html'
+                })
+                //银行存管-dcf
+                .state('bank-savermb',{
+	                 url:'/bank-savermb',
+	                 templateUrl:'template/cp/bank-savermb.html'
+	//               controller:'controllerbkcq'
+                })
+                //安全中心-dcf
+                .state('safeCenter',{
+	                 url:'/safeCenter',
+	                 templateUrl:'template/cp/safeCenter.html'
+                })
+                //自媒体-dcf
+                .state('newsdt',{
+	                 url:'/newsdt',
+	                 templateUrl:'template/activity/newsdt.html'
+                })
+                //新闻动态-dcf
+                .state('newstate',{
+	                 url:'/newstate?artiId',
+	                 templateUrl:'template/activity/newstate.html'
+                })
+                //平台公告-dcf
+                .state('balance-gg',{
+	                 url:'/balance-gg',
+	                 templateUrl:'template/activity/balance-gg.html'
+                })
+                //重新加载-dcf
+                .state('fail-load',{
+	                 url:'/fail-load',
+	                 templateUrl:'template/activity/fail-load.html'
+                })
+                //提现-dcf
+                .state('cash-money',{
+	                 url:'/cash-money',
+	                 templateUrl:'template/myaccount/cash-money.html'
+                })
+                //投资详情-dcf
+                .state('pj-detail',{
+	                 url:'/pj-detail',
+	                 templateUrl:'template/cp/pj-detail.html'
+                })
+                //体验投资-dcf
+                .state('try-label',{
+	                 url:'/try-label',
+	                 templateUrl:'template/pages/try-label.html'
+                })
+                //体验金-dcf
+                .state('try-money',{
+	                 url:'/try-money',
+	                 templateUrl:'template/pages/try-money.html'
+                })
+                //活动中心-dcf
+                .state('activity',{
+	                 url:'/activity-center',
+	                 templateUrl:'template/activity/activity-center.html'
+                })
+                //投资成功-dcf
+                .state('invest-success',{
+	                 url:'/invest-success',
+	                 templateUrl:'template/myaccount/invest-success.html'
+                })
+                //公司资质-dcf
+                .state('aptitude',{
+	                 url:'/aptitude',
+	                 templateUrl:'template/pages/aptitude.html'
+                })
+
+                
+                
+                
+                
         })
     /*---------------------------Banner-----------------------------------*/
     rootApp.directive(
@@ -740,6 +845,7 @@ define(['jweixin', "app", 'filter', 'urlFilters', 'md5js', 'framework/slider.js'
         };
         //查找
         this.queryPost = function (scope, url, data, type) {
+//      	console.log(11111)
             scope.submitBool = false;
             // showMask($rootScope);
             /*临时改变时间*/

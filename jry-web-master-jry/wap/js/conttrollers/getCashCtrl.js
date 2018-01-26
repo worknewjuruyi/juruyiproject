@@ -135,5 +135,64 @@ define(['js/module.js'], function (controllers) {
             $scope.onClick = function () {
                 ngDialog.closeAll();
             };
+            
+            
+            //newjs
+            //提现按钮点击
+            $scope.ClickTxBtn=function(){
+            	//现需要判断是否满足需求 再弹出键盘输入 --如已输错3次不再弹出
+            	var isThreeTimes=true;
+            	if (isThreeTimes) {
+            		$filter("投资交易密码错误信息2")($scope)
+            	} else{
+            		$(".mask-layer").show();
+            	    $(".safety-keyborad").slideDown()
+            	}
+            	
+            }
+            
+            
+            
+            //键盘模块
+            $scope.keyboardArr=[];
+            $scope.isShowTopWorn=false;//默认警告不显示
+            $scope.isShowPsw=true;//默认显示 文字：巨如意安全键盘
+            //点击关闭键盘、
+            $scope.closeKeyboard=function(){
+            	$(".safety-keyborad").slideUp();
+            	$(".mask-layer").hide();
+            }
+            //点击删除
+            $scope.deletNum=function(){
+            	$scope.keyboardArr.pop();
+            	if ($scope.keyboardArr.length<=0){//若用户将输错的密码全部清空 则密码框颜色恢复正常
+            		$scope.isredBord=false;
+            	}
+            }
+            //点击输入
+            $scope.Click1=function($event){ 
+            	
+            	$scope.isShowTopWorn=true; //显示顶部警告
+            	$scope.keyboardArr.push(parseInt($event.target.innerHTML));
+            	
+            	if ($scope.keyboardArr.length>=6) {
+            		$scope.keyboardArr.length=6 
+            		console.log($scope.keyboardArr.toString());
+            		//请求判断输入的6位密码是否正确--istradpsw
+            		$scope.istradpsw=false;
+            		
+            		if ($scope.istradpsw) {//正确
+            			$scope.isredBord=false;//正确 密码框 边框不变
+            		} else{//不正确
+            			$scope.isredBord=true;//不正确 密码框 边框变红色
+            			$scope.isShowPsw=false;//文字由 巨如意安全键盘 变为警告
+            			
+            			$filter("投资交易密码错误信息2")($scope)
+            		}
+            		
+            	}               	
+            }
+            
+            
         });
     })

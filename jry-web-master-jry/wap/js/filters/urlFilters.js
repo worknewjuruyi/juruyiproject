@@ -86,6 +86,14 @@ define(['app'], function (app) {
                 '开始抽奖171016':base+'activityLottery/getLotteryPriz.dos',
                 '我的抽奖171016':base+'activityLottery/queryAward.dos',
                 '十个抽奖纪录171016':base+'activityLottery/queryAwardAll.dos',
+                
+                
+                //myself
+                '新闻详情':base+'aboutus/newsDetails.dos',
+                '签到记录':base+'signIn/continuous.dos',
+                '是否已签到':base+'signIn/signInYN.dos',
+                '点击签到':base+'signIn/clickSignIn.dos',
+                '签到积分':base+'integral/IntegralSum.dos'
             };
             return urls[name];
         }

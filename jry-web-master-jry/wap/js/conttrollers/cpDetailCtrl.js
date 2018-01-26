@@ -132,7 +132,7 @@ define(['js/module.js', 'jquery', 'ngdialog','framework/mggScrollImg.js'], funct
         	
         }
         
-        
+        console.log(111111)
         
         
         
@@ -149,16 +149,32 @@ define(['js/module.js', 'jquery', 'ngdialog','framework/mggScrollImg.js'], funct
 		    moveEndY = e.originalEvent.changedTouches[0].pageY,
 		    X = moveEndX - startX,
 		    Y = moveEndY - startY;
-		     
+		     //上下
 		    if ( Math.abs(Y) > Math.abs(X) && Y > 20) {
                 //下滑
-                $(".touch-up").removeClass("touch-down").children("p").html("上滑查看详情")
+                $(".touch-up").removeClass("touch-down").children("p").html("上滑查看详情");
+                $(".invest-detail").slideUp();
+                //原内容显示
+                $(".immedia-invest-inner").show();
+                //投资按钮显示
+                $(".immedia-invest-btn").show();
 		    }
 		    else if ( Math.abs(Y) > Math.abs(X) && Y < -20 ) {
 		        //上滑
                 $(".touch-up").addClass("touch-down").children("p").html("下滑关闭弹窗");
-                $(".invest-detail").show()
+                $(".invest-detail").slideDown(function(){
+                	$(".invest-detail").css({
+                		"top":0
+                	})
+                })
+                //原内容隐藏
+                $(".immedia-invest-inner").hide();
+                //投资按钮隐藏
+                $(".immedia-invest-btn").hide();
+                
 		    }
+		    
+
 		    
 		});
 		//产品详情弹出层
@@ -167,24 +183,82 @@ define(['js/module.js', 'jquery', 'ngdialog','framework/mggScrollImg.js'], funct
             switch(type) {
                 case 1: 
                     $scope.showMode = 1;
-//                  if ($scope.one.request == false) {
-//                      $scope.getData($scope.one);
-//                  }
                 break;
                 case 2: 
                     $scope.showMode = 2;
-//                  if ($scope.two.request == false) {
-//                      $scope.getData($scope.two);
-//                  }
                 break;
                 case 3: 
                     $scope.showMode = 3;
-//                  if ($scope.three.request == false) {
-//                      $scope.getData($scope.three);
-//                  }
                 break;
             }
         };
-
+        
+        //swiper
+        var aButton=$('.tab-header li');
+        var aButton2=document.querySelectorAll('.tab-header ul li');
+        var mySwiper = new Swiper ('.swiper-container', {
+		    speed:300,
+		    freeMode:false,
+		    observer:true,//修改swiper自己或子元素时，自动初始化swiper ** 
+            observeParents:true,//修改swiper的父元素时，自动初始化swiper**  
+            autoHeight: true, 
+            onSlideChangeStart: function(ev){
+	            var _index = mySwiper.activeIndex//*************this
+	            var distance = _index;
+	            tabProductMenu(_index);//*************this
+	            //请求数据
+	        }
+            
+		}) 
+        // 切换页面
+		for(var i=0;i<aButton2.length;i++){		  
+          aButton2[i].index=i;
+          aButton2[i].addEventListener('touchend',function(){
+            currentIndex=this.index;
+            tabProductMenu(currentIndex);            
+            mySwiper.slideTo(currentIndex,400,false,true);
+            //请求数据
+            
+            
+            
+            return false;
+          },false)
+        }
+        function tabProductMenu(obj){
+          for(var i=0;i<aButton.length;i++){
+            $('.tab-header li').find("h4").removeClass('active');
+            $('.tab-header li').find("div").removeClass('red-line');
+          }
+          $('.tab-header li').eq(obj).find("h4").addClass('active');
+          $('.tab-header li').eq(obj).find("div").addClass('red-line');
+        }
+        //文字超出隐藏 点击展开        
+        $("li.original-data .data-content p").each(function(){
+            var maxwidth=60;//设置最多显示的字数
+            var text=$(this).text();
+            
+            if($(this).text().length>maxwidth){
+                $(this).text($(this).text().substring(0,maxwidth));
+                $(this).html($(this).html()+"...");//如果字数超过最大字数，超出部分用...代替，并且在后面加上点击展开的链接；
+                $(this).addClass("toolong");
+                $(this).next("span").html("[点击展开]");
+            };
+            $(this).parents(".data-content").click(function(){
+            	if ($(this).children("p").text().length>maxwidth) {
+            		if ($(this).children("p").hasClass("toolong")) {
+	            		$(this).children("p").html(text);
+	            		$(this).children("p").removeClass("toolong");
+	            		$(this).children("p").next("span").html("[点击收回]")
+	            	} else{
+	            		$(this).children("p").text($(this).children("p").text().substring(0,maxwidth));
+	                    $(this).children("p").html($(this).children("p").html()+"...");
+	                    $(this).children("p").addClass("toolong");
+	                    $(this).children("p").next("span").html("[点击展开]");
+	            	}
+            	} 
+            	
+                
+            })
+        })
     })
 })

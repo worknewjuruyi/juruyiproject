@@ -10,6 +10,7 @@ define(['js/module.js', 'jquery', 'ngdialog'], function (controllers, $, ngdialo
         $scope.userOBJ = $filter('isRegister')();
         if ($scope.userOBJ.register) {
             $scope.user = $scope.userOBJ.user.member;
+//          console.log($scope.userOBJ);
             resourceService.queryPost($scope, $filter('getUrl')('myacc'), {
                 uid: $scope.user.uid
             }, '我的账户');
@@ -87,5 +88,31 @@ define(['js/module.js', 'jquery', 'ngdialog'], function (controllers, $, ngdialo
                     break;
             };
         };
+        
+        //newjs
+        //点击眼睛显示/隐藏 资产板块
+        //后台获取3项资金金额
+        $scope.totalMoney="12,345,678.90";//总资产初始化
+        $scope.totalIncome="12,345,678.90";//总收益初始化
+        $scope.accountMoney="1000.32";//账户余额初始化
+        $scope.isCloseEye=false;//眼睛是否闭合初始化false
+        $scope.clickEye=function(){//眼睛点击效果
+        	$scope.isCloseEye=!$scope.isCloseEye;//眼睛样式名 取反
+        	//根据眼睛样式名的闭合判断数据隐藏还是显示
+        	if ($scope.isCloseEye) {
+        		$scope.totalMoney="*****";
+                $scope.totalIncome="*****";
+                $scope.accountMoney="***";
+        	} else{
+        		$scope.totalMoney="12,345,678.90";
+                $scope.totalIncome="12,345,678.90";
+                $scope.accountMoney="1000.32";
+        	}
+        }
+        
+                        
+        //数字加逗号
+        console.log($filter('数字加逗号')(12345678)) 
     });
+    
 })

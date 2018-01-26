@@ -756,7 +756,21 @@ define(['app'], function (app) {
                 });
             };
         })
-
+        //投资交易密码错误信息2--myself
+        .filter('投资交易密码错误信息2', function (ngDialog, $state, $localStorage) {
+            return function (scope) {
+                scope.closeDialog = function () {
+                    ngDialog.closeAll();
+                };
+                ngDialog.open({
+                    template: '<div class="recharge-dialog2"><div class="title2">提示</div><p class="inner"><span class="inner-title">您已输入错误<em>3</em>次</span><i class="inner-content">连续输错三次支付密码，账户将被锁定1小时，期间无法进行提现或充值操作。您可在一小时后或重置交易密码后解锁账户</i></p><div class="btns2"><span ng-click="closeDialog()">稍后再试</span><span class="right2" ng-click="closeDialog()" ui-sref="resetTradePwd({firstset:false})">忘记密码</span></div></div>',                    
+                    scope: scope,
+                    showClose: false,
+                    closeByDocument: false,
+                    plain: true
+                });
+            };
+        })
         .filter('充值验证码error信息', function (ngDialog, $filter) {
             return function (msg) {
                 var error = {
@@ -1066,5 +1080,58 @@ define(['app'], function (app) {
             return function (date, i) {
                 return new Date(new Date(date).getTime() + (86400000 * i));
             }
+        })
+        
+        
+        //filter-mySelf
+        .filter('数字加逗号',function(){
+	    	return function(str){
+	    		var newStr = "";
+				var count = 0;	
+				var str=str.toString();
+				if(str.indexOf(".")==-1){
+				   for(var i=str.length-1;i>=0;i--){
+					 if(count % 3 == 0 && count != 0){
+					   newStr = str.charAt(i) + "," + newStr;
+					 }else{
+					   newStr = str.charAt(i) + newStr;
+					 }
+					 count++;
+				   }
+				   str = newStr + ".00"; //自动补小数点后两位
+				}else{
+				   for(var i = str.indexOf(".")-1;i>=0;i--){
+					 if(count % 3 == 0 && count != 0){
+					   newStr = str.charAt(i) + "," + newStr;
+					 }else{
+					   newStr = str.charAt(i) + newStr; //逐个字符相接起来
+					 }
+					 count++;
+				   }
+				   str = newStr + (str + "00").substr((str + "00").indexOf("."),3);
+				}
+				return str
+	    	}
+	    })
+        
+        //filter-mySelf
+        .filter("系统错误信息",function(ngDialog, $filter, $state){
+        	ngDialog.closeAll();
+        	return function (msg) {
+                var error = {
+                    1: "系统错误",
+                    2: "网络异常",
+                };
+                ngDialog.open({
+                    template: '<p class="error-msg">' + error[msg] + '</p>',
+                    showClose: false,
+                    closeByDocument: true,
+                    plain: true
+                });
+//              setTimeout(function(){
+//              	ngDialog.closeAll();
+//              	
+//              },1000)
+            };
         })
 });

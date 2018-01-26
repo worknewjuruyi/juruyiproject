@@ -36,5 +36,18 @@ define([
 	'conttrollers/myDepositoryController',
 	'conttrollers/activity/luckyDrawV1Controller',
 	'conttrollers/regSuccessCtr',
+	
+	//myself
+	'conttrollers/controllerOrderDtailMy',
+	'conttrollers/protolControllerMy',
+	'conttrollers/signCtrlMy',
+	
+	//duf
+	'conttrollers/controllerbuyend',
+	'conttrollers/controllerbkcq',
+	'conttrollers/controllerHpjy',
+	'conttrollers/controllerMyaddress',
+	'conttrollers/controllerNewsdt',
+	'conttrollers/controllersafeCr',
 ], function () {
 });

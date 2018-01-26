@@ -26,6 +26,7 @@ require.config({
         'ngscrollbar':'../framework/ngscrollbar',
         'ngTouch':'./ng/ngTouch',
         'radialIndicator':'../framework/radialIndicator',
+        'iScroll':'../framework/iscroll'
     },
     shim:{
         'angular':{
