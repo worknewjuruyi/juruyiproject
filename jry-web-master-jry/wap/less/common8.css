@@ -28,11 +28,6 @@
   margin-top: -0.44444rem;
   font-size: 0.79012rem;
 }
-.ngdialog.ngdialog-theme-default .ngdialog-content {
-  max-width: 14.81481rem !important;
-  font-size: 1.03704rem !important;
-  width: auto !important;
-}
 .ngdialog.ngdialog-theme-default .ngdialog-close,
 .ngdialog.ngdialog-theme-default .ngdialog-close:before {
   font-size: 1.03704rem !important;
@@ -40,7 +35,7 @@
 .ngdialog-content .error-msg {
   padding: 0.61728rem 0.49383rem;
   text-align: center;
-  font-size: 1.23457rem;
+  font-size: 0.8rem;
 }
 .ngdialog-content .success-msg {
   padding: 0.61728rem 0.49383rem;

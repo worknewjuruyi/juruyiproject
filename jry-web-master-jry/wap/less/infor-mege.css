@@ -1,0 +1,32 @@
+@charset "utf-8";
+.a-apde-wrap {
+  margin-bottom: 5.6rem;
+}
+.a-apde-wrap .a-apde-main {
+  font-size: 0.4rem;
+  color: #3d3f4c;
+  width: 90%;
+  margin: 0 auto;
+  text-indent: 0.93rem;
+  margin-top: 0.4rem;
+}
+.a-apde-wrap .a-apde-main p {
+  margin-bottom: 0.25rem;
+}
+.a-apde-wrap .a-apde-main .a-apde-cfe .a-apde-img p:nth-child(1) {
+  display: flex;
+  justify-content: center;
+}
+.a-apde-wrap .a-apde-main .a-apde-cfe .a-apde-img p:nth-child(1) img {
+  width: 8.53rem;
+  height: 11rem;
+  margin-bottom: 0.4rem;
+}
+.a-apde-wrap .a-apde-main .a-apde-cfe .a-apde-img p:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.a-apde-wrap .a-apde-main .a-apde-cfe .a-apde-img p:nth-child(2) img {
+  width: 8.53rem;
+  height: 4.58rem;
+}

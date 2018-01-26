@@ -1,0 +1,184 @@
+@charset "utf-8";
+.invest-orderDtail {
+  margin-bottom: 2rem;
+}
+.invest-orderDtail .common-header .project-detail {
+  color: #5665F5;
+  font-size: 16px;
+  position: absolute;
+  height: 1.17rem;
+  line-height: 1.17rem;
+  top: 0;
+  right: 0.4rem;
+}
+[data-dpr="2"] .invest-orderDtail .common-header .project-detail {
+  font-size: 32px;
+}
+[data-dpr="3"] .invest-orderDtail .common-header .project-detail {
+  font-size: 48px;
+}
+[data-dpr="4"] .invest-orderDtail .common-header .project-detail {
+  font-size: 64px;
+}
+.invest-orderDtail .invest-orderDtail-content .content-top-msg {
+  width: 100%;
+  padding: 0.66rem 0;
+  background: -webkit-linear-gradient(left, #ff8560, #fe4f40);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #ff8560, #fe4f40);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #ff8560, #fe4f40);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #ff8560, #fe4f40);
+  /* 标准的语法 */
+}
+.invest-orderDtail .invest-orderDtail-content .content-top-msg h4 {
+  color: white;
+  font-size: 16px;
+  padding-left: 0.4rem;
+  font-weight: bold;
+}
+[data-dpr="2"] .invest-orderDtail .invest-orderDtail-content .content-top-msg h4 {
+  font-size: 32px;
+}
+[data-dpr="3"] .invest-orderDtail .invest-orderDtail-content .content-top-msg h4 {
+  font-size: 48px;
+}
+[data-dpr="4"] .invest-orderDtail .invest-orderDtail-content .content-top-msg h4 {
+  font-size: 64px;
+}
+.invest-orderDtail .invest-orderDtail-content .content-top-msg p {
+  margin-top: 0.4rem;
+  color: white;
+  font-size: 16px;
+  padding-left: 0.4rem;
+  font-weight: bold;
+}
+[data-dpr="2"] .invest-orderDtail .invest-orderDtail-content .content-top-msg p {
+  font-size: 32px;
+}
+[data-dpr="3"] .invest-orderDtail .invest-orderDtail-content .content-top-msg p {
+  font-size: 48px;
+}
+[data-dpr="4"] .invest-orderDtail .invest-orderDtail-content .content-top-msg p {
+  font-size: 64px;
+}
+.invest-orderDtail .invest-orderDtail-content .content-top-msg p em {
+  margin-left: 0.26rem;
+  font-weight: bold;
+}
+.invest-orderDtail .invest-orderDtail-content .order-amount,
+.invest-orderDtail .invest-orderDtail-content .others {
+  background-color: white;
+  padding-bottom: 0.4rem;
+}
+.invest-orderDtail .invest-orderDtail-content .order-amount dl dt,
+.invest-orderDtail .invest-orderDtail-content .others dl dt {
+  background-color: white;
+  height: 1.17rem;
+  line-height: 1.17rem;
+  color: #3D3F4C;
+  font-size: 16px;
+  padding-left: 0.4rem;
+  font-weight: bold;
+}
+[data-dpr="2"] .invest-orderDtail .invest-orderDtail-content .order-amount dl dt,
+[data-dpr="2"] .invest-orderDtail .invest-orderDtail-content .others dl dt {
+  font-size: 32px;
+}
+[data-dpr="3"] .invest-orderDtail .invest-orderDtail-content .order-amount dl dt,
+[data-dpr="3"] .invest-orderDtail .invest-orderDtail-content .others dl dt {
+  font-size: 48px;
+}
+[data-dpr="4"] .invest-orderDtail .invest-orderDtail-content .order-amount dl dt,
+[data-dpr="4"] .invest-orderDtail .invest-orderDtail-content .others dl dt {
+  font-size: 64px;
+}
+.invest-orderDtail .invest-orderDtail-content .order-amount dl dd,
+.invest-orderDtail .invest-orderDtail-content .others dl dd {
+  background-color: #f2e5e5;
+  height: 0.85rem;
+  line-height: 0.85rem;
+  padding-left: 0.8rem;
+  padding-right: 0.4rem;
+  overflow: hidden;
+}
+.invest-orderDtail .invest-orderDtail-content .order-amount dl dd p,
+.invest-orderDtail .invest-orderDtail-content .others dl dd p {
+  float: left;
+  font-size: 14px;
+  color: #3D3F4C;
+}
+[data-dpr="2"] .invest-orderDtail .invest-orderDtail-content .order-amount dl dd p,
+[data-dpr="2"] .invest-orderDtail .invest-orderDtail-content .others dl dd p {
+  font-size: 28px;
+}
+[data-dpr="3"] .invest-orderDtail .invest-orderDtail-content .order-amount dl dd p,
+[data-dpr="3"] .invest-orderDtail .invest-orderDtail-content .others dl dd p {
+  font-size: 42px;
+}
+[data-dpr="4"] .invest-orderDtail .invest-orderDtail-content .order-amount dl dd p,
+[data-dpr="4"] .invest-orderDtail .invest-orderDtail-content .others dl dd p {
+  font-size: 56px;
+}
+.invest-orderDtail .invest-orderDtail-content .order-amount dl dd span,
+.invest-orderDtail .invest-orderDtail-content .others dl dd span {
+  float: right;
+  color: #FF4B3B;
+  font-size: 14px;
+}
+[data-dpr="2"] .invest-orderDtail .invest-orderDtail-content .order-amount dl dd span,
+[data-dpr="2"] .invest-orderDtail .invest-orderDtail-content .others dl dd span {
+  font-size: 28px;
+}
+[data-dpr="3"] .invest-orderDtail .invest-orderDtail-content .order-amount dl dd span,
+[data-dpr="3"] .invest-orderDtail .invest-orderDtail-content .others dl dd span {
+  font-size: 42px;
+}
+[data-dpr="4"] .invest-orderDtail .invest-orderDtail-content .order-amount dl dd span,
+[data-dpr="4"] .invest-orderDtail .invest-orderDtail-content .others dl dd span {
+  font-size: 56px;
+}
+.invest-orderDtail .invest-orderDtail-content .order-amount dl dd span i,
+.invest-orderDtail .invest-orderDtail-content .others dl dd span i {
+  margin-left: 0.13rem;
+}
+.invest-orderDtail .invest-orderDtail-content .order-amount dl dd .count-amount,
+.invest-orderDtail .invest-orderDtail-content .others dl dd .count-amount {
+  color: #3D3F4C;
+}
+.invest-orderDtail .invest-orderDtail-content .order-amount dl dd .userd,
+.invest-orderDtail .invest-orderDtail-content .others dl dd .userd {
+  color: #C1C1C7;
+}
+.invest-orderDtail .invest-orderDtail-content .order-amount dl .color-grey,
+.invest-orderDtail .invest-orderDtail-content .others dl .color-grey {
+  background-color: #F2F2F2;
+}
+.invest-orderDtail .invest-orderDtail-content .others {
+  margin-top: 2px;
+}
+.invest-orderDtail .invest-orderDtail-content .btn-check {
+  margin-top: 1.06rem;
+}
+.invest-orderDtail .invest-orderDtail-content .btn-check button {
+  display: block;
+  width: 9.2rem;
+  height: 1.17rem;
+  margin: 0 auto;
+  background-color: #ff9f49;
+  border-radius: 0.1rem;
+  outline: none;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+[data-dpr="2"] .invest-orderDtail .invest-orderDtail-content .btn-check button {
+  font-size: 32px;
+}
+[data-dpr="3"] .invest-orderDtail .invest-orderDtail-content .btn-check button {
+  font-size: 48px;
+}
+[data-dpr="4"] .invest-orderDtail .invest-orderDtail-content .btn-check button {
+  font-size: 64px;
+}

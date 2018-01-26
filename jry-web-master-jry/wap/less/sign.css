@@ -1,0 +1,240 @@
+@charset "utf-8";
+#calendar {
+  width: 9rem;
+  height: 7.31rem;
+  margin: 0 auto;
+  margin-top: 1.56rem;
+}
+.sign table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #a46626;
+  font-weight: bold;
+  font-size: 12px;
+}
+[data-dpr="2"] .sign table {
+  font-size: 24px;
+}
+[data-dpr="3"] .sign table {
+  font-size: 36px;
+}
+[data-dpr="4"] .sign table {
+  font-size: 48px;
+}
+.sign th,
+.sign td {
+  text-align: center;
+  line-height: 0.93rem;
+  border: 1px solid #faca34;
+  border-radius: 0.09rem;
+  background: #fff;
+  font-size: 11px;
+}
+[data-dpr="2"] .sign th,
+[data-dpr="2"] .sign td {
+  font-size: 22px;
+}
+[data-dpr="3"] .sign th,
+[data-dpr="3"] .sign td {
+  font-size: 33px;
+}
+[data-dpr="4"] .sign th,
+[data-dpr="4"] .sign td {
+  font-size: 44px;
+}
+.sign td {
+  color: #404040;
+  vertical-align: middle;
+  border-radius: 0.09rem;
+  background: #fff;
+  color: #a46626;
+}
+.sign .on {
+  background-color: #dc7a14;
+}
+.sign .sign-show {
+  color: red;
+}
+.calendar_month_prev {
+  float: left;
+  line-height: 0.8rem;
+  color: #656565;
+  font-weight: bold;
+  margin-left: 0.3rem;
+}
+.calendar_month_next {
+  float: right;
+  line-height: 0.8rem;
+  color: #656565;
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+.calendar_month_span {
+  display: inline;
+  line-height: 0.8rem;
+  font-size: 13px;
+  color: #656565;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+[data-dpr="2"] .calendar_month_span {
+  font-size: 26px;
+}
+[data-dpr="3"] .calendar_month_span {
+  font-size: 39px;
+}
+[data-dpr="4"] .calendar_month_span {
+  font-size: 52px;
+}
+.sign_succ_calendar_title {
+  height: 0.8rem;
+  text-align: center;
+  border-left: 1px solid #faca34;
+  border-right: 1px solid #faca34;
+  background: #faca34;
+}
+.sign_main {
+  border-top: 1px solid #faca34;
+  font-family: "Microsoft YaHei", SimHei;
+}
+.sign-btn {
+  margin-top: 1.46rem;
+}
+.sign-btn .sign-btn-click {
+  width: 4rem;
+  height: 0.78rem;
+  display: block;
+  margin: 0 auto;
+  background-color: #faca34;
+  border-radius: 0.39rem;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: white;
+}
+[data-dpr="2"] .sign-btn .sign-btn-click {
+  font-size: 28px;
+}
+[data-dpr="3"] .sign-btn .sign-btn-click {
+  font-size: 42px;
+}
+[data-dpr="4"] .sign-btn .sign-btn-click {
+  font-size: 56px;
+}
+.sign-btn .btn-grey {
+  background-color: grey;
+}
+.sign-msg-show {
+  width: 9rem;
+  margin: 0 auto;
+  margin-top: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.sign-msg-show .sign-times {
+  color: black;
+  font-size: 16px;
+}
+[data-dpr="2"] .sign-msg-show .sign-times {
+  font-size: 32px;
+}
+[data-dpr="3"] .sign-msg-show .sign-times {
+  font-size: 48px;
+}
+[data-dpr="4"] .sign-msg-show .sign-times {
+  font-size: 64px;
+}
+.sign-msg-show .sign-times span {
+  color: orangered;
+}
+.sign-msg-show .sign-total-integral {
+  color: black;
+  font-size: 16px;
+}
+[data-dpr="2"] .sign-msg-show .sign-total-integral {
+  font-size: 32px;
+}
+[data-dpr="3"] .sign-msg-show .sign-total-integral {
+  font-size: 48px;
+}
+[data-dpr="4"] .sign-msg-show .sign-total-integral {
+  font-size: 64px;
+}
+.sign-msg-show .sign-total-integral span {
+  color: orangered;
+}
+.maskbox {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+.qdbox {
+  display: none;
+  padding: 0.23rem 0;
+  width: 6rem;
+  border: 0.04rem solid #58bc8d;
+  border-radius: 0.15rem;
+  background: #fff;
+  position: fixed;
+  z-index: 1001;
+  top: 50%;
+  left: 50%;
+  margin-top: -1.76rem;
+  margin-left: -3rem;
+}
+.qdbox .text-green {
+  color: #58bc8d;
+  font-size: 13px;
+}
+[data-dpr="2"] .qdbox .text-green {
+  font-size: 26px;
+}
+[data-dpr="3"] .qdbox .text-green {
+  font-size: 39px;
+}
+[data-dpr="4"] .qdbox .text-green {
+  font-size: 52px;
+}
+.qdbox .text-center {
+  text-align: center;
+  line-height: 0.8rem;
+  font-size: 16px;
+}
+[data-dpr="2"] .qdbox .text-center {
+  font-size: 32px;
+}
+[data-dpr="3"] .qdbox .text-center {
+  font-size: 48px;
+}
+[data-dpr="4"] .qdbox .text-center {
+  font-size: 64px;
+}
+.btn-yes {
+  width: 3rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  margin: 0 auto;
+  margin-top: 0.31rem;
+  background-color: darkgreen;
+  border-radius: 0.4rem;
+}
+[data-dpr="2"] .btn-yes {
+  font-size: 28px;
+}
+[data-dpr="3"] .btn-yes {
+  font-size: 42px;
+}
+[data-dpr="4"] .btn-yes {
+  font-size: 56px;
+}

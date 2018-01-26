@@ -1,0 +1,191 @@
+@charset "utf-8";
+@min: '@2x.png';
+@max: '@3x.png';
+.ml(@n){
+  margin-left: @n;
+}
+.mr(@n){
+  margin-right: @n;
+}
+.mt(@n){
+  margin-top:@n;
+}
+.mb(@n){
+  margin-bottom:@n;
+}
+.pl(@n){
+  padding-left: @n;
+}
+.pr(@n){
+  padding-right: @n;
+}
+.pt(@n){
+  padding-top:@n;
+}
+.pb(@n){
+  padding-bottom:@n;
+}
+.bg-c(@c){
+  background-color: @c;
+}
+.br(@deg){
+  border-radius: @deg;
+}
+.bg-image(@url){
+@media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+    background-image:url('@{url}@{max}');
+    background-size:cover; 
+}
+background-image:url('@{url}@{min}');
+background-size:cover; 
+}
+
+.font-size(@val){
+    font-size: @val;
+    [data-dpr="2"] &{
+        font-size: 2*@val
+    }
+
+    [data-dpr="3"] &{
+        font-size: 3*@val
+    }
+
+    [data-dpr="4"] &{
+        font-size: 4*@val
+    }
+}
+
+.myinvest-wrapper{
+    .myinvest-content{
+        .myinvest-top-msg{
+            width: 100%;
+            padding: 0.93rem 0;
+            background: -webkit-linear-gradient(left, #ff8560 , #fe4f40); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(right, #ff8560, #fe4f40); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(right, #ff8560, #fe4f40); /* Firefox 3.6 - 15 */
+            background: linear-gradient(to right, #ff8560, #fe4f40); /* 标准的语法 */
+            p{
+                color: white;
+                .font-size(14px);
+                text-align: center;
+            }
+            h4{
+                color: white;
+                .font-size(44px);
+                font-weight: bold;
+                text-align: center;
+                margin-top: 0.4rem;
+            }
+        }
+        
+        .income-data{
+            padding: 0.4rem 0;
+            display: flex;
+            background-color: white;
+            justify-content: space-between;
+            .income-waite,.income-total{
+                width: 50%;
+                text-align: center;
+                h4{
+                    color: #9C9DAE;
+                    .font-size(14px);
+                }
+                p{
+                    margin-top: 0.13rem;
+                    color: #5C5C66;
+                    .font-size(22px);
+                }
+            }
+        }
+        
+        //列表
+        .invest-list-my{
+            margin-top: 0.4rem;
+            .tab-header{
+                height: 1.17rem;
+                background-color: white;        
+                ul{
+                    display: flex;
+                    justify-content: space-around;
+                    li{
+                        height: 1.17rem;
+                        line-height: 1.17rem;                
+                        text-align: center;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;                
+                        .red-line{
+                            width: 100%;
+                            height: 0.1rem;
+                            background-color: #ff4b3b;
+                            position: absolute;
+                            bottom: 0.13rem;
+                        }
+                        h4{
+                          color: #9C9DAE;
+                          .font-size(16px);  
+                        }
+                        h4.active{
+                          color: #3D3F4C;
+                          font-weight: bold;
+                        }
+                    }
+                }
+            }
+            
+            //募集中
+//          #slide1{
+//              height: 8.5rem;
+//          }
+            .invest-mj,.invest-tz,.invest-hk{
+                //自适应
+                height: 8.5rem;
+                overflow: auto;
+                ul{
+                    width: 100%;
+                    
+                    li{
+                        
+                        padding: 0.4rem 0;
+                        background-color: white;
+                        border-top: 2px solid #F2F2F2; 
+                        .li-wrap{
+                           width: 9.2rem;
+                           margin: 0 auto;
+                        }
+                        h4{
+                           color: #9C9DAE;
+                           .font-size(16px); 
+                        }
+                        .invest-mj-msgtitle,.invest-tz-msgtitle,.invest-hk-msgtitle{
+                            margin-top: 0.4rem;
+                            color: #9C9DAE;
+                           .font-size(12px);
+                           display: flex;
+                           span{
+                               width: 33.33%;
+                               display: block;                               
+                           }
+                        }
+                        .invest-mj-msgcontent,.invest-tz-msgcontent,.invest-hk-msgcontent{
+                            margin-top: 0.26rem;
+                            color: #9C9DAE;
+                           .font-size(16px);
+                           font-weight: bold;
+                           display: flex;
+                           span{
+                               width: 33.33%;
+                               display: block;                               
+                           }
+                        }
+                        .invest-state{
+                            margin-top: 0.4rem;
+                            color: #FF9F49;
+                            .font-size(16px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

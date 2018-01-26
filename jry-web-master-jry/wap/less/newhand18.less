@@ -1183,6 +1183,7 @@ background-size:cover;
 //newcss
 .immedia-invest{
     .common-header{
+        border: none;
         .protol{
             color: #5665F5;
             .font-size(16px);
@@ -1195,6 +1196,7 @@ background-size:cover;
     }
     //历史年化收益率
     .income-rate{
+        margin-top: 2px;
         padding: 0.8rem 0 0.4rem 0;
         background-color: white;
         .income-rate-content{
@@ -1405,16 +1407,18 @@ background-size:cover;
     }
     
     .immedia-invest-content{
-        position: relative;
+//      position: relative;
     }
     //投资详情页面
     .invest-detail{
         width: 100%;
         position: absolute;
-        top: 0;
+        top: 0;        
         left: 0;
+        margin-top: 1.17rem;
+        padding-bottom: 1.2rem;
         z-index: 50;
-//      display: none;
+        display: none;        
 
         //tab切换按钮
         .tab-header{
@@ -1482,39 +1486,121 @@ background-size:cover;
                     }
                 }
             }
-            
+            //列表
+            .invest-list-data{
+                background-color: white;
+                ul{
+                    li{
+                        padding: 0.4rem 0;
+                        width: 9.2rem;
+                        margin: 0 auto;
+                        border-bottom: 1px solid;
+                        border-bottom-color: rgba(193,193,199,0.5);
+                    }
+                    li.original-data{
+                        .title{
+                            color: #3D3F4C;
+                            .font-size(16px);
+                            font-weight: bold;
+                            margin-bottom: 0.13rem;
+                        }
+                        .data-content{
+                            p{
+                                color: #5C5C66;
+                                .font-size(14px);
+                                line-height: 0.66rem;
+                                
+                            }
+                            span{
+                                .font-size(14px);
+                                color: #C1C1C7;
+                            }
+                        }
+                    }
+                    //第三方委托合同展示
+                    li.contract-img-show{
+                        .title{
+                            margin-bottom: 0.3rem;
+                        }
+                        .show-img-list{
+                            dl{
+                                display: flex;
+                                justify-content: space-around;
+                                flex-wrap:wrap;
+                            }
+                            dd{
+                                width: 2.8rem;
+                                height: 2.8rem;
+                                background-color: #F06A28;
+                                border-radius: 0.13rem;
+                                margin-bottom: 0.4rem;
+                            }
+                        }
+                    }
+                }
+            }
             
         }
-
+        //投资记录
+        .invest-record{
+            .head-msg{
+                width: 100%;
+                height: 0.9rem;
+                background-color: #ff9f49;
+                display: flex;
+                justify-content: space-around;
+                span{
+                   display: block;
+                   align-self: center;
+                   .font-size(12px);
+                   color: white;
+                }
+            }
+            .record-content{
+                ul{
+                    width: 100%;
+                    background-color: white;
+                    li{
+                        width: 9.2rem;
+                        margin: 0 auto;
+                        height: 1.33rem;                        
+                        border-top: 1px solid;
+                        border-top-color: rgba(193, 193, 199, 0.5);
+                        display: flex;
+                        justify-content: space-between;
+                        span{
+                            display: block;
+                            align-self: center;
+                            .font-size(16px);
+                        }
+                        .phone-num{
+                            color: #3D3F4C;
+                        }
+                        .invest-amount{
+                            font-weight: bold;
+                        }
+                        .date-time{
+                            color: #9C9DAE;
+                            .font-size(14px);
+                        }
+                    }
+                }
+            }
+        }
     }
+    
     
     
     //浮动层
     .invest-float{
+        background-color: #F2F2F2;
         width: 100%;
         position: fixed;
         z-index: 100;
         left: 0;
         bottom: 0;
 //      bottom:20px;
-        //立即投资按钮
-        .immedia-invest-btn{
-            width: 9.2rem;
-            height: 1.17rem;
-            margin: 0 auto;
-            button{
-                width: 9.2rem;
-                height: 1.17rem;
-                color: white;
-                .font-size(16px);
-                text-align: center;
-                border-radius: 0.1rem;
-                background: -webkit-linear-gradient(left, #ff8560 , #fe4f40); /* Safari 5.1 - 6.0 */
-                background: -o-linear-gradient(right, #ff8560, #fe4f40); /* Opera 11.1 - 12.0 */
-                background: -moz-linear-gradient(right, #ff8560, #fe4f40); /* Firefox 3.6 - 15 */
-                background: linear-gradient(to right, #ff8560, #fe4f40); /* 标准的语法 */
-            }
-        }
+        
         //不懂问一问
         .touch-detail{
             width: 9.2rem;
@@ -1697,6 +1783,27 @@ background-size:cover;
                     }
                 }
             }
+        }
+    }
+    //立即投资按钮
+    .immedia-invest-btn{
+        position: absolute;
+        bottom:1.4rem;
+        width: 9.2rem;
+        height: 1.17rem;
+        left: 50%;
+        margin-left: -4.6rem;
+        button{
+            width: 9.2rem;
+            height: 1.17rem;
+            color: white;
+            .font-size(16px);
+            text-align: center;
+            border-radius: 0.1rem;
+            background: -webkit-linear-gradient(left, #ff8560 , #fe4f40); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(right, #ff8560, #fe4f40); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(right, #ff8560, #fe4f40); /* Firefox 3.6 - 15 */
+            background: linear-gradient(to right, #ff8560, #fe4f40); /* 标准的语法 */
         }
     }
 }

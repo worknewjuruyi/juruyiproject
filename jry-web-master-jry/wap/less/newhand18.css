@@ -1060,6 +1060,9 @@
   padding: 0.8rem 0.8rem 0 0;
   z-index: 150;
 }
+.immedia-invest .common-header {
+  border: none;
+}
 .immedia-invest .common-header .protol {
   color: #5665F5;
   font-size: 16px;
@@ -1079,6 +1082,7 @@
   font-size: 64px;
 }
 .immedia-invest .income-rate {
+  margin-top: 2px;
   padding: 0.8rem 0 0.4rem 0;
   background-color: white;
 }
@@ -1419,15 +1423,15 @@
 [data-dpr="4"] .immedia-invest .coupons .coupons-userful em {
   font-size: 56px;
 }
-.immedia-invest .immedia-invest-content {
-  position: relative;
-}
 .immedia-invest .invest-detail {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  margin-top: 1.17rem;
+  padding-bottom: 1.2rem;
   z-index: 50;
+  display: none;
 }
 .immedia-invest .invest-detail .tab-header {
   height: 1.17rem;
@@ -1526,42 +1530,148 @@
 [data-dpr="4"] .immedia-invest .invest-detail .project-detail .date-msg .bottom-msg span {
   font-size: 52px;
 }
+.immedia-invest .invest-detail .project-detail .invest-list-data {
+  background-color: white;
+}
+.immedia-invest .invest-detail .project-detail .invest-list-data ul li {
+  padding: 0.4rem 0;
+  width: 9.2rem;
+  margin: 0 auto;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(193, 193, 199, 0.5);
+}
+.immedia-invest .invest-detail .project-detail .invest-list-data ul li.original-data .title {
+  color: #3D3F4C;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0.13rem;
+}
+[data-dpr="2"] .immedia-invest .invest-detail .project-detail .invest-list-data ul li.original-data .title {
+  font-size: 32px;
+}
+[data-dpr="3"] .immedia-invest .invest-detail .project-detail .invest-list-data ul li.original-data .title {
+  font-size: 48px;
+}
+[data-dpr="4"] .immedia-invest .invest-detail .project-detail .invest-list-data ul li.original-data .title {
+  font-size: 64px;
+}
+.immedia-invest .invest-detail .project-detail .invest-list-data ul li.original-data .data-content p {
+  color: #5C5C66;
+  font-size: 14px;
+  line-height: 0.66rem;
+}
+[data-dpr="2"] .immedia-invest .invest-detail .project-detail .invest-list-data ul li.original-data .data-content p {
+  font-size: 28px;
+}
+[data-dpr="3"] .immedia-invest .invest-detail .project-detail .invest-list-data ul li.original-data .data-content p {
+  font-size: 42px;
+}
+[data-dpr="4"] .immedia-invest .invest-detail .project-detail .invest-list-data ul li.original-data .data-content p {
+  font-size: 56px;
+}
+.immedia-invest .invest-detail .project-detail .invest-list-data ul li.original-data .data-content span {
+  font-size: 14px;
+  color: #C1C1C7;
+}
+[data-dpr="2"] .immedia-invest .invest-detail .project-detail .invest-list-data ul li.original-data .data-content span {
+  font-size: 28px;
+}
+[data-dpr="3"] .immedia-invest .invest-detail .project-detail .invest-list-data ul li.original-data .data-content span {
+  font-size: 42px;
+}
+[data-dpr="4"] .immedia-invest .invest-detail .project-detail .invest-list-data ul li.original-data .data-content span {
+  font-size: 56px;
+}
+.immedia-invest .invest-detail .project-detail .invest-list-data ul li.contract-img-show .title {
+  margin-bottom: 0.3rem;
+}
+.immedia-invest .invest-detail .project-detail .invest-list-data ul li.contract-img-show .show-img-list dl {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.immedia-invest .invest-detail .project-detail .invest-list-data ul li.contract-img-show .show-img-list dd {
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: #F06A28;
+  border-radius: 0.13rem;
+  margin-bottom: 0.4rem;
+}
+.immedia-invest .invest-detail .invest-record .head-msg {
+  width: 100%;
+  height: 0.9rem;
+  background-color: #ff9f49;
+  display: flex;
+  justify-content: space-around;
+}
+.immedia-invest .invest-detail .invest-record .head-msg span {
+  display: block;
+  align-self: center;
+  font-size: 12px;
+  color: white;
+}
+[data-dpr="2"] .immedia-invest .invest-detail .invest-record .head-msg span {
+  font-size: 24px;
+}
+[data-dpr="3"] .immedia-invest .invest-detail .invest-record .head-msg span {
+  font-size: 36px;
+}
+[data-dpr="4"] .immedia-invest .invest-detail .invest-record .head-msg span {
+  font-size: 48px;
+}
+.immedia-invest .invest-detail .invest-record .record-content ul {
+  width: 100%;
+  background-color: white;
+}
+.immedia-invest .invest-detail .invest-record .record-content ul li {
+  width: 9.2rem;
+  margin: 0 auto;
+  height: 1.33rem;
+  border-top: 1px solid;
+  border-top-color: rgba(193, 193, 199, 0.5);
+  display: flex;
+  justify-content: space-between;
+}
+.immedia-invest .invest-detail .invest-record .record-content ul li span {
+  display: block;
+  align-self: center;
+  font-size: 16px;
+}
+[data-dpr="2"] .immedia-invest .invest-detail .invest-record .record-content ul li span {
+  font-size: 32px;
+}
+[data-dpr="3"] .immedia-invest .invest-detail .invest-record .record-content ul li span {
+  font-size: 48px;
+}
+[data-dpr="4"] .immedia-invest .invest-detail .invest-record .record-content ul li span {
+  font-size: 64px;
+}
+.immedia-invest .invest-detail .invest-record .record-content ul li .phone-num {
+  color: #3D3F4C;
+}
+.immedia-invest .invest-detail .invest-record .record-content ul li .invest-amount {
+  font-weight: bold;
+}
+.immedia-invest .invest-detail .invest-record .record-content ul li .date-time {
+  color: #9C9DAE;
+  font-size: 14px;
+}
+[data-dpr="2"] .immedia-invest .invest-detail .invest-record .record-content ul li .date-time {
+  font-size: 28px;
+}
+[data-dpr="3"] .immedia-invest .invest-detail .invest-record .record-content ul li .date-time {
+  font-size: 42px;
+}
+[data-dpr="4"] .immedia-invest .invest-detail .invest-record .record-content ul li .date-time {
+  font-size: 56px;
+}
 .immedia-invest .invest-float {
+  background-color: #F2F2F2;
   width: 100%;
   position: fixed;
   z-index: 100;
   left: 0;
   bottom: 0;
-}
-.immedia-invest .invest-float .immedia-invest-btn {
-  width: 9.2rem;
-  height: 1.17rem;
-  margin: 0 auto;
-}
-.immedia-invest .invest-float .immedia-invest-btn button {
-  width: 9.2rem;
-  height: 1.17rem;
-  color: white;
-  font-size: 16px;
-  text-align: center;
-  border-radius: 0.1rem;
-  background: -webkit-linear-gradient(left, #ff8560, #fe4f40);
-  /* Safari 5.1 - 6.0 */
-  background: -o-linear-gradient(right, #ff8560, #fe4f40);
-  /* Opera 11.1 - 12.0 */
-  background: -moz-linear-gradient(right, #ff8560, #fe4f40);
-  /* Firefox 3.6 - 15 */
-  background: linear-gradient(to right, #ff8560, #fe4f40);
-  /* 标准的语法 */
-}
-[data-dpr="2"] .immedia-invest .invest-float .immedia-invest-btn button {
-  font-size: 32px;
-}
-[data-dpr="3"] .immedia-invest .invest-float .immedia-invest-btn button {
-  font-size: 48px;
-}
-[data-dpr="4"] .immedia-invest .invest-float .immedia-invest-btn button {
-  font-size: 64px;
 }
 .immedia-invest .invest-float .touch-detail {
   width: 9.2rem;
@@ -1864,4 +1974,37 @@
 }
 .immedia-invest .coupon-list-mask .coupon-list .coupon-list-content ul .coupon-selected .coupons-msg-right {
   color: white;
+}
+.immedia-invest .immedia-invest-btn {
+  position: absolute;
+  bottom: 1.4rem;
+  width: 9.2rem;
+  height: 1.17rem;
+  left: 50%;
+  margin-left: -4.6rem;
+}
+.immedia-invest .immedia-invest-btn button {
+  width: 9.2rem;
+  height: 1.17rem;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 0.1rem;
+  background: -webkit-linear-gradient(left, #ff8560, #fe4f40);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #ff8560, #fe4f40);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #ff8560, #fe4f40);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #ff8560, #fe4f40);
+  /* 标准的语法 */
+}
+[data-dpr="2"] .immedia-invest .immedia-invest-btn button {
+  font-size: 32px;
+}
+[data-dpr="3"] .immedia-invest .immedia-invest-btn button {
+  font-size: 48px;
+}
+[data-dpr="4"] .immedia-invest .immedia-invest-btn button {
+  font-size: 64px;
 }

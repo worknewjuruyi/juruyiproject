@@ -1,0 +1,64 @@
+@charset "utf-8";
+.i-inst-container {
+  height: 10.13rem;
+  background-color: #FFFFFF;
+  margin-bottom: 0.8rem;
+}
+.i-inst-container .i-inst-wrap {
+  height: 5.86rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e9eff5;
+}
+.i-inst-container .i-inst-wrap .i-inst-main p:nth-child(1) {
+  width: 4.8rem;
+  height: 3.2rem;
+  background-image: url('../images/newhand/investment_empty@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .i-inst-container .i-inst-wrap .i-inst-main p:nth-child(1) {
+    background-image: url('../images/newhand/investment_empty@3x.png');
+    background-size: cover;
+  }
+}
+.i-inst-container .i-inst-wrap .i-inst-main p:nth-child(2) {
+  text-align: center;
+  font-size: 0.48rem;
+  padding-top: 0.47rem;
+}
+.i-inst-container .i-inst-meg dl {
+  padding: 0.4rem 0.4rem;
+}
+.i-inst-container .i-inst-meg dl dt {
+  font-size: 0.37rem;
+  color: #3d3f4c;
+  line-height: 0.66rem;
+}
+.i-inst-container .i-inst-meg dl dd {
+  color: #c1c1c7;
+  font-size: 0.37rem;
+  line-height: 0.86rem;
+}
+.i-inst-container .i-inst-meg dl dd span {
+  float: right;
+  color: #3d3f4c;
+}
+.i-inst-btn {
+  width: 8.4rem;
+  height: 1.2rem;
+  background: linear-gradient(to right, #ff8560 0%, #fe4f40 100%);
+  border-radius: 0.1rem;
+  color: #FFFFFF;
+  font-size: 0.42rem;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.2rem;
+}
+.i-inst-myinst {
+  font-size: 0.42rem;
+  color: #5665f5;
+  text-align: center;
+  padding-top: 0.8rem;
+}

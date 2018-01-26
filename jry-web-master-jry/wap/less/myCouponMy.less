@@ -1,0 +1,179 @@
+@charset "utf-8";
+@min: '@2x.png';
+@max: '@3x.png';
+.ml(@n){
+  margin-left: @n;
+}
+.mr(@n){
+  margin-right: @n;
+}
+.mt(@n){
+  margin-top:@n;
+}
+.mb(@n){
+  margin-bottom:@n;
+}
+.pl(@n){
+  padding-left: @n;
+}
+.pr(@n){
+  padding-right: @n;
+}
+.pt(@n){
+  padding-top:@n;
+}
+.pb(@n){
+  padding-bottom:@n;
+}
+.bg-c(@c){
+  background-color: @c;
+}
+.br(@deg){
+  border-radius: @deg;
+}
+.bg-image(@url){
+@media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+    background-image:url('@{url}@{max}');
+    background-size:cover; 
+}
+background-image:url('@{url}@{min}');
+background-size:cover; 
+}
+
+.font-size(@val){
+    font-size: @val;
+    [data-dpr="2"] &{
+        font-size: 2*@val
+    }
+
+    [data-dpr="3"] &{
+        font-size: 3*@val
+    }
+
+    [data-dpr="4"] &{
+        font-size: 4*@val
+    }
+}
+
+.my-coupon{
+    .common-header{
+        span{
+            position: absolute;
+            top: 0;
+            right: 0.4rem;
+            height: 1.17rem;
+            line-height: 1.17rem;
+            color: #5665f5;
+            .font-size(18px);
+        }
+    }
+    
+    //tab切换按钮
+    .tab-header{
+        height: 1.17rem;
+        background-color: white;        
+        ul{
+            display: flex;
+            justify-content: space-around;
+            li{
+                height: 1.17rem;
+                line-height: 1.17rem;                
+                text-align: center;
+                position: relative;
+                display: flex;
+                justify-content: center;                
+                .red-line{
+                    width: 100%;
+                    height: 0.1rem;
+                    background-color: #ff4b3b;
+                    position: absolute;
+                    bottom: 0;
+                }
+                h4{
+                  color: #9C9DAE;
+                  .font-size(16px);  
+                }
+                h4.active{
+                  color: #3D3F4C;
+                  font-weight: bold;
+                }
+            }
+        }
+    }
+    //列表
+    .coupon-list{        
+        //content
+        .coupon-list-content,.coupon-list-content2,.coupon-list-content3{
+            height: 15rem;
+            padding-top: 0.4rem;
+            overflow: auto;
+            ul{
+                li{
+                    width: 9.2rem;
+                    height: 2.18rem;
+                    margin: 0 auto;
+                    margin-bottom: 0.4rem;
+                    .bg-image("../images/investmentMy/coupons_noopt");
+                    display: flex;
+                    justify-content: space-between;
+                    .coupons-msg-left{
+                        width: 5.46rem;
+                        padding-left: 0.4rem; 
+                        align-self: center;                          
+                        color: #9c9dae;
+                        h5{
+                          .font-size(18px);  
+                        }
+                        p{
+                          .font-size(12px);  
+                        }
+                    }
+                    .coupons-msg-right{
+                        width: 3.73rem;
+                        text-align: center;
+                        line-height: 2.18rem;
+                        .font-size(44px);
+                        color: #9c9dae;
+                        span,em{
+                            .font-size(22px);
+                        }
+                    }
+                }
+                //不可点击的优惠券
+                .coupon-invalid{
+                    .bg-image("../images/investmentMy/coupons_noopt");
+                }
+                //可点击的优惠券
+                .coupon-valid{
+                    .bg-image("../images/investmentMy/coupons_opt");
+                    .coupons-msg-left{
+                        h5{
+                          color: #3D3F4C;  
+                        }
+                        p{
+                          color: #5C5C66;  
+                        }
+                    }
+                    .coupons-msg-right{
+                        color: #FF4B3B;
+                    }
+                }
+                //已选中的优惠券
+                .coupon-selected{
+                    .bg-image("../images/investmentMy/coupons_selected");
+                    .coupons-msg-left{
+                        h5{
+                          color: white;  
+                        }
+                        p{
+                          color: white; 
+                        }
+                    }
+                    .coupons-msg-right{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,226 @@
+@charset "utf-8";
+@min: '@2x.png';
+@max: '@3x.png';
+.ml(@n){
+  margin-left: @n;
+}
+.mr(@n){
+  margin-right: @n;
+}
+.mt(@n){
+  margin-top:@n;
+}
+.mb(@n){
+  margin-bottom:@n;
+}
+.pl(@n){
+  padding-left: @n;
+}
+.pr(@n){
+  padding-right: @n;
+}
+.pt(@n){
+  padding-top:@n;
+}
+.pb(@n){
+  padding-bottom:@n;
+}
+.bg-c(@c){
+  background-color: @c;
+}
+.br(@deg){
+  border-radius: @deg;
+}
+.bg-image(@url){
+@media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+    background-image:url('@{url}@{max}');
+    background-size:cover; 
+}
+background-image:url('@{url}@{min}');
+background-size:cover; 
+}
+
+.font-size(@val){
+    font-size: @val;
+    [data-dpr="2"] &{
+        font-size: 2*@val
+    }
+
+    [data-dpr="3"] &{
+        font-size: 3*@val
+    }
+
+    [data-dpr="4"] &{
+        font-size: 4*@val
+    }
+}
+//日历组件样式
+#calendar{
+    width: 9rem;
+    height: 7.31rem;
+    margin: 0 auto;
+    margin-top: 1.56rem;
+}
+
+.sign table{
+    width:100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #a46626;
+    font-weight: bold;
+    .font-size(12px);
+}
+
+.sign th,.sign td {
+//  width: 30px;
+//  height: 40px;
+    text-align: center;
+    line-height: 0.93rem;
+    border:1px solid #faca34;
+    border-radius:0.09rem;
+    background:#fff;
+    .font-size(11px);
+}
+.sign td {
+    color: #404040;
+    vertical-align: middle;
+    border-radius:0.09rem;
+    background:#fff;
+    color: #a46626;
+}   
+.sign .on {
+    background-color:#dc7a14;
+}
+.sign .sign-show{
+    color:red;
+}
+//上一月 /下一月按钮样式
+.calendar_month_prev {
+    float:left;
+    line-height:0.8rem;
+    color: #656565;
+    font-weight: bold;
+    margin-left: 0.3rem;
+}
+.calendar_month_next {
+    float:right;
+    line-height:0.8rem;
+    color: #656565;
+    font-weight: bold;
+    margin-right: 0.3rem;
+}
+.calendar_month_span {
+    display:inline;
+    line-height: 0.8rem;
+    .font-size(13px);
+    color: #656565;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.sign_succ_calendar_title {
+    height: 0.8rem;
+    text-align: center;
+    border-left:1px solid #faca34;
+    border-right:1px solid #faca34;
+    background:#faca34;
+}
+.sign_main{
+    border-top:1px solid #faca34;
+    font-family: "Microsoft YaHei",SimHei;
+}
+
+//签到按钮样式
+.sign-btn{
+    margin-top: 1.46rem;
+    .sign-btn-click{
+        width: 4rem;
+        height: 0.78rem;
+        display: block;
+        margin: 0 auto;
+        background-color: #faca34;
+        border-radius: 0.39rem;
+        text-align: center;
+        .font-size(14px);
+        text-decoration: none;
+        outline: none;
+        border: none;
+        color: white;
+    }
+    .btn-grey{
+        background-color: grey;
+    }
+}
+
+//连续签到次数/积分总数
+.sign-msg-show{
+    width: 9rem;
+    margin: 0 auto;
+    margin-top: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    
+    .sign-times{
+        color: black;
+        .font-size(16px);
+        span{
+            color: orangered;
+        }
+    }
+    .sign-total-integral{
+        color: black;
+        .font-size(16px);
+        span{
+            color: orangered;
+        }
+    }
+}
+//
+
+
+//弹出层样式
+.maskbox{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    display: none;
+    position: absolute;
+    z-index:1000;
+    top:0;
+    left:0;
+}
+.qdbox{
+    display:none;
+    padding:0.23rem 0;
+    width:6rem;
+    border:0.04rem solid #58bc8d;
+    border-radius:0.15rem;
+    background:#fff;
+    position:fixed;
+    z-index:1001;
+    top:50%;
+    left:50%;
+    margin-top:-1.76rem;
+    margin-left:-3rem;
+ }
+.qdbox .text-green{
+    color:#58bc8d;
+    .font-size(13px);
+}
+.qdbox .text-center{
+    text-align: center;
+    line-height: 0.8rem;
+    .font-size(16px);
+    
+}
+.btn-yes{
+    width: 3rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    .font-size(14px);
+    color: white;
+    margin: 0 auto;
+    margin-top: 0.31rem;
+    background-color: darkgreen;
+    border-radius: 0.4rem;
+}

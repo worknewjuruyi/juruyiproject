@@ -1,0 +1,318 @@
+@charset "utf-8";
+.myinvest-wrapper .myinvest-content .myinvest-top-msg {
+  width: 100%;
+  padding: 0.93rem 0;
+  background: -webkit-linear-gradient(left, #ff8560, #fe4f40);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #ff8560, #fe4f40);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #ff8560, #fe4f40);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #ff8560, #fe4f40);
+  /* 标准的语法 */
+}
+.myinvest-wrapper .myinvest-content .myinvest-top-msg p {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .myinvest-top-msg p {
+  font-size: 28px;
+}
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .myinvest-top-msg p {
+  font-size: 42px;
+}
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .myinvest-top-msg p {
+  font-size: 56px;
+}
+.myinvest-wrapper .myinvest-content .myinvest-top-msg h4 {
+  color: white;
+  font-size: 44px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .myinvest-top-msg h4 {
+  font-size: 88px;
+}
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .myinvest-top-msg h4 {
+  font-size: 132px;
+}
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .myinvest-top-msg h4 {
+  font-size: 176px;
+}
+.myinvest-wrapper .myinvest-content .income-data {
+  padding: 0.4rem 0;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+}
+.myinvest-wrapper .myinvest-content .income-data .income-waite,
+.myinvest-wrapper .myinvest-content .income-data .income-total {
+  width: 50%;
+  text-align: center;
+}
+.myinvest-wrapper .myinvest-content .income-data .income-waite h4,
+.myinvest-wrapper .myinvest-content .income-data .income-total h4 {
+  color: #9C9DAE;
+  font-size: 14px;
+}
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .income-data .income-waite h4,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .income-data .income-total h4 {
+  font-size: 28px;
+}
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .income-data .income-waite h4,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .income-data .income-total h4 {
+  font-size: 42px;
+}
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .income-data .income-waite h4,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .income-data .income-total h4 {
+  font-size: 56px;
+}
+.myinvest-wrapper .myinvest-content .income-data .income-waite p,
+.myinvest-wrapper .myinvest-content .income-data .income-total p {
+  margin-top: 0.13rem;
+  color: #5C5C66;
+  font-size: 22px;
+}
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .income-data .income-waite p,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .income-data .income-total p {
+  font-size: 44px;
+}
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .income-data .income-waite p,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .income-data .income-total p {
+  font-size: 66px;
+}
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .income-data .income-waite p,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .income-data .income-total p {
+  font-size: 88px;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my {
+  margin-top: 0.4rem;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .tab-header {
+  height: 1.17rem;
+  background-color: white;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .tab-header ul {
+  display: flex;
+  justify-content: space-around;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .tab-header ul li {
+  height: 1.17rem;
+  line-height: 1.17rem;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .tab-header ul li .red-line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #ff4b3b;
+  position: absolute;
+  bottom: 0.13rem;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .tab-header ul li h4 {
+  color: #9C9DAE;
+  font-size: 16px;
+}
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .tab-header ul li h4 {
+  font-size: 32px;
+}
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .tab-header ul li h4 {
+  font-size: 48px;
+}
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .tab-header ul li h4 {
+  font-size: 64px;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .tab-header ul li h4.active {
+  color: #3D3F4C;
+  font-weight: bold;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk {
+  height: 8.5rem;
+  overflow: auto;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul {
+  width: 100%;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li {
+  padding: 0.4rem 0;
+  background-color: white;
+  border-top: 2px solid #F2F2F2;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .li-wrap,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .li-wrap,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .li-wrap {
+  width: 9.2rem;
+  margin: 0 auto;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li h4,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li h4,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li h4 {
+  color: #9C9DAE;
+  font-size: 16px;
+}
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li h4,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li h4,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li h4 {
+  font-size: 32px;
+}
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li h4,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li h4,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li h4 {
+  font-size: 48px;
+}
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li h4,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li h4,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li h4 {
+  font-size: 64px;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-mj-msgtitle,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-mj-msgtitle,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-mj-msgtitle,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-tz-msgtitle,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-tz-msgtitle,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-tz-msgtitle,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-hk-msgtitle,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-hk-msgtitle,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-hk-msgtitle {
+  margin-top: 0.4rem;
+  color: #9C9DAE;
+  font-size: 12px;
+  display: flex;
+}
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-mj-msgtitle,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-mj-msgtitle,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-mj-msgtitle,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-tz-msgtitle,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-tz-msgtitle,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-tz-msgtitle,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-hk-msgtitle,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-hk-msgtitle,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-hk-msgtitle {
+  font-size: 24px;
+}
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-mj-msgtitle,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-mj-msgtitle,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-mj-msgtitle,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-tz-msgtitle,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-tz-msgtitle,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-tz-msgtitle,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-hk-msgtitle,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-hk-msgtitle,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-hk-msgtitle {
+  font-size: 36px;
+}
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-mj-msgtitle,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-mj-msgtitle,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-mj-msgtitle,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-tz-msgtitle,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-tz-msgtitle,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-tz-msgtitle,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-hk-msgtitle,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-hk-msgtitle,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-hk-msgtitle {
+  font-size: 48px;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-mj-msgtitle span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-mj-msgtitle span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-mj-msgtitle span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-tz-msgtitle span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-tz-msgtitle span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-tz-msgtitle span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-hk-msgtitle span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-hk-msgtitle span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-hk-msgtitle span {
+  width: 33.33%;
+  display: block;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-mj-msgcontent,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-mj-msgcontent,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-mj-msgcontent,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-tz-msgcontent,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-tz-msgcontent,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-tz-msgcontent,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-hk-msgcontent,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-hk-msgcontent,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-hk-msgcontent {
+  margin-top: 0.26rem;
+  color: #9C9DAE;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+}
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-mj-msgcontent,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-mj-msgcontent,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-mj-msgcontent,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-tz-msgcontent,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-tz-msgcontent,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-tz-msgcontent,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-hk-msgcontent,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-hk-msgcontent,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-hk-msgcontent {
+  font-size: 32px;
+}
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-mj-msgcontent,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-mj-msgcontent,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-mj-msgcontent,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-tz-msgcontent,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-tz-msgcontent,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-tz-msgcontent,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-hk-msgcontent,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-hk-msgcontent,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-hk-msgcontent {
+  font-size: 48px;
+}
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-mj-msgcontent,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-mj-msgcontent,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-mj-msgcontent,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-tz-msgcontent,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-tz-msgcontent,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-tz-msgcontent,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-hk-msgcontent,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-hk-msgcontent,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-hk-msgcontent {
+  font-size: 64px;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-mj-msgcontent span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-mj-msgcontent span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-mj-msgcontent span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-tz-msgcontent span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-tz-msgcontent span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-tz-msgcontent span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-hk-msgcontent span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-hk-msgcontent span,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-hk-msgcontent span {
+  width: 33.33%;
+  display: block;
+}
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-state,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-state,
+.myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-state {
+  margin-top: 0.4rem;
+  color: #FF9F49;
+  font-size: 16px;
+}
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-state,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-state,
+[data-dpr="2"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-state {
+  font-size: 32px;
+}
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-state,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-state,
+[data-dpr="3"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-state {
+  font-size: 48px;
+}
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-mj ul li .invest-state,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-tz ul li .invest-state,
+[data-dpr="4"] .myinvest-wrapper .myinvest-content .invest-list-my .invest-hk ul li .invest-state {
+  font-size: 64px;
+}

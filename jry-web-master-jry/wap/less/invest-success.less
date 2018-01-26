@@ -1,0 +1,117 @@
+@charset "utf-8";
+@min: '@2x.png';
+@max: '@3x.png';
+.ml(@n){
+  margin-left: @n;
+}
+.mr(@n){
+  margin-right: @n;
+}
+.mt(@n){
+  margin-top:@n;
+}
+.mb(@n){
+  margin-bottom:@n;
+}
+.pl(@n){
+  padding-left: @n;
+}
+.pr(@n){
+  padding-right: @n;
+}
+.pt(@n){
+  padding-top:@n;
+}
+.pb(@n){
+  padding-bottom:@n;
+}
+.bg-c(@c){
+  background-color: @c;
+}
+.br(@deg){
+  border-radius: @deg;
+}
+.bg-image(@url){
+@media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+    background-image:url('@{url}@{max}');
+    background-size:cover; 
+}
+background-image:url('@{url}@{min}');
+background-size:cover; 
+}
+.font-size(@val){
+    font-size: @val;
+    [data-dpr="2"] &{
+        font-size: 2*@val
+    }
+
+    [data-dpr="3"] &{
+        font-size: 3*@val
+    }
+
+    [data-dpr="4"] &{
+        font-size: 4*@val
+    }
+}
+.i-inst-container{
+    height:10.13rem;
+    background-color:#FFFFFF;
+    margin-bottom:0.8rem;
+    .i-inst-wrap{
+        height:5.86rem;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       border-bottom:1px solid #e9eff5;
+        .i-inst-main{
+            p:nth-child(1){
+                width:4.8rem;
+                height:3.2rem;
+                .bg-image("../images/newhand/investment_empty");
+            }
+            p:nth-child(2){
+                text-align: center;
+                font-size:0.48rem;
+//              font-weight:600;
+               padding-top:0.47rem;
+            }
+        }
+    }
+    .i-inst-meg{
+        dl{
+            padding:0.4rem 0.4rem;
+            dt{
+                font-size:0.37rem;
+                color:#3d3f4c;
+                line-height:0.66rem;
+              
+            }
+            dd{
+                color:#c1c1c7;
+                font-size:0.37rem;
+                line-height:0.86rem;
+                span{
+                    float:right;
+                    color:#3d3f4c;
+                }
+            }
+        }
+    }
+}
+ .i-inst-btn{
+        width: 8.4rem;
+        height: 1.2rem;
+        background:linear-gradient(to right, #ff8560 0%, #fe4f40 100%);
+        border-radius: 0.1rem;
+        color: #FFFFFF;
+        font-size:0.42rem;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 1.2rem;
+    }
+    .i-inst-myinst{
+        font-size:0.42rem;
+        color:#5665f5;
+        text-align:center;
+        padding-top:0.8rem;
+    }

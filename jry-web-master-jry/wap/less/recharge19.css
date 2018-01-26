@@ -396,6 +396,24 @@
   width: 50%;
   color: #a0a0a0;
 }
+.cash-wrapper .common-header span {
+  position: absolute;
+  top: 0;
+  right: 0.4rem;
+  height: 1.17rem;
+  line-height: 1.17rem;
+  color: #5665f5;
+  font-size: 18px;
+}
+[data-dpr="2"] .cash-wrapper .common-header span {
+  font-size: 36px;
+}
+[data-dpr="3"] .cash-wrapper .common-header span {
+  font-size: 54px;
+}
+[data-dpr="4"] .cash-wrapper .common-header span {
+  font-size: 72px;
+}
 .cash-wrapper .cash-userful {
   padding: 0.93rem 0;
   background-color: white;
@@ -625,4 +643,277 @@
 }
 [data-dpr="4"] .cash-wrapper .get-btn {
   font-size: 64px;
+}
+.cash-wrapper .mask-layer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+.cash-wrapper .safety-keyborad {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 200;
+}
+.cash-wrapper .safety-keyborad .worning-msg {
+  height: 0.9rem;
+  line-height: 0.9rem;
+  color: #FF9F49;
+  background-color: #fff7f0;
+  text-align: center;
+  font-size: 11px;
+}
+[data-dpr="2"] .cash-wrapper .safety-keyborad .worning-msg {
+  font-size: 22px;
+}
+[data-dpr="3"] .cash-wrapper .safety-keyborad .worning-msg {
+  font-size: 33px;
+}
+[data-dpr="4"] .cash-wrapper .safety-keyborad .worning-msg {
+  font-size: 44px;
+}
+.cash-wrapper .safety-keyborad .keyborad-header {
+  height: 1.54rem;
+  line-height: 1.54rem;
+  color: #3D3F4C;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+[data-dpr="2"] .cash-wrapper .safety-keyborad .keyborad-header {
+  font-size: 36px;
+}
+[data-dpr="3"] .cash-wrapper .safety-keyborad .keyborad-header {
+  font-size: 54px;
+}
+[data-dpr="4"] .cash-wrapper .safety-keyborad .keyborad-header {
+  font-size: 72px;
+}
+.cash-wrapper .safety-keyborad .keyborad-header .close-keyborad {
+  height: 1.54rem;
+  line-height: 1.54rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 0;
+  color: #9C9DAE;
+  font-size: 18px;
+}
+[data-dpr="2"] .cash-wrapper .safety-keyborad .keyborad-header .close-keyborad {
+  font-size: 36px;
+}
+[data-dpr="3"] .cash-wrapper .safety-keyborad .keyborad-header .close-keyborad {
+  font-size: 54px;
+}
+[data-dpr="4"] .cash-wrapper .safety-keyborad .keyborad-header .close-keyborad {
+  font-size: 72px;
+}
+.cash-wrapper .safety-keyborad .number-show table {
+  width: 9.12rem;
+  margin: 0 auto;
+  border-color: #c8cedd;
+}
+.cash-wrapper .safety-keyborad .number-show table td {
+  width: 1.52rem;
+  height: 1.52rem;
+  text-align: center;
+  border-color: #c8cedd;
+  background-color: #f7f9fb;
+}
+.cash-wrapper .safety-keyborad .number-show .table-error {
+  border-color: #ff4b3b;
+}
+.cash-wrapper .safety-keyborad .number-show .table-error td {
+  border-color: #ff4b3b;
+}
+.cash-wrapper .safety-keyborad .safe-msg {
+  width: 9.12rem;
+  height: 1.06rem;
+  line-height: 1.06rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.cash-wrapper .safety-keyborad .safe-msg .msg-left .msg-normal {
+  color: #C1C1C7;
+  font-size: 14px;
+}
+[data-dpr="2"] .cash-wrapper .safety-keyborad .safe-msg .msg-left .msg-normal {
+  font-size: 28px;
+}
+[data-dpr="3"] .cash-wrapper .safety-keyborad .safe-msg .msg-left .msg-normal {
+  font-size: 42px;
+}
+[data-dpr="4"] .cash-wrapper .safety-keyborad .safe-msg .msg-left .msg-normal {
+  font-size: 56px;
+}
+.cash-wrapper .safety-keyborad .safe-msg .msg-left .worning-psw {
+  color: #3D3F4C;
+  font-size: 14px;
+}
+[data-dpr="2"] .cash-wrapper .safety-keyborad .safe-msg .msg-left .worning-psw {
+  font-size: 28px;
+}
+[data-dpr="3"] .cash-wrapper .safety-keyborad .safe-msg .msg-left .worning-psw {
+  font-size: 42px;
+}
+[data-dpr="4"] .cash-wrapper .safety-keyborad .safe-msg .msg-left .worning-psw {
+  font-size: 56px;
+}
+.cash-wrapper .safety-keyborad .safe-msg .msg-left .worning-psw i {
+  color: #FF4B3B;
+}
+.cash-wrapper .safety-keyborad .safe-msg .msg-right {
+  color: #5665F5;
+  font-size: 14px;
+}
+[data-dpr="2"] .cash-wrapper .safety-keyborad .safe-msg .msg-right {
+  font-size: 28px;
+}
+[data-dpr="3"] .cash-wrapper .safety-keyborad .safe-msg .msg-right {
+  font-size: 42px;
+}
+[data-dpr="4"] .cash-wrapper .safety-keyborad .safe-msg .msg-right {
+  font-size: 56px;
+}
+.cash-wrapper .safety-keyborad .safe-keyboard-content table {
+  width: 100%;
+  border-color: #c8cedd;
+  border-left-color: white;
+  border-right-color: white;
+}
+.cash-wrapper .safety-keyborad .safe-keyboard-content table td {
+  height: 1.6rem;
+  text-align: center;
+  border-color: #c8cedd;
+  background-color: white;
+}
+.cash-wrapper .safety-keyborad .safe-keyboard-content table .cell-none {
+  background-color: #C1C1C7;
+}
+.cash-wrapper .safety-keyborad .safe-keyboard-content table .delet-cell {
+  background-color: #C1C1C7;
+  position: relative;
+}
+.cash-wrapper .safety-keyborad .safe-keyboard-content table .delet-cell .delet-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.8rem;
+  height: 0.52rem;
+  margin-left: -0.4rem;
+  margin-top: -0.26rem;
+  background-image: url('../images/recharge2/delete_nunb@2x.png');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .cash-wrapper .safety-keyborad .safe-keyboard-content table .delet-cell .delet-img {
+    background-image: url('../images/recharge2/delete_nunb@3x.png');
+    background-size: cover;
+  }
+}
+.recharge-dialog2 {
+  width: 8rem;
+  background-color: white;
+  border-radius: 0.15rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -4rem;
+}
+.recharge-dialog2 .title2 {
+  padding: 0.4rem 0;
+  color: #3D3F4C;
+  font-size: 15px;
+  text-align: center;
+}
+[data-dpr="2"] .recharge-dialog2 .title2 {
+  font-size: 30px;
+}
+[data-dpr="3"] .recharge-dialog2 .title2 {
+  font-size: 45px;
+}
+[data-dpr="4"] .recharge-dialog2 .title2 {
+  font-size: 60px;
+}
+.recharge-dialog2 .inner .inner-title {
+  color: #5C5C66;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+}
+[data-dpr="2"] .recharge-dialog2 .inner .inner-title {
+  font-size: 28px;
+}
+[data-dpr="3"] .recharge-dialog2 .inner .inner-title {
+  font-size: 42px;
+}
+[data-dpr="4"] .recharge-dialog2 .inner .inner-title {
+  font-size: 56px;
+}
+.recharge-dialog2 .inner .inner-title em {
+  font-size: 14px;
+  color: #FF4B3B;
+}
+[data-dpr="2"] .recharge-dialog2 .inner .inner-title em {
+  font-size: 28px;
+}
+[data-dpr="3"] .recharge-dialog2 .inner .inner-title em {
+  font-size: 42px;
+}
+[data-dpr="4"] .recharge-dialog2 .inner .inner-title em {
+  font-size: 56px;
+}
+.recharge-dialog2 .inner .inner-content {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 0.13rem;
+  font-size: 13px;
+  line-height: 0.7rem;
+  display: block;
+}
+[data-dpr="2"] .recharge-dialog2 .inner .inner-content {
+  font-size: 26px;
+}
+[data-dpr="3"] .recharge-dialog2 .inner .inner-content {
+  font-size: 39px;
+}
+[data-dpr="4"] .recharge-dialog2 .inner .inner-content {
+  font-size: 52px;
+}
+.recharge-dialog2 .btns2 {
+  margin-top: 0.13rem;
+  border-top: 2px solid #F2F2F2;
+  height: 1.2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.recharge-dialog2 .btns2 span {
+  width: 50%;
+  text-align: center;
+  color: #5665F5;
+  font-size: 18px;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  display: block;
+}
+[data-dpr="2"] .recharge-dialog2 .btns2 span {
+  font-size: 36px;
+}
+[data-dpr="3"] .recharge-dialog2 .btns2 span {
+  font-size: 54px;
+}
+[data-dpr="4"] .recharge-dialog2 .btns2 span {
+  font-size: 72px;
+}
+.recharge-dialog2 .btns2 .right2 {
+  border-left: 1px solid #F2F2F2;
 }

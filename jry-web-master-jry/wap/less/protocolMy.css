@@ -1,0 +1,129 @@
+@charset "utf-8";
+.protocol-invest {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 1.19rem;
+}
+.protocol-invest .common-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.protocol-invest .protocol-content {
+  background-color: white;
+}
+.protocol-invest .protocol-content .protocol-title {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+[data-dpr="2"] .protocol-invest .protocol-content .protocol-title {
+  font-size: 40px;
+}
+[data-dpr="3"] .protocol-invest .protocol-content .protocol-title {
+  font-size: 60px;
+}
+[data-dpr="4"] .protocol-invest .protocol-content .protocol-title {
+  font-size: 80px;
+}
+.protocol-invest .protocol-content .user-jy {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 0.66rem;
+}
+.protocol-invest .protocol-content .user-jy .user-j h5,
+.protocol-invest .protocol-content .user-jy .user-y h5,
+.protocol-invest .protocol-content .user-jy .user-j p,
+.protocol-invest .protocol-content .user-jy .user-y p {
+  font-size: 16px;
+}
+[data-dpr="2"] .protocol-invest .protocol-content .user-jy .user-j h5,
+[data-dpr="2"] .protocol-invest .protocol-content .user-jy .user-y h5,
+[data-dpr="2"] .protocol-invest .protocol-content .user-jy .user-j p,
+[data-dpr="2"] .protocol-invest .protocol-content .user-jy .user-y p {
+  font-size: 32px;
+}
+[data-dpr="3"] .protocol-invest .protocol-content .user-jy .user-j h5,
+[data-dpr="3"] .protocol-invest .protocol-content .user-jy .user-y h5,
+[data-dpr="3"] .protocol-invest .protocol-content .user-jy .user-j p,
+[data-dpr="3"] .protocol-invest .protocol-content .user-jy .user-y p {
+  font-size: 48px;
+}
+[data-dpr="4"] .protocol-invest .protocol-content .user-jy .user-j h5,
+[data-dpr="4"] .protocol-invest .protocol-content .user-jy .user-y h5,
+[data-dpr="4"] .protocol-invest .protocol-content .user-jy .user-j p,
+[data-dpr="4"] .protocol-invest .protocol-content .user-jy .user-y p {
+  font-size: 64px;
+}
+.protocol-invest .protocol-content .user-jy .user-y {
+  margin-top: 0.4rem;
+}
+.protocol-invest .protocol-content .protocol-content-inner {
+  width: 95%;
+  margin: 0 auto;
+}
+.protocol-invest .protocol-content .protocol-content-inner .inner-tips {
+  font-size: 16px;
+}
+[data-dpr="2"] .protocol-invest .protocol-content .protocol-content-inner .inner-tips {
+  font-size: 32px;
+}
+[data-dpr="3"] .protocol-invest .protocol-content .protocol-content-inner .inner-tips {
+  font-size: 48px;
+}
+[data-dpr="4"] .protocol-invest .protocol-content .protocol-content-inner .inner-tips {
+  font-size: 64px;
+}
+.protocol-invest .protocol-content .protocol-content-inner .inner-content {
+  width: 100%;
+}
+.protocol-invest .protocol-content .protocol-content-inner .inner-content ul li {
+  margin-top: 0.26rem;
+}
+.protocol-invest .protocol-content .protocol-content-inner .inner-content ul li h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0.13rem;
+}
+[data-dpr="2"] .protocol-invest .protocol-content .protocol-content-inner .inner-content ul li h5 {
+  font-size: 32px;
+}
+[data-dpr="3"] .protocol-invest .protocol-content .protocol-content-inner .inner-content ul li h5 {
+  font-size: 48px;
+}
+[data-dpr="4"] .protocol-invest .protocol-content .protocol-content-inner .inner-content ul li h5 {
+  font-size: 64px;
+}
+.protocol-invest .protocol-content .protocol-content-inner .inner-content ul li .word-inner p {
+  font-size: 16px;
+  line-height: 0.7rem;
+}
+[data-dpr="2"] .protocol-invest .protocol-content .protocol-content-inner .inner-content ul li .word-inner p {
+  font-size: 32px;
+}
+[data-dpr="3"] .protocol-invest .protocol-content .protocol-content-inner .inner-content ul li .word-inner p {
+  font-size: 48px;
+}
+[data-dpr="4"] .protocol-invest .protocol-content .protocol-content-inner .inner-content ul li .word-inner p {
+  font-size: 64px;
+}
+.protocol-invest .protocol-content .protocol-content-inner .inner-content ul li table {
+  max-width: 100%;
+  width: 100%;
+}
+.protocol-invest .protocol-content .protocol-content-inner .inner-content ul li table tr td {
+  width: 50%;
+  height: 1.17rem;
+  padding: 0.1rem;
+  font-size: 16px;
+}
+[data-dpr="2"] .protocol-invest .protocol-content .protocol-content-inner .inner-content ul li table tr td {
+  font-size: 32px;
+}
+[data-dpr="3"] .protocol-invest .protocol-content .protocol-content-inner .inner-content ul li table tr td {
+  font-size: 48px;
+}
+[data-dpr="4"] .protocol-invest .protocol-content .protocol-content-inner .inner-content ul li table tr td {
+  font-size: 64px;
+}
