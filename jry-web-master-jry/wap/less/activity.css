@@ -1,10 +1,13 @@
 @charset "utf-8";
 .slide2 {
-  height: 16rem;
+  height: 16.5rem;
   overflow: auto;
 }
+.wrap-news {
+  background-color: white;
+}
 .g-content {
-  padding: 0.4rem 0.2rem 0.3rem 0.4rem;
+  padding: 0.4rem 0.4rem 0.3rem 0.4rem;
 }
 .g-content .g-section1 {
   font-size: 20px;
@@ -34,23 +37,17 @@
   font-size: 48px;
 }
 .g-content .g-content-section1 p {
-  font-size: 16px;
+  font-size: 0.42rem !important;
   line-height: 0.66rem;
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
 }
-[data-dpr="2"] .g-content .g-content-section1 p {
-  font-size: 32px;
-}
-[data-dpr="3"] .g-content .g-content-section1 p {
-  font-size: 48px;
-}
-[data-dpr="4"] .g-content .g-content-section1 p {
-  font-size: 64px;
-}
 .g-content .g-content-section1 img {
   width: 9.22rem;
   height: 5.78rem;
+}
+.g-content .g-content-section1 em {
+  font-size: 0.42rem !important;
 }
 .gContent-gg {
   height: 2.66rem;
