@@ -5,11 +5,11 @@ define(['js/module.js', 'jquery', 'ngdialog'], function (controllers, $, ngdialo
 //  var time2=new Date();
 //  console.log(time2.getFullYear().toString()+'-'+(time2.getMonth()+1).toString()+'-'+time2.getDate().toString());
 //  console.log(typeof(time2.getFullYear()))
-//  $scope.newtime=time;
+//  $rootScope.newtime=time;
 
 //      console.log($stateParams.artiId) 
 //      $scope.newartiId=$stateParams.artiId                               
-        resourceService.queryPost($scope, $filter('getUrl')('新闻详情'), {artiId:38}, '新闻详情');
+        resourceService.queryPost($scope, $filter('getUrl')('新闻详情'), {artiId:41}, '新闻详情');
         $scope.$on('resourceService.QUERY_POST_MYEVENT', function (event, data, type) {
          console.log(111111)
             switch(type){

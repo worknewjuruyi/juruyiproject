@@ -1,0 +1,35 @@
+.slide2 {
+  height: 16.5rem;
+  overflow: auto;
+}
+.wrap-news {
+  background-color: white;
+}
+.g-content {
+  padding: 0.4rem 0;
+  width: 9rem;
+  margin: 0 auto;
+}
+.g-content .g-section1 {
+  font-size: 0.53rem;
+  color: #3D3F4C;
+}
+.g-content .g-section2 {
+  font-size: 0.32rem;
+  color: #C1C1C7;
+  padding: 0.4rem 0;
+}
+.g-content .g-content-section1 p {
+  font-size: 0.42rem !important;
+  line-height: 0.66rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+.g-content .g-content-section1 img {
+  width: 100%;
+  height: auto;
+}
+.g-content .g-content-section1 em {
+  font-size: 0.42rem !important;
+  line-height: 0.66rem;
+}

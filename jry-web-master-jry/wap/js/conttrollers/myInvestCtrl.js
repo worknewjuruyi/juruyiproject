@@ -16,62 +16,8 @@ define([
         ,function($scope,$rootScope,$filter,$state,resourceService,$localStorage,$http){            
             //newjs
             //success/error -->not under angular-1.5+(use then method)
-//          $scope.sysArticle={};
-            //新闻列表
-            $http({  
-	            url:'/aboutus/newsDetails.dos',  
-	            method:"GET",	            
-	            params:{artiId:1}//get请求params
-	        }).success(function(data){
-	        	console.log(22222);
-	        	console.log(data);                
-	        }).error(function(data){
-	        	console.log(1111)
-	        	console.log(data);
-	        })
-	        
-	        //签到
-            $http({  
-	            url:'/signIn/continuous.dos',  
-	            method:"POST",	            
-	            data:{uid:38,token:'2001'}//post请求params/data
-	        }).success(function(data){
-	        	console.log(22222);
-	        	console.log(data);                
-	        }).error(function(data){
-	        	console.log(1111)
-	        	console.log(data);
-	        })
 
-            resourceService.getJsonServer($scope, $filter('getUrl')('新闻详情'),{artiId:1},'新闻详情');
-            $scope.$on('resourceService_GET_JSON.MYEVENT', function (event, data, type) {
-                switch (type) {
-                    case '新闻详情':
-                        if (data) {
-                            console.log(data)
-                            
-                        } else {
-                            console.log(data.errorMsg)
-                        }
-                        break;                                       
-                };
-            });
-            
-            
-            resourceService.queryPost($scope, $filter('getUrl')('签到记录'),{uid:38,token:'2001'},'签到记录');
-            $scope.$on('resourceService.QUERY_POST_MYEVENT', function (event, data, type) {
-                switch (type) {
-                    case '签到记录':
-                        if (data) {
-                            console.log(data)
-                            
-                        } else {
-                            console.log(data.errorMsg)
-                        }
-                        break;                                       
-                };
-            });
-            
+                        
             //swiper                                               
 	        var aButton=$('.tab-header li');
 	        var aButton2=document.querySelectorAll('.tab-header ul li');
@@ -80,7 +26,7 @@ define([
 			    freeMode:false,
 			    observer:true,//修改swiper自己或子元素时，自动初始化swiper ** 
 	            observeParents:true,//修改swiper的父元素时，自动初始化swiper**  
-	            autoHeight: true, 
+//	            autoHeight: true, 
 	            onSlideChangeStart: function(ev){
 		            var _index = mySwiper.activeIndex//*************this
 		            var distance = _index;
@@ -118,8 +64,8 @@ define([
 	        
 	        // 设置上拉加载数据 同时自适应高度
 	        //募集中
-	        var srollsFirst = document.getElementById('slide1');
-	        var myscrollFirst = new iScroll(srollsFirst,{
+	        var srollsFirst1 = document.getElementById('slide1');
+	        var myscrollFirst = new iScroll(srollsFirst1,{
 	          vScrollbar: false,
 	          onScrollEnd: function(){
 	            if( (this.y == this.maxScrollY)) {	
@@ -138,27 +84,27 @@ define([
 	          }
 	        })
 	        //投资中
-	        var srollsFirst = document.getElementById('slide2');
-	        var myscrollFirst = new iScroll(srollsFirst,{
+	        var srollsFirst2 = document.getElementById('slide2');
+	        var myscrollFirst2 = new iScroll(srollsFirst2,{
 	          vScrollbar: false,
 	          onScrollEnd: function(){
 	            if( (this.y == this.maxScrollY)) {	              
 	              // 加载数据
 	              setTimeout(function(){	              	
-	                myscrollFirst.refresh();
+	                myscrollFirst2.refresh();
 	              },10)
 	            }
 	          }
 	        })
 	        //已回款
-	        var srollsFirst = document.getElementById('slide3');
-	        var myscrollFirst = new iScroll(srollsFirst,{
+	        var srollsFirst3 = document.getElementById('slide3');
+	        var myscrollFirst3 = new iScroll(srollsFirst3,{
 	          vScrollbar: false,
 	          onScrollEnd: function(){
 	            if( (this.y == this.maxScrollY)) {	              
 	              // 加载数据
 	              setTimeout(function(){	              	
-	                myscrollFirst.refresh();
+	                myscrollFirst3.refresh();
 	              },10)
 	            }
 	          }

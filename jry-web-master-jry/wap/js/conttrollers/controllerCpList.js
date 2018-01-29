@@ -85,7 +85,7 @@ define(['jweixin', 'js/module.js', 'ngdialog', 'radialIndicator'], function (wx,
         var aButton2=document.querySelectorAll('.tab-header ul li');
         var mySwiper = new Swiper ('.swiper-container', {
 		    speed:300,
-            autoHeight: true, 
+//          autoHeight: true, 
             onSlideChangeStart: function(ev){
 	            var _index = mySwiper.activeIndex//*************this
 	            var distance = _index;
