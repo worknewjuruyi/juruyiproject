@@ -16,24 +16,24 @@ define([
         ,'$stateParams'
         ,function($scope,$rootScope,$filter,$state,resourceService,$localStorage,$http,$stateParams){                        
 	        //签到
-            var betweenTime = 0;
-			var b=0;
-			var num = 0;
-			document.addEventListener('webkitvisibilitychange',function()
-			{
-			    if(document.webkitVisibilityState=='hidden')
-			    {
-			        b=Date.now();
-			    }else
-			    {
-			        var betweenMs = Date.now() - b;
-			        var  betweens = Math.floor(betweenMs / 1000);
-			        betweenTime = Math.floor(betweens / 60);
-			        console.log('间隔:' + betweenTime + '分钟');
-			        num=betweenTime;
-			        $scope.newtime=num
-			    }
-			});
+//          var betweenTime = 0;
+//			var b=0;
+//			var num = 0;
+//			document.addEventListener('webkitvisibilitychange',function()
+//			{
+//			    if(document.webkitVisibilityState=='hidden')
+//			    {
+//			        b=Date.now();
+//			    }else
+//			    {
+//			        var betweenMs = Date.now() - b;
+//			        var  betweens = Math.floor(betweenMs / 1000);
+//			        betweenTime = Math.floor(betweens / 60);
+//			        console.log('间隔:' + betweenTime + '分钟');
+//			        num=betweenTime;
+//			        $scope.newtime=num
+//			    }
+//			});
             //app传递用户的uid和token到链接地址里我们接收
             //console.log($stateParams.uid)
             var calUtil = {  
