@@ -250,6 +250,24 @@ body .wap-more-bkse {
   overflow: auto;
   background-color: #FFFFFF;
 }
+.g-hotqt .g-hotqt-p {
+  height: 1.3rem;
+  line-height: 1.2rem;
+  margin-top: 0.53rem;
+  margin-left: 0.45rem;
+  color: #3D3F4C;
+  font-size: 18px;
+  font-weight: 600;
+}
+[data-dpr="2"] .g-hotqt .g-hotqt-p {
+  font-size: 36px;
+}
+[data-dpr="3"] .g-hotqt .g-hotqt-p {
+  font-size: 54px;
+}
+[data-dpr="4"] .g-hotqt .g-hotqt-p {
+  font-size: 72px;
+}
 .g-hotqt .g-nav-ct .click-part {
   border-top: none !important;
   border-bottom: 1px solid #f2f2f2;
