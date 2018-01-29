@@ -21,6 +21,7 @@ define(['js/module.js', 'jquery', 'ngdialog'], function (controllers, $, ngdialo
                         $scope.creatTime = article.createTime;
                         $scope.articleImgSrc = article.litpic;
                         //调用$sce转化html输出到页面($sce必须先注入才能使用)
+                        
                         $scope.content = $sce.trustAsHtml(article.content);
                         //iscroll滚动                     
                         $scope.$watch('$viewContentLoaded', function() {//$watch监听页面加载完毕才执行iscroll
