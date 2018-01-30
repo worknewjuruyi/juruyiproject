@@ -49,5 +49,6 @@ define([
 	'conttrollers/controllerMyaddress',
 	'conttrollers/controllerNewsdt',
 	'conttrollers/controllersafeCr',
+	'conttrollers/cashMoneyCtr',
 ], function () {
 });

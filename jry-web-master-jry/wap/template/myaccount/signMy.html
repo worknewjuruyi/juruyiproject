@@ -4,7 +4,7 @@
 	<div id="calendar"></div>
 	<!--签到按钮-->
 	<div class="sign-btn">
-		<button class="sign-btn-click" ng-click="signNow()" ng-disabled='' ng-class="{'btn-grey':isGrey}" ng-bind="signWord"></button>
+		<button class="sign-btn-click" ng-click="signNow()" ng-disabled='signOk' ng-class="{'btn-grey':isGrey}" ng-bind="signWord"></button>
 	</div>
 	<!--连续签到时间/积分总数-->
 	<div class="sign-msg-show">
@@ -17,10 +17,7 @@
 			当前积分<span>{{nowIntegral}}</span>
 		</div>
 	</div>
-	<!--test-->
-	<div class="time">
-		{{newtime|date:'yyyy-MM-dd HH:mm:ss'}}
-	</div>
+	
 	<!--弹窗-->
 	<!--遮挡层-->
 	<div class="maskbox"></div>

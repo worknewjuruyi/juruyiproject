@@ -1,3 +1,4 @@
+<!--app内嵌h5页面-->
 <html>
 	<head>
 		<title></title>
@@ -5,7 +6,7 @@
 	</head>
 	<body>
 		<div class="wrap-news" ng-controller="controllerNewsdt">
-			<header class="common-header">
+			<header class="common-header" ng-if="isHeader">
 				<i></i>
 				<h3>自媒体</h3>
 			</header>

@@ -109,8 +109,10 @@ define(['js/module.js', 'jquery', 'ngdialog'], function (controllers, $, ngdialo
                 $scope.accountMoney="1000.32";
         	}
         }
-        
-                        
+             
+        $scope.doing=function(){
+        	$state.go('newstate')
+        }
         //数字加逗号
         console.log($filter('数字加逗号')(12345678)) 
     });

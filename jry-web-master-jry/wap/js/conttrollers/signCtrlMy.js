@@ -35,7 +35,7 @@ define([
 //			    }
 //			});
             //app传递用户的uid和token到链接地址里我们接收
-            //console.log($stateParams.uid)
+            console.log($stateParams.ui)
             var calUtil = {  
 				  //当前日历显示的年份  
 				  showYear:2018,  

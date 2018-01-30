@@ -427,7 +427,7 @@ define(['jweixin', "app", 'filter', 'urlFilters', 'md5js', 'framework/slider.js'
                 })
                 //新闻动态-dcf
                 .state('newstate',{
-	                 url:'/newstate?artiId',
+	                 url:'/newstate?artiId&uid',
 	                 templateUrl:'template/activity/newstate.html'
                 })
                 //平台公告-dcf
