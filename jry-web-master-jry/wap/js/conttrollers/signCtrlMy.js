@@ -259,7 +259,8 @@ define([
                         break;
                     case '签到积分':
                         if (data.success) {
-                            $scope.nowIntegral=data.map.integralSum;//当前签到积分                                                        
+                            $scope.nowIntegral=data.map.integralSum;//当前签到积分
+                            console.log($scope.nowIntegral)
                         } else {
                             console.log(data.errorMsg)
                         }
