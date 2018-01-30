@@ -6,7 +6,7 @@ define(['js/module.js', 'jquery', 'ngdialog'], function (controllers, $, ngdialo
         
         $scope.isHeader=false;//是否显示头部 如果app传参跳转过来 header不显示 否则就是wap页面 则显示头部
         
-        console.log($stateParams.uid);                               
+//      console.log($stateParams.uid);                               
         
                                                              
     })

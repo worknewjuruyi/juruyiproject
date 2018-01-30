@@ -415,6 +415,22 @@ define(['jweixin', "app", 'filter', 'urlFilters', 'md5js', 'framework/slider.js'
 	                 templateUrl:'template/cp/bank-savermb.html'
 	//               controller:'controllerbkcq'
                 })
+                
+                //充值提现帮助 -dcf
+                .state('help-charge',{
+	                 url:'/help-charge',
+	                 templateUrl:'template/cp/help-charge.html'
+                })
+                //投资产品帮助 -dcf
+                .state('help-tzcp',{
+	                 url:'/help-tzcp',
+	                 templateUrl:'template/cp/help-tzcp.html'
+                })
+                //活动奖励帮助 -dcf
+                .state('help-hdjl',{
+	                 url:'/help-hdjl',
+	                 templateUrl:'template/cp/help-hdjl.html'
+                })
                 //安全中心-dcf
                 .state('safeCenter',{
 	                 url:'/safeCenter',
