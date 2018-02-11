@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="../../less/newhand-jxq.css" />
+<div class="newhand-jxq" ng-controller="newhandJxqCtr">
+	<header class="common-header" ng-if="isHeader">
+	     <i></i>
+	     <h3>新手福利</h3>
+    </header>
+	<div class="jxq-content">
+		<div class="jxq-content-top">
+			<div class="top-img"></div>
+			<h4 class="top-title">1%加息券</h4>
+			<p class="top-msg">注册后30天内完成首次投资可获得1%加息券</p>
+		</div>
+		<!--按钮-->
+		<div class="jxq-content-btn" ng-click="isGo()">
+			<a href="{{goLink}}" class="btn-inner">马上去投资</a>
+		</div>
+		<!--活动规则-->
+		<div class="jxq-rulers">
+			<h4>活动规则:</h4>
+			<ul>
+				<li>1.用户完成注册后，并在30天内完成首次投资，即可获得1%加息券一张。用户可在我的-我的券包界面中进行查看</li>
+				<li>2.不同类型的卡券可叠加使用。即加息券可与返现券叠加使用。反之，同类型的卡券不支持叠加使用</li>
+				<li>3.用户可在投资界面选择优惠券进行投资</li>
+				<li>4.加息券需在有效期内使用，过期即失效</li>
+				<li>5.卡券使用规则的最终解释权归巨如意平台所有</li>
+			</ul>
+		</div>
+	</div>
+	
+</div>

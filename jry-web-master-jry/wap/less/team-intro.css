@@ -1,0 +1,49 @@
+@charset "utf-8";
+.wrap-teamIntro {
+  padding-bottom: 0.66rem;
+}
+.t-tmInt-header {
+  height: 2.5rem;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.48rem;
+  font-weight: bold;
+  margin-bottom: 0.74rem;
+}
+.t-tmInt-header .tmint-main p:nth-child(2) {
+  padding-top: 0.2rem;
+}
+.t-tmInt {
+  margin-bottom: 0.74rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding: 0.4rem 0;
+}
+.t-tmInt h4 {
+  font-size: 0.48rem;
+  color: #3d3f4c;
+  margin-bottom: 0.12rem;
+  font-weight: bold;
+}
+.t-tmInt p {
+  font-size: 0.37rem;
+  color: #3d3f4c;
+  line-height: 0.5rem;
+}
+.t-tmInt .level {
+  margin-bottom: 0.1rem;
+  font-weight: bold;
+}
+.t-tmInt .tmint {
+  width: 2.13rem;
+  height: 2.13rem;
+  background-color: #2f70b5;
+  border-radius: 50%;
+  align-self: center;
+}
+.t-tmInt .tmInt-fr-rt {
+  width: 7rem;
+}

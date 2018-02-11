@@ -57,6 +57,9 @@ define(['jweixin', "app", 'filter', 'urlFilters', 'md5js', 'framework/slider.js'
             $rootScope.maskHidde = false;
             $rootScope.maskError = false;
             $rootScope.appPath = '../';
+            
+//          $rootScope.isShowLoading=true;
+            
             var urlstr = window.location.href;
             if (urlstr.split('.com').length < 2 || (urlstr.split('.com').length > 1 && urlstr.split('.com')[1] == "/")) {
                 if (urlstr.substring(urlstr.length - 1, urlstr.length) == "/") {
@@ -388,12 +391,22 @@ define(['jweixin', "app", 'filter', 'urlFilters', 'md5js', 'framework/slider.js'
                 })
                 //签到页面--my
                 .state('sign',{
-                    url: '/sign?uid&token',
+                    url: '/sign?uid&token?app',
                     templateUrl: "template/myaccount/signMy.html",                    
                 })
                 
+                //修改交易密码成功--my
+                .state('tradeSetSuccess',{
+                    url: '/tradeSetSuccess?app',
+                    templateUrl: "template/myaccount/tradepsw-success.html",                    
+                })
+                //修改交易密码失败--my
+                .state('tradeSetFalse',{
+                    url: '/tradeSetFalse?app',
+                    templateUrl: "template/myaccount/tradepsw-false.html",                    
+                })
                 
-                //
+                
                 //理财商品已售罄-dcf
                 .state('buy-end',{
 	                 url:'/buy-end',
@@ -404,6 +417,11 @@ define(['jweixin', "app", 'filter', 'urlFilters', 'md5js', 'framework/slider.js'
 	                 url:'/help-advice',
 	                 templateUrl:'template/login/help-advice.html'
                 })
+                //帮助与反馈2-dcf
+                .state('help-advice2',{
+	                 url:'/help-advice2',
+	                 templateUrl:'template/login/help-advice2.html'
+                })
                 //收货地址-dcf
                 .state('myaddress',{
 	                 url:'/myaddress',
@@ -413,7 +431,6 @@ define(['jweixin', "app", 'filter', 'urlFilters', 'md5js', 'framework/slider.js'
                 .state('bank-savermb',{
 	                 url:'/bank-savermb',
 	                 templateUrl:'template/cp/bank-savermb.html'
-	//               controller:'controllerbkcq'
                 })
                 
                 //充值提现帮助 -dcf
@@ -443,7 +460,7 @@ define(['jweixin', "app", 'filter', 'urlFilters', 'md5js', 'framework/slider.js'
                 })
                 //新闻动态-dcf
                 .state('newstate',{
-	                 url:'/newstate?artiId&uid',
+	                 url:'/newstate?id',
 	                 templateUrl:'template/activity/newstate.html'
                 })
                 //平台公告-dcf
@@ -456,10 +473,15 @@ define(['jweixin', "app", 'filter', 'urlFilters', 'md5js', 'framework/slider.js'
 	                 url:'/fail-load',
 	                 templateUrl:'template/activity/fail-load.html'
                 })
-                //提现-dcf
+                //提现申请成功-dcf
                 .state('cash-money',{
 	                 url:'/cash-money',
 	                 templateUrl:'template/myaccount/cash-money.html'
+                })                
+                //提现申请失败-dcf
+                .state('exact-money',{
+	                 url:'/exact-money',
+	                 templateUrl:'template/activity/exact-money.html'
                 })
                 //投资详情-dcf
                 .state('pj-detail',{
@@ -486,15 +508,67 @@ define(['jweixin', "app", 'filter', 'urlFilters', 'md5js', 'framework/slider.js'
 	                 url:'/invest-success',
 	                 templateUrl:'template/myaccount/invest-success.html'
                 })
+                
+                //关于我们相关页面
+                //走进巨和-dcf
+                .state('goto-juhe',{
+	                 url:'/goto-juhe',
+	                 templateUrl:'template/pages/goto-juhe.html'
+                })
+                //管理团队
+                .state('team-intro',{
+                     url:'/team-intro',
+                     templateUrl:'template/pages/team-intro.html'
+                })
                 //公司资质-dcf
                 .state('aptitude',{
 	                 url:'/aptitude',
 	                 templateUrl:'template/pages/aptitude.html'
                 })
 
+                //新手福利-dcf
+                //新手福利-主页面
+                .state('newsband-fl',{
+                     url:'/newsband-fl?uid&app',
+                     templateUrl:'template/newhand/newsband-fl.html'
+                })
+                //新手福利子页面-加息券-dcf
+                .state('newhand-jxq',{
+	                 url:'/newhand-jxq?isRegister&isFuiou&hasInvest&app',
+	                 templateUrl:'template/newhand/newhand-jxq.html'
+                })
+                //新手福利子页面-红包-dcf
+                .state('newhand-hb',{
+	                 url:'/newhand-hb?isRegister&app',
+	                 templateUrl:'template/newhand/newhand-hb.html'
+                })
+                //新手福利子页面-体验金-dcf
+                .state('newhand-tyj',{
+	                 url:'/newhand-tyj?isRegister&isFuiou&app',
+	                 templateUrl:'template/newhand/newhand-tyj.html'
+                })
+                //新手福利子页面-积分-dcf
+                .state('newhand-jf',{
+	                 url:'/newhand-jf?isRegister&app',
+	                 templateUrl:'template/newhand/newhand-jf.html'
+                })
                 
+                //优惠券使用规则-dcf
+                .state('discount-rule',{
+                     url:'/discount-rule',
+                     templateUrl:'template/pages/discount-rule.html'
+                })
+                //体验金使用规则-dcf
+                .state('trymoy-rule',{
+                     url:'/trymoy-rule',
+                     templateUrl:'template/pages/trymoy-rule.html'
+                })
                 
-                
+                //app测试
+                .state('AppTest',{
+                     url:'/AppTest',
+                     templateUrl:'template/activity/AppTest.html'
+                })
                 
         })
     /*---------------------------Banner-----------------------------------*/

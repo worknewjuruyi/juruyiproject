@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="../../less/newhand-jxq.css" />
+<div class="newhand-jf" ng-controller="newhandJfCtr">
+	<header class="common-header" ng-if="isHeader">
+	     <i></i>
+	     <h3>新手福利</h3>
+    </header>
+	<div class="jf-content">
+		<div class="jf-content-top">
+			<div class="top-img"></div>
+			<h4 class="top-title">1000</h4>
+			<p class="top-msg">首次注册即可获得1000积分</p>
+		</div>
+		<!--按钮-->
+		<div class="jf-content-btn" ng-click="isGo()">
+			<a href="{{goLink}}" class="btn-inner">立即注册</a>
+		</div>
+		<!--活动规则-->
+		<div class="jf-rulers">
+			<h4>活动规则:</h4>
+			<ul>
+				<li>用户完成注册后，即可获得1000积分，用户可在我的-我的积分界面中进行查看。</li>				
+			</ul>
+		</div>
+		
+	</div>
+	
+</div>
+

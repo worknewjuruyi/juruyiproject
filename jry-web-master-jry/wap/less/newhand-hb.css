@@ -1,0 +1,98 @@
+@charset "utf-8";
+.newhand-hb .hb-content .hb-content-top {
+  width: 100%;
+  background-color: white;
+  padding: 1.4rem 0 0.86rem 0;
+}
+.newhand-hb .hb-content .hb-content-top .top-img {
+  width: 1.45rem;
+  height: 1.76rem;
+  background-image: url(../images/newhand11/hb1188.png);
+  background-size: cover;
+  margin: 0 auto;
+}
+.newhand-hb .hb-content .hb-content-top .top-title {
+  color: #FF9F49;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 0.33rem;
+}
+.newhand-hb .hb-content .hb-content-top .top-msg {
+  color: #9c9dae;
+  font-size: 0.42rem;
+  text-align: center;
+  margin-top: 0.13rem;
+}
+.newhand-hb .hb-content .hb-content-btn {
+  margin-top: 0.8rem;
+}
+.newhand-hb .hb-content .hb-content-btn .btn-inner {
+  display: block;
+  text-align: center;
+  border-radius: 0.1rem;
+  background: -moz-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  background: -webkit-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  background: -ms-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  width: 9.2rem;
+  height: 1.17rem;
+  line-height: 1.17rem;
+  margin: 0 auto;
+  color: white;
+  font-size: 0.42rem;
+  text-decoration: none;
+}
+.newhand-hb .hb-content .hb-content-rules {
+  margin: 0 auto;
+  margin-top: 0.77rem;
+  width: 9.2rem;
+}
+.newhand-hb .hb-content .hb-content-rules .rules-title {
+  color: #3d3f4c;
+  font-size: 0.42rem;
+  font-weight: bold;
+}
+.newhand-hb .hb-content .hb-content-rules .rules-msg {
+  margin-top: 0.13rem;
+  color: #5c5c66;
+  font-size: 0.37rem;
+  line-height: 0.65rem;
+}
+.newhand-hb .hb-content .hb-content-rules .table table {
+  width: 100%;
+}
+.newhand-hb .hb-content .hb-content-rules .table table tr th {
+  height: 0.86rem;
+  background-color: #c1c1c7;
+  text-align: center;
+  border: none;
+  color: white;
+  font-size: 0.37rem;
+}
+.newhand-hb .hb-content .hb-content-rules .table table tr td {
+  text-align: center;
+  height: 0.6rem;
+  color: #5c5c66;
+  font-size: 0.37rem;
+}
+.newhand-hb .hb-content .hb-content-rules .table table tr .td1 {
+  color: #ff9f49;
+}
+.newhand-hb .hb-content .hb-worning {
+  width: 9.2rem;
+  margin: 0 auto;
+  margin-top: 0.45rem;
+  padding-bottom: 1.44rem;
+}
+.newhand-hb .hb-content .hb-worning h4 {
+  color: #3d3f4c;
+  font-size: 0.42rem;
+  font-weight: bold;
+}
+.newhand-hb .hb-content .hb-worning ul {
+  margin-top: 0.13rem;
+}
+.newhand-hb .hb-content .hb-worning ul li {
+  color: #5c5c66;
+  font-size: 0.37rem;
+  line-height: 0.65rem;
+}

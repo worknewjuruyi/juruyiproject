@@ -16,26 +16,12 @@ define([
         ,'$stateParams'
         ,function($scope,$rootScope,$filter,$state,resourceService,$localStorage,$http,$stateParams){                        
 	        //签到
-//          var betweenTime = 0;
-//			var b=0;
-//			var num = 0;
-//			document.addEventListener('webkitvisibilitychange',function()
-//			{
-//			    if(document.webkitVisibilityState=='hidden')
-//			    {
-//			        b=Date.now();
-//			    }else
-//			    {
-//			        var betweenMs = Date.now() - b;
-//			        var  betweens = Math.floor(betweenMs / 1000);
-//			        betweenTime = Math.floor(betweens / 60);
-//			        console.log('间隔:' + betweenTime + '分钟');
-//			        num=betweenTime;
-//			        $scope.newtime=num
-//			    }
-//			});
+            $scope.isHeader=false;
             //app传递用户的uid和token到链接地址里我们接收
-            console.log($stateParams.ui)
+            console.log($stateParams.uid);
+            console.log($stateParams.token);
+            $scope.uid=$stateParams.uid;
+            $scope.token=$stateParams.token;
             var calUtil = {  
 				  //当前日历显示的年份  
 				  showYear:2018,  
@@ -56,6 +42,7 @@ define([
 				    $("#calendar").html(str);  
 				    //绑定日历表头  
 				    var calendarName=calUtil.showYear+"年"+calUtil.showMonth+"月";  
+//				    var calendarName=calUtil.showYear+"-"+calUtil.showMonth; 
 				    $(".calendar_month_span").html(calendarName);    
 				  },  
 				  //绑定事件  
@@ -79,8 +66,8 @@ define([
 				      console.log($scope.prevMonth);
 				      resourceService.queryPost($scope, $filter('getUrl')('签到记录'),
 				      {
-				      	uid:38,
-				      	token:'2001',
+				      	uid:$scope.uid,
+				      	token:$scope.token,
 				      	date:$scope.prevMonth
 				      },
 				      '签到记录');
@@ -104,8 +91,8 @@ define([
 				      console.log($scope.nextMonth);
 				      resourceService.queryPost($scope, $filter('getUrl')('签到记录'),
 				      {
-				      	uid:38,
-				      	token:'2001',
+				      	uid:$scope.uid,
+				      	token:$scope.token,
 				      	date:$scope.nextMonth
 				      },
 				      '签到记录');
@@ -195,12 +182,12 @@ define([
 				   var htmls = new Array();  
 				   htmls.push("<div class='sign_main' id='sign_layer'>");  
 				   htmls.push("<div class='sign_succ_calendar_title'>");  
-				   htmls.push("<div class='calendar_month_next'>下月</div>");
-				   htmls.push("<div class='calendar_month_prev'>上月</div>");
+				   htmls.push("<div class='calendar_month_next'>></div>");
+				   htmls.push("<div class='calendar_month_prev'><</div>");
 				   htmls.push("<div class='calendar_month_span'></div>");  
 				   htmls.push("</div>");  
 				   htmls.push("<div class='sign' id='sign_cal'>");  
-				   htmls.push("<table>");  
+				   htmls.push("<table border='0' cellspacing='0' cellpadding='0'>");  
 				   htmls.push("<tr>");  
 				   htmls.push("<th>" + myMonth[0][0] + "</th>");  
 				   htmls.push("<th>" + myMonth[0][1] + "</th>");  
@@ -217,9 +204,9 @@ define([
 				     var ifHasSigned = calUtil.ifHasSigned(signList,myMonth[w][d]);  
 				//   console.log(ifHasSigned);  
 				     if(ifHasSigned){  
-				      htmls.push("<td class='on'>" + (!isNaN(myMonth[w][d]) ? myMonth[w][d] : " ") + "</td>");  
+				      htmls.push("<td class='on'>" + (!isNaN(myMonth[w][d]) ? myMonth[w][d] : " ") +'<span></span>'+ "</td>");  
 				     } else {  
-				      htmls.push("<td>" + (!isNaN(myMonth[w][d]) ? myMonth[w][d] : " ") + "</td>");  
+				      htmls.push("<td>" + (!isNaN(myMonth[w][d]) ? myMonth[w][d] : " ")+'<span></span>' + "</td>");  
 				     }  
 				    }  
 				    htmls.push("</tr>");  
@@ -232,12 +219,14 @@ define([
 			
 			};  
 
-
+          
+            //测试
+            //calUtil.init([{"signDay":"09"},{"signDay":"11"},{"signDay":"12"},{"signDay":"13"}],calUtil.showYear,calUtil.showMonth);
 
             
-            resourceService.queryPost($scope, $filter('getUrl')('是否已签到'),{uid:38,token:'2001'},'是否签到');
-            resourceService.queryPost($scope, $filter('getUrl')('签到记录'),{uid:38,token:'2001'},'签到记录');
-            resourceService.queryPost($scope, $filter('getUrl')('签到积分'),{uid:38,token:'2001'},'签到积分');
+            resourceService.queryPost($scope, $filter('getUrl')('是否已签到'),{uid:$scope.uid,token:$scope.token},'是否签到');
+            resourceService.queryPost($scope, $filter('getUrl')('签到记录'),{uid:$scope.uid,token:$scope.token},'签到记录');
+            resourceService.queryPost($scope, $filter('getUrl')('签到积分'),{uid:$scope.uid,token:$scope.token},'签到积分');
             $scope.$on('resourceService.QUERY_POST_MYEVENT', function (event, data, type) {
                 switch (type) {
                     case '签到记录':
@@ -260,7 +249,7 @@ define([
                     case '签到积分':
                         if (data.success) {
                             $scope.nowIntegral=data.map.integralSum;//当前签到积分
-                            console.log($scope.nowIntegral)
+//                          console.log($scope.nowIntegral)
                         } else {
                             console.log(data.errorMsg)
                         }
@@ -273,7 +262,7 @@ define([
                             calUtil.init([],$scope.signDateYear,$scope.signDateMonth)//初始化日历
                             
                             $scope.isSign=data.success;//是否已签到标志
-                            console.log(data.success);
+//                          console.log(data.success);
 					        if (!$scope.isSign) {    //未签到    	
 					        	$scope.signOk=false;
 					        	$scope.isGrey=false;
@@ -291,9 +280,9 @@ define([
                     case '点击签到':
                         if (data.success) {
                         	//这里写签到之后的打钩效果
-                            console.log(data.msg);
-                            console.log($("td.on:last").html());
-                            console.log($("td.on").length);
+//                          //点击签到按钮  返回成功之后再请求 签到积分和记录
+                            resourceService.queryPost($scope, $filter('getUrl')('签到记录'),{uid:$scope.uid,token:$scope.token},'签到记录'); 
+                            resourceService.queryPost($scope, $filter('getUrl')('签到积分'),{uid:$scope.uid,token:$scope.token},'签到积分');
                             $("td.on:last").addClass("sign-show");//添加签到打钩动画
                             $scope.isSign=data.success;
                             if (!$scope.isSign) {    //未签到    	
@@ -306,8 +295,7 @@ define([
 					        	$scope.signWord="已签到"
 					        }                            
                         } else {
-                        	console.log($("td.on").length);
-                        	console.log($("td.on:last").html());
+                        	
                             console.log("系统错误");
                             $filter('系统错误信息')('2', $scope);
                         }
@@ -318,17 +306,12 @@ define([
             	       	        	        
 	        //是否可签到标记--ajax后台获取	        
 			$scope.signNow=function(){
-//				//ajax获取当前用户的本月签到数据，连续签到数据 
-//				$scope.signList=[{"signDay":"09"},{"signDay":"11"},{"signDay":"12"},{"signDay":"13"},{"signDay":"15"}]; 
-//				calUtil.init($scope.signList);
-//				//ajax请求成功后弹出层出现
-//				$scope.signIn();
-//              $scope.signOk=true;
-//	        	$scope.isGrey=true; 
-//	        	$scope.signWord="已签到";	 
-                resourceService.queryPost($scope, $filter('getUrl')('点击签到'),{uid:38,token:'2001'},'点击签到');
-                resourceService.queryPost($scope, $filter('getUrl')('签到记录'),{uid:38,token:'2001'},'签到记录'); 
-                resourceService.queryPost($scope, $filter('getUrl')('签到积分'),{uid:38,token:'2001'},'签到积分');
+//				//ajax获取当前用户的本月签到数据，连续签到数据  
+                resourceService.queryPost($scope, $filter('getUrl')('点击签到'),{uid:$scope.uid,token:$scope.token},'点击签到');                               
+                console.log($scope.nowIntegral);
+                console.log($scope.signNum);
+                console.log($scope.signList)
+                
 			}
 						
 			//弹出层出现效果

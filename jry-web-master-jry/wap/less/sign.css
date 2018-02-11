@@ -1,17 +1,109 @@
 @charset "utf-8";
-#calendar {
-  width: 9rem;
-  height: 7.31rem;
+.sign-wrap {
+  width: 100%;
+  height: 30.29rem;
+  background-image: url(../images/signs/bgsign@2x.png);
+  background-size: cover;
+}
+.calendar-wrap {
+  padding-top: 4.64rem;
+  position: relative;
+}
+.calendar-wrap .sign-total {
+  width: 8.78rem;
+  height: 1.04rem;
+  line-height: 1.04rem;
+  text-align: center;
+  font-size: 0.42rem;
+  background-color: #f4f6ff;
+  position: absolute;
+  left: 50%;
+  margin-left: -4.39rem;
+  bottom: 2.1rem;
+  border-radius: 0.52rem;
+}
+.calendar-wrap .sign-total span {
+  color: #5665f5;
+}
+.calendar-wrap .sign-total em {
+  color: #ff9f49;
+}
+.calendar-wrap .sign-btn .sign-btn-click {
+  position: absolute;
+  margin-left: -4.33rem;
+  left: 50%;
+  bottom: 0.4rem;
+  border-radius: 0.1rem;
+  background: -moz-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  background: -webkit-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  background: -ms-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  width: 8.66rem;
+  height: 1.3rem;
+  display: block;
+  text-align: center;
+  font-size: 0.37rem;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: white;
+}
+.calendar-wrap .sign-btn .btn-grey {
+  background: #ced0d8;
+}
+.calendar-wrap .coin1 {
+  position: absolute;
+  top: 3.58rem;
+  right: 1.52rem;
+  width: 1.38rem;
+  height: 1.29rem;
+  background-image: url(../images/signs/coins1@2x.png);
+  background-size: cover;
+}
+.sign-rules {
+  width: 9.98rem;
+  height: 12.29rem;
   margin: 0 auto;
-  margin-top: 1.56rem;
+  margin-top: 0.96rem;
+  background-image: url(../images/signs/rules@2x.png);
+  background-size: cover;
+  position: relative;
+}
+.sign-rules .coin2 {
+  width: 2.18rem;
+  height: 2.94rem;
+  background-image: url(../images/signs/coins2@2x.png);
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: -1.17rem;
+}
+.sign-rules .coin3 {
+  width: 2.05rem;
+  height: 2.84rem;
+  background-image: url(../images/signs/coins3@2x.png);
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+}
+#calendar {
+  width: 9.94rem;
+  height: 10.6rem;
+  margin: 0 auto;
+  background-image: url(../images/signs/datelist@2x.png);
+  background-size: cover;
 }
 .sign table {
-  width: 100%;
+  width: 9.25rem;
+  margin: 0 auto;
   border-collapse: collapse;
   border-spacing: 0;
   color: #a46626;
   font-weight: bold;
   font-size: 12px;
+  border: none;
+  cellspacing: 0;
+  cellpadding: 0;
 }
 [data-dpr="2"] .sign table {
   font-size: 24px;
@@ -25,146 +117,67 @@
 .sign th,
 .sign td {
   text-align: center;
-  line-height: 0.93rem;
-  border: 1px solid #faca34;
-  border-radius: 0.09rem;
+  height: 0.85rem;
+  line-height: 0.85rem;
   background: #fff;
-  font-size: 11px;
+  font-size: 0.32rem;
 }
-[data-dpr="2"] .sign th,
-[data-dpr="2"] .sign td {
-  font-size: 22px;
-}
-[data-dpr="3"] .sign th,
-[data-dpr="3"] .sign td {
-  font-size: 33px;
-}
-[data-dpr="4"] .sign th,
-[data-dpr="4"] .sign td {
-  font-size: 44px;
+.sign th {
+  background-color: #c1c1c7;
 }
 .sign td {
   color: #404040;
   vertical-align: middle;
-  border-radius: 0.09rem;
   background: #fff;
   color: #a46626;
+  font-size: 0.34rem;
 }
 .sign .on {
-  background-color: #dc7a14;
+  position: relative;
 }
-.sign .sign-show {
-  color: red;
+.sign .on span {
+  position: absolute;
+  width: 0.42rem;
+  height: 0.33rem;
+  left: 50%;
+  margin-left: -0.21rem;
+  bottom: 0.1rem;
+  background-image: url(../images/signs/signGou@2x.png);
+  background-size: cover;
 }
 .calendar_month_prev {
   float: left;
-  line-height: 0.8rem;
-  color: #656565;
+  line-height: 1.33rem;
+  color: white;
   font-weight: bold;
-  margin-left: 0.3rem;
+  font-size: 0.5rem;
+  margin-left: 0.4rem;
 }
 .calendar_month_next {
   float: right;
-  line-height: 0.8rem;
-  color: #656565;
+  line-height: 1.33rem;
+  color: white;
   font-weight: bold;
-  margin-right: 0.3rem;
+  font-size: 0.5rem;
+  margin-right: 0.4rem;
 }
 .calendar_month_span {
   display: inline;
-  line-height: 0.8rem;
-  font-size: 13px;
-  color: #656565;
+  line-height: 1.33rem;
+  font-size: 0.46rem;
+  color: white;
   letter-spacing: 2px;
   font-weight: bold;
 }
-[data-dpr="2"] .calendar_month_span {
-  font-size: 26px;
-}
-[data-dpr="3"] .calendar_month_span {
-  font-size: 39px;
-}
-[data-dpr="4"] .calendar_month_span {
-  font-size: 52px;
-}
 .sign_succ_calendar_title {
-  height: 0.8rem;
+  width: 9.21rem;
+  margin: 0 auto;
+  height: 1.33rem;
   text-align: center;
-  border-left: 1px solid #faca34;
-  border-right: 1px solid #faca34;
-  background: #faca34;
 }
 .sign_main {
   border-top: 1px solid #faca34;
   font-family: "Microsoft YaHei", SimHei;
-}
-.sign-btn {
-  margin-top: 1.46rem;
-}
-.sign-btn .sign-btn-click {
-  width: 4rem;
-  height: 0.78rem;
-  display: block;
-  margin: 0 auto;
-  background-color: #faca34;
-  border-radius: 0.39rem;
-  text-align: center;
-  font-size: 14px;
-  text-decoration: none;
-  outline: none;
-  border: none;
-  color: white;
-}
-[data-dpr="2"] .sign-btn .sign-btn-click {
-  font-size: 28px;
-}
-[data-dpr="3"] .sign-btn .sign-btn-click {
-  font-size: 42px;
-}
-[data-dpr="4"] .sign-btn .sign-btn-click {
-  font-size: 56px;
-}
-.sign-btn .btn-grey {
-  background-color: grey;
-}
-.sign-msg-show {
-  width: 9rem;
-  margin: 0 auto;
-  margin-top: 0.4rem;
-  display: flex;
-  justify-content: space-between;
-}
-.sign-msg-show .sign-times {
-  color: black;
-  font-size: 16px;
-}
-[data-dpr="2"] .sign-msg-show .sign-times {
-  font-size: 32px;
-}
-[data-dpr="3"] .sign-msg-show .sign-times {
-  font-size: 48px;
-}
-[data-dpr="4"] .sign-msg-show .sign-times {
-  font-size: 64px;
-}
-.sign-msg-show .sign-times span {
-  color: orangered;
-}
-.sign-msg-show .sign-total-integral {
-  color: black;
-  font-size: 16px;
-}
-[data-dpr="2"] .sign-msg-show .sign-total-integral {
-  font-size: 32px;
-}
-[data-dpr="3"] .sign-msg-show .sign-total-integral {
-  font-size: 48px;
-}
-[data-dpr="4"] .sign-msg-show .sign-total-integral {
-  font-size: 64px;
-}
-.sign-msg-show .sign-total-integral span {
-  color: orangered;
 }
 .maskbox {
   width: 100%;

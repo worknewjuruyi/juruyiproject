@@ -89,11 +89,13 @@ define(['app'], function (app) {
                 
                 
                 //myself
+                '首页':base+'index/index.dos',
                 '新闻详情':base+'aboutus/newsDetails.dos',
                 '签到记录':base+'signIn/continuous.dos',
                 '是否已签到':base+'signIn/signInYN.dos',
                 '点击签到':base+'signIn/clickSignIn.dos',
-                '签到积分':base+'integral/IntegralSum.dos'
+                '签到积分':base+'integral/IntegralSum.dos',
+                '新手福利':base+'member/newMember.do'
             };
             return urls[name];
         }

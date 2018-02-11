@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="../../less/newhand-hb.css" />
+<div class="newhand-hb" ng-controller="newhandHbCtr">
+	<header class="common-header" ng-if="isHeader">
+	     <i></i>
+	     <h3>新手红包</h3>
+    </header>
+	<div class="hb-content">
+		<div class="hb-content-top">
+			<div class="top-img"></div>
+			<h4 class="top-title">1188</h4>
+			<p class="top-msg">首次注册即可获得价值总计1188元红包</p>
+		</div>
+		<!--按钮-->
+		<div class="hb-content-btn" ng-click="isGo()">
+			<a href="{{goLink}}" class="btn-inner">立即注册</a>
+		</div>
+		<!--活动规则-->
+		<div class="hb-content-rules">
+			<h4 class="rules-title">活动规则:</h4>
+			<p class="rules-msg">用户完成注册后，即可获得1188元的8个返现券，用户可在我的-我的卡券中进行查看。具体红包使用规则如下：</p>
+			<div class="table">
+				<table border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<th>红包金额(元)</th>
+						<th>起投金额(元)</th>
+						<th>投资期限(天)</th>
+					</tr>
+					<tr>
+						<td class="td1">18</td>
+						<td class="td2">≥2000</td>
+						<td class="td3">≥30</td>
+					</tr>
+					<tr>
+						<td class="td1">38</td>
+						<td class="td2">≥5000</td>
+						<td class="td3">≥30</td>
+					</tr>
+					<tr>
+						<td class="td1">100</td>
+						<td class="td2">≥10000</td>
+						<td class="td3">≥30</td>
+					</tr>
+					<tr>
+						<td class="td1">188</td>
+						<td class="td2">≥20000</td>
+						<td class="td3">≥30</td>
+					</tr>
+					<tr>
+						<td class="td1">68</td>
+						<td class="td2">≥5000</td>
+						<td class="td3">≥60</td>
+					</tr>
+					<tr>
+						<td class="td1">180</td>
+						<td class="td2">≥10000</td>
+						<td class="td3">≥60</td>
+					</tr>
+					<tr>
+						<td class="td1">308</td>
+						<td class="td2">≥20000</td>
+						<td class="td3">≥90</td>
+					</tr>
+					<tr>
+						<td class="td1">288</td>
+						<td class="td2">≥10000</td>
+						<td class="td3">≥180</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!--使用注意事项-->
+		<div class="hb-worning">
+			<h4>使用返现券注意事项:</h4>
+			<ul>
+				<li>1.同类型卡券不得叠加使用</li>
+				<li>2.用户可在投资界面根据需要选择返现券，卡券使用后将自动返现到帐户余额中</li>
+				<li>3.请在有效期内使用卡券，过期即失效</li>
+				<li>4.卡券使用规则的最终解释权归巨如意平台所有</li>
+			</ul>
+		</div>
+	</div>
+	
+</div>

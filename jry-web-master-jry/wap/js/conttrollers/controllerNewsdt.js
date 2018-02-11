@@ -5,9 +5,13 @@ define(['js/module.js', 'jquery', 'ngdialog'], function (controllers, $, ngdialo
         $rootScope.newtime=time;
         
         $scope.isHeader=false;//是否显示头部 如果app传参跳转过来 header不显示 否则就是wap页面 则显示头部
-        
-        console.log($stateParams.uid);                               
-        resourceService.queryPost($scope, $filter('getUrl')('新闻详情'), {artiId:41}, '新闻详情');
+        if ($stateParams.id!=undefined||$stateParams.id!=null) {
+        	var nowArtiId=$stateParams.id; 
+        } else{
+        	
+        }
+                                      
+        resourceService.queryPost($scope, $filter('getUrl')('新闻详情'), {artiId:nowArtiId}, '新闻详情');
         $scope.$on('resourceService.QUERY_POST_MYEVENT', function (event, data, type) {
             switch(type){
                 case '新闻详情':

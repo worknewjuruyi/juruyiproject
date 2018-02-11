@@ -1,30 +1,27 @@
 <link rel="stylesheet" type="text/css" href="../../less/sign.css"/>
 <div class="sign-wrap" ng-controller='signCtrl'>
+	<header class="common-header" ng-if="isHeader">
+		<i></i>
+		<h3>新手福利</h3>
+	</header>
 	<!--日历组件-->
-	<div id="calendar"></div>
-	<!--签到按钮-->
-	<div class="sign-btn">
-		<button class="sign-btn-click" ng-click="signNow()" ng-disabled='signOk' ng-class="{'btn-grey':isGrey}" ng-bind="signWord"></button>
-	</div>
-	<!--连续签到时间/积分总数-->
-	<div class="sign-msg-show">
-		<!--连签次数-->
-		<div class="sign-times">
-			已连续签到<span>{{signNum}}</span>天
+	<div class="calendar-wrap">
+		<div id="calendar"></div>
+	    <!--签到天数和签到按钮-->
+	    <div class="sign-total">
+	    	<p>已连续签到<span> {{signNum}} </span>天/当前积分<em> {{nowIntegral}} </em></p>
+	    </div>
+	    <div class="sign-btn">
+			<button class="sign-btn-click" ng-click="signNow()" ng-disabled='signOk' ng-class="{'btn-grey':isGrey}" ng-bind="signWord">签到</button>
 		</div>
-		<!--积分总数-->
-		<div class="sign-total-integral">
-			当前积分<span>{{nowIntegral}}</span>
-		</div>
+		<!--金币装饰-->
+		<div class="coin1"></div>
 	</div>
 	
-	<!--弹窗-->
-	<!--遮挡层-->
-	<div class="maskbox"></div>
-	<!--dialog-->
-	<div class="qdbox">
-		<div class="text-center text-green font18"><strong>签到成功！</strong></div>
-		<div class="text-center pt10">您已经连续签到&nbsp;<span class="text-green">10</span>&nbsp;天</div>
-		<div class="btn-yes" ng-click='btnYesClick()'>知道啦！</div>
+	<!--签到规则-->
+	<div class="sign-rules">
+		<div class="coin2"></div>
+		<div class="coin3"></div>
 	</div>
+			
 </div>

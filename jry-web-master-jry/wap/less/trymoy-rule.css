@@ -1,0 +1,26 @@
+@charset "utf-8";
+.t-tyrule-title {
+  height: 3.86rem;
+  background-color: #ff7449;
+}
+.t-tyrule-contain {
+  padding: 0rem 0.4rem;
+}
+.t-tyrule-contain h3 {
+  font-size: 0.42rem;
+  color: #5665f5;
+}
+.t-tyrule-contain p {
+  font-size: 0.37rem;
+  color: #5c5c66;
+  line-height: 0.7rem;
+}
+.t-tyrule-contain .trymoy-intro h3 {
+  padding: 0.4rem 0rem;
+}
+.t-tyrule-contain .trymoy-useStep {
+  padding-top: 0.8rem;
+}
+.t-tyrule-contain .trymoy-useStep h3 {
+  padding-bottom: 0.4rem;
+}

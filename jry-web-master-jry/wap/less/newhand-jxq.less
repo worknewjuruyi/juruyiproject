@@ -1,0 +1,290 @@
+@charset "utf-8";
+@min: '@2x.png';
+@max: '@3x.png';
+.ml(@n){
+  margin-left: @n;
+}
+.mr(@n){
+  margin-right: @n;
+}
+.mt(@n){
+  margin-top:@n;
+}
+.mb(@n){
+  margin-bottom:@n;
+}
+.pl(@n){
+  padding-left: @n;
+}
+.pr(@n){
+  padding-right: @n;
+}
+.pt(@n){
+  padding-top:@n;
+}
+.pb(@n){
+  padding-bottom:@n;
+}
+.bg-c(@c){
+  background-color: @c;
+}
+.br(@deg){
+  border-radius: @deg;
+}
+.bg-image(@url){
+@media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+    background-image:url('@{url}@{max}');
+    background-size:cover; 
+}
+background-image:url('@{url}@{min}');
+background-size:cover; 
+}
+
+.font-size(@val){
+    font-size: @val;
+    [data-dpr="2"] &{
+        font-size: 2*@val
+    }
+
+    [data-dpr="3"] &{
+        font-size: 3*@val
+    }
+
+    [data-dpr="4"] &{
+        font-size: 4*@val
+    }
+}
+
+//新手福利-加息券
+.newhand-jxq{
+    .jxq-content{
+        .jxq-content-top{  
+            width: 100%;          
+            background-color: white;
+            padding: 1.4rem 0 0.86rem 0;
+            .top-img{
+                width: 2.13rem;
+                height: 1.13rem;
+                background-image: url(../images/newhand11/fish1@2x.png);
+                background-size: cover;
+                margin: 0 auto;
+            }
+            .top-title{
+                color: #FF9F49;
+                font-size:0.85rem;
+                text-align: center;
+                margin-top: 0.33rem;
+            }
+            .top-msg{
+                color: #9c9dae;
+                font-size:0.42rem;
+                text-align: center;
+                margin-top: 0.13rem;
+            }
+        }
+        .jxq-content-btn{
+            margin-top: 0.8rem;
+            .btn-inner{
+                display: block;
+                text-align: center;                
+                border-radius: 0.1rem;
+                background: -moz-linear-gradient( 180deg, rgb(255,74,58) 0%, rgb(255,127,77) 100%);
+                background: -webkit-linear-gradient( 180deg, rgb(255,74,58) 0%, rgb(255,127,77) 100%);
+                background: -ms-linear-gradient( 180deg, rgb(255,74,58) 0%, rgb(255,127,77) 100%);                  
+                width: 9.2rem;
+                height: 1.17rem;  
+                line-height: 1.17rem;
+                margin: 0 auto;
+                color: white;
+                font-size:0.42rem;
+                text-decoration: none;
+            }
+        }
+        //活动规则
+        .jxq-rulers{
+            width: 9.2rem;
+            margin: 0 auto;
+            margin-top: 0.77rem;
+            h4{
+                color: #3d3f4c;
+                font-size:0.42rem;
+                font-weight: bold;
+                
+            }
+            ul{
+                margin-top: 0.13rem;
+                li{
+                    color: #5c5c66;
+                    font-size:0.37rem;
+                    line-height: 0.65rem;
+                }
+            }
+        }
+    }
+}
+
+
+//新手福利-体验金
+.newhand-tyj{
+    .tyj-content{
+        .tyj-content-top{  
+            width: 100%;          
+            background-color: white;
+            padding: 1.4rem 0 0.86rem 0;
+            .top-img{
+                width: 1.61rem;
+                height: 1.41rem;
+                background-image: url(../images/newhand11/newhand-jf.png);
+                background-size: cover;
+                margin: 0 auto;
+            }
+            .top-title{
+                color: #FF9F49;
+                font-size:0.85rem;
+                text-align: center;
+                margin-top: 0.33rem;
+            }
+            .top-msg{
+                color: #9c9dae;
+                font-size:0.42rem;
+                text-align: center;
+                margin-top: 0.13rem;
+            }
+        }
+        .tyj-content-btn{
+            margin-top: 0.8rem;
+            .btn-inner{
+                display: block;
+                text-align: center;                
+                border-radius: 0.1rem;
+                background: -moz-linear-gradient( 180deg, rgb(255,74,58) 0%, rgb(255,127,77) 100%);
+                background: -webkit-linear-gradient( 180deg, rgb(255,74,58) 0%, rgb(255,127,77) 100%);
+                background: -ms-linear-gradient( 180deg, rgb(255,74,58) 0%, rgb(255,127,77) 100%);                  
+                width: 9.2rem;
+                height: 1.17rem;  
+                line-height: 1.17rem;
+                margin: 0 auto;
+                color: white;
+                font-size:0.42rem;
+                text-decoration: none;
+            }
+        }
+        //活动规则
+        .tyj-rulers{
+            width: 9.2rem;
+            margin: 0 auto;
+            margin-top: 0.77rem;
+            h4{
+                color: #3d3f4c;
+                font-size:0.42rem;
+                font-weight: bold;
+                
+            }
+            ul{
+                margin-top: 0.13rem;
+                li{
+                    color: #5c5c66;
+                    font-size:0.37rem;
+                    line-height: 0.65rem;
+                }
+            }
+        }
+        
+        //举例说明
+        .example{
+            width: 9.2rem;
+            margin: 0 auto;
+            margin-top: 0.33rem;
+            padding-bottom: 0.8rem;
+            .example-title{
+                color: #3d3f4c;
+                font-size:0.37rem;
+                margin-bottom: 0.26rem;
+            }
+            .example-content{
+                border: 2px dashed rgb(255, 102, 68);
+                border-radius: 0.1rem;                                   
+                width: 9.14rem;
+                padding: 0.2rem 0;
+//              height: 2.34rem;
+                p{
+                    width: 8.69rem;
+                    margin: 0 auto;
+                    color:#5c5c66;
+                    font-size:0.37rem;
+                    line-height: 0.7rem;
+                }
+            }
+           
+  
+        }
+    }
+}
+
+//新手福利-积分
+.newhand-jf{
+    .jf-content{
+        .jf-content-top{  
+            width: 100%;          
+            background-color: white;
+            padding: 1.4rem 0 0.86rem 0;
+            .top-img{
+                width: 1.42rem;
+                height: 1.42rem;
+                background-image: url(../images/newhand11/newhand-coin.png);
+                background-size: cover;
+                margin: 0 auto;
+            }
+            .top-title{
+                color: #FF9F49;
+                font-size:0.85rem;
+                text-align: center;
+                margin-top: 0.33rem;
+            }
+            .top-msg{
+                color: #9c9dae;
+                font-size:0.42rem;
+                text-align: center;
+                margin-top: 0.13rem;
+            }
+        }
+        .jf-content-btn{
+            margin-top: 0.8rem;
+            .btn-inner{
+                display: block;
+                text-align: center;                
+                border-radius: 0.1rem;
+                background: -moz-linear-gradient( 180deg, rgb(255,74,58) 0%, rgb(255,127,77) 100%);
+                background: -webkit-linear-gradient( 180deg, rgb(255,74,58) 0%, rgb(255,127,77) 100%);
+                background: -ms-linear-gradient( 180deg, rgb(255,74,58) 0%, rgb(255,127,77) 100%);                  
+                width: 9.2rem;
+                height: 1.17rem;  
+                line-height: 1.17rem;
+                margin: 0 auto;
+                color: white;
+                font-size:0.42rem;
+                text-decoration: none;
+            }
+        }
+        //活动规则
+        .jf-rulers{
+            width: 9.2rem;
+            margin: 0 auto;
+            margin-top: 0.77rem;
+            h4{
+                color: #3d3f4c;
+                font-size:0.42rem;
+                font-weight: bold;
+                
+            }
+            ul{
+                margin-top: 0.13rem;
+                li{
+                    color: #5c5c66;
+                    font-size:0.37rem;
+                    line-height: 0.65rem;
+                }
+            }
+        }
+    }
+}

@@ -41,6 +41,7 @@ define([
 	'conttrollers/controllerOrderDtailMy',
 	'conttrollers/protolControllerMy',
 	'conttrollers/signCtrlMy',
+	'conttrollers/tradeSetCtr',
 	
 	//duf
 	'conttrollers/controllerbuyend',
@@ -50,5 +51,7 @@ define([
 	'conttrollers/controllerNewsdt',
 	'conttrollers/controllersafeCr',
 	'conttrollers/cashMoneyCtr',
+	'conttrollers/mainNewshandCtr',
+	'conttrollers/newhandChildCtrl',
 ], function () {
 });

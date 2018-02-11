@@ -1134,4 +1134,27 @@ define(['app'], function (app) {
 //              },1000)
             };
         })
+        .filter("新手福利提示信息",function(ngDialog, $filter, $state){
+        	ngDialog.closeAll();
+        	return function (tip) {
+                var tips = {
+                    1: "您已是注册用户",
+                    2: "已登录",
+                    3: "已领取过积分",
+                    4: "已领取过红包",
+                    5: "已领取过体验金",
+                    6: "已领取过加息券"
+                };
+                ngDialog.open({
+                    template: '<p class="tips-msg">' + tips[tip] + '</p>',
+                    showClose: false,
+                    closeByDocument: true,
+                    plain: true
+                });
+                setTimeout(function(){ //自动消失
+                	ngDialog.closeAll();                	
+                },1500)
+            };
+        })
+        
 });

@@ -2,6 +2,7 @@
 define(['js/module.js', 'jquery', 'ngdialog'], function (controllers, $, ngdialog) {
     controllers.controller('controllerbkcq', function ($scope, resourceService, $filter, $http, $state, $rootScope, $localStorage, ngDialog, $stateParams,md5) {	         
      	$scope.isHeader=false;//是否显示头部
+//   	$rootScope.isShowLoading=false;
      	$scope.changeToggle = function(event){
             if ($(event.currentTarget).siblings("main").hasClass("new")) {   
             	$(event.currentTarget).siblings("main").slideUp('slow').removeClass("new");

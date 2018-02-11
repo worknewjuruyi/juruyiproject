@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="../../less/newhand-jxq.css" />
+<div class="newhand-tyj" ng-controller="newhandTyjCtr">
+	<header class="common-header" ng-if="isHeader">
+	     <i></i>
+	     <h3>新手福利</h3>
+    </header>
+	<div class="tyj-content">
+		<div class="tyj-content-top">
+			<div class="top-img"></div>
+			<h4 class="top-title">88888</h4>
+			<p class="top-msg">开通存管即可获得88888体验金</p>
+		</div>
+		<!--按钮-->
+		<div class="tyj-content-btn" ng-click="isGo()">
+			<a href="{{goLink}}" class="btn-inner">立即开通存管</a>
+		</div>
+		<!--活动规则-->
+		<div class="tyj-rulers">
+			<h4>活动规则:</h4>
+			<ul>
+				<li>1.用户开通存管后，即可获得88888体验金，用户可在我的-体验金界面中进行查看</li>
+				<li>2.体验金可用于投资体验标，标的为虚拟标的，投资可产生收益，次日开始计息</li>
+				<li>3.投资体验标到期后，所得的收益将以现金形式存入用户的帐户余额中，归用户所有</li>
+				<li>4.体验后，体验金将由平台收回，本规则最终解释权归巨如意所有</li>
+				<li>5.体验金需在有效期内使用，过期即失效</li>
+			</ul>
+		</div>
+		<!--举例说明-->
+		<div class="example">
+			<h4 class="example-title">举例说明</h4>
+			<div class="example-content">
+				<p>假设小明有50000元体验金，体验标历史年化收益率为10%，那么他的收益：</p>
+				<p>50000x10%/360x1=13.89元</p>
+			</div>
+		</div>
+	</div>
+	
+</div>

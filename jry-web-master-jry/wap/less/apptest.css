@@ -1,0 +1,24 @@
+@charset "utf-8";
+.wrap-apptest {
+  background-color: white;
+  height: 18rem;
+  padding-top: 2rem;
+}
+.wrap-apptest ul li {
+  margin: 0.4rem 0;
+}
+.wrap-apptest ul li a {
+  display: block;
+  text-align: center;
+  border-radius: 0.1rem;
+  background: -moz-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  background: -webkit-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  background: -ms-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  width: 9.2rem;
+  height: 1.17rem;
+  line-height: 1.17rem;
+  margin: 0 auto;
+  color: white;
+  font-size: 0.42rem;
+  text-decoration: none;
+}

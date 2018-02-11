@@ -1,0 +1,18 @@
+@charset "utf-8";
+.r-rule-header {
+  height: 3.86rem;
+  background-color: #ff7449;
+}
+.r-rule-content {
+  font-size: 0.37rem;
+  color: #5c5c66;
+  padding: 0rem 0.4rem;
+}
+.r-rule-content h3 {
+  font-size: 0.42rem;
+  color: #5665f5;
+  padding: 0.3rem 0rem;
+}
+.r-rule-content p {
+  line-height: 0.85rem;
+}

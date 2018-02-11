@@ -1,0 +1,205 @@
+@charset "utf-8";
+.newhand-jxq .jxq-content .jxq-content-top {
+  width: 100%;
+  background-color: white;
+  padding: 1.4rem 0 0.86rem 0;
+}
+.newhand-jxq .jxq-content .jxq-content-top .top-img {
+  width: 2.13rem;
+  height: 1.13rem;
+  background-image: url(../images/newhand11/fish1@2x.png);
+  background-size: cover;
+  margin: 0 auto;
+}
+.newhand-jxq .jxq-content .jxq-content-top .top-title {
+  color: #FF9F49;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 0.33rem;
+}
+.newhand-jxq .jxq-content .jxq-content-top .top-msg {
+  color: #9c9dae;
+  font-size: 0.42rem;
+  text-align: center;
+  margin-top: 0.13rem;
+}
+.newhand-jxq .jxq-content .jxq-content-btn {
+  margin-top: 0.8rem;
+}
+.newhand-jxq .jxq-content .jxq-content-btn .btn-inner {
+  display: block;
+  text-align: center;
+  border-radius: 0.1rem;
+  background: -moz-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  background: -webkit-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  background: -ms-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  width: 9.2rem;
+  height: 1.17rem;
+  line-height: 1.17rem;
+  margin: 0 auto;
+  color: white;
+  font-size: 0.42rem;
+  text-decoration: none;
+}
+.newhand-jxq .jxq-content .jxq-rulers {
+  width: 9.2rem;
+  margin: 0 auto;
+  margin-top: 0.77rem;
+}
+.newhand-jxq .jxq-content .jxq-rulers h4 {
+  color: #3d3f4c;
+  font-size: 0.42rem;
+  font-weight: bold;
+}
+.newhand-jxq .jxq-content .jxq-rulers ul {
+  margin-top: 0.13rem;
+}
+.newhand-jxq .jxq-content .jxq-rulers ul li {
+  color: #5c5c66;
+  font-size: 0.37rem;
+  line-height: 0.65rem;
+}
+.newhand-tyj .tyj-content .tyj-content-top {
+  width: 100%;
+  background-color: white;
+  padding: 1.4rem 0 0.86rem 0;
+}
+.newhand-tyj .tyj-content .tyj-content-top .top-img {
+  width: 1.61rem;
+  height: 1.41rem;
+  background-image: url(../images/newhand11/newhand-jf.png);
+  background-size: cover;
+  margin: 0 auto;
+}
+.newhand-tyj .tyj-content .tyj-content-top .top-title {
+  color: #FF9F49;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 0.33rem;
+}
+.newhand-tyj .tyj-content .tyj-content-top .top-msg {
+  color: #9c9dae;
+  font-size: 0.42rem;
+  text-align: center;
+  margin-top: 0.13rem;
+}
+.newhand-tyj .tyj-content .tyj-content-btn {
+  margin-top: 0.8rem;
+}
+.newhand-tyj .tyj-content .tyj-content-btn .btn-inner {
+  display: block;
+  text-align: center;
+  border-radius: 0.1rem;
+  background: -moz-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  background: -webkit-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  background: -ms-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  width: 9.2rem;
+  height: 1.17rem;
+  line-height: 1.17rem;
+  margin: 0 auto;
+  color: white;
+  font-size: 0.42rem;
+  text-decoration: none;
+}
+.newhand-tyj .tyj-content .tyj-rulers {
+  width: 9.2rem;
+  margin: 0 auto;
+  margin-top: 0.77rem;
+}
+.newhand-tyj .tyj-content .tyj-rulers h4 {
+  color: #3d3f4c;
+  font-size: 0.42rem;
+  font-weight: bold;
+}
+.newhand-tyj .tyj-content .tyj-rulers ul {
+  margin-top: 0.13rem;
+}
+.newhand-tyj .tyj-content .tyj-rulers ul li {
+  color: #5c5c66;
+  font-size: 0.37rem;
+  line-height: 0.65rem;
+}
+.newhand-tyj .tyj-content .example {
+  width: 9.2rem;
+  margin: 0 auto;
+  margin-top: 0.33rem;
+  padding-bottom: 0.8rem;
+}
+.newhand-tyj .tyj-content .example .example-title {
+  color: #3d3f4c;
+  font-size: 0.37rem;
+  margin-bottom: 0.26rem;
+}
+.newhand-tyj .tyj-content .example .example-content {
+  border: 2px dashed #ff6644;
+  border-radius: 0.1rem;
+  width: 9.14rem;
+  padding: 0.2rem 0;
+}
+.newhand-tyj .tyj-content .example .example-content p {
+  width: 8.69rem;
+  margin: 0 auto;
+  color: #5c5c66;
+  font-size: 0.37rem;
+  line-height: 0.7rem;
+}
+.newhand-jf .jf-content .jf-content-top {
+  width: 100%;
+  background-color: white;
+  padding: 1.4rem 0 0.86rem 0;
+}
+.newhand-jf .jf-content .jf-content-top .top-img {
+  width: 1.42rem;
+  height: 1.42rem;
+  background-image: url(../images/newhand11/newhand-coin.png);
+  background-size: cover;
+  margin: 0 auto;
+}
+.newhand-jf .jf-content .jf-content-top .top-title {
+  color: #FF9F49;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 0.33rem;
+}
+.newhand-jf .jf-content .jf-content-top .top-msg {
+  color: #9c9dae;
+  font-size: 0.42rem;
+  text-align: center;
+  margin-top: 0.13rem;
+}
+.newhand-jf .jf-content .jf-content-btn {
+  margin-top: 0.8rem;
+}
+.newhand-jf .jf-content .jf-content-btn .btn-inner {
+  display: block;
+  text-align: center;
+  border-radius: 0.1rem;
+  background: -moz-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  background: -webkit-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  background: -ms-linear-gradient(180deg, #ff4a3a 0%, #ff7f4d 100%);
+  width: 9.2rem;
+  height: 1.17rem;
+  line-height: 1.17rem;
+  margin: 0 auto;
+  color: white;
+  font-size: 0.42rem;
+  text-decoration: none;
+}
+.newhand-jf .jf-content .jf-rulers {
+  width: 9.2rem;
+  margin: 0 auto;
+  margin-top: 0.77rem;
+}
+.newhand-jf .jf-content .jf-rulers h4 {
+  color: #3d3f4c;
+  font-size: 0.42rem;
+  font-weight: bold;
+}
+.newhand-jf .jf-content .jf-rulers ul {
+  margin-top: 0.13rem;
+}
+.newhand-jf .jf-content .jf-rulers ul li {
+  color: #5c5c66;
+  font-size: 0.37rem;
+  line-height: 0.65rem;
+}

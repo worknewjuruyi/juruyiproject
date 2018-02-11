@@ -54,126 +54,209 @@ background-size:cover;
         font-size: 4*@val
     }
 }
+
+
+.sign-wrap{
+    width: 100%;
+    height: 30.29rem;
+    background-image: url(../images/signs/bgsign@2x.png);
+    background-size: cover;
+}
 //日历组件样式
-#calendar{
-    width: 9rem;
-    height: 7.31rem;
+.calendar-wrap{
+    padding-top: 4.64rem;
+    position: relative;
+    .sign-total{        
+      width: 8.78rem;
+      height: 1.04rem;
+      line-height: 1.04rem;
+      text-align: center;
+      font-size:0.42rem;
+      background-color: #f4f6ff;
+      position: absolute;
+      left: 50%;
+      margin-left: -4.39rem;
+      bottom: 2.1rem;
+      border-radius: 0.52rem;
+      span{
+          color: #5665f5;
+      }
+      em{
+          color: #ff9f49;
+      }
+    }
+    
+    //签到按钮样式
+    .sign-btn{        
+        .sign-btn-click{
+            position: absolute;
+            margin-left: -4.33rem;
+            left: 50%;
+            bottom:0.4rem;
+            border-radius: 0.1rem;
+            background: -moz-linear-gradient( 180deg, rgb(255,74,58) 0%, rgb(255,127,77) 100%);
+            background: -webkit-linear-gradient( 180deg, rgb(255,74,58) 0%, rgb(255,127,77) 100%);
+            background: -ms-linear-gradient( 180deg, rgb(255,74,58) 0%, rgb(255,127,77) 100%);
+            width: 8.66rem;
+            height: 1.3rem;
+            display: block;
+            text-align: center;
+            font-size:0.37rem;
+            text-decoration: none;
+            outline: none;
+            border: none;
+            color: white;                                
+        }
+        .btn-grey{
+            background: #ced0d8;
+        }
+    }
+    //coin1
+    .coin1{
+        position: absolute;
+        top: 3.58rem;
+        right: 1.52rem;
+        width: 1.38rem;
+        height: 1.29rem;
+        background-image: url(../images/signs/coins1@2x.png);
+        background-size: cover;
+    }
+}
+
+//签到规则
+.sign-rules{
+    width: 9.98rem;
+    height: 12.29rem;
     margin: 0 auto;
-    margin-top: 1.56rem;
+    margin-top: 0.96rem;
+    background-image: url(../images/signs/rules@2x.png);
+    background-size: cover;
+    position: relative;
+    .coin2{
+        width: 2.18rem;
+        height: 2.94rem;
+        background-image: url(../images/signs/coins2@2x.png);
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        top: -1.17rem;
+    }
+    .coin3{
+        width: 2.05rem;
+        height: 2.84rem;
+        background-image: url(../images/signs/coins3@2x.png);
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        bottom: -1rem;
+    }
+}
+
+
+#calendar{
+    width: 9.94rem;
+    height: 10.6rem;
+    margin: 0 auto;
+    background-image: url(../images/signs/datelist@2x.png);
+    background-size: cover;
 }
 
 .sign table{
-    width:100%;
+    width:9.25rem;
+    margin: 0 auto;
     border-collapse: collapse;
     border-spacing: 0;
     color: #a46626;
     font-weight: bold;
     .font-size(12px);
+    border:none;
+    cellspacing:0;
+    cellpadding:0;
+    
 }
 
 .sign th,.sign td {
 //  width: 30px;
 //  height: 40px;
     text-align: center;
-    line-height: 0.93rem;
-    border:1px solid #faca34;
-    border-radius:0.09rem;
+    height: 0.85rem;
+    line-height: 0.85rem;
+//  border:1px solid #faca34;
+//  border-radius:0.09rem;
     background:#fff;
-    .font-size(11px);
+    font-size:0.32rem;
+}
+.sign th{
+    background-color: #c1c1c7;
 }
 .sign td {
     color: #404040;
     vertical-align: middle;
-    border-radius:0.09rem;
+//  border-radius:0.09rem;
     background:#fff;
     color: #a46626;
+    font-size:0.34rem;
 }   
+//签到的样式
 .sign .on {
-    background-color:#dc7a14;
+    position: relative;
+//  background-color:#dc7a14;
+    span{
+        position: absolute;
+        width: 0.42rem;
+        height: 0.33rem;
+        left: 50%;
+        margin-left: -0.21rem;
+        bottom: 0.1rem;
+        background-image: url(../images/signs/signGou@2x.png);
+        background-size: cover;
+    }
 }
 .sign .sign-show{
-    color:red;
+//  color:red;
 }
 //上一月 /下一月按钮样式
 .calendar_month_prev {
     float:left;
-    line-height:0.8rem;
-    color: #656565;
+    line-height:1.33rem;
+    color: white;
     font-weight: bold;
-    margin-left: 0.3rem;
+    font-size:0.5rem;
+    margin-left: 0.4rem;
 }
 .calendar_month_next {
     float:right;
-    line-height:0.8rem;
-    color: #656565;
+    line-height:1.33rem;
+    color: white;
     font-weight: bold;
-    margin-right: 0.3rem;
+    font-size:0.5rem;
+    margin-right: 0.4rem;
 }
 .calendar_month_span {
     display:inline;
-    line-height: 0.8rem;
-    .font-size(13px);
-    color: #656565;
+    line-height: 1.33rem;
+    font-size:0.46rem;
+    color: white;
     letter-spacing: 2px;
     font-weight: bold;
 }
 .sign_succ_calendar_title {
-    height: 0.8rem;
+    width:9.21rem;
+    margin: 0 auto;
+    height: 1.33rem;
     text-align: center;
-    border-left:1px solid #faca34;
-    border-right:1px solid #faca34;
-    background:#faca34;
+//  border-left:1px solid #faca34;
+//  border-right:1px solid #faca34;
+//  background:#faca34;
 }
 .sign_main{
     border-top:1px solid #faca34;
     font-family: "Microsoft YaHei",SimHei;
 }
 
-//签到按钮样式
-.sign-btn{
-    margin-top: 1.46rem;
-    .sign-btn-click{
-        width: 4rem;
-        height: 0.78rem;
-        display: block;
-        margin: 0 auto;
-        background-color: #faca34;
-        border-radius: 0.39rem;
-        text-align: center;
-        .font-size(14px);
-        text-decoration: none;
-        outline: none;
-        border: none;
-        color: white;
-    }
-    .btn-grey{
-        background-color: grey;
-    }
-}
 
-//连续签到次数/积分总数
-.sign-msg-show{
-    width: 9rem;
-    margin: 0 auto;
-    margin-top: 0.4rem;
-    display: flex;
-    justify-content: space-between;
-    
-    .sign-times{
-        color: black;
-        .font-size(16px);
-        span{
-            color: orangered;
-        }
-    }
-    .sign-total-integral{
-        color: black;
-        .font-size(16px);
-        span{
-            color: orangered;
-        }
-    }
-}
+
+
 //
 
 

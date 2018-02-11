@@ -16,17 +16,17 @@ define(['js/module.js'], function (controllers) {
             console.log(11111);
             
             //上拉/下拉弹性            
-	        var srollsFirst = document.getElementById('slide1');
-	        var myscrollFirst = new iScroll(srollsFirst,{
-	          vScrollbar: false,
-	          onScrollEnd: function(){
-	            if( (this.y == this.maxScrollY)) {	              
-	              // 加载数据
-	              setTimeout(function(){	              	
-	                myscrollFirst.refresh();
-	              },10)
-	            }
-	          }
-	        })
+//	        var srollsFirst = document.getElementById('slide1');
+//	        var myscrollFirst = new iScroll(srollsFirst,{
+//	          vScrollbar: false,
+//	          onScrollEnd: function(){
+//	            if( (this.y == this.maxScrollY)) {	              
+//	              // 加载数据
+//	              setTimeout(function(){	              	
+//	                myscrollFirst.refresh();
+//	              },10)
+//	            }
+//	          }
+//	        })
         });
     })
